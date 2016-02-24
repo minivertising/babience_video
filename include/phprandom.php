@@ -74,8 +74,9 @@ class PHPRandom
         if ($length < 1) return '';
         $bytes_required = ceil($length / 2);
         $bytes = self::getBinary($bytes_required);
-        return substr(bin2hex($bytes), 0, $length);
-    }
+		$rs_txt	= strtoupper(substr(bin2hex($bytes), 0, $length));
+		return $rs_txt;
+	}
     
     // Get a random binary string of the specified length.
     
