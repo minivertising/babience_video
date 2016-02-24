@@ -107,7 +107,7 @@ body{
 
 .popup_wrap .p_agree.p_position .block_content{
 	background:#fff;
-	position:absolute;
+	/*position:absolute;*/
 	top:35px;
 	width:100%;
 }

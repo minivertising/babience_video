@@ -1,43 +1,404 @@
 <?
 	include_once   "./header.php";
+	$serial	= BC_getSerial();
 ?>
-<body>
-<div class="sec_top">
-  <div class="inner_sec_top">
-    <a href="#"><img src="images/logo.png" width="80" /></a>
+ <body>
+<div id="main_div">
+  <iframe allowfullscreen="1" src="<?=$_gl['youtube_url']?>" frameborder="0" id="ytplayer" class="ytplayer"></iframe><br />
+  <a href="#" onclick="show_input_div('input_popup');return false;">성장 영상 만들기</a><br />
+  <a href="#" onclick="show_notice();return false;">이벤트 유의사항</a>
+  <div id="notice_div" style="display:none;">
+    이벤트 유의사항 내용
   </div>
 </div>
-<div class="sec_top_visual">
-  <div class="inner_sec_top img">
-    <img src="images/img_sec_top_visual.jpg" />
+<div id="input_div" style="background:white;display:none;">
+  <input type="text" name="mb_name" id="mb_name" placeholder="이름"><br />
+  <input type="tel" name="mb_phone" id="mb_phone" placeholder="휴대폰번호" onkeyup="only_num(this);chk_len(this.value);"><br />
+  <input type="checkbox" name="privacy_check" id="privacy_check">개인정보 수집 및 위탁에 관한 동의<a href="#">자세히보기</a><br />
+  <input type="checkbox" name="adver_check" id="adver_check">광고성 정보 전송 동의<a href="#">자세히보기</a><br />
+  <a href="#" onclick="insert_input();return false;">입력하기</a>
+</div>
+<div id="concept_div" style="background:white;display:none;">
+  영상컨셉1<br />
+  <a href="#" onclick="sel_concept('1');return false;">그것이 알고싶어</a><br />
+  영상컨셉2<br />
+  <a href="#" onclick="sel_concept('2');return false;">아기인간극장</a><br />
+  영상컨셉3<br />
+  <a href="#" onclick="sel_concept('3');return false;">베비뉴스</a><br />
+  영상컨셉4<br />
+  <a href="#" onclick="sel_concept('4');return false;">성장다이어리</a><br />
+</div>
+<div id="input_baby_div" style="background:white;display:none;">
+  <input type="text" name="mb_baby_name" id="mb_baby_name" placeholder="아기이름"><br />
+  <input type="tel" name="mb_baby_age" id="mb_baby_age" placeholder="나이"><br />
+
+  <h3>사진1</h3>
+  <a href="#" onclick="change_tab('1');return false;">사진1</a>
+  <a href="#" onclick="change_tab('2');return false;">사진2</a>
+  <a href="#" onclick="change_tab('3');return false;">사진3</a>
+  <a href="#" onclick="change_tab('4');return false;">사진4</a>
+  <a href="#" onclick="change_tab('5');return false;">사진5</a><br />
+  <div class="inner_file clearfix">
+    <input type="hidden" id="up_images1" value="">
+    <div class="btn">
+      <span class="btn btn-success fileinput-button">
+      <i class="glyphicon glyphicon-plus"></i>
+  <span>
+    <div id="files">
+      <a href="#"><img src="./images/imsi_preview.PNG" id="preview1" onclick="sel_image('1');return false;"></a>
+    </div>
+  </span>
+  <!-- The file input field used as target for the file upload widget -->
+  <input id="fileupload" type="file" name="files[]" >
+  </span>
+    <!-- The global progress bar -->
+    <div id="progress" class="progress">
+      <div class="progress-bar progress-bar-success"></div>
+    </div>
+    <!-- <a href="#"><img src="images/popup/btn_select_file.png" alt=""/></a> -->
   </div>
 </div>
-<div class="sec_movie">
-  <div class="inner_sec_movie">
-    <iframe allowfullscreen="1" src="<?=$_gl['youtube_url']?>" frameborder="0" id="ytplayer" class="ytplayer"></iframe>
+<div class="pre_img" style="width:175px;height:109px">
+  <!-- The container for the uploaded files -->
+  <!-- <div id="files" class="files">
+    <img src="images/popup/pre_img.jpg" alt=""/>
+  </div> -->
+</div>
+  <br />
+  <input type="text" name="mb_caption1" id="mb_caption1"><br />
+  <a href="#" onclick="create_movie();return false;">합성하기</a>
+</div>
+<br />
+  <h3>사진2</h3>
+  <a href="#" onclick="change_tab('1');return false;">사진1</a>
+  <a href="#" onclick="change_tab('2');return false;">사진2</a>
+  <a href="#" onclick="change_tab('3');return false;">사진3</a>
+  <a href="#" onclick="change_tab('4');return false;">사진4</a>
+  <a href="#" onclick="change_tab('5');return false;">사진5</a><br />
+  <div class="inner_file clearfix">
+<input type="hidden" id="up_images2" value="">
+                <div class="btn">
+                  <span class="btn btn-success fileinput-button">
+                    <i class="glyphicon glyphicon-plus"></i>
+                    <span>
+					  <div id="files2">
+					    <a href="#"><img src="./images/imsi_preview.PNG" id="preview2" onclick="sel_image('2');return false;"></a>
+					  </div>
+					</span>
+                    <!-- The file input field used as target for the file upload widget -->
+                    <input id="fileupload2" type="file" name="files[]" >
+                  </span>
+                  <!-- The global progress bar -->
+                  <div id="progress" class="progress">
+                    <div class="progress-bar progress-bar-success"></div>
+                  </div>
+                  <!-- <a href="#"><img src="images/popup/btn_select_file.png" alt=""/></a> -->
+                </div>
+              </div>
+              <div class="pre_img" style="width:175px;height:109px">
+                <!-- The container for the uploaded files -->
+                <!-- <div id="files" class="files">
+                  <img src="images/popup/pre_img.jpg" alt=""/>
+                </div> -->
+              </div>
+  <br />
+  <input type="text" name="mb_caption2" id="mb_caption2"><br />
+  <a href="#" onclick="create_movie();return false;">합성하기</a>
+<br />
+  <h3>사진3</h3>
+  <a href="#" onclick="change_tab('1');return false;">사진1</a>
+  <a href="#" onclick="change_tab('2');return false;">사진2</a>
+  <a href="#" onclick="change_tab('3');return false;">사진3</a>
+  <a href="#" onclick="change_tab('4');return false;">사진4</a>
+  <a href="#" onclick="change_tab('5');return false;">사진5</a><br />
+<div class="inner_file clearfix">
+<input type="hidden" id="up_images3" value="">
+                <div class="btn">
+                  <span class="btn btn-success fileinput-button">
+                    <i class="glyphicon glyphicon-plus"></i>
+                    <span>
+					  <div id="files3">
+					    <a href="#"><img src="./images/imsi_preview.PNG" id="preview3" onclick="sel_image('3');return false;"></a>
+					  </div>
+					</span>
+                    <!-- The file input field used as target for the file upload widget -->
+                    <input id="fileupload3" type="file" name="files[]" >
+                  </span>
+                  <!-- The global progress bar -->
+                  <div id="progress" class="progress">
+                    <div class="progress-bar progress-bar-success"></div>
+                  </div>
+                  <!-- <a href="#"><img src="images/popup/btn_select_file.png" alt=""/></a> -->
+                </div>
+              </div>
+              <div class="pre_img" style="width:175px;height:109px">
+                <!-- The container for the uploaded files -->
+                <!-- <div id="files" class="files">
+                  <img src="images/popup/pre_img.jpg" alt=""/>
+                </div> -->
+              </div>
+  <br />
+  <input type="text" name="mb_caption3" id="mb_caption3"><br />
+  <a href="#" onclick="create_movie();return false;">합성하기</a>
+<br />
+  <h3>사진4</h3>
+  <a href="#" onclick="change_tab('1');return false;">사진1</a>
+  <a href="#" onclick="change_tab('2');return false;">사진2</a>
+  <a href="#" onclick="change_tab('3');return false;">사진3</a>
+  <a href="#" onclick="change_tab('4');return false;">사진4</a>
+  <a href="#" onclick="change_tab('5');return false;">사진5</a><br />
+<div class="inner_file clearfix">
+<input type="hidden" id="up_images4" value="">
+                <div class="btn">
+                  <span class="btn btn-success fileinput-button">
+                    <i class="glyphicon glyphicon-plus"></i>
+                    <span>
+					  <div id="files4">
+					    <a href="#"><img src="./images/imsi_preview.PNG" id="preview4" onclick="sel_image('4');return false;"></a>
+					  </div>
+					</span>
+                    <!-- The file input field used as target for the file upload widget -->
+                    <input id="fileupload4" type="file" name="files[]" >
+                  </span>
+                  <!-- The global progress bar -->
+                  <div id="progress" class="progress">
+                    <div class="progress-bar progress-bar-success"></div>
+                  </div>
+                  <!-- <a href="#"><img src="images/popup/btn_select_file.png" alt=""/></a> -->
+                </div>
+              </div>
+              <div class="pre_img" style="width:175px;height:109px">
+                <!-- The container for the uploaded files -->
+                <!-- <div id="files" class="files">
+                  <img src="images/popup/pre_img.jpg" alt=""/>
+                </div> -->
+              </div>
+  <br />
+  <input type="text" name="mb_caption4" id="mb_caption4"><br />
+  <a href="#" onclick="create_movie();return false;">합성하기</a>
+<br />
+  <h3>사진5</h3>
+  <a href="#" onclick="change_tab('1');return false;">사진1</a>
+  <a href="#" onclick="change_tab('2');return false;">사진2</a>
+  <a href="#" onclick="change_tab('3');return false;">사진3</a>
+  <a href="#" onclick="change_tab('4');return false;">사진4</a>
+  <a href="#" onclick="change_tab('5');return false;">사진5</a><br />
+<div class="inner_file clearfix">
+<input type="hidden" id="up_images5" value="">
+                <div class="btn">
+                  <span class="btn btn-success fileinput-button">
+                    <i class="glyphicon glyphicon-plus"></i>
+                    <span>
+					  <div id="files5">
+					    <a href="#"><img src="./images/imsi_preview.PNG" id="preview5" onclick="sel_image('5');return false;"></a>
+					  </div>
+					</span>
+                    <!-- The file input field used as target for the file upload widget -->
+                    <input id="fileupload5" type="file" name="files[]" >
+                  </span>
+                  <!-- The global progress bar -->
+                  <div id="progress" class="progress">
+                    <div class="progress-bar progress-bar-success"></div>
+                  </div>
+                  <!-- <a href="#"><img src="images/popup/btn_select_file.png" alt=""/></a> -->
+                </div>
+              </div>
+              <div class="pre_img" style="width:175px;height:109px">
+                <!-- The container for the uploaded files -->
+                <!-- <div id="files" class="files">
+                  <img src="images/popup/pre_img.jpg" alt=""/>
+                </div> -->
+              </div>
+  <br />
+  <input type="text" name="mb_caption5" id="mb_caption5"><br />
+  <a href="#" onclick="create_movie();return false;">합성하기</a>
+
+  <!-- <a href="#" onclick="insert_baby_input();return false;">입력하기</a> -->
+</div>
+<div id="input_picture1_div" style="background:white;display:none;">
+  <h3>사진1</h3>
+  <a href="#" onclick="change_tab('1');return false;">사진1</a>
+  <a href="#" onclick="change_tab('2');return false;">사진2</a>
+  <a href="#" onclick="change_tab('3');return false;">사진3</a>
+  <a href="#" onclick="change_tab('4');return false;">사진4</a>
+  <a href="#" onclick="change_tab('5');return false;">사진5</a><br />
+  <div class="inner_file clearfix">
+    <input type="hidden" id="up_images1" value="">
+    <div class="btn">
+      <span class="btn btn-success fileinput-button">
+      <i class="glyphicon glyphicon-plus"></i>
+  <span>
+    <div id="files">
+      <a href="#"><img src="./images/imsi_preview.PNG" id="preview1" onclick="sel_image('1');return false;"></a>
+    </div>
+  </span>
+  <!-- The file input field used as target for the file upload widget -->
+  <input id="fileupload" type="file" name="files[]" >
+  </span>
+    <!-- The global progress bar -->
+    <div id="progress" class="progress">
+      <div class="progress-bar progress-bar-success"></div>
+    </div>
+    <!-- <a href="#"><img src="images/popup/btn_select_file.png" alt=""/></a> -->
   </div>
 </div>
-<div class="sec_btn">
-  <div class="inner_sec_btn">
-    <div class="img btn_make"><a href="popup_input1.php"><img src="images/btn_make.png" /></a></div>
-    <div class="img"><img src="images/bg_btn.jpg" /></div>
-  </div>
+<div class="pre_img" style="width:175px;height:109px">
+  <!-- The container for the uploaded files -->
+  <!-- <div id="files" class="files">
+    <img src="images/popup/pre_img.jpg" alt=""/>
+  </div> -->
 </div>
-<div class="sec_gift">
-  <div class="inner_sec_gift">
-    <div class="img"><img src="images/img_gift.jpg" /></div>
-  </div>
+  <br />
+  <input type="text" name="mb_caption1" id="mb_caption1"><br />
+  <a href="#" onclick="create_movie();return false;">합성하기</a>
 </div>
-<div class="sec_banner">
-  <div class="inner_sec_banner">
-    <div class="img"><a href="#"><img src="images/banner_change.jpg" /></a></div>
-  </div>
+<div id="input_picture2_div" style="background:white;display:none;">
+  <h3>사진2</h3>
+  <a href="#" onclick="change_tab('1');return false;">사진1</a>
+  <a href="#" onclick="change_tab('2');return false;">사진2</a>
+  <a href="#" onclick="change_tab('3');return false;">사진3</a>
+  <a href="#" onclick="change_tab('4');return false;">사진4</a>
+  <a href="#" onclick="change_tab('5');return false;">사진5</a><br />
+  <div class="inner_file clearfix">
+<input type="hidden" id="up_images2" value="">
+                <div class="btn">
+                  <span class="btn btn-success fileinput-button">
+                    <i class="glyphicon glyphicon-plus"></i>
+                    <span>
+					  <div id="files2">
+					    <a href="#"><img src="./images/imsi_preview.PNG" id="preview2" onclick="sel_image('2');return false;"></a>
+					  </div>
+					</span>
+                    <!-- The file input field used as target for the file upload widget -->
+                    <input id="fileupload2" type="file" name="files[]" >
+                  </span>
+                  <!-- The global progress bar -->
+                  <div id="progress" class="progress">
+                    <div class="progress-bar progress-bar-success"></div>
+                  </div>
+                  <!-- <a href="#"><img src="images/popup/btn_select_file.png" alt=""/></a> -->
+                </div>
+              </div>
+              <div class="pre_img" style="width:175px;height:109px">
+                <!-- The container for the uploaded files -->
+                <!-- <div id="files" class="files">
+                  <img src="images/popup/pre_img.jpg" alt=""/>
+                </div> -->
+              </div>
+  <br />
+  <input type="text" name="mb_caption2" id="mb_caption2"><br />
+  <a href="#" onclick="create_movie();return false;">합성하기</a>
 </div>
-<div class="sec_footer">
-  <div class="inner_sec_footer">
-    <div class="img"><a href="#"><img src="images/footer.jpg" /></a></div>
-    <div class="img txt" style="display:none;"><img src="images/footer_txt.jpg" /></div>
-  </div>
+<div id="input_picture3_div" style="background:white;display:none;">
+  <h3>사진3</h3>
+  <a href="#" onclick="change_tab('1');return false;">사진1</a>
+  <a href="#" onclick="change_tab('2');return false;">사진2</a>
+  <a href="#" onclick="change_tab('3');return false;">사진3</a>
+  <a href="#" onclick="change_tab('4');return false;">사진4</a>
+  <a href="#" onclick="change_tab('5');return false;">사진5</a><br />
+<div class="inner_file clearfix">
+<input type="hidden" id="up_images3" value="">
+                <div class="btn">
+                  <span class="btn btn-success fileinput-button">
+                    <i class="glyphicon glyphicon-plus"></i>
+                    <span>
+					  <div id="files3">
+					    <a href="#"><img src="./images/imsi_preview.PNG" id="preview3" onclick="sel_image('3');return false;"></a>
+					  </div>
+					</span>
+                    <!-- The file input field used as target for the file upload widget -->
+                    <input id="fileupload3" type="file" name="files[]" >
+                  </span>
+                  <!-- The global progress bar -->
+                  <div id="progress" class="progress">
+                    <div class="progress-bar progress-bar-success"></div>
+                  </div>
+                  <!-- <a href="#"><img src="images/popup/btn_select_file.png" alt=""/></a> -->
+                </div>
+              </div>
+              <div class="pre_img" style="width:175px;height:109px">
+                <!-- The container for the uploaded files -->
+                <!-- <div id="files" class="files">
+                  <img src="images/popup/pre_img.jpg" alt=""/>
+                </div> -->
+              </div>
+  <br />
+  <input type="text" name="mb_caption3" id="mb_caption3"><br />
+  <a href="#" onclick="create_movie();return false;">합성하기</a>
+</div>
+<div id="input_picture4_div" style="background:white;display:none;">
+  <h3>사진4</h3>
+  <a href="#" onclick="change_tab('1');return false;">사진1</a>
+  <a href="#" onclick="change_tab('2');return false;">사진2</a>
+  <a href="#" onclick="change_tab('3');return false;">사진3</a>
+  <a href="#" onclick="change_tab('4');return false;">사진4</a>
+  <a href="#" onclick="change_tab('5');return false;">사진5</a><br />
+<div class="inner_file clearfix">
+<input type="hidden" id="up_images4" value="">
+                <div class="btn">
+                  <span class="btn btn-success fileinput-button">
+                    <i class="glyphicon glyphicon-plus"></i>
+                    <span>
+					  <div id="files4">
+					    <a href="#"><img src="./images/imsi_preview.PNG" id="preview4" onclick="sel_image('4');return false;"></a>
+					  </div>
+					</span>
+                    <!-- The file input field used as target for the file upload widget -->
+                    <input id="fileupload4" type="file" name="files[]" >
+                  </span>
+                  <!-- The global progress bar -->
+                  <div id="progress" class="progress">
+                    <div class="progress-bar progress-bar-success"></div>
+                  </div>
+                  <!-- <a href="#"><img src="images/popup/btn_select_file.png" alt=""/></a> -->
+                </div>
+              </div>
+              <div class="pre_img" style="width:175px;height:109px">
+                <!-- The container for the uploaded files -->
+                <!-- <div id="files" class="files">
+                  <img src="images/popup/pre_img.jpg" alt=""/>
+                </div> -->
+              </div>
+  <br />
+  <input type="text" name="mb_caption4" id="mb_caption4"><br />
+  <a href="#" onclick="create_movie();return false;">합성하기</a>
+</div>
+<div id="input_picture5_div" style="background:white;display:none;">
+  <h3>사진5</h3>
+  <a href="#" onclick="change_tab('1');return false;">사진1</a>
+  <a href="#" onclick="change_tab('2');return false;">사진2</a>
+  <a href="#" onclick="change_tab('3');return false;">사진3</a>
+  <a href="#" onclick="change_tab('4');return false;">사진4</a>
+  <a href="#" onclick="change_tab('5');return false;">사진5</a><br />
+<div class="inner_file clearfix">
+<input type="hidden" id="up_images5" value="">
+                <div class="btn">
+                  <span class="btn btn-success fileinput-button">
+                    <i class="glyphicon glyphicon-plus"></i>
+                    <span>
+					  <div id="files5">
+					    <a href="#"><img src="./images/imsi_preview.PNG" id="preview5" onclick="sel_image('5');return false;"></a>
+					  </div>
+					</span>
+                    <!-- The file input field used as target for the file upload widget -->
+                    <input id="fileupload5" type="file" name="files[]" >
+                  </span>
+                  <!-- The global progress bar -->
+                  <div id="progress" class="progress">
+                    <div class="progress-bar progress-bar-success"></div>
+                  </div>
+                  <!-- <a href="#"><img src="images/popup/btn_select_file.png" alt=""/></a> -->
+                </div>
+              </div>
+              <div class="pre_img" style="width:175px;height:109px">
+                <!-- The container for the uploaded files -->
+                <!-- <div id="files" class="files">
+                  <img src="images/popup/pre_img.jpg" alt=""/>
+                </div> -->
+              </div>
+  <br />
+  <input type="text" name="mb_caption5" id="mb_caption5"><br />
+  <a href="#" onclick="create_movie();return false;">합성하기</a>
 </div>
 <?
 	include_once   "./popup_div.php";
@@ -58,12 +419,6 @@ $(document).ready(function() {
 	$("#cboxMiddleRight").hide();
 	$("#cboxTopCenter").hide();
 	$("#cboxBottomCenter").hide();
-
-	var yt_width = $(".inner_sec_movie").width();
-	var youtube_height = (yt_width / 16) * 9;
-	$("#ytplayer").width(yt_width);
-	$("#ytplayer").height(youtube_height);
-
 });
 
 function show_input_div()
