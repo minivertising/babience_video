@@ -450,6 +450,7 @@ function create_movie()
 			$("#input_baby_div").hide();
 		},
 		success: function(response){
+			alert(response);
 			//$("#input_baby_div").show();
 			$("#movie_div").show();
 			$("#loading_div").hide();

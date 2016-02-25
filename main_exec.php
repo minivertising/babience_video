@@ -120,13 +120,14 @@ switch ($_REQUEST['exec'])
 			$cap_image5			= caption_image($mb_caption5, $mb_serial,"5");
 		}
 
-		$out_exec	= 'ffmpeg \ -loop 1 -i ./files/'.$mb_serial.'/'.$img_name1.' \ -loop 1 -i ./files/'.$mb_serial.'/'.$img_name2.' \ -loop 1 -i ./files/'.$mb_serial.'/'.$img_name3.' \ -loop 1 -i ./files/'.$mb_serial.'/'.$img_name4.' \ -loop 1 -i ./files/'.$mb_serial.'/'.$img_name5.' \ -filter_complex \ "[0:v]trim=duration=15,fade=t=out:st=14.5:d=0.5[v0]; \ [1:v]trim=duration=15,fade=t=in:st=0:d=0.5,fade=t=out:st=14.5:d=0.5[v1]; \ [2:v]trim=duration=15,fade=t=in:st=0:d=0.5,fade=t=out:st=14.5:d=0.5[v2]; \ [3:v]trim=duration=15,fade=t=in:st=0:d=0.5,fade=t=out:st=14.5:d=0.5[v3]; \ [4:v]trim=duration=15,fade=t=in:st=0:d=0.5,fade=t=out:st=14.5:d=0.5[v4]; \ [v0][v1][v2][v3][v4]concat=n=5:v=1:a=0,format=yuv420p[v]" -map "[v]" out.mp4';
+		//$out_exec	= 'ffmpeg \ -loop 1 -i ./files/'.$mb_serial.'/'.$img_name1.' \ -loop 1 -i ./files/'.$mb_serial.'/'.$img_name2.' \ -loop 1 -i ./files/'.$mb_serial.'/'.$img_name3.' \ -loop 1 -i ./files/'.$mb_serial.'/'.$img_name4.' \ -loop 1 -i ./files/'.$mb_serial.'/'.$img_name5.' \ -filter_complex \ "[0:v]trim=duration=15,fade=t=out:st=14.5:d=0.5[v0]; \ [1:v]trim=duration=15,fade=t=in:st=0:d=0.5,fade=t=out:st=14.5:d=0.5[v1]; \ [2:v]trim=duration=15,fade=t=in:st=0:d=0.5,fade=t=out:st=14.5:d=0.5[v2]; \ [3:v]trim=duration=15,fade=t=in:st=0:d=0.5,fade=t=out:st=14.5:d=0.5[v3]; \ [4:v]trim=duration=15,fade=t=in:st=0:d=0.5,fade=t=out:st=14.5:d=0.5[v4]; \ [v0][v1][v2][v3][v4]concat=n=5:v=1:a=0,format=yuv420p[v]" -map "[v]" out.mp4';
 
-		exec($out_exec,$output);
+		//exec($out_exec,$output);
 
-		//$query 	= "UPDATE ".$_gl['member_info_table']." SET mb_photo1='".$img_name1."', mb_photo2='".$img_name2."', mb_photo3='".$img_name3."', mb_photo4='".$img_name4."', mb_photo5='".$img_name5."', mb_caption1='".$mb_caption1."', mb_caption2='".$mb_caption2."', mb_caption3='".$mb_caption3."', mb_caption4='".$mb_caption4."', mb_caption5='".$mb_caption5."' WHERE mb_serial='".$mb_serial."'";
-		//$result 	= mysqli_query($my_db, $query);
-		print_r($out_exec);
+		$query 	= "UPDATE ".$_gl['member_info_table']." SET mb_photo1='".$img_name1."', mb_photo2='".$img_name2."', mb_photo3='".$img_name3."', mb_photo4='".$img_name4."', mb_photo5='".$img_name5."', mb_caption1='".$mb_caption1."', mb_caption2='".$mb_caption2."', mb_caption3='".$mb_caption3."', mb_caption4='".$mb_caption4."', mb_caption5='".$mb_caption5."' WHERE mb_serial='".$mb_serial."'";
+		$result 	= mysqli_query($my_db, $query);
+
+		echo $query;
 	break;
 }
 ?>
