@@ -312,13 +312,15 @@
         </div>
         <div class="btn_block img">
           <a href="../files/out.mp4" download><img src="images/popup/btn_down.png" /></a>
+          <a href="#" onclick="prev_page();return false;">이전</a>
+          <a href="#" onclick="next_page();return false;">다음</a>
         </div>
       </div><!--inner-->
     </div>
   </div>
 </div>
 
-
+<!------------------------------ 체험팩 쿠폰 받을 사람 엔딩 ------------------------------>
 <div id="end_coupon_div" class="popup_wrap" style="display:none;">
   <div class="p_mid p_position">
     <div class="block_close clearfix">
@@ -340,6 +342,38 @@
     </div>
   </div>
 </div>
+<!------------------------------ 체험팩 쿠폰 받을 사람 엔딩 ------------------------------>
+
+<!------------------------------ 체험팩 쿠폰 이미 받은 사람 엔딩 ------------------------------>
+<div id="end_sns_div" class="popup_wrap" style="display:none;">
+  <div class="p_mid p_position">
+    <div class="block_close clearfix">
+      <a href="index.php" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+    </div>
+    <div class="block_content ending_sns">
+      <div class="inner">
+        <div class="ending_t">
+          <div class="name c_babyname">김서우</div>
+          <div class="img"><img src="images/popup/ending_t_1.png" /></div>
+        </div>
+        <div class="share">
+          <img src="images/popup/txt_sns.png" class="txt_sns"/>
+          <div>
+            <a href="#" onclick="sns_share('kt','share');return false;"><img src="images/popup/btn_kt.png" /></a>
+            <a href="#" onclick="sns_share('ks','share');return false;"><img src="images/popup/btn_ks.png" /></a>
+            <a href="#" onclick="sns_share('fb','share');return false;"><img src="images/popup/btn_fb.png" /></a>
+          </div>
+        </div>
+        <div class="btn_block">
+          <a href="index.php" class="img"><img src="images/popup/btn_onemore.png" /></a>
+        </div>
+      </div><!--inner-->
+    </div>
+  </div>
+</div>
+<!------------------------------ 체험팩 쿠폰 이미 받은 사람 엔딩 ------------------------------>
+
+
 
 </body>
 </html>
@@ -451,12 +485,33 @@ function create_movie()
 		},
 		success: function(response){
 			console.log(response);
-			//$("#input_baby_div").show();
-			$("#movie_div").show();
-			$("#loading_div").hide();
+			if (response == "Y")
+			{
+				$(".serial").html("<?=$serial?>");
+				$("#end_coupon_div").show();
+				$("#loading_div").hide();
+			}else if (response == "D"){
+				$(".c_babyname").html(mb_baby_name);
+				$("#end_sns_div").show();
+				$("#loading_div").hide();
+			}else{
+				alert('접속자가 많아 참여가 지연되고 있습니다. 다시 시도해 주세요.');
+				location.href="index.php";
+			}
 			//console.log(response);
 		}
 	});
+}
+
+function prev_page()
+{
+	$("#input_baby_div").show();
+	$("#movie_div").hide();
+}
+
+function next_page()
+{
+	$("#movie_div").hide();
 }
 
 $(function () {
@@ -888,4 +943,76 @@ $(function () {
         .parent().addClass($.support.fileInput ? undefined : 'disabled');
 });
 
+function sns_share(media, flag)
+{
+	if (media == "fb")
+	{
+
+		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://grow.babience-event.com/MOBILE/share_page.php?serial=<?=$serial?>'),'sharer','toolbar=0,status=0,width=600,height=325');
+		$.ajax({
+			type   : "POST",
+			async  : false,
+			url    : "../main_exec.belif",
+			data:{
+				"exec" : "insert_share_info",
+				"sns_media" : media,
+				"sns_flag"		: flag
+			}
+		});
+		//var newWindow = window.open('https://www.facebook.com/dialog/feed?app_id=1604312303162602&display=popup&caption=testurl&link=http://vacance.babience-event.com&redirect_uri=http://www.hanatour.com','sharer','toolbar=0,status=0,width=600,height=325');
+	}else if (media == "tw"){
+		var newWindow = window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent("빌리의 수분 폭탄 공장에 숨어 있는 빌리를 찾아주신 분에게는 즉석 당첨을 통해 수분 폭탄 쿠션 체험 키트를 드립니다. ") + '&url='+ encodeURIComponent('http://bit.ly/1QuvGJU'),'sharer','toolbar=0,status=0,width=600,height=325');
+		$.ajax({
+			type   : "POST",
+			async  : false,
+			url    : "../main_exec.belif",
+			data:{
+				"exec" : "insert_share_info",
+				"sns_media" : media,
+				"sns_flag"		: flag
+			}
+		});
+	}else if (media == "kt"){
+		// 카카오톡 링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+		//Kakao.Link.createTalkLinkButton({
+		Kakao.Link.sendTalkLink({
+		  //container: '#kakao-link-btn',
+		  label: "우리아기 특별한 성장 영상 공개!",
+		  image: {
+			src: 'http://grow.babience-event.com/<?=$serial?>/medium/final_<?=$serial?>_1.jpg',
+			width: '800',
+			height: '600'
+		  },
+		  webButton: {
+			text: '[베비언스] 베비언스 먹고 폭풍 성장!',
+			url: 'http://grow.babience-event.com/MOBILE/share_page.php?serial=<?=$serial?>' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
+		  }
+		});
+		$.ajax({
+			type   : "POST",
+			async  : false,
+			url    : "../main_exec.belif",
+			data:{
+				"exec" : "insert_share_info",
+				"sns_media" : media,
+				"sns_flag"		: flag
+			}
+		});
+	}else{
+		Kakao.Story.share({
+			url: 'http://grow.babience-event.com/MOBILE/share_page.php?serial=<?=$serial?>',
+			text: '우리아기 특별한 성장 영상 공개!\r\nhttp://grow.babience-event.com/mypage.php?serial=<?=$serial?>'
+		});
+		$.ajax({
+			type   : "POST",
+			async  : false,
+			url    : "../main_exec.belif",
+			data:{
+				"exec" : "insert_share_info",
+				"sns_media" : media,
+				"sns_flag"		: flag
+			}
+		});
+	}
+}
 </script>
