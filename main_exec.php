@@ -34,7 +34,7 @@ switch ($_REQUEST['exec'])
 			$flag	= "N||".$serial;
 
 		// $flag=D ( 중복 ), Y ( 참여완료 ), N ( 오류 )
-		echo $flag;
+		echo $query;
 	break;
 
 	case "update_baby_info" :
