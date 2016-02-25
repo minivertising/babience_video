@@ -13,10 +13,10 @@
 
 	if($gubun == "MOBILE")
 	{
-		Header("Location:http://www.thefaceshop-event.com/MOBILE/index.php?media=".$media."");
+		Header("Location:http://grow.babience-event.com/MOBILE/index.php?media=".$media."");
 		exit;
 	}else{
-		Header("Location:http://www.thefaceshop-event.com/PC/index.php?media=".$media."");
+		Header("Location:http://grow.babience-event.com/MOBILE/index.php?media=".$media."");
 		exit;
 	}
 ?>

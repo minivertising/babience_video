@@ -1,6 +1,6 @@
 <?php
 	session_start();
-    //header("Content-Type: text/html; charset=UTF-8");
+	header("Content-Type: text/html; charset=UTF-8");
 	//환경설정 파일
 	include_once "include/global.php"; 			//변수정보
 	include_once "include/function.php"; 		//함수정보
@@ -33,6 +33,7 @@
 			break;
 		}
 	}
+	/*
 	if(stripos( $_SERVER['HTTP_USER_AGENT'], "MSIE 7.0" ))
 		$IE7	= "Y";
 	else
@@ -42,7 +43,7 @@
 		$IE8	= "Y";
 	else
 		$IE8	= "N";
-
+	*/
 /*
 	if(stripos( $_SERVER['HTTP_USER_AGENT'], "iPhone" ) || stripos( $_SERVER['HTTP_USER_AGENT'], "iPod" ) || stripos( $_SERVER['HTTP_USER_AGENT'], "iPad" ))
 		$iPhoneYN = "Y";
