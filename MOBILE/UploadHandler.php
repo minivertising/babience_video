@@ -531,7 +531,7 @@ class UploadHandler
 
 		$namearr	= explode(".",stripslashes($name));
 		$arr_num	= count($namearr) -1;
-		$name	= $_REQUEST['s_id']."_1.".$namearr[$arr_num];
+		$name	= $_REQUEST['s_id']."_1.".strtolower($namearr[$arr_num]);
 		//$name	= date("YmdHis").".".$namearr[1];
 		//$ssl_name = stripslashes($name);
 		//$namearr	= substr($ssl_name,-3);
