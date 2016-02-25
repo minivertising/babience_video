@@ -379,6 +379,11 @@
 </html>
 <script type="text/javascript">
 var video_concept	= null;
+
+$(document).ready(function() {
+	Kakao.init('d58dc6bc022da9c054b20aff9c23e0f9');
+});
+
 function sel_concept(param)
 {
 	video_concept = param;
