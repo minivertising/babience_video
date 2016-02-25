@@ -81,7 +81,7 @@ switch ($_REQUEST['exec'])
 		{
 			$img_name1arr			= explode(".",stripslashes($img_name1));
 			$img_name1arr_num	= count($img_name1arr) -1;
-			$img_name1			= $mb_serial."_1.".$img_name1arr[$img_name1arr_num]; 
+			$img_name1			= $mb_serial."_1.".strtolower($img_name1arr[$img_name1arr_num]); 
 			$new_image1			= merge_image($img_name1, $mb_serial,"1");
 			$cap_image1			= caption_image($mb_caption1, $mb_serial,"1");
 		}
@@ -90,7 +90,7 @@ switch ($_REQUEST['exec'])
 		{
 			$img_name2arr			= explode(".",stripslashes($img_name2));
 			$img_name2arr_num	= count($img_name2arr) -1;
-			$img_name2			= $mb_serial."_2.".$img_name2arr[$img_name2arr_num]; 
+			$img_name2			= $mb_serial."_2.".strtolower($img_name2arr[$img_name2arr_num]); 
 			$new_image2			= merge_image($img_name2, $mb_serial,"2");
 			$cap_image2			= caption_image($mb_caption2, $mb_serial,"2");
 		}
@@ -99,7 +99,7 @@ switch ($_REQUEST['exec'])
 		{
 			$img_name3arr			= explode(".",stripslashes($img_name3));
 			$img_name3arr_num	= count($img_name3arr) -1;
-			$img_name3			= $mb_serial."_3.".$img_name3arr[$img_name3arr_num]; 
+			$img_name3			= $mb_serial."_3.".strtolower($img_name3arr[$img_name3arr_num]); 
 			$new_image3			= merge_image($img_name3, $mb_serial,"3");
 			$cap_image3			= caption_image($mb_caption3, $mb_serial,"3");
 		}
@@ -108,7 +108,7 @@ switch ($_REQUEST['exec'])
 		{
 			$img_name4arr			= explode(".",stripslashes($img_name4));
 			$img_name4arr_num	= count($img_name4arr) -1;
-			$img_name4			= $mb_serial."_4.".$img_name4arr[$img_name4arr_num]; 
+			$img_name4			= $mb_serial."_4.".strtolower($img_name4arr[$img_name4arr_num]); 
 			$new_image4			= merge_image($img_name4, $mb_serial,"4");
 			$cap_image4			= caption_image($mb_caption4, $mb_serial,"4");
 		}
@@ -117,7 +117,7 @@ switch ($_REQUEST['exec'])
 		{
 			$img_name5arr			= explode(".",stripslashes($img_name5));
 			$img_name5arr_num	= count($img_name5arr) -1;
-			$img_name5			= $mb_serial."_5.".$img_name5arr[$img_name5arr_num]; 
+			$img_name5			= $mb_serial."_5.".strtolower($img_name5arr[$img_name5arr_num]); 
 			$new_image5			= merge_image($img_name5, $mb_serial,"5");
 			$cap_image5			= caption_image($mb_caption5, $mb_serial,"5");
 		}
