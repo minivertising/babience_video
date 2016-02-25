@@ -5,6 +5,21 @@
 	$serial			= $_REQUEST['serial'];
 ?>
 <body>
+<div id="loading_div" class="popup_wrap" style="display:none;">
+  <div class="p_mid p_position">
+    <div class="block_close clearfix">
+      <a href="#" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+    </div>
+    <div class="block_content loading">
+      <div class="inner">
+        <div class="img">
+          <img src="images/popup/loading.gif" />
+        </div>
+      </div><!--inner-->
+    </div>
+  </div>
+</div>
+
 <div id="concept_div" class="popup_wrap">
   <div class="p_mid p_position">
     <div class="block_close clearfix">
@@ -273,6 +288,59 @@
     </div>
   </div>
 </div>
+
+<div id="movie_div" class="popup_wrap" style="display:none;">
+  <div class="p_mid p_position">
+    <div class="block_close clearfix">
+      <a href="#" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+    </div>        
+    <div class="block_content movie">
+      <div class="inner">
+        <div class="title img">
+          <img src="images/popup/title_movie_1.jpg" />
+        </div>
+        <div class="mv">
+          <div class="title">
+            <div class="img"><img src="images/popup/movie_sub_t_1.png" /></div>
+            <div class="name">
+              김서우<span><img src="images/popup/label_baby.png" width="35" /></span>
+            </div>
+          </div>
+          <div class="youtube">
+            <video src="../files/BEB54EC761/out.mp4" controls autoplay loop muted preload="auto" poster="demo.jpg" id="video_player"></video>
+          </div>
+        </div>
+        <div class="btn_block img">
+          <a href="#"><img src="images/popup/btn_down.png" /></a>
+        </div>
+      </div><!--inner-->
+    </div>
+  </div>
+</div>
+
+
+<div id="end_coupon_div" class="popup_wrap" style="display:none;">
+  <div class="p_mid p_position">
+    <div class="block_close clearfix">
+      <a href="#" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+    </div>
+    <div class="block_content coupon">
+      <div class="inner">
+        <div class="coupon_img">
+          <div class="serial">serial</div>
+          <div class="img"><img src="images/popup/bg_coupon.jpg" /></div>
+        </div>
+        <div class="img">
+          <img src="images/popup/txt_go_home.png" />
+        </div>
+        <div class="btn_block">
+          <a href="#" class="img"><img src="images/popup/btn_home.png" /></a>
+        </div>
+      </div><!--inner-->
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
 <script type="text/javascript">
@@ -377,8 +445,15 @@ function create_movie()
 			"mb_serial"				: "<?=$serial?>"
 		},
 		url: "../main_exec.php",
+		beforeSend: function(response){
+			$("#loading_div").show();
+			$("#input_baby_div").hide();
+		},
 		success: function(response){
-			console.log(response);
+			//$("#input_baby_div").show();
+			$("#movie_div").show();
+			$("#loading_div").hide();
+			//console.log(response);
 		}
 	});
 }
