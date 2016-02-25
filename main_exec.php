@@ -56,6 +56,8 @@ switch ($_REQUEST['exec'])
 	break;
 
 	case "create_movie" :
+		$mb_baby_name		= $_REQUEST['mb_baby_name'];
+		$mb_baby_age			= $_REQUEST['mb_baby_age'];
 		$img_name1	= $_REQUEST['up_image1'];
 		$img_name2	= $_REQUEST['up_image2'];
 		$img_name3	= $_REQUEST['up_image3'];
@@ -124,7 +126,7 @@ switch ($_REQUEST['exec'])
 
 		//exec($out_exec,$output);
 
-		$query 	= "UPDATE ".$_gl['member_info_table']." SET mb_photo1='".$img_name1."', mb_photo2='".$img_name2."', mb_photo3='".$img_name3."', mb_photo4='".$img_name4."', mb_photo5='".$img_name5."', mb_caption1='".$mb_caption1."', mb_caption2='".$mb_caption2."', mb_caption3='".$mb_caption3."', mb_caption4='".$mb_caption4."', mb_caption5='".$mb_caption5."' WHERE mb_serial='".$mb_serial."'";
+		$query 	= "UPDATE ".$_gl['member_info_table']." SET mb_baby_name='".$mb_baby_name."',mb_baby_age='".$mb_baby_age."',mb_photo1='".$img_name1."', mb_photo2='".$img_name2."', mb_photo3='".$img_name3."', mb_photo4='".$img_name4."', mb_photo5='".$img_name5."', mb_caption1='".$mb_caption1."', mb_caption2='".$mb_caption2."', mb_caption3='".$mb_caption3."', mb_caption4='".$mb_caption4."', mb_caption5='".$mb_caption5."' WHERE mb_serial='".$mb_serial."'";
 		$result 	= mysqli_query($my_db, $query);
 
 		echo $query;
