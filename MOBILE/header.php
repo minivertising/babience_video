@@ -1,7 +1,7 @@
 <?
 	include_once "../config.php";
 
-	if (!isset($_REQUEST['serial']))
+	if (isset($_REQUEST['serial']))
 		$serial2	= $_REQUEST['serial'];
 ?>
 <!doctype html>
