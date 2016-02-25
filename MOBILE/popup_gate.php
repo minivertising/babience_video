@@ -307,11 +307,11 @@
             </div>
           </div>
           <div class="youtube">
-            <video src="../files/BEB54EC761/out.mp4" controls autoplay loop muted preload="auto" poster="demo.jpg" id="video_player"></video>
+            <video src="../files/out.mp4" controls autoplay loop muted preload="auto" poster="demo.jpg" id="video_player"></video>
           </div>
         </div>
         <div class="btn_block img">
-          <a href="#"><img src="images/popup/btn_down.png" /></a>
+          <a href="../files/out.mp4" download><img src="images/popup/btn_down.png" /></a>
         </div>
       </div><!--inner-->
     </div>
