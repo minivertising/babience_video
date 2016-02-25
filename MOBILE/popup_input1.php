@@ -17,7 +17,7 @@
         <div class="input_block">
           <div class="title img">
             <img src="images/popup/title_input_1.png" />
-          </div>                    
+          </div>
           <div class="inner_input_block">
             <div class="input_one">
               <div class="inner_input_one clearfix">
@@ -58,6 +58,7 @@
 <script type="text/javascript">
 var chk_privacy_flag	= 0;
 var chk_adver_flag		= 0;
+var serial_num		= null;
 
 $(document).ready(function() {
 	$("#cboxTopLeft").hide();
@@ -159,7 +160,7 @@ function insert_input()
 	if (mb_phone == "")
 	{
 		alert('휴대폰 번호를 입력해주세요.');
-		$("#mb_phone1").focus();
+		$("#mb_phone").focus();
 		//chk_ins = 0;
 		return false;
 	}
@@ -195,7 +196,7 @@ function insert_input()
 			{
 				//$("#input_div").hide();
 				//$("#concept_div").show();
-				location.href="./popup_gate.php?mb_phone=" + mb_phone;
+				location.href="./popup_gate.php?mb_phone=" + mb_phone + "&serial=<?=$serial?>";
 			}else{
 				alert("참여자가 많아 지연되고 있습니다. 다시 응모해 주세요.");
 				location.href="index.php";

@@ -988,29 +988,29 @@ function proc_watermark($src, $src_w, $src_h, $path_mark_file, $pos, $sharpness,
 
       case 1 : //상단 왼쪽
 
-        $src_x = 0 + $padding;
-        $src_y = 0 + $padding;
+        $src_x = ceil(($src_w - $mark_w) / 2);
+        $src_y = ceil(($src_h - $mark_h) / 2);
 
         break;
 
       case 2 : //상단 오른쪽
 
-        $src_x = $src_w - $mark_w - $padding;
-        $src_y = 0 + $padding;
+        $src_x = ceil(($src_w - $mark_w) / 2);
+        $src_y = ceil(($src_h - $mark_h) / 2);
 
         break;
 
       case 3 : //하단 왼쪽
 
-        $src_x = 0 + $padding;
-        $src_y = $src_h - $mark_h - $padding;
+        $src_x = ceil(($src_w - $mark_w) / 2);
+        $src_y = ceil(($src_h - $mark_h) / 2);
 
         break;
 
       case 4 : //하단 오른쪽
 
-        $src_x = $src_w - $mark_w - $padding;
-        $src_y = $src_h - $mark_h - $padding;
+        $src_x = ceil(($src_w - $mark_w) / 2);
+        $src_y = ceil(($src_h - $mark_h) / 2);
 
         break;
 
@@ -1023,8 +1023,8 @@ function proc_watermark($src, $src_w, $src_h, $path_mark_file, $pos, $sharpness,
 
       default : // 그 밖의 값은 전부 상단 왼쪽 치부
 
-        $src_x = 0 + $padding;
-        $src_y = 0 + $padding;
+        $src_x = ceil(($src_w - $mark_w) / 2);
+        $src_y = ceil(($src_h - $mark_h) / 2);
 
     }
 
@@ -1085,7 +1085,7 @@ function thumnail_test1($path_src_file, $path_save_file, $path_mark_file, $save_
   $crop_pos_height = 1;//높이 기준 크롭시 상단을 기준
 
   $watermark_path_file = $path_mark_file;//워터마크로 사용할 파일 경로 : 없음
-  $watermark_pos = 1;//워터마크 찍는 위치 : 하단 오른쪽
+  $watermark_pos = 5;//워터마크 찍는 위치 : 하단 오른쪽
   $watermark_sharpness = 100;//워터마크 이미지의 선명도 : 30 %
   $watermark_padding = 0;//원본과 워터마크 사이의 여백 : 10px
 
