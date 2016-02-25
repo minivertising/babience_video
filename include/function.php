@@ -1291,7 +1291,7 @@ function getPrintToImage($serial, $num, $szFilePath, &$objFont, $serial, $nFontA
 			return FALSE;
     }
 	imagedestroy($nImage);
-	echo "complete";
+	//echo "complete";
     return TRUE;
 }
 ?>
