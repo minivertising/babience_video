@@ -990,7 +990,7 @@ function sns_share(media, flag)
 		  },
 		  webButton: {
 			text: '[베비언스] 베비언스 먹고 폭풍 성장!',
-			url: 'http://grow.babience-event.com/MOBILE/share_page.php?serial=<?=$serial?>' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
+			url: 'http://grow.babience-event.com/MOBILE/index.php?serial=<?=$serial?>' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
 		  }
 		});
 		$.ajax({
