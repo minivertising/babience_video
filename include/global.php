@@ -8,4 +8,8 @@
 	$_gl['bann_info_table']		= "bann_info";				//체험팩 사용자 테이블
 
 	$_gl['youtube_url']				= "https://www.youtube.com/embed/3rBxaOJPVGk?controls=0&loop=1&playlist=3rBxaOJPVGk&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0&autoplay=1"; // 유튜브 URL
+	$_gl['youtube_url1']				= "https://www.youtube.com/embed/3rBxaOJPVGk?controls=0&loop=1&playlist=3rBxaOJPVGk&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0&autoplay=1"; // 유튜브 URL
+	$_gl['youtube_url2']				= "https://www.youtube.com/embed/3rBxaOJPVGk?controls=0&loop=1&playlist=3rBxaOJPVGk&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0&autoplay=1"; // 유튜브 URL
+	$_gl['youtube_url3']				= "https://www.youtube.com/embed/3rBxaOJPVGk?controls=0&loop=1&playlist=3rBxaOJPVGk&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0&autoplay=1"; // 유튜브 URL
+	$_gl['youtube_url4']				= "https://www.youtube.com/embed/3rBxaOJPVGk?controls=0&loop=1&playlist=3rBxaOJPVGk&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0&autoplay=1"; // 유튜브 URL
 ?>

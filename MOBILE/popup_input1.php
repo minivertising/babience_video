@@ -95,17 +95,6 @@ function adver_check()
 	}
 }
 
-function open_pop(param)
-{
-	$.colorbox({innerWidth:"100%", initialWidth:"95%", inline:true, opacity:"0.9", scrolling:false, reposition: false,closeButton:false, overlayClose: false, open:true, speed:0, fadeOut: 300, href:"#"+param, onComplete: function(){
-		$("#cboxContent").css("background","none");
-		$("#colorbox").width($("body").width());
-		$("#cboxWrapper").width($("body").width());
-	},
-	onClosed: function(){
-		$("#cboxContent").css("background","#fff");
-	}});
-}
 
 function chk_len(val)
 {

@@ -25,7 +25,7 @@
       <link rel="stylesheet" href="../lib/colorbox/colorbox.css">
       <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
       <script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
-      <!-- <script type="text/javascript" src="../js/m_main.js"></script> -->
+      <script type="text/javascript" src="../js/m_main.js"></script>
       <script type="text/javascript" src="../lib/colorbox/jquery.colorbox-min.js"></script>
       <!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
       <script src="../lib/jQuery-File-Upload/js/vendor/jquery.ui.widget.js"></script>

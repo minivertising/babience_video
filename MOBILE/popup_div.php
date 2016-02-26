@@ -56,4 +56,84 @@
 </div>
 <!-- 광고성 정보전송 동의 약관 팝업 -->
 
+<!-- 영상컨셉1 예시 팝업 -->
+<div id="exam1_popup" class="popup_wrap view">
+  <div class="p_mid p_view p_position">
+    <div class="block_close clearfix">
+      <a href="#" onclick="$.colorbox.close();" class="btn_close"><img src="images/popup/btn_close_2.png" /></a>
+    </div>        
+    <div class="block_content">
+      <div class="inner">
+        <div class="title img">
+          <img src="images/popup/title_view_1.png" />
+        </div>
+        <div class="youtube">
+          <iframe allowfullscreen="1" src="<?=$_gl['youtube_url1']?>" frameborder="0" id="ytplayer1" class="ytplayer1"></iframe>
+        </div>
+      </div><!--inner-->
+    </div>
+  </div>
+</div>
+<!-- 영상컨셉1 예시 팝업 -->
+
+<!-- 영상컨셉2 예시 팝업 -->
+<div id="exam2_popup" class="popup_wrap view">
+  <div class="p_mid p_view p_position">
+    <div class="block_close clearfix">
+      <a href="#" onclick="$.colorbox.close();" class="btn_close"><img src="images/popup/btn_close_2.png" /></a>
+    </div>        
+    <div class="block_content">
+      <div class="inner">
+        <div class="title img">
+          <img src="images/popup/title_view_2.png" />
+        </div>
+        <div class="youtube">
+          <iframe allowfullscreen="1" src="<?=$_gl['youtube_url2']?>" frameborder="0" id="ytplayer2" class="ytplayer2"></iframe>
+        </div>
+      </div><!--inner-->
+    </div>
+  </div>
+</div>
+<!-- 영상컨셉2 예시 팝업 -->
+
+<!-- 영상컨셉3 예시 팝업 -->
+<div id="exam3_popup" class="popup_wrap view">
+  <div class="p_mid p_view p_position">
+    <div class="block_close clearfix">
+      <a href="#" onclick="$.colorbox.close();" class="btn_close"><img src="images/popup/btn_close_2.png" /></a>
+    </div>        
+    <div class="block_content">
+      <div class="inner">
+        <div class="title img">
+          <img src="images/popup/title_view_3.png" />
+        </div>
+        <div class="youtube">
+          <iframe allowfullscreen="1" src="<?=$_gl['youtube_url3']?>" frameborder="0" id="ytplayer3" class="ytplayer3"></iframe>
+        </div>
+      </div><!--inner-->
+    </div>
+  </div>
+</div>
+<!-- 영상컨셉3 예시 팝업 -->
+
+<!-- 영상컨셉4 예시 팝업 -->
+<div id="exam4_popup" class="popup_wrap view">
+  <div class="p_mid p_view p_position">
+    <div class="block_close clearfix">
+      <a href="#" onclick="$.colorbox.close();" class="btn_close"><img src="images/popup/btn_close_2.png" /></a>
+    </div>        
+    <div class="block_content">
+      <div class="inner">
+        <div class="title img">
+          <img src="images/popup/title_view_4.png" />
+        </div>
+        <div class="youtube">
+          <iframe allowfullscreen="1" src="<?=$_gl['youtube_url4']?>" frameborder="0" id="ytplayer4" class="ytplayer4"></iframe>
+        </div>
+      </div><!--inner-->
+    </div>
+  </div>
+</div>
+<!-- 영상컨셉4 예시 팝업 -->
+
 </div>
