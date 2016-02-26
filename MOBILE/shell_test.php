@@ -1,3 +1,4 @@
 <?
-	exec("./test.sh imsi_f");
+	$output	= exec("./test.sh imsi");
+	print_r($output); 
 ?>
