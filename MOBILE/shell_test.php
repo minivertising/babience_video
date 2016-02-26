@@ -1,3 +1,3 @@
 <?
-	exec("test.sh imsi_f");
+	exec("./test.sh imsi_f");
 ?>
