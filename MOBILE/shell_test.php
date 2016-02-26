@@ -1,5 +1,5 @@
 <?
 	//$output	= "www";
-	$output	=  exec("./test.sh");
+	$output	=  shell_exec("./test.sh");
 	print_r($output); 
 ?>
