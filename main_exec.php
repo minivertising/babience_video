@@ -166,7 +166,15 @@ switch ($_REQUEST['exec'])
 		}else{
 			$flag	= "N";
 		}
-		echo $out_exec;
+		echo $out_exec1;
+		echo $out_exec2;
+		echo $out_exec3;
+		echo $out_exec4;
+		echo $out_exec5;
+		echo $out_exec6;
+		echo $out_exec7;
+		echo $out_exec8;
+		echo $out_exec9;
 	break;
 }
 ?>
