@@ -139,15 +139,18 @@ switch ($_REQUEST['exec'])
 		$out_exec8 = " [0:v][b1v][1:v][b2v][2:v][b3v][3:v][b4v][4:v]concat=n=9:v=1:a=0,format=yuv420p[v]";
 		$out_exec9 = ' " -pix_fmt yuv420p -map "[v]" ./files/F50C0DFE82/medium/out.mp4';
 
-		system(stripslashes($out_exec1));
-		system(stripslashes($out_exec2));
-		system(stripslashes($out_exec3));
-		system(stripslashes($out_exec4));
-		system(stripslashes($out_exec5));
-		system(stripslashes($out_exec6));
-		system(stripslashes($out_exec7));
-		system(stripslashes($out_exec8));
-		system(stripslashes($out_exec9));
+		shell_exec("mkdir test");
+		/*
+		shell_exec(stripslashes($out_exec1));
+		shell_exec(stripslashes($out_exec2));
+		shell_exec(stripslashes($out_exec3));
+		shell_exec(stripslashes($out_exec4));
+		shell_exec(stripslashes($out_exec5));
+		shell_exec(stripslashes($out_exec6));
+		shell_exec(stripslashes($out_exec7));
+		shell_exec(stripslashes($out_exec8));
+		shell_exec(stripslashes($out_exec9));
+		*/
 
 		$query 	= "UPDATE ".$_gl['member_info_table']." SET mb_baby_name='".$mb_baby_name."',mb_baby_age='".$mb_baby_age."',mb_photo1='".$img_name1."', mb_photo2='".$img_name2."', mb_photo3='".$img_name3."', mb_photo4='".$img_name4."', mb_photo5='".$img_name5."', mb_caption1='".$mb_caption1."', mb_caption2='".$mb_caption2."', mb_caption3='".$mb_caption3."', mb_caption4='".$mb_caption4."' WHERE mb_serial='".$mb_serial."'";
 		$result 	= mysqli_query($my_db, $query);
