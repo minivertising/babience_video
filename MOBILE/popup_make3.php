@@ -432,7 +432,8 @@ function create_movie()
 			"mb_caption4"			: mb_caption4,
 			"mb_caption5"			: mb_caption5,
 			"mb_phone"				: "<?=$mb_phone?>",
-			"mb_serial"				: "<?=$serial?>"
+			"mb_serial"				: "<?=$serial?>",
+			"mb_concept"			: "3"
 		},
 		url: "../main_exec.php",
 		beforeSend: function(response){

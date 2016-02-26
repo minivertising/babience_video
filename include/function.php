@@ -348,6 +348,13 @@ if ($concept == "1")
 		$result = thumnail_test1_2_1($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
 	else if ($p_num == "5")
 		$result = thumnail_test1_5_1($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
+}else if ($concept == "2"){
+	if ($p_num == "1")
+		$result = thumnail_test2_1_1($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
+	else if ($p_num == "2" || $p_num == "3" || $p_num == "4")
+		$result = thumnail_test2_2_1($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
+	else if ($p_num == "5")
+		$result = thumnail_test2_5_1($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
 }
 
 flush();
@@ -371,15 +378,22 @@ flush();
 			}
 		}else if ($concept == "2"){
 			if ($p_num == "1")
+			{
 				$path_mark_file = './files/frame_images/img_frm_2_1.png';
-			else if ($p_num == "2")
+				$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
+			}else if ($p_num == "2"){
 				$path_mark_file = './files/frame_images/img_frm_2_2.png';
-			else if ($p_num == "3")
+				$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
+			}else if ($p_num == "3"){
 				$path_mark_file = './files/frame_images/img_frm_2_3.png';
-			else if ($p_num == "4")
+				$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
+			}else if ($p_num == "4"){
 				$path_mark_file = './files/frame_images/img_frm_2_4.png';
-			else
+				$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
+			}else{
 				$path_mark_file = './files/frame_images/img_frm_2_5.png';
+				$path_save_file = './files/'.$img_folder.'/medium/final_'.$img_name; // 합성된 이미지 파일
+			}
 		}else if ($concept == "3"){
 			if ($p_num == "1")
 				$path_mark_file = './files/frame_images/img_frm_3_1.png';
@@ -452,6 +466,13 @@ $options['watermark_pos'] = 1;
 
 if ($concept == "1")
 {
+	if ($p_num == "1")
+		$result = thumnail_test1_1_2($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
+	else if ($p_num == "2" || $p_num == "3" || $p_num == "4")
+		$result = thumnail_test1_2_2($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
+	else if ($p_num == "5")
+		$result = thumnail_test1_5_2($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
+}else if ($concept == "1"){
 	if ($p_num == "1")
 		$result = thumnail_test1_1_2($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
 	else if ($p_num == "2" || $p_num == "3" || $p_num == "4")
@@ -1884,42 +1905,42 @@ function proc_watermark1_5_1($src, $src_w, $src_h, $path_mark_file, $pos, $sharp
       case 1 : //상단 왼쪽
 
         $src_x = ceil(($src_w - $mark_w) / 2);
-        $src_y = ceil(($src_h - $mark_h) / 2 + 7);
+        $src_y = ceil(($src_h - $mark_h) / 2 - 8);
 
         break;
 
       case 2 : //상단 오른쪽
 
         $src_x = ceil(($src_w - $mark_w) / 2);
-        $src_y = ceil(($src_h - $mark_h) / 2 + 7);
+        $src_y = ceil(($src_h - $mark_h) / 2 - 8);
 
         break;
 
       case 3 : //하단 왼쪽
 
         $src_x = ceil(($src_w - $mark_w) / 2);
-        $src_y = ceil(($src_h - $mark_h) / 2 + 7);
+        $src_y = ceil(($src_h - $mark_h) / 2 - 8);
 
         break;
 
       case 4 : //하단 오른쪽
 
         $src_x = ceil(($src_w - $mark_w) / 2);
-        $src_y = ceil(($src_h - $mark_h) / 2 + 7);
+        $src_y = ceil(($src_h - $mark_h) / 2 - 8);
 
         break;
 
       case 5 : //중앙
 
         $src_x = ceil(($src_w - $mark_w) / 2);
-        $src_y = ceil(($src_h - $mark_h) / 2 + 7);
+        $src_y = ceil(($src_h - $mark_h) / 2 - 8);
 
         break;
 
       default : // 그 밖의 값은 전부 상단 왼쪽 치부
 
         $src_x = ceil(($src_w - $mark_w) / 2);
-        $src_y = ceil(($src_h - $mark_h) / 2 + 7);
+        $src_y = ceil(($src_h - $mark_h) / 2 - 8);
 
     }
 

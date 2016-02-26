@@ -431,7 +431,8 @@ function create_movie()
 			"mb_caption4"			: mb_caption4,
 			//"mb_caption5"			: mb_caption5,
 			"mb_phone"				: "<?=$mb_phone?>",
-			"mb_serial"				: "<?=$serial?>"
+			"mb_serial"				: "<?=$serial?>",
+			"mb_concept"			: "1"
 		},
 		url: "../main_exec.php",
 		beforeSend: function(response){
@@ -882,9 +883,9 @@ $(function () {
             node
                 .prepend('<br>')
                 .prepend(file.preview);
-				$("div#user_img5 > div > p > canvas").css("width","60%");
-				$("div#user_img5 > div > p > canvas").css("padding-top","12%");
-				$("div#user_img5 > div > p > canvas").css("padding-left","20%");
+				$("div#user_img5 > div > p > canvas").css("width","40%");
+				$("div#user_img5 > div > p > canvas").css("padding-top","19%");
+				$("div#user_img5 > div > p > canvas").css("padding-left","29.2%");
         }
         if (file.error) {
             node

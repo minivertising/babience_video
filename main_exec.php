@@ -70,6 +70,7 @@ switch ($_REQUEST['exec'])
 		//$mb_caption5	= $_REQUEST['mb_caption5'];
 		$mb_phone		= $_REQUEST['mb_phone'];
 		$mb_serial		= $_REQUEST['mb_serial'];
+		$mb_concept	= $_REQUEST['mb_concept'];
 
 		$cap_image1	= "";
 		$cap_image2	= "";
@@ -77,14 +78,37 @@ switch ($_REQUEST['exec'])
 		$cap_image4	= "";
 		$cap_image5	= "";
 
+		if ($mb_concept == "1")
+		{
+			$caption_image1_w	= "280;";
+			$caption_image1_h	= "380;";
+			$caption_image2_w	= "280;";
+			$caption_image2_h	= "440;";
+		}else if ($mb_concept == "2"){
+			$caption_image1_w	= "280;";
+			$caption_image1_h	= "380;";
+			$caption_image2_w	= "280;";
+			$caption_image2_h	= "440;";
+		}else if ($mb_concept == "3"){
+			$caption_image1_w	= "280;";
+			$caption_image1_h	= "380;";
+			$caption_image2_w	= "280;";
+			$caption_image2_h	= "440;";
+		}else if ($mb_concept == "4"){
+			$caption_image1_w	= "280;";
+			$caption_image1_h	= "380;";
+			$caption_image2_w	= "280;";
+			$caption_image2_h	= "440;";
+		}
+
 		if ($img_name1)
 		{
 			$img_name1arr			= explode(".",stripslashes($img_name1));
 			$img_name1arr_num	= count($img_name1arr) -1;
 			$img_name1			= $mb_serial."_1.".strtolower($img_name1arr[$img_name1arr_num]); 
-			$new_image1			= merge_image($img_name1, $mb_serial,"1", "1");
-			$new_image1_1			= merge_image2($img_name1, $mb_serial,"1", "1");
-			$cap_image1			= caption_image($mb_caption1, $mb_serial,"1","280","380");
+			$new_image1			= merge_image($img_name1, $mb_serial,"1", $mb_concept);
+			$new_image1_1			= merge_image2($img_name1, $mb_serial,"1", $mb_concept);
+			$cap_image1			= caption_image($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
 		}
 
 		if ($img_name2)
@@ -92,9 +116,9 @@ switch ($_REQUEST['exec'])
 			$img_name2arr			= explode(".",stripslashes($img_name2));
 			$img_name2arr_num	= count($img_name2arr) -1;
 			$img_name2			= $mb_serial."_2.".strtolower($img_name2arr[$img_name2arr_num]); 
-			$new_image2			= merge_image($img_name2, $mb_serial,"2","1");
-			$new_image2_1			= merge_image2($img_name2, $mb_serial,"2","1");
-			$cap_image2			= caption_image($mb_caption2, $mb_serial,"2","280","440");
+			$new_image2			= merge_image($img_name2, $mb_serial,"2",$mb_concept);
+			$new_image2_1			= merge_image2($img_name2, $mb_serial,"2",$mb_concept);
+			$cap_image2			= caption_image($mb_caption2, $mb_serial,"2",$caption_image2_w,$caption_image2_h);
 		}
 
 		if ($img_name3)
@@ -102,9 +126,9 @@ switch ($_REQUEST['exec'])
 			$img_name3arr			= explode(".",stripslashes($img_name3));
 			$img_name3arr_num	= count($img_name3arr) -1;
 			$img_name3			= $mb_serial."_3.".strtolower($img_name3arr[$img_name3arr_num]); 
-			$new_image3			= merge_image($img_name3, $mb_serial,"3","1");
-			$new_image3_1			= merge_image2($img_name3, $mb_serial,"3","1");
-			$cap_image3			= caption_image($mb_caption3, $mb_serial,"3","280","440");
+			$new_image3			= merge_image($img_name3, $mb_serial,"3",$mb_concept);
+			$new_image3_1			= merge_image2($img_name3, $mb_serial,"3",$mb_concept);
+			$cap_image3			= caption_image($mb_caption3, $mb_serial,"3",$caption_image2_w,$caption_image2_h);
 		}
 
 		if ($img_name4)
@@ -112,9 +136,9 @@ switch ($_REQUEST['exec'])
 			$img_name4arr			= explode(".",stripslashes($img_name4));
 			$img_name4arr_num	= count($img_name4arr) -1;
 			$img_name4			= $mb_serial."_4.".strtolower($img_name4arr[$img_name4arr_num]); 
-			$new_image4			= merge_image($img_name4, $mb_serial,"4","1");
-			$new_image4_1			= merge_image2($img_name4, $mb_serial,"4","1");
-			$cap_image4			= caption_image($mb_caption4, $mb_serial,"4","280","440");
+			$new_image4			= merge_image($img_name4, $mb_serial,"4",$mb_concept);
+			$new_image4_1			= merge_image2($img_name4, $mb_serial,"4",$mb_concept);
+			$cap_image4			= caption_image($mb_caption4, $mb_serial,"4",$caption_image2_w,$caption_image2_h);
 		}
 
 		if ($img_name5)
@@ -122,13 +146,14 @@ switch ($_REQUEST['exec'])
 			$img_name5arr			= explode(".",stripslashes($img_name5));
 			$img_name5arr_num	= count($img_name5arr) -1;
 			$img_name5			= $mb_serial."_5.".strtolower($img_name5arr[$img_name5arr_num]); 
-			$new_image5			= merge_image($img_name5, $mb_serial,"5","1");
-			$new_image5_1			= merge_image2($img_name5, $mb_serial,"5","1");
+			$new_image5			= merge_image($img_name5, $mb_serial,"5",$mb_concept);
+			$new_image5_1			= merge_image2($img_name5, $mb_serial,"5",$mb_concept);
 			//$cap_image5			= caption_image($mb_caption5, $mb_serial,"5");
 		}
 
 		//$out_exec	= 'ffmpeg \ -loop 1 -i ./files/'.$mb_serial.'/'.$img_name1.' \ -loop 1 -i ./files/'.$mb_serial.'/'.$img_name2.' \ -loop 1 -i ./files/'.$mb_serial.'/'.$img_name3.' \ -loop 1 -i ./files/'.$mb_serial.'/'.$img_name4.' \ -loop 1 -i ./files/'.$mb_serial.'/'.$img_name5.' \ -filter_complex \ "[0:v]trim=duration=15,fade=t=out:st=14.5:d=0.5[v0]; \ [1:v]trim=duration=15,fade=t=in:st=0:d=0.5,fade=t=out:st=14.5:d=0.5[v1]; \ [2:v]trim=duration=15,fade=t=in:st=0:d=0.5,fade=t=out:st=14.5:d=0.5[v2]; \ [3:v]trim=duration=15,fade=t=in:st=0:d=0.5,fade=t=out:st=14.5:d=0.5[v3]; \ [4:v]trim=duration=15,fade=t=in:st=0:d=0.5,fade=t=out:st=14.5:d=0.5[v4]; \ [v0][v1][v2][v3][v4]concat=n=5:v=1:a=0,format=yuv420p[v]" -map "[v]" ./files/'.$mb_serial.'/out.mp4';
 
+		/*
 		$out_exec1 = 'ffmpeg \\-loop 1 -t 1 -i ./files/'.$mb_serial.'/medium/final_'.$mb_serial.'_1.jpg \\-loop 1 -t 1 -i ./files/'.$mb_serial.'/medium/final_'.$mb_serial.'_2.jpg \\-loop 1 -t 1 -i ./files/'.$mb_serial.'/medium/final_'.$mb_serial.'_3.jpg \\-loop 1 -t 1 -i ./files/'.$mb_serial.'/medium/final_'.$mb_serial.'_4.jpg \\-loop 1 -t 1 -i ./files/'.$mb_serial.'/medium/final_'.$mb_serial.'_4.jpg \\';
 		$out_exec2 = "-filter_complex \\";
 		$out_exec3 = '"[1:v][0:v]blend=';
@@ -140,6 +165,7 @@ switch ($_REQUEST['exec'])
 		$out_exec9 = ' " -pix_fmt yuv420p -map "[v]" ./files/F50C0DFE82/medium/out.mp4';
 
 		shell_exec("mkdir test");
+		*/
 		/*
 		shell_exec(stripslashes($out_exec1));
 		shell_exec(stripslashes($out_exec2));
@@ -152,7 +178,7 @@ switch ($_REQUEST['exec'])
 		shell_exec(stripslashes($out_exec9));
 		*/
 
-		$query 	= "UPDATE ".$_gl['member_info_table']." SET mb_baby_name='".$mb_baby_name."',mb_baby_age='".$mb_baby_age."',mb_photo1='".$img_name1."', mb_photo2='".$img_name2."', mb_photo3='".$img_name3."', mb_photo4='".$img_name4."', mb_photo5='".$img_name5."', mb_caption1='".$mb_caption1."', mb_caption2='".$mb_caption2."', mb_caption3='".$mb_caption3."', mb_caption4='".$mb_caption4."' WHERE mb_serial='".$mb_serial."'";
+		$query 	= "UPDATE ".$_gl['member_info_table']." SET mb_baby_name='".$mb_baby_name."',mb_baby_age='".$mb_baby_age."',mb_concept='".$mb_concept."', mb_photo1='".$img_name1."', mb_photo2='".$img_name2."', mb_photo3='".$img_name3."', mb_photo4='".$img_name4."', mb_photo5='".$img_name5."', mb_caption1='".$mb_caption1."', mb_caption2='".$mb_caption2."', mb_caption3='".$mb_caption3."', mb_caption4='".$mb_caption4."' WHERE mb_serial='".$mb_serial."'";
 		$result 	= mysqli_query($my_db, $query);
 
 		if ($result)

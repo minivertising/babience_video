@@ -432,7 +432,8 @@ function create_movie()
 			"mb_caption4"			: mb_caption4,
 			"mb_caption5"			: mb_caption5,
 			"mb_phone"				: "<?=$mb_phone?>",
-			"mb_serial"				: "<?=$serial?>"
+			"mb_serial"				: "<?=$serial?>",
+			"mb_concept"			: "2"
 		},
 		url: "../main_exec.php",
 		beforeSend: function(response){
@@ -521,9 +522,9 @@ $(function () {
             node
                 .prepend('<br>')
                 .prepend(file.preview);
-				$("div#user_img1 > div > p > canvas").css("width","40%");
-				$("div#user_img1 > div > p > canvas").css("padding-top","20%");
-				$("div#user_img1 > div > p > canvas").css("padding-left","29%");
+				$("div#user_img1 > div > p > canvas").css("width","48%");
+				$("div#user_img1 > div > p > canvas").css("padding-top","10%");
+				$("div#user_img1 > div > p > canvas").css("padding-left","4%");
         }
         if (file.error) {
             node
@@ -578,8 +579,8 @@ $(function () {
         // send Blob objects via XHR requests:
         disableImageResize: /Android(?!.*Chrome)|Opera/
             .test(window.navigator.userAgent),
-        previewMaxWidth: 50,
-        previewMaxHeight: 50,
+        previewMaxWidth: 500,
+        previewMaxHeight: 500,
         previewCrop: false
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
@@ -669,8 +670,8 @@ $(function () {
         // send Blob objects via XHR requests:
         disableImageResize: /Android(?!.*Chrome)|Opera/
             .test(window.navigator.userAgent),
-        previewMaxWidth: 50,
-        previewMaxHeight: 50,
+        previewMaxWidth: 500,
+        previewMaxHeight: 500,
         previewCrop: false
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
@@ -759,8 +760,8 @@ $(function () {
         // send Blob objects via XHR requests:
         disableImageResize: /Android(?!.*Chrome)|Opera/
             .test(window.navigator.userAgent),
-        previewMaxWidth: 50,
-        previewMaxHeight: 50,
+        previewMaxWidth: 500,
+        previewMaxHeight: 500,
         previewCrop: false
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
@@ -849,8 +850,8 @@ $(function () {
         // send Blob objects via XHR requests:
         disableImageResize: /Android(?!.*Chrome)|Opera/
             .test(window.navigator.userAgent),
-        previewMaxWidth: 50,
-        previewMaxHeight: 50,
+        previewMaxWidth: 500,
+        previewMaxHeight: 500,
         previewCrop: false
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
@@ -883,9 +884,9 @@ $(function () {
             node
                 .prepend('<br>')
                 .prepend(file.preview);
-				$("div#user_img5 > div > p > canvas").css("width","60%");
-				$("div#user_img5 > div > p > canvas").css("padding-top","12%");
-				$("div#user_img5 > div > p > canvas").css("padding-left","20%");
+				$("div#user_img5 > div > p > canvas").css("width","100%");
+				//$("div#user_img5 > div > p > canvas").css("padding-top","12%");
+				//$("div#user_img5 > div > p > canvas").css("padding-left","20%");
         }
         if (file.error) {
             node
