@@ -1,3 +1,3 @@
 <?
-	shell_exec("mkdir test");
+	exec("mkdir test");
 ?>
