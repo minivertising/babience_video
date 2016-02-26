@@ -1,3 +1,3 @@
 <?
-	exec("mkdir test");
+	exec("test.sh imsi_f");
 ?>
