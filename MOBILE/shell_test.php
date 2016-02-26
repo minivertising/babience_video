@@ -1,5 +1,5 @@
 <?
-	$output	= "www";
-	 system("./test.sh imsi");
+	//$output	= "www";
+	$output	=  exec("./test.sh");
 	print_r($output); 
 ?>
