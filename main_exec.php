@@ -85,10 +85,12 @@ switch ($_REQUEST['exec'])
 			$caption_image2_w	= "280;";
 			$caption_image2_h	= "440;";
 		}else if ($mb_concept == "2"){
-			$caption_image1_w	= "280;";
-			$caption_image1_h	= "380;";
-			$caption_image2_w	= "280;";
+			$caption_image1_w	= "40;";
+			$caption_image1_h	= "345;";
+			$caption_image2_w	= "40;";
 			$caption_image2_h	= "440;";
+			$caption_image2_name_w	= "40;";
+			$caption_image2_name_h	= "383;";
 		}else if ($mb_concept == "3"){
 			$caption_image1_w	= "280;";
 			$caption_image1_h	= "380;";
@@ -119,6 +121,11 @@ switch ($_REQUEST['exec'])
 			$new_image2			= merge_image($img_name2, $mb_serial,"2",$mb_concept);
 			$new_image2_1			= merge_image2($img_name2, $mb_serial,"2",$mb_concept);
 			$cap_image2			= caption_image($mb_caption2, $mb_serial,"2",$caption_image2_w,$caption_image2_h);
+			if ($mb_concept == "2")
+			{
+				$mb_name_age_caption	= $mb_baby_name." (".$mb_baby_age.")";
+				$cap_image2_2			= caption_image2($mb_name_age_caption, $mb_serial,"2",$caption_image2_name_w,$caption_image2_name_h);
+			}
 		}
 
 		if ($img_name3)
@@ -129,6 +136,11 @@ switch ($_REQUEST['exec'])
 			$new_image3			= merge_image($img_name3, $mb_serial,"3",$mb_concept);
 			$new_image3_1			= merge_image2($img_name3, $mb_serial,"3",$mb_concept);
 			$cap_image3			= caption_image($mb_caption3, $mb_serial,"3",$caption_image2_w,$caption_image2_h);
+			if ($mb_concept == "2")
+			{
+				$mb_name_age_caption	= $mb_baby_name." (".$mb_baby_age.")";
+				$cap_image2_2			= caption_image2($mb_name_age_caption, $mb_serial,"3",$caption_image2_name_w,$caption_image2_name_h);
+			}
 		}
 
 		if ($img_name4)
@@ -139,6 +151,11 @@ switch ($_REQUEST['exec'])
 			$new_image4			= merge_image($img_name4, $mb_serial,"4",$mb_concept);
 			$new_image4_1			= merge_image2($img_name4, $mb_serial,"4",$mb_concept);
 			$cap_image4			= caption_image($mb_caption4, $mb_serial,"4",$caption_image2_w,$caption_image2_h);
+			if ($mb_concept == "2")
+			{
+				$mb_name_age_caption	= $mb_baby_name." (".$mb_baby_age.")";
+				$cap_image2_2			= caption_image2($mb_name_age_caption, $mb_serial,"4",$caption_image2_name_w,$caption_image2_name_h);
+			}
 		}
 
 		if ($img_name5)

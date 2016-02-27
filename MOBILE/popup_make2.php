@@ -435,11 +435,12 @@ function create_movie()
 		},
 		url: "../main_exec.php",
 		beforeSend: function(response){
-			$("#loading_div").show();
-			$("#input_baby_div").hide();
+			//$("#loading_div").show();
+			//$("#input_baby_div").hide();
 		},
 		success: function(response){
-			console.log(response);
+			//console.log(response);
+			
 			if (response == "Y")
 			{
 				$(".serial").html("<?=$serial?>");
@@ -453,7 +454,6 @@ function create_movie()
 				alert('접속자가 많아 참여가 지연되고 있습니다. 다시 시도해 주세요.');
 				location.href="index.php";
 			}
-			//console.log(response);
 		}
 	});
 }
@@ -472,7 +472,7 @@ function next_page()
 $(function () {
     'use strict';
     // Change this to the location of your server-side upload handler:
-    var url = 'file_upload.php?s_id=<?=$serial?>';
+    var url = 'file_upload1_2.php?s_id=<?=$serial?>';
     $('#fileupload').fileupload({
         url: url,
         dataType: 'json',
@@ -565,7 +565,7 @@ $(function () {
 $(function () {
     'use strict';
     // Change this to the location of your server-side upload handler:
-    var url = 'file_upload2.php?s_id=<?=$serial?>';
+    var url = 'file_upload2_2.php?s_id=<?=$serial?>';
     $('#fileupload2').fileupload({
         url: url,
         dataType: 'json',
@@ -657,7 +657,7 @@ $(function () {
 $(function () {
     'use strict';
     // Change this to the location of your server-side upload handler:
-    var url = 'file_upload3.php?s_id=<?=$serial?>';
+    var url = 'file_upload3_2.php?s_id=<?=$serial?>';
     $('#fileupload3').fileupload({
         url: url,
         dataType: 'json',
@@ -746,7 +746,7 @@ $(function () {
 $(function () {
     'use strict';
     // Change this to the location of your server-side upload handler:
-    var url = 'file_upload4.php?s_id=<?=$serial?>';
+    var url = 'file_upload4_2.php?s_id=<?=$serial?>';
     $('#fileupload4').fileupload({
         url: url,
         dataType: 'json',
@@ -837,7 +837,7 @@ $(function () {
 $(function () {
     'use strict';
     // Change this to the location of your server-side upload handler:
-    var url = 'file_upload5.php?s_id=<?=$serial?>';
+    var url = 'file_upload5_2.php?s_id=<?=$serial?>';
     $('#fileupload5').fileupload({
         url: url,
         dataType: 'json',
