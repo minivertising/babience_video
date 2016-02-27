@@ -12,7 +12,12 @@ function open_pop(param)
 
 function ins_caption(param)
 {
-	$("#imsi_caption"+param).html($("#mb_caption"+param).val());
+	if (param == "b_name")
+		$(".imsi_caption_baby").html($("#mb_baby_name").val()+" ("+$("#mb_baby_age").val()+")");
+	else if (param == "b_age")
+		$(".imsi_caption_baby").html($("#mb_baby_name").val()+" ("+$("#mb_baby_age").val()+")");
+	else
+		$("#imsi_caption"+param).html($("#mb_caption"+param).val());
 }
 
 function sel_concept(param, param2, param3)
