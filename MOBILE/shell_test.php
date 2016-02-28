@@ -28,9 +28,9 @@ $output	.= ' [0:v][b1v][1:v][b2v][2:v][b3v][3:v][b4v][4:v]concat=n=9:v=1:a=0,for
 
 	system(stripslashes($output));
 
-$output2	= "ffmpeg -i ../files/4C12029A69/output.mp4 -i ./scene/sound/1-5_sound.mp4 \\";
-$output2	.= "-c:v copy -c:a aac -strict experimental ../files/4C12029A69/growmovie.mp4";
-	system(stripslashes($output2));
+$output2	= "ffmpeg -i ../files/4C12029A69/out.mp4 -i ./scene/sound/1-5_sound.mp4 -c:v copy -c:a copy ../files/4C12029A69/growmovie.mp4";
+//$output2	.= "-c:v copy -c:a aac -strict experimental ../files/4C12029A69/growmovie.mp4";
+	system($output2);
 
 	print_r(stripslashes($output2));
 ?>
