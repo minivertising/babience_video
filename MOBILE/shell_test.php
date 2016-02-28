@@ -17,5 +17,5 @@ $output	.= ' [0:v][b1v][1:v][b2v][2:v][b3v][3:v][b4v][4:v]concat=n=9:v=1:a=0,for
 	
 	system(stripslashes($output));
 	//print_r($output); 
-	print_r("ok");
+	print_r(stripslashes($output));
 ?>
