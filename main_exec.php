@@ -183,32 +183,21 @@ switch ($_REQUEST['exec'])
 			//$cap_image5			= caption_image($mb_caption5, $mb_serial,"5");
 		}
 
-		//$out_exec	= 'ffmpeg \ -loop 1 -i ./files/'.$mb_serial.'/'.$img_name1.' \ -loop 1 -i ./files/'.$mb_serial.'/'.$img_name2.' \ -loop 1 -i ./files/'.$mb_serial.'/'.$img_name3.' \ -loop 1 -i ./files/'.$mb_serial.'/'.$img_name4.' \ -loop 1 -i ./files/'.$mb_serial.'/'.$img_name5.' \ -filter_complex \ "[0:v]trim=duration=15,fade=t=out:st=14.5:d=0.5[v0]; \ [1:v]trim=duration=15,fade=t=in:st=0:d=0.5,fade=t=out:st=14.5:d=0.5[v1]; \ [2:v]trim=duration=15,fade=t=in:st=0:d=0.5,fade=t=out:st=14.5:d=0.5[v2]; \ [3:v]trim=duration=15,fade=t=in:st=0:d=0.5,fade=t=out:st=14.5:d=0.5[v3]; \ [4:v]trim=duration=15,fade=t=in:st=0:d=0.5,fade=t=out:st=14.5:d=0.5[v4]; \ [v0][v1][v2][v3][v4]concat=n=5:v=1:a=0,format=yuv420p[v]" -map "[v]" ./files/'.$mb_serial.'/out.mp4';
+		$output	= "ffmpeg \\";
+		$output	.= "-loop 1 -t 1 -i ../files/".$mb_serial."/medium/final_".$mb_serial."_1.jpg \\";
+		$output	.= "-loop 1 -t 1 -i ../files/".$mb_serial."/medium/final_".$mb_serial."_2.jpg \\";
+		$output	.= "-loop 1 -t 1 -i ../files/".$mb_serial."/medium/final_".$mb_serial."_3.jpg \\";
+		$output	.= "-loop 1 -t 1 -i ../files/".$mb_serial."/medium/final_".$mb_serial."_4.jpg \\";
+		$output	.= "-loop 1 -t 1 -i ../files/".$mb_serial."/medium/final_".$mb_serial."_4.jpg \\";
+		$output	.= "-filter_complex \\";
+		$output	.= '"[1:v][0:v]blend=all_expr=';
+		$output	.= "'A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b1v]; \\";
+		$output	.= " [2:v][1:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b2v]; \\";
+		$output	.= " [3:v][2:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b3v]; \\";
+		$output	.= " [4:v][3:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b4v]; \\";
+		$output	.= ' [0:v][b1v][1:v][b2v][2:v][b3v][3:v][b4v][4:v]concat=n=9:v=1:a=0,format=yuv420p[v]" -pix_fmt yuv420p -map "[v]" ../files/'.$mb_serial.'/medium/user_video1.mp4';
 
-		/*
-		$out_exec1 = 'ffmpeg \\-loop 1 -t 1 -i ./files/'.$mb_serial.'/medium/final_'.$mb_serial.'_1.jpg \\-loop 1 -t 1 -i ./files/'.$mb_serial.'/medium/final_'.$mb_serial.'_2.jpg \\-loop 1 -t 1 -i ./files/'.$mb_serial.'/medium/final_'.$mb_serial.'_3.jpg \\-loop 1 -t 1 -i ./files/'.$mb_serial.'/medium/final_'.$mb_serial.'_4.jpg \\-loop 1 -t 1 -i ./files/'.$mb_serial.'/medium/final_'.$mb_serial.'_4.jpg \\';
-		$out_exec2 = "-filter_complex \\";
-		$out_exec3 = '"[1:v][0:v]blend=';
-		$out_exec4 = "all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b1v]; \\";
-		$out_exec5 = " [2:v][1:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b2v]; \\";
-		$out_exec6 = " [3:v][2:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b3v]; \\";
-		$out_exec7 = " [4:v][3:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b4v]; \\";
-		$out_exec8 = " [0:v][b1v][1:v][b2v][2:v][b3v][3:v][b4v][4:v]concat=n=9:v=1:a=0,format=yuv420p[v]";
-		$out_exec9 = ' " -pix_fmt yuv420p -map "[v]" ./files/F50C0DFE82/medium/out.mp4';
-
-		shell_exec("mkdir test");
-		*/
-		/*
-		shell_exec(stripslashes($out_exec1));
-		shell_exec(stripslashes($out_exec2));
-		shell_exec(stripslashes($out_exec3));
-		shell_exec(stripslashes($out_exec4));
-		shell_exec(stripslashes($out_exec5));
-		shell_exec(stripslashes($out_exec6));
-		shell_exec(stripslashes($out_exec7));
-		shell_exec(stripslashes($out_exec8));
-		shell_exec(stripslashes($out_exec9));
-		*/
+		system(stripslashes($output));
 
 		$query 	= "UPDATE ".$_gl['member_info_table']." SET mb_baby_name='".$mb_baby_name."',mb_baby_age='".$mb_baby_age."',mb_concept='".$mb_concept."', mb_photo1='".$img_name1."', mb_photo2='".$img_name2."', mb_photo3='".$img_name3."', mb_photo4='".$img_name4."', mb_photo5='".$img_name5."', mb_caption1='".$mb_caption1."', mb_caption2='".$mb_caption2."', mb_caption3='".$mb_caption3."', mb_caption4='".$mb_caption4."' WHERE mb_serial='".$mb_serial."'";
 		$result 	= mysqli_query($my_db, $query);
