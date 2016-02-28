@@ -439,7 +439,7 @@ function create_movie()
 			$("#input_baby_div").hide();
 		},
 		success: function(response){
-			//console.log(response);
+			console.log(response);
 			
 			if (response == "Y")
 			{
