@@ -258,7 +258,7 @@
           <img src="images/popup/txt_go_home.png" />
         </div>
         <div class="btn_block">
-          <a href="#" class="img"><img src="images/popup/btn_home.png" /></a>
+          <a href="http://www.babience.com/m/index.jsp" class="img" target="_blank"><img src="images/popup/btn_home.png" /></a>
         </div>
       </div><!--inner-->
     </div>
@@ -267,17 +267,30 @@
 <!------------------------------ 체험팩 쿠폰 받을 사람 엔딩 ------------------------------>
 
 <!------------------------------ 체험팩 쿠폰 이미 받은 사람 엔딩 ------------------------------>
-<div id="end_sns_div" class="popup_wrap" style="display:none;">
+<div id="end_coupon_div" class="popup_wrap" style="display:none;">
   <div class="p_mid p_position">
     <div class="block_close clearfix">
       <a href="index.php" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+    </div>        
+    <div class="block_content coupon">
+      <div class="inner">
+        <div class="coupon_img">
+          <div class="serial">serial</div>
+          <div class="img"><img src="images/popup/bg_coupon.jpg" /></div>
+        </div>
+        <div class="btn_home_block">
+          <div class="img">
+            <img src="images/popup/txt_go_home.png" />
+          </div>
+          <div class="btn_block">
+            <a href="http://www.babience.com/m/index.jsp" class="img"><img src="images/popup/btn_home.png" /></a>
+          </div>
+        </div>
+      </div><!--inner-->
     </div>
+        
     <div class="block_content ending_sns">
       <div class="inner">
-        <div class="ending_t">
-          <div class="name c_babyname">김서우</div>
-          <div class="img"><img src="images/popup/ending_t_1.png" /></div>
-        </div>
         <div class="share">
           <img src="images/popup/txt_sns.png" class="txt_sns"/>
           <div>

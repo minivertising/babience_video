@@ -92,15 +92,19 @@ switch ($_REQUEST['exec'])
 			$caption_image2_name_w	= "40;";
 			$caption_image2_name_h	= "383;";
 		}else if ($mb_concept == "3"){
-			$caption_image1_w	= "280;";
-			$caption_image1_h	= "380;";
-			$caption_image2_w	= "280;";
+			$caption_image1_w	= "370;";
+			$caption_image1_h	= "410;";
+			$caption_image2_w	= "40;";
 			$caption_image2_h	= "440;";
+			$caption_image2_name_w	= "40;";
+			$caption_image2_name_h	= "393;";
 		}else if ($mb_concept == "4"){
-			$caption_image1_w	= "280;";
-			$caption_image1_h	= "380;";
-			$caption_image2_w	= "280;";
+			$caption_image1_w	= "370;";
+			$caption_image1_h	= "410;";
+			$caption_image2_w	= "40;";
 			$caption_image2_h	= "440;";
+			$caption_image2_name_w	= "40;";
+			$caption_image2_name_h	= "393;";
 		}
 
 		if ($img_name1)
@@ -111,6 +115,10 @@ switch ($_REQUEST['exec'])
 			$new_image1			= merge_image($img_name1, $mb_serial,"1", $mb_concept);
 			$new_image1_1			= merge_image2($img_name1, $mb_serial,"1", $mb_concept);
 			$cap_image1			= caption_image($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
+			if ($mb_concept == "4")
+				$cap_image1			= caption_image_white($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
+			else
+				$cap_image1			= caption_image($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
 		}
 
 		if ($img_name2)
@@ -120,11 +128,14 @@ switch ($_REQUEST['exec'])
 			$img_name2			= $mb_serial."_2.".strtolower($img_name2arr[$img_name2arr_num]); 
 			$new_image2			= merge_image($img_name2, $mb_serial,"2",$mb_concept);
 			$new_image2_1			= merge_image2($img_name2, $mb_serial,"2",$mb_concept);
-			$cap_image2			= caption_image($mb_caption2, $mb_serial,"2",$caption_image2_w,$caption_image2_h);
-			if ($mb_concept == "2")
+			if ($mb_concept == "3")
+				$cap_image2			= caption_image_white($mb_caption2, $mb_serial,"2",$caption_image2_w,$caption_image2_h);
+			else
+				$cap_image2			= caption_image($mb_caption2, $mb_serial,"2",$caption_image2_w,$caption_image2_h);
+			if ($mb_concept == "2" || $mb_concept == "3")
 			{
 				$mb_name_age_caption	= $mb_baby_name." (".$mb_baby_age.")";
-				$cap_image2_2			= caption_image2($mb_name_age_caption, $mb_serial,"2",$caption_image2_name_w,$caption_image2_name_h);
+				$cap_image2_2			= caption_image2_white($mb_name_age_caption, $mb_serial,"2",$caption_image2_name_w,$caption_image2_name_h);
 			}
 		}
 
@@ -150,8 +161,12 @@ switch ($_REQUEST['exec'])
 			$img_name4			= $mb_serial."_4.".strtolower($img_name4arr[$img_name4arr_num]); 
 			$new_image4			= merge_image($img_name4, $mb_serial,"4",$mb_concept);
 			$new_image4_1			= merge_image2($img_name4, $mb_serial,"4",$mb_concept);
-			$cap_image4			= caption_image($mb_caption4, $mb_serial,"4",$caption_image2_w,$caption_image2_h);
-			if ($mb_concept == "2")
+			if ($mb_concept == "3")
+				$cap_image4			= caption_image_white($mb_caption4, $mb_serial,"4",$caption_image2_w,$caption_image2_h);
+			else
+				$cap_image4			= caption_image($mb_caption4, $mb_serial,"4",$caption_image2_w,$caption_image2_h);
+
+			if ($mb_concept == "2" || $mb_concept == "3")
 			{
 				$mb_name_age_caption	= $mb_baby_name." (".$mb_baby_age.")";
 				$cap_image2_2			= caption_image2($mb_name_age_caption, $mb_serial,"4",$caption_image2_name_w,$caption_image2_name_h);
@@ -212,15 +227,7 @@ switch ($_REQUEST['exec'])
 		}else{
 			$flag	= "N";
 		}
-		echo $shell_exe1;
-		echo $shell_exe2;
-		echo $shell_exe3;
-		echo $shell_exe4;
-		echo $shell_exe5;
-		echo $shell_exe6;
-		echo $shell_exe7;
-		echo $shell_exe8;
-		echo $shell_exe9;
+		echo $flag;
 	break;
 }
 ?>

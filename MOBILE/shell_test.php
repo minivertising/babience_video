@@ -1,5 +1,5 @@
 <?
 	//$output	= "www";
-	$output	=  exec("mkdir gogogogo");
-	print_r($output); 
+	$output=exec("mkdir gogogo");
+	//print_r($output); 
 ?>

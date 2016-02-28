@@ -435,8 +435,8 @@ function create_movie()
 		},
 		url: "../main_exec.php",
 		beforeSend: function(response){
-			//$("#loading_div").show();
-			//$("#input_baby_div").hide();
+			$("#loading_div").show();
+			$("#input_baby_div").hide();
 		},
 		success: function(response){
 			//console.log(response);

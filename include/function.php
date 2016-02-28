@@ -355,6 +355,15 @@ if ($concept == "1")
 		$result = thumnail_test2_2_1($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
 	else if ($p_num == "4")
 		$result = thumnail_test2_4_1($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
+}else if ($concept == "3"){
+	if ($p_num == "3")
+		$result = thumnail_test3_3_1($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
+	else if ($p_num == "1" || $p_num == "2" || $p_num == "4")
+		$result = thumnail_test3_1_1($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
+	else if ($p_num == "5")
+		$result = thumnail_test3_5_1($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
+}else if ($concept == "4"){
+	$result = thumnail_test4_1_1($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
 }
 
 flush();
@@ -396,24 +405,37 @@ flush();
 			}
 		}else if ($concept == "3"){
 			if ($p_num == "1")
+			{
 				$path_mark_file = './files/frame_images/img_frm_3_1.png';
-			else if ($p_num == "2")
+				$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
+			}else if ($p_num == "2" || $p_num == "4"){
 				$path_mark_file = './files/frame_images/img_frm_3_2.png';
-			else if ($p_num == "3" || $p_num == "4")
+				$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
+			}else if ($p_num == "3"){
 				$path_mark_file = './files/frame_images/img_frm_3_3.png';
-			else
+				$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
+			}else{
 				$path_mark_file = './files/frame_images/img_frm_3_5.png';
+				$path_save_file = './files/'.$img_folder.'/medium/final_'.$img_name; // 합성된 이미지 파일
+			}
 		}else{
 			if ($p_num == "1")
+			{
 				$path_mark_file = './files/frame_images/img_frm_4_1.png';
-			else if ($p_num == "2")
+				$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
+			}else if ($p_num == "2"){
 				$path_mark_file = './files/frame_images/img_frm_4_2.png';
-			else if ($p_num == "3")
+				$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
+			}else if ($p_num == "3"){
 				$path_mark_file = './files/frame_images/img_frm_4_3.png';
-			else if ($p_num == "4")
+				$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
+			}else if ($p_num == "4"){
 				$path_mark_file = './files/frame_images/img_frm_4_4.png';
-			else
+				$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
+			}else{
 				$path_mark_file = './files/frame_images/img_frm_4_5.png';
+				$path_save_file = './files/'.$img_folder.'/medium/final_'.$img_name; // 합성된 이미지 파일
+			}
 		}
 		$path_src_file = './files/'.$img_folder.'/medium/merge_'.$img_name;	//원본파일
 		//$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
@@ -479,6 +501,15 @@ if ($concept == "1")
 		$result = thumnail_test2_2_2($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
 	else if ($p_num == "4")
 		$result = thumnail_test2_4_2($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
+}else if ($concept == "3"){
+	if ($p_num == "3")
+		$result = thumnail_test3_3_2($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
+	else if ($p_num == "1" || $p_num == "2" || $p_num == "4")
+		$result = thumnail_test3_1_2($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
+	else if ($p_num == "5")
+		$result = thumnail_test3_5_2($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
+}else if ($concept == "4"){
+	$result = thumnail_test4_1_2($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
 }
 
 
@@ -2762,7 +2793,647 @@ function proc_watermark2_2_1($src, $src_w, $src_h, $path_mark_file, $pos, $sharp
   return true;
 }
 
+function proc_watermark3_3_1($src, $src_w, $src_h, $path_mark_file, $pos, $sharpness, $padding=0){
+
+  if (empty($src))  {//원본의 리소스 id 가 빈값일 경우
+    //$GLOBALS['errormsg'] = '원본 리소스가 없습니다.';
+    return false;
+  }
+
+  //정수형이 아니라면 정수형으로 강제 형변환
+  if (!is_int($src_w)) settype($src_w, 'int');
+  if (!is_int($src_h)) settype($src_h, 'int');
+  if (!is_int($sharpness)) settype($sharpness, 'int');
+  if (!is_int($padding)) settype($padding, 'int');
+
+
+
+  if ($src_w < 1 || $src_h < 1){//원본의 너비와 높이가 둘중에 하나라도 0보다 큰 정수가 아닐경우
+    //$GLOBALS['errormsg'] = "원본의 너비와 높이가 0보다 큰 정수가 아닙니다. ($src_w, $src_h)";
+    return false;
+  }
+
+
+
+  if (empty($path_mark_file)) {//워터마크 이미지 경로값이 없다면
+    //$GLOBALS['errormsg'] = '워터마크 이미지경로값이 없습니다.';
+    return false;
+  }
+
+  list($mark, $mark_w, $mark_h) = get_image_resource_from_file ($path_mark_file);
+
+  if (empty($mark)) return false;//에러 메시지 작성은 get_image_resource_from_file 내부에서 함
+
+
+
+  if ($src_w < $mark_w + (2 * $padding)) {//원본너비가 워터마크 이미지 너비보다 작으면 워터마크 처리 안함, return true;
+   return true;
+  }
+
+  if ($src_h < $mark_h + (2 * $padding)) {//원본높이가 워터마크 이미지 높이보다 작으면 워터마크 처리 안함, return true;
+    return true;
+  }
+
+
+
+  if ($sharpness < 0 || $sharpness > 100) $sharpness = 100;//$sharpness 가 지정된 범위 이상의 숫자라면 100으로 강제 재설정
+
+  if ($padding < 0 || $padding > $mark_w || $padding > $mark_h) $padding = 0;//$padding이 0보다 작거나 워터마크의 너비나 높이보다 크면 0으로 강제 재설정
+
+
+
+  if ($pos == 10) {//워터마크 전체로 찍을 경우의 처리
+
+    $w_max = $src_w - $padding;
+    $h_max = $src_h - $padding;
+
+    //x 축으로 워터마크를 몇번 찍을 것인지 계산, 패딩을 더해서 나눔
+    $x_max = ceil($w_max / ($mark_w + $padding));
+
+    //y 축으로 워터마크를 몇번 찍을 것인지 계산
+    $y_max = ceil($h_max / ($mark_h + $padding));
+
+    //루프를 돌리면서 워터마크를 찍음
+    for($x = 0; $x < $x_max; $x++){
+
+      for($y = 0; $y < $y_max; $y++){
+
+        //기준점을 구한다.
+        $src_x = $x * ($mark_w + $padding) + $padding;
+        $src_y = $y * ($mark_h + $padding) + $padding;
+
+        $copy_w = $mark_w;
+        $copy_h = $mark_h;
+
+        if ($src_x + $mark_w > $w_max) $copy_w = $w_max - $src_x;
+        if ($src_y + $mark_h > $h_max) $copy_h = $h_max - $src_y;
+
+        if ($sharpness != 100) {//선명도가 100 이 아닐경우에는 선명도를 사용할수 있는 imagecopymerge 사용
+
+          $result_watermark = imagecopymerge($src, $mark, $src_x, $src_y, 0, 0, $copy_w, $copy_h, $sharpness);
+        }
+        else {//선명도가 100 일 경우에는 투명이미지를 사용할수 있는 imagecopyresampled 사용
+
+          $result_watermark = imagecopyresampled ($src , $mark , $src_x, $src_y, 0 , 0 , $copy_w, $copy_h , $copy_w, $copy_h);
+        }
+
+        if ($result_watermark === false) {
+          @imagedestroy($mark);
+          //$GLOBALS['errormsg'] = "워터마크 처리에 실패하였습니다.";
+          return false;
+        }
+      }
+    }
+  }
+  else {//워터마크를 하나만 찍을 경우에의 처리
+
+    //워터마크의 복사할 너비, 높이 기본값 지정
+    $copy_w = $mark_w;
+    $copy_h = $mark_h;
+
+    switch($pos){
+
+      case 1 : //상단 왼쪽
+
+        $src_x = ceil(($src_w - $mark_w) / 2+148);
+        $src_y = ceil(($src_h - $mark_h) / 2-38);
+
+        break;
+
+      case 2 : //상단 오른쪽
+
+        $src_x = ceil(($src_w - $mark_w) / 2+148);
+        $src_y = ceil(($src_h - $mark_h) / 2-38);
+
+        break;
+
+      case 3 : //하단 왼쪽
+
+        $src_x = ceil(($src_w - $mark_w) / 2+148);
+        $src_y = ceil(($src_h - $mark_h) / 2-38);
+
+        break;
+
+      case 4 : //하단 오른쪽
+
+        $src_x = ceil(($src_w - $mark_w) / 2+148);
+        $src_y = ceil(($src_h - $mark_h) / 2-38);
+
+        break;
+
+      case 5 : //중앙
+
+        $src_x = ceil(($src_w - $mark_w) / 2+148);
+        $src_y = ceil(($src_h - $mark_h) / 2-38);
+
+        break;
+
+      default : // 그 밖의 값은 전부 상단 왼쪽 치부
+
+        $src_x = ceil(($src_w - $mark_w) / 2+148);
+        $src_y = ceil(($src_h - $mark_h) / 2-38);
+
+    }
+
+    if ($sharpness != 100) {//선명도가 100 이 아닐경우에는 선명도를 사용할수 있는 imagecopymerge 사용
+
+      $result_watermark = imagecopymerge($src, $mark, $src_x, $src_y, 0, 0, $copy_w, $copy_h, $sharpness);
+    }
+    else {//선명도가 100 일 경우에는 투명이미지를 사용할수 있는 imagecopyresampled 사용
+      $result_watermark = imagecopyresampled ($src , $mark , $src_x, $src_y, 0 , 0 , $copy_w, $copy_h , $copy_w, $copy_h);
+    }
+
+    @imagedestroy($mark);
+
+    if ($result_watermark === false) {
+      //$GLOBALS['errormsg'] = "워터마크 처리에 실패하였습니다.";
+      return false;
+    }
+  }
+  return true;
+}
+
+function proc_watermark3_5_1($src, $src_w, $src_h, $path_mark_file, $pos, $sharpness, $padding=0){
+
+  if (empty($src))  {//원본의 리소스 id 가 빈값일 경우
+    //$GLOBALS['errormsg'] = '원본 리소스가 없습니다.';
+    return false;
+  }
+
+  //정수형이 아니라면 정수형으로 강제 형변환
+  if (!is_int($src_w)) settype($src_w, 'int');
+  if (!is_int($src_h)) settype($src_h, 'int');
+  if (!is_int($sharpness)) settype($sharpness, 'int');
+  if (!is_int($padding)) settype($padding, 'int');
+
+
+
+  if ($src_w < 1 || $src_h < 1){//원본의 너비와 높이가 둘중에 하나라도 0보다 큰 정수가 아닐경우
+    //$GLOBALS['errormsg'] = "원본의 너비와 높이가 0보다 큰 정수가 아닙니다. ($src_w, $src_h)";
+    return false;
+  }
+
+
+
+  if (empty($path_mark_file)) {//워터마크 이미지 경로값이 없다면
+    //$GLOBALS['errormsg'] = '워터마크 이미지경로값이 없습니다.';
+    return false;
+  }
+
+  list($mark, $mark_w, $mark_h) = get_image_resource_from_file ($path_mark_file);
+
+  if (empty($mark)) return false;//에러 메시지 작성은 get_image_resource_from_file 내부에서 함
+
+
+
+  if ($src_w < $mark_w + (2 * $padding)) {//원본너비가 워터마크 이미지 너비보다 작으면 워터마크 처리 안함, return true;
+   return true;
+  }
+
+  if ($src_h < $mark_h + (2 * $padding)) {//원본높이가 워터마크 이미지 높이보다 작으면 워터마크 처리 안함, return true;
+    return true;
+  }
+
+
+
+  if ($sharpness < 0 || $sharpness > 100) $sharpness = 100;//$sharpness 가 지정된 범위 이상의 숫자라면 100으로 강제 재설정
+
+  if ($padding < 0 || $padding > $mark_w || $padding > $mark_h) $padding = 0;//$padding이 0보다 작거나 워터마크의 너비나 높이보다 크면 0으로 강제 재설정
+
+
+
+  if ($pos == 10) {//워터마크 전체로 찍을 경우의 처리
+
+    $w_max = $src_w - $padding;
+    $h_max = $src_h - $padding;
+
+    //x 축으로 워터마크를 몇번 찍을 것인지 계산, 패딩을 더해서 나눔
+    $x_max = ceil($w_max / ($mark_w + $padding));
+
+    //y 축으로 워터마크를 몇번 찍을 것인지 계산
+    $y_max = ceil($h_max / ($mark_h + $padding));
+
+    //루프를 돌리면서 워터마크를 찍음
+    for($x = 0; $x < $x_max; $x++){
+
+      for($y = 0; $y < $y_max; $y++){
+
+        //기준점을 구한다.
+        $src_x = $x * ($mark_w + $padding) + $padding;
+        $src_y = $y * ($mark_h + $padding) + $padding;
+
+        $copy_w = $mark_w;
+        $copy_h = $mark_h;
+
+        if ($src_x + $mark_w > $w_max) $copy_w = $w_max - $src_x;
+        if ($src_y + $mark_h > $h_max) $copy_h = $h_max - $src_y;
+
+        if ($sharpness != 100) {//선명도가 100 이 아닐경우에는 선명도를 사용할수 있는 imagecopymerge 사용
+
+          $result_watermark = imagecopymerge($src, $mark, $src_x, $src_y, 0, 0, $copy_w, $copy_h, $sharpness);
+        }
+        else {//선명도가 100 일 경우에는 투명이미지를 사용할수 있는 imagecopyresampled 사용
+
+          $result_watermark = imagecopyresampled ($src , $mark , $src_x, $src_y, 0 , 0 , $copy_w, $copy_h , $copy_w, $copy_h);
+        }
+
+        if ($result_watermark === false) {
+          @imagedestroy($mark);
+          //$GLOBALS['errormsg'] = "워터마크 처리에 실패하였습니다.";
+          return false;
+        }
+      }
+    }
+  }
+  else {//워터마크를 하나만 찍을 경우에의 처리
+
+    //워터마크의 복사할 너비, 높이 기본값 지정
+    $copy_w = $mark_w;
+    $copy_h = $mark_h;
+
+    switch($pos){
+
+      case 1 : //상단 왼쪽
+
+        $src_x = ceil(($src_w - $mark_w) / 2+135);
+        $src_y = ceil(($src_h - $mark_h) / 2-61);
+
+        break;
+
+      case 2 : //상단 오른쪽
+
+        $src_x = ceil(($src_w - $mark_w) / 2+135);
+        $src_y = ceil(($src_h - $mark_h) / 2-61);
+
+        break;
+
+      case 3 : //하단 왼쪽
+
+        $src_x = ceil(($src_w - $mark_w) / 2+135);
+        $src_y = ceil(($src_h - $mark_h) / 2-61);
+
+        break;
+
+      case 4 : //하단 오른쪽
+
+        $src_x = ceil(($src_w - $mark_w) / 2+135);
+        $src_y = ceil(($src_h - $mark_h) / 2-61);
+
+        break;
+
+      case 5 : //중앙
+
+        $src_x = ceil(($src_w - $mark_w) / 2+135);
+        $src_y = ceil(($src_h - $mark_h) / 2-61);
+
+        break;
+
+      default : // 그 밖의 값은 전부 상단 왼쪽 치부
+
+        $src_x = ceil(($src_w - $mark_w) / 2+135);
+        $src_y = ceil(($src_h - $mark_h) / 2-61);
+
+    }
+
+    if ($sharpness != 100) {//선명도가 100 이 아닐경우에는 선명도를 사용할수 있는 imagecopymerge 사용
+
+      $result_watermark = imagecopymerge($src, $mark, $src_x, $src_y, 0, 0, $copy_w, $copy_h, $sharpness);
+    }
+    else {//선명도가 100 일 경우에는 투명이미지를 사용할수 있는 imagecopyresampled 사용
+      $result_watermark = imagecopyresampled ($src , $mark , $src_x, $src_y, 0 , 0 , $copy_w, $copy_h , $copy_w, $copy_h);
+    }
+
+    @imagedestroy($mark);
+
+    if ($result_watermark === false) {
+      //$GLOBALS['errormsg'] = "워터마크 처리에 실패하였습니다.";
+      return false;
+    }
+  }
+  return true;
+}
+
 function proc_watermark2_2_2($src, $src_w, $src_h, $path_mark_file, $pos, $sharpness, $padding=0){
+
+  if (empty($src))  {//원본의 리소스 id 가 빈값일 경우
+    //$GLOBALS['errormsg'] = '원본 리소스가 없습니다.';
+    return false;
+  }
+
+  //정수형이 아니라면 정수형으로 강제 형변환
+  if (!is_int($src_w)) settype($src_w, 'int');
+  if (!is_int($src_h)) settype($src_h, 'int');
+  if (!is_int($sharpness)) settype($sharpness, 'int');
+  if (!is_int($padding)) settype($padding, 'int');
+
+
+
+  if ($src_w < 1 || $src_h < 1){//원본의 너비와 높이가 둘중에 하나라도 0보다 큰 정수가 아닐경우
+    //$GLOBALS['errormsg'] = "원본의 너비와 높이가 0보다 큰 정수가 아닙니다. ($src_w, $src_h)";
+    return false;
+  }
+
+
+
+  if (empty($path_mark_file)) {//워터마크 이미지 경로값이 없다면
+    //$GLOBALS['errormsg'] = '워터마크 이미지경로값이 없습니다.';
+    return false;
+  }
+
+  list($mark, $mark_w, $mark_h) = get_image_resource_from_file ($path_mark_file);
+
+  if (empty($mark)) return false;//에러 메시지 작성은 get_image_resource_from_file 내부에서 함
+
+
+
+  if ($src_w < $mark_w + (2 * $padding)) {//원본너비가 워터마크 이미지 너비보다 작으면 워터마크 처리 안함, return true;
+   return true;
+  }
+
+  if ($src_h < $mark_h + (2 * $padding)) {//원본높이가 워터마크 이미지 높이보다 작으면 워터마크 처리 안함, return true;
+    return true;
+  }
+
+
+
+  if ($sharpness < 0 || $sharpness > 100) $sharpness = 100;//$sharpness 가 지정된 범위 이상의 숫자라면 100으로 강제 재설정
+
+  if ($padding < 0 || $padding > $mark_w || $padding > $mark_h) $padding = 0;//$padding이 0보다 작거나 워터마크의 너비나 높이보다 크면 0으로 강제 재설정
+
+
+
+  if ($pos == 10) {//워터마크 전체로 찍을 경우의 처리
+
+    $w_max = $src_w - $padding;
+    $h_max = $src_h - $padding;
+
+    //x 축으로 워터마크를 몇번 찍을 것인지 계산, 패딩을 더해서 나눔
+    $x_max = ceil($w_max / ($mark_w + $padding));
+
+    //y 축으로 워터마크를 몇번 찍을 것인지 계산
+    $y_max = ceil($h_max / ($mark_h + $padding));
+
+    //루프를 돌리면서 워터마크를 찍음
+    for($x = 0; $x < $x_max; $x++){
+
+      for($y = 0; $y < $y_max; $y++){
+
+        //기준점을 구한다.
+        $src_x = $x * ($mark_w + $padding) + $padding;
+        $src_y = $y * ($mark_h + $padding) + $padding;
+
+        $copy_w = $mark_w;
+        $copy_h = $mark_h;
+
+        if ($src_x + $mark_w > $w_max) $copy_w = $w_max - $src_x;
+        if ($src_y + $mark_h > $h_max) $copy_h = $h_max - $src_y;
+
+        if ($sharpness != 100) {//선명도가 100 이 아닐경우에는 선명도를 사용할수 있는 imagecopymerge 사용
+
+          $result_watermark = imagecopymerge($src, $mark, $src_x, $src_y, 0, 0, $copy_w, $copy_h, $sharpness);
+        }
+        else {//선명도가 100 일 경우에는 투명이미지를 사용할수 있는 imagecopyresampled 사용
+
+          $result_watermark = imagecopyresampled ($src , $mark , $src_x, $src_y, 0 , 0 , $copy_w, $copy_h , $copy_w, $copy_h);
+        }
+
+        if ($result_watermark === false) {
+          @imagedestroy($mark);
+          //$GLOBALS['errormsg'] = "워터마크 처리에 실패하였습니다.";
+          return false;
+        }
+      }
+    }
+  }
+  else {//워터마크를 하나만 찍을 경우에의 처리
+
+    //워터마크의 복사할 너비, 높이 기본값 지정
+    $copy_w = $mark_w;
+    $copy_h = $mark_h;
+
+    switch($pos){
+
+      case 1 : //상단 왼쪽
+
+        $src_x = ceil(($src_w - $mark_w) / 2);
+        $src_y = ceil(($src_h - $mark_h) / 2);
+
+        break;
+
+      case 2 : //상단 오른쪽
+
+        $src_x = ceil(($src_w - $mark_w) / 2);
+        $src_y = ceil(($src_h - $mark_h) / 2);
+
+        break;
+
+      case 3 : //하단 왼쪽
+
+        $src_x = ceil(($src_w - $mark_w) / 2);
+        $src_y = ceil(($src_h - $mark_h) / 2);
+
+        break;
+
+      case 4 : //하단 오른쪽
+
+        $src_x = ceil(($src_w - $mark_w) / 2);
+        $src_y = ceil(($src_h - $mark_h) / 2);
+
+        break;
+
+      case 5 : //중앙
+
+        $src_x = ceil(($src_w - $mark_w) / 2);
+        $src_y = ceil(($src_h - $mark_h) / 2);
+
+        break;
+
+      default : // 그 밖의 값은 전부 상단 왼쪽 치부
+
+        $src_x = ceil(($src_w - $mark_w) / 2);
+        $src_y = ceil(($src_h - $mark_h) / 2);
+
+    }
+
+    if ($sharpness != 100) {//선명도가 100 이 아닐경우에는 선명도를 사용할수 있는 imagecopymerge 사용
+
+      $result_watermark = imagecopymerge($src, $mark, $src_x, $src_y, 0, 0, $copy_w, $copy_h, $sharpness);
+    }
+    else {//선명도가 100 일 경우에는 투명이미지를 사용할수 있는 imagecopyresampled 사용
+      $result_watermark = imagecopyresampled ($src , $mark , $src_x, $src_y, 0 , 0 , $copy_w, $copy_h , $copy_w, $copy_h);
+    }
+
+    @imagedestroy($mark);
+
+    if ($result_watermark === false) {
+      //$GLOBALS['errormsg'] = "워터마크 처리에 실패하였습니다.";
+      return false;
+    }
+  }
+  return true;
+}
+
+function proc_watermark3_3_2($src, $src_w, $src_h, $path_mark_file, $pos, $sharpness, $padding=0){
+
+  if (empty($src))  {//원본의 리소스 id 가 빈값일 경우
+    //$GLOBALS['errormsg'] = '원본 리소스가 없습니다.';
+    return false;
+  }
+
+  //정수형이 아니라면 정수형으로 강제 형변환
+  if (!is_int($src_w)) settype($src_w, 'int');
+  if (!is_int($src_h)) settype($src_h, 'int');
+  if (!is_int($sharpness)) settype($sharpness, 'int');
+  if (!is_int($padding)) settype($padding, 'int');
+
+
+
+  if ($src_w < 1 || $src_h < 1){//원본의 너비와 높이가 둘중에 하나라도 0보다 큰 정수가 아닐경우
+    //$GLOBALS['errormsg'] = "원본의 너비와 높이가 0보다 큰 정수가 아닙니다. ($src_w, $src_h)";
+    return false;
+  }
+
+
+
+  if (empty($path_mark_file)) {//워터마크 이미지 경로값이 없다면
+    //$GLOBALS['errormsg'] = '워터마크 이미지경로값이 없습니다.';
+    return false;
+  }
+
+  list($mark, $mark_w, $mark_h) = get_image_resource_from_file ($path_mark_file);
+
+  if (empty($mark)) return false;//에러 메시지 작성은 get_image_resource_from_file 내부에서 함
+
+
+
+  if ($src_w < $mark_w + (2 * $padding)) {//원본너비가 워터마크 이미지 너비보다 작으면 워터마크 처리 안함, return true;
+   return true;
+  }
+
+  if ($src_h < $mark_h + (2 * $padding)) {//원본높이가 워터마크 이미지 높이보다 작으면 워터마크 처리 안함, return true;
+    return true;
+  }
+
+
+
+  if ($sharpness < 0 || $sharpness > 100) $sharpness = 100;//$sharpness 가 지정된 범위 이상의 숫자라면 100으로 강제 재설정
+
+  if ($padding < 0 || $padding > $mark_w || $padding > $mark_h) $padding = 0;//$padding이 0보다 작거나 워터마크의 너비나 높이보다 크면 0으로 강제 재설정
+
+
+
+  if ($pos == 10) {//워터마크 전체로 찍을 경우의 처리
+
+    $w_max = $src_w - $padding;
+    $h_max = $src_h - $padding;
+
+    //x 축으로 워터마크를 몇번 찍을 것인지 계산, 패딩을 더해서 나눔
+    $x_max = ceil($w_max / ($mark_w + $padding));
+
+    //y 축으로 워터마크를 몇번 찍을 것인지 계산
+    $y_max = ceil($h_max / ($mark_h + $padding));
+
+    //루프를 돌리면서 워터마크를 찍음
+    for($x = 0; $x < $x_max; $x++){
+
+      for($y = 0; $y < $y_max; $y++){
+
+        //기준점을 구한다.
+        $src_x = $x * ($mark_w + $padding) + $padding;
+        $src_y = $y * ($mark_h + $padding) + $padding;
+
+        $copy_w = $mark_w;
+        $copy_h = $mark_h;
+
+        if ($src_x + $mark_w > $w_max) $copy_w = $w_max - $src_x;
+        if ($src_y + $mark_h > $h_max) $copy_h = $h_max - $src_y;
+
+        if ($sharpness != 100) {//선명도가 100 이 아닐경우에는 선명도를 사용할수 있는 imagecopymerge 사용
+
+          $result_watermark = imagecopymerge($src, $mark, $src_x, $src_y, 0, 0, $copy_w, $copy_h, $sharpness);
+        }
+        else {//선명도가 100 일 경우에는 투명이미지를 사용할수 있는 imagecopyresampled 사용
+
+          $result_watermark = imagecopyresampled ($src , $mark , $src_x, $src_y, 0 , 0 , $copy_w, $copy_h , $copy_w, $copy_h);
+        }
+
+        if ($result_watermark === false) {
+          @imagedestroy($mark);
+          //$GLOBALS['errormsg'] = "워터마크 처리에 실패하였습니다.";
+          return false;
+        }
+      }
+    }
+  }
+  else {//워터마크를 하나만 찍을 경우에의 처리
+
+    //워터마크의 복사할 너비, 높이 기본값 지정
+    $copy_w = $mark_w;
+    $copy_h = $mark_h;
+
+    switch($pos){
+
+      case 1 : //상단 왼쪽
+
+        $src_x = ceil(($src_w - $mark_w) / 2);
+        $src_y = ceil(($src_h - $mark_h) / 2);
+
+        break;
+
+      case 2 : //상단 오른쪽
+
+        $src_x = ceil(($src_w - $mark_w) / 2);
+        $src_y = ceil(($src_h - $mark_h) / 2);
+
+        break;
+
+      case 3 : //하단 왼쪽
+
+        $src_x = ceil(($src_w - $mark_w) / 2);
+        $src_y = ceil(($src_h - $mark_h) / 2);
+
+        break;
+
+      case 4 : //하단 오른쪽
+
+        $src_x = ceil(($src_w - $mark_w) / 2);
+        $src_y = ceil(($src_h - $mark_h) / 2);
+
+        break;
+
+      case 5 : //중앙
+
+        $src_x = ceil(($src_w - $mark_w) / 2);
+        $src_y = ceil(($src_h - $mark_h) / 2);
+
+        break;
+
+      default : // 그 밖의 값은 전부 상단 왼쪽 치부
+
+        $src_x = ceil(($src_w - $mark_w) / 2);
+        $src_y = ceil(($src_h - $mark_h) / 2);
+
+    }
+
+    if ($sharpness != 100) {//선명도가 100 이 아닐경우에는 선명도를 사용할수 있는 imagecopymerge 사용
+
+      $result_watermark = imagecopymerge($src, $mark, $src_x, $src_y, 0, 0, $copy_w, $copy_h, $sharpness);
+    }
+    else {//선명도가 100 일 경우에는 투명이미지를 사용할수 있는 imagecopyresampled 사용
+      $result_watermark = imagecopyresampled ($src , $mark , $src_x, $src_y, 0 , 0 , $copy_w, $copy_h , $copy_w, $copy_h);
+    }
+
+    @imagedestroy($mark);
+
+    if ($result_watermark === false) {
+      //$GLOBALS['errormsg'] = "워터마크 처리에 실패하였습니다.";
+      return false;
+    }
+  }
+  return true;
+}
+
+function proc_watermark3_5_2($src, $src_w, $src_h, $path_mark_file, $pos, $sharpness, $padding=0){
 
   if (empty($src))  {//원본의 리소스 id 가 빈값일 경우
     //$GLOBALS['errormsg'] = '원본 리소스가 없습니다.';
@@ -3537,6 +4208,218 @@ function thumnail_test2_2_1($path_src_file, $path_save_file, $path_mark_file, $s
   return $result_save;
 }
 
+function thumnail_test3_1_1($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h=0, $options=Array()){
+
+  //기본값 설정
+  $save_quality = 70;//저장 품질 : 70 %
+  $save_force = 2;//저장형태 : 파일 덮어씌움
+
+  $crop_use = 0;//크롭 사용여부
+  $crop_pos_width = 2;//너비 기준 크롭시 중앙을 기준
+  $crop_pos_height = 1;//높이 기준 크롭시 상단을 기준
+
+  $watermark_path_file = $path_mark_file;//워터마크로 사용할 파일 경로 : 없음
+  $watermark_pos = 5;//워터마크 찍는 위치 : 하단 오른쪽
+  $watermark_sharpness = 100;//워터마크 이미지의 선명도 : 30 %
+  $watermark_padding = 0;//원본과 워터마크 사이의 여백 : 10px
+
+  //기본값 재설정
+  if (!empty($options)) @extract($options);
+
+  //원본 리소스 생성
+  list($src, $src_w, $src_h) = get_image_resource_from_file ($path_src_file);
+  if (empty($src)) return false;
+
+  //리사이즈 또는 크롭 리사이즈
+  if ($crop_use == 1) {//크롭 리사이즈
+
+    $dst = get_image_cropresize($src, $src_w, $src_h, $save_w, $save_h, $crop_pos_width, $crop_pos_height);
+  }
+  else {//리사이즈
+
+    $dst = get_image_resize($src, $src_w, $src_h, $save_w, $save_h);
+  }
+
+  @imagedestroy($src);
+  if (empty($dst)) return false;
+
+  $save_w = imagesx($dst);//생성된 썸네일 리소스에서 실제 너비를 구한다.
+  $save_h = imagesy($dst);//생성된 썸네일 리소스에서 실제 높이를 구한다.
+
+  //워터마크 이미지가 파일일 경우, 워터마크 처리
+  if (!empty($watermark_path_file) && is_file($watermark_path_file)) {
+
+    $result_watermark = proc_watermark2_2_1($dst, $save_w, $save_h, $watermark_path_file, $watermark_pos, $watermark_sharpness, $watermark_padding);
+
+    if (empty($result_watermark)) return false;
+  }
+
+  $result_save = save_image_from_resource ($dst, $path_save_file, $save_quality, $save_force);
+
+  @imagedestroy($dst);
+
+  return $result_save;
+}
+
+function thumnail_test4_1_1($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h=0, $options=Array()){
+
+  //기본값 설정
+  $save_quality = 70;//저장 품질 : 70 %
+  $save_force = 2;//저장형태 : 파일 덮어씌움
+
+  $crop_use = 0;//크롭 사용여부
+  $crop_pos_width = 2;//너비 기준 크롭시 중앙을 기준
+  $crop_pos_height = 1;//높이 기준 크롭시 상단을 기준
+
+  $watermark_path_file = $path_mark_file;//워터마크로 사용할 파일 경로 : 없음
+  $watermark_pos = 5;//워터마크 찍는 위치 : 하단 오른쪽
+  $watermark_sharpness = 100;//워터마크 이미지의 선명도 : 30 %
+  $watermark_padding = 0;//원본과 워터마크 사이의 여백 : 10px
+
+  //기본값 재설정
+  if (!empty($options)) @extract($options);
+
+  //원본 리소스 생성
+  list($src, $src_w, $src_h) = get_image_resource_from_file ($path_src_file);
+  if (empty($src)) return false;
+
+  //리사이즈 또는 크롭 리사이즈
+  if ($crop_use == 1) {//크롭 리사이즈
+
+    $dst = get_image_cropresize($src, $src_w, $src_h, $save_w, $save_h, $crop_pos_width, $crop_pos_height);
+  }
+  else {//리사이즈
+
+    $dst = get_image_resize($src, $src_w, $src_h, $save_w, $save_h);
+  }
+
+  @imagedestroy($src);
+  if (empty($dst)) return false;
+
+  $save_w = imagesx($dst);//생성된 썸네일 리소스에서 실제 너비를 구한다.
+  $save_h = imagesy($dst);//생성된 썸네일 리소스에서 실제 높이를 구한다.
+
+  //워터마크 이미지가 파일일 경우, 워터마크 처리
+  if (!empty($watermark_path_file) && is_file($watermark_path_file)) {
+
+    $result_watermark = proc_watermark2_2_1($dst, $save_w, $save_h, $watermark_path_file, $watermark_pos, $watermark_sharpness, $watermark_padding);
+
+    if (empty($result_watermark)) return false;
+  }
+
+  $result_save = save_image_from_resource ($dst, $path_save_file, $save_quality, $save_force);
+
+  @imagedestroy($dst);
+
+  return $result_save;
+}
+
+function thumnail_test3_3_1($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h=0, $options=Array()){
+
+  //기본값 설정
+  $save_quality = 70;//저장 품질 : 70 %
+  $save_force = 2;//저장형태 : 파일 덮어씌움
+
+  $crop_use = 0;//크롭 사용여부
+  $crop_pos_width = 2;//너비 기준 크롭시 중앙을 기준
+  $crop_pos_height = 1;//높이 기준 크롭시 상단을 기준
+
+  $watermark_path_file = $path_mark_file;//워터마크로 사용할 파일 경로 : 없음
+  $watermark_pos = 5;//워터마크 찍는 위치 : 하단 오른쪽
+  $watermark_sharpness = 100;//워터마크 이미지의 선명도 : 30 %
+  $watermark_padding = 0;//원본과 워터마크 사이의 여백 : 10px
+
+  //기본값 재설정
+  if (!empty($options)) @extract($options);
+
+  //원본 리소스 생성
+  list($src, $src_w, $src_h) = get_image_resource_from_file ($path_src_file);
+  if (empty($src)) return false;
+
+  //리사이즈 또는 크롭 리사이즈
+  if ($crop_use == 1) {//크롭 리사이즈
+
+    $dst = get_image_cropresize($src, $src_w, $src_h, $save_w, $save_h, $crop_pos_width, $crop_pos_height);
+  }
+  else {//리사이즈
+
+    $dst = get_image_resize($src, $src_w, $src_h, $save_w, $save_h);
+  }
+
+  @imagedestroy($src);
+  if (empty($dst)) return false;
+
+  $save_w = imagesx($dst);//생성된 썸네일 리소스에서 실제 너비를 구한다.
+  $save_h = imagesy($dst);//생성된 썸네일 리소스에서 실제 높이를 구한다.
+
+  //워터마크 이미지가 파일일 경우, 워터마크 처리
+  if (!empty($watermark_path_file) && is_file($watermark_path_file)) {
+
+    $result_watermark = proc_watermark3_3_1($dst, $save_w, $save_h, $watermark_path_file, $watermark_pos, $watermark_sharpness, $watermark_padding);
+
+    if (empty($result_watermark)) return false;
+  }
+
+  $result_save = save_image_from_resource ($dst, $path_save_file, $save_quality, $save_force);
+
+  @imagedestroy($dst);
+
+  return $result_save;
+}
+
+function thumnail_test3_5_1($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h=0, $options=Array()){
+
+  //기본값 설정
+  $save_quality = 70;//저장 품질 : 70 %
+  $save_force = 2;//저장형태 : 파일 덮어씌움
+
+  $crop_use = 0;//크롭 사용여부
+  $crop_pos_width = 2;//너비 기준 크롭시 중앙을 기준
+  $crop_pos_height = 1;//높이 기준 크롭시 상단을 기준
+
+  $watermark_path_file = $path_mark_file;//워터마크로 사용할 파일 경로 : 없음
+  $watermark_pos = 5;//워터마크 찍는 위치 : 하단 오른쪽
+  $watermark_sharpness = 100;//워터마크 이미지의 선명도 : 30 %
+  $watermark_padding = 0;//원본과 워터마크 사이의 여백 : 10px
+
+  //기본값 재설정
+  if (!empty($options)) @extract($options);
+
+  //원본 리소스 생성
+  list($src, $src_w, $src_h) = get_image_resource_from_file ($path_src_file);
+  if (empty($src)) return false;
+
+  //리사이즈 또는 크롭 리사이즈
+  if ($crop_use == 1) {//크롭 리사이즈
+
+    $dst = get_image_cropresize($src, $src_w, $src_h, $save_w, $save_h, $crop_pos_width, $crop_pos_height);
+  }
+  else {//리사이즈
+
+    $dst = get_image_resize($src, $src_w, $src_h, $save_w, $save_h);
+  }
+
+  @imagedestroy($src);
+  if (empty($dst)) return false;
+
+  $save_w = imagesx($dst);//생성된 썸네일 리소스에서 실제 너비를 구한다.
+  $save_h = imagesy($dst);//생성된 썸네일 리소스에서 실제 높이를 구한다.
+
+  //워터마크 이미지가 파일일 경우, 워터마크 처리
+  if (!empty($watermark_path_file) && is_file($watermark_path_file)) {
+
+    $result_watermark = proc_watermark3_5_1($dst, $save_w, $save_h, $watermark_path_file, $watermark_pos, $watermark_sharpness, $watermark_padding);
+
+    if (empty($result_watermark)) return false;
+  }
+
+  $result_save = save_image_from_resource ($dst, $path_save_file, $save_quality, $save_force);
+
+  @imagedestroy($dst);
+
+  return $result_save;
+}
+
 function thumnail_test2_2_2($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h=0, $options=Array()){
 
   //기본값 설정
@@ -3579,6 +4462,218 @@ function thumnail_test2_2_2($path_src_file, $path_save_file, $path_mark_file, $s
   if (!empty($watermark_path_file) && is_file($watermark_path_file)) {
 
     $result_watermark = proc_watermark2_2_2($dst, $save_w, $save_h, $watermark_path_file, $watermark_pos, $watermark_sharpness, $watermark_padding);
+
+    if (empty($result_watermark)) return false;
+  }
+
+  $result_save = save_image_from_resource ($dst, $path_save_file, $save_quality, $save_force);
+
+  @imagedestroy($dst);
+
+  return $result_save;
+}
+
+function thumnail_test3_1_2($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h=0, $options=Array()){
+
+  //기본값 설정
+  $save_quality = 70;//저장 품질 : 70 %
+  $save_force = 2;//저장형태 : 파일 덮어씌움
+
+  $crop_use = 0;//크롭 사용여부
+  $crop_pos_width = 2;//너비 기준 크롭시 중앙을 기준
+  $crop_pos_height = 1;//높이 기준 크롭시 상단을 기준
+
+  $watermark_path_file = $path_mark_file;//워터마크로 사용할 파일 경로 : 없음
+  $watermark_pos = 5;//워터마크 찍는 위치 : 하단 오른쪽
+  $watermark_sharpness = 100;//워터마크 이미지의 선명도 : 30 %
+  $watermark_padding = 0;//원본과 워터마크 사이의 여백 : 10px
+
+  //기본값 재설정
+  if (!empty($options)) @extract($options);
+
+  //원본 리소스 생성
+  list($src, $src_w, $src_h) = get_image_resource_from_file ($path_src_file);
+  if (empty($src)) return false;
+
+  //리사이즈 또는 크롭 리사이즈
+  if ($crop_use == 1) {//크롭 리사이즈
+
+    $dst = get_image_cropresize($src, $src_w, $src_h, $save_w, $save_h, $crop_pos_width, $crop_pos_height);
+  }
+  else {//리사이즈
+
+    $dst = get_image_resize($src, $src_w, $src_h, $save_w, $save_h);
+  }
+
+  @imagedestroy($src);
+  if (empty($dst)) return false;
+
+  $save_w = imagesx($dst);//생성된 썸네일 리소스에서 실제 너비를 구한다.
+  $save_h = imagesy($dst);//생성된 썸네일 리소스에서 실제 높이를 구한다.
+
+  //워터마크 이미지가 파일일 경우, 워터마크 처리
+  if (!empty($watermark_path_file) && is_file($watermark_path_file)) {
+
+    $result_watermark = proc_watermark2_2_2($dst, $save_w, $save_h, $watermark_path_file, $watermark_pos, $watermark_sharpness, $watermark_padding);
+
+    if (empty($result_watermark)) return false;
+  }
+
+  $result_save = save_image_from_resource ($dst, $path_save_file, $save_quality, $save_force);
+
+  @imagedestroy($dst);
+
+  return $result_save;
+}
+
+function thumnail_test4_1_2($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h=0, $options=Array()){
+
+  //기본값 설정
+  $save_quality = 70;//저장 품질 : 70 %
+  $save_force = 2;//저장형태 : 파일 덮어씌움
+
+  $crop_use = 0;//크롭 사용여부
+  $crop_pos_width = 2;//너비 기준 크롭시 중앙을 기준
+  $crop_pos_height = 1;//높이 기준 크롭시 상단을 기준
+
+  $watermark_path_file = $path_mark_file;//워터마크로 사용할 파일 경로 : 없음
+  $watermark_pos = 5;//워터마크 찍는 위치 : 하단 오른쪽
+  $watermark_sharpness = 100;//워터마크 이미지의 선명도 : 30 %
+  $watermark_padding = 0;//원본과 워터마크 사이의 여백 : 10px
+
+  //기본값 재설정
+  if (!empty($options)) @extract($options);
+
+  //원본 리소스 생성
+  list($src, $src_w, $src_h) = get_image_resource_from_file ($path_src_file);
+  if (empty($src)) return false;
+
+  //리사이즈 또는 크롭 리사이즈
+  if ($crop_use == 1) {//크롭 리사이즈
+
+    $dst = get_image_cropresize($src, $src_w, $src_h, $save_w, $save_h, $crop_pos_width, $crop_pos_height);
+  }
+  else {//리사이즈
+
+    $dst = get_image_resize($src, $src_w, $src_h, $save_w, $save_h);
+  }
+
+  @imagedestroy($src);
+  if (empty($dst)) return false;
+
+  $save_w = imagesx($dst);//생성된 썸네일 리소스에서 실제 너비를 구한다.
+  $save_h = imagesy($dst);//생성된 썸네일 리소스에서 실제 높이를 구한다.
+
+  //워터마크 이미지가 파일일 경우, 워터마크 처리
+  if (!empty($watermark_path_file) && is_file($watermark_path_file)) {
+
+    $result_watermark = proc_watermark2_2_2($dst, $save_w, $save_h, $watermark_path_file, $watermark_pos, $watermark_sharpness, $watermark_padding);
+
+    if (empty($result_watermark)) return false;
+  }
+
+  $result_save = save_image_from_resource ($dst, $path_save_file, $save_quality, $save_force);
+
+  @imagedestroy($dst);
+
+  return $result_save;
+}
+
+function thumnail_test3_3_2($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h=0, $options=Array()){
+
+  //기본값 설정
+  $save_quality = 70;//저장 품질 : 70 %
+  $save_force = 2;//저장형태 : 파일 덮어씌움
+
+  $crop_use = 0;//크롭 사용여부
+  $crop_pos_width = 2;//너비 기준 크롭시 중앙을 기준
+  $crop_pos_height = 1;//높이 기준 크롭시 상단을 기준
+
+  $watermark_path_file = $path_mark_file;//워터마크로 사용할 파일 경로 : 없음
+  $watermark_pos = 5;//워터마크 찍는 위치 : 하단 오른쪽
+  $watermark_sharpness = 100;//워터마크 이미지의 선명도 : 30 %
+  $watermark_padding = 0;//원본과 워터마크 사이의 여백 : 10px
+
+  //기본값 재설정
+  if (!empty($options)) @extract($options);
+
+  //원본 리소스 생성
+  list($src, $src_w, $src_h) = get_image_resource_from_file ($path_src_file);
+  if (empty($src)) return false;
+
+  //리사이즈 또는 크롭 리사이즈
+  if ($crop_use == 1) {//크롭 리사이즈
+
+    $dst = get_image_cropresize($src, $src_w, $src_h, $save_w, $save_h, $crop_pos_width, $crop_pos_height);
+  }
+  else {//리사이즈
+
+    $dst = get_image_resize($src, $src_w, $src_h, $save_w, $save_h);
+  }
+
+  @imagedestroy($src);
+  if (empty($dst)) return false;
+
+  $save_w = imagesx($dst);//생성된 썸네일 리소스에서 실제 너비를 구한다.
+  $save_h = imagesy($dst);//생성된 썸네일 리소스에서 실제 높이를 구한다.
+
+  //워터마크 이미지가 파일일 경우, 워터마크 처리
+  if (!empty($watermark_path_file) && is_file($watermark_path_file)) {
+
+    $result_watermark = proc_watermark3_3_2($dst, $save_w, $save_h, $watermark_path_file, $watermark_pos, $watermark_sharpness, $watermark_padding);
+
+    if (empty($result_watermark)) return false;
+  }
+
+  $result_save = save_image_from_resource ($dst, $path_save_file, $save_quality, $save_force);
+
+  @imagedestroy($dst);
+
+  return $result_save;
+}
+
+function thumnail_test3_5_2($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h=0, $options=Array()){
+
+  //기본값 설정
+  $save_quality = 70;//저장 품질 : 70 %
+  $save_force = 2;//저장형태 : 파일 덮어씌움
+
+  $crop_use = 0;//크롭 사용여부
+  $crop_pos_width = 2;//너비 기준 크롭시 중앙을 기준
+  $crop_pos_height = 1;//높이 기준 크롭시 상단을 기준
+
+  $watermark_path_file = $path_mark_file;//워터마크로 사용할 파일 경로 : 없음
+  $watermark_pos = 5;//워터마크 찍는 위치 : 하단 오른쪽
+  $watermark_sharpness = 100;//워터마크 이미지의 선명도 : 30 %
+  $watermark_padding = 0;//원본과 워터마크 사이의 여백 : 10px
+
+  //기본값 재설정
+  if (!empty($options)) @extract($options);
+
+  //원본 리소스 생성
+  list($src, $src_w, $src_h) = get_image_resource_from_file ($path_src_file);
+  if (empty($src)) return false;
+
+  //리사이즈 또는 크롭 리사이즈
+  if ($crop_use == 1) {//크롭 리사이즈
+
+    $dst = get_image_cropresize($src, $src_w, $src_h, $save_w, $save_h, $crop_pos_width, $crop_pos_height);
+  }
+  else {//리사이즈
+
+    $dst = get_image_resize($src, $src_w, $src_h, $save_w, $save_h);
+  }
+
+  @imagedestroy($src);
+  if (empty($dst)) return false;
+
+  $save_w = imagesx($dst);//생성된 썸네일 리소스에서 실제 너비를 구한다.
+  $save_h = imagesy($dst);//생성된 썸네일 리소스에서 실제 높이를 구한다.
+
+  //워터마크 이미지가 파일일 경우, 워터마크 처리
+  if (!empty($watermark_path_file) && is_file($watermark_path_file)) {
+
+    $result_watermark = proc_watermark3_5_2($dst, $save_w, $save_h, $watermark_path_file, $watermark_pos, $watermark_sharpness, $watermark_padding);
 
     if (empty($result_watermark)) return false;
   }
@@ -3771,6 +4866,25 @@ function caption_image($caption, $serial, $num, $txt_X, $txt_Y)
 	$cImage = getPrintToImage($txt_X, $txt_Y, $serial, $num, $szFilePath, $objFont, $serial, LEFT | MIDDLE);
 }
 
+function caption_image_white($caption, $serial, $num, $txt_X, $txt_Y)
+{
+	# 사용예제
+	$objFont = new Font;
+
+	$objFont->text  = $caption;
+	$objFont->size  = 20;
+	$objFont->color = 0xFFFFFF;
+	//$objFont->angle = 45;
+	//$objFont->font  = "/home/vdl_gate/nanumBold.ttf";
+	$objFont->font  = "./nanumBold.ttf";
+
+	//$szFilePath     = "/home/vdl_gate/m/images/baby_1.jpg";
+	//$szFilePath     = "./images/baby1.jpg";
+	$szFilePath     = "./files/".$serial."/medium/merge2_".$serial."_".$num.".jpg";
+
+	$cImage = getPrintToImage($txt_X, $txt_Y, $serial, $num, $szFilePath, $objFont, $serial, LEFT | MIDDLE);
+}
+
 function caption_image2($caption, $serial, $num, $txt_X, $txt_Y)
 {
 	# 사용예제
@@ -3779,6 +4893,25 @@ function caption_image2($caption, $serial, $num, $txt_X, $txt_Y)
 	$objFont->text  = $caption;
 	$objFont->size  = 20;
 	$objFont->color = 0x000000;
+	//$objFont->angle = 45;
+	//$objFont->font  = "/home/vdl_gate/nanumBold.ttf";
+	$objFont->font  = "./nanumBold.ttf";
+
+	//$szFilePath     = "/home/vdl_gate/m/images/baby_1.jpg";
+	//$szFilePath     = "./images/baby1.jpg";
+	$szFilePath     = "./files/".$serial."/medium/final_".$serial."_".$num.".jpg";
+
+	$cImage = getPrintToImage($txt_X, $txt_Y, $serial, $num, $szFilePath, $objFont, $serial, LEFT | MIDDLE);
+}
+
+function caption_image2_white($caption, $serial, $num, $txt_X, $txt_Y)
+{
+	# 사용예제
+	$objFont = new Font;
+
+	$objFont->text  = $caption;
+	$objFont->size  = 20;
+	$objFont->color = 0xFFFFFF;
 	//$objFont->angle = 45;
 	//$objFont->font  = "/home/vdl_gate/nanumBold.ttf";
 	$objFont->font  = "./nanumBold.ttf";

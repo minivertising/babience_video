@@ -43,12 +43,12 @@
         <div class="inner_input_block">
           <div class="input_one">
             <div class="inner_input_one clearfix">
-              <div class="input"><input type="text" name="mb_baby_name" id="mb_baby_name" placeholder="아기 이름"></div>
+              <div class="input"><input type="text" name="mb_baby_name" id="mb_baby_name" placeholder="아기 이름" onkeyup="ins_caption('b_name');return false;"></div>
             </div>
           </div>
           <div class="input_one">
             <div class="inner_input_one clearfix">
-              <div class="input"><input type="text" name="mb_baby_age" id="mb_baby_age" placeholder="아기 나이 (숫자만 넣어주세요)"></div>
+              <div class="input"><input type="text" name="mb_baby_age" id="mb_baby_age" placeholder="아기 나이 (숫자만 넣어주세요)" onkeyup="ins_caption('b_age');return false;"></div>
             </div>
           </div>
         </div>      
@@ -70,10 +70,9 @@
                 <input id="fileupload" type="file" name="files[]" >
               </span>
             </div>
-            <!-- <div class="re_upload"><a href="#"><img src="images/popup/btn_reup.png" /></a></div> -->
-            <div class="text f_1_1" id="imsi_caption1">성장 타이틀</div>
-            <div class="p_img f_1_1" id="user_img1"><img src="images/popup/ex.jpg" /></div><!--소비자 합성 이미지-->
-            <div class="front_img img"><img src="images/popup/img_frm_4_1.png" /></div>
+            <div class="text f_4_1" id="imsi_caption1">성장타이틀성장타이틀</div>
+            <div class="p_img f_4_1" id="user_img1">소비자 합성 이미지</div><!--소비자 합성 이미지-->
+            <div class="front_img img"><img src="images/popup/img_frm_4_1.png"  id="preview_img_1"/></div>
             <div class="bg img"><img src="images/popup/frm_b_bg.jpg" /></div>
           </div>
           <div class="pic_input">
@@ -101,9 +100,9 @@
                 <input id="fileupload2" type="file" name="files[]" >
               </span>
             </div>
-            <!--<div class="re_upload"><a href="#"><img src="images/popup/btn_reup.png" /></a></div>-->
-            <div class="text f_1_2" id="imsi_caption2">성장 타이틀</div>
-            <div class="p_img f_1_2" id="user_img2"><img src="images/popup/ex.jpg" /></div><!--소비자 합성 이미지-->
+            <div class="name f_4_2 imsi_caption_baby">이서준(2)</div>
+            <div class="text f_4_2" id="imsi_caption2">성장 타이틀</div>
+            <div class="p_img f_4_2" id="user_img2">이미지</div><!--소비자 합성 이미지-->
             <div class="front_img img"><img src="images/popup/img_frm_4_2.png" /></div>
             <div class="bg img"><img src="images/popup/frm_b_bg.jpg" /></div>
           </div>
@@ -118,7 +117,7 @@
       <div class="pics frame_1">
         <input type="hidden" id="up_images3" value="">
         <div class="inner_pics">
-          <div class="title_frame img"><img src="images/popup/title_frame_1_2.png" /></div>
+          <div class="title_frame img"><img src="images/popup/title_frame_1_3.png" /></div>
           <div class="pc_frame">
             <div class="upload" id="up_img_div3">
               <!-- <a href="#"><img src="images/popup/btn_up.png" /></a> -->
@@ -132,10 +131,10 @@
                 <input id="fileupload3" type="file" name="files[]" >
               </span>
             </div>
-            <!--<div class="re_upload"><a href="#"><img src="images/popup/btn_reup.png" /></a></div>-->
-            <div class="text f_1_2" id="imsi_caption3">성장 타이틀</div>
-            <div class="p_img f_1_2" id="user_img3"><img src="images/popup/ex.jpg" /></div><!--소비자 합성 이미지-->
-            <div class="front_img img"><img src="images/popup/img_frm_4_2.png" /></div>
+            <div class="name f_4_2 imsi_caption_baby">이서준(2)</div>
+            <div class="text f_4_2" id="imsi_caption3">성장 타이틀</div>
+            <div class="p_img f_4_2" id="user_img3">이미지</div><!--소비자 합성 이미지-->
+            <div class="front_img img"><img src="images/popup/img_frm_4_3.png" /></div>
             <div class="bg img"><img src="images/popup/frm_b_bg.jpg" /></div>
           </div>
           <div class="pic_input">
@@ -149,7 +148,7 @@
       <div class="pics frame_1">
         <input type="hidden" id="up_images4" value="">
         <div class="inner_pics">
-          <div class="title_frame img"><img src="images/popup/title_frame_1_2.png" /></div>
+          <div class="title_frame img"><img src="images/popup/title_frame_1_4.png" /></div>
           <div class="pc_frame">
             <div class="upload" id="up_img_div4">
               <!-- <a href="#"><img src="images/popup/btn_up.png" /></a> -->
@@ -163,10 +162,10 @@
                 <input id="fileupload4" type="file" name="files[]" >
               </span>
             </div>
-            <!--<div class="re_upload"><a href="#"><img src="images/popup/btn_reup.png" /></a></div>-->
-            <div class="text f_1_2" id="imsi_caption4">성장 타이틀</div>
-            <div class="p_img f_1_2" id="user_img4"><img src="images/popup/ex.jpg" /></div><!--소비자 합성 이미지-->
-            <div class="front_img img"><img src="images/popup/img_frm_4_2.png" /></div>
+            <div class="name f_4_4 imsi_caption_baby">이서준(2)</div>
+            <div class="text f_4_4" id="imsi_caption4">성장 타이틀</div>
+            <div class="p_img f_4_4" id="user_img4">예시 이미지</div><!--소비자 합성 이미지-->
+            <div class="front_img img"><img src="images/popup/img_frm_4_4.png" /></div>
             <div class="bg img"><img src="images/popup/frm_b_bg.jpg" /></div>
           </div>
           <div class="pic_input">
@@ -194,8 +193,7 @@
                 <input id="fileupload5" type="file" name="files[]" >
               </span>
             </div>
-            <!--<div class="re_upload"><a href="#"><img src="images/popup/btn_reup.png" /></a></div>-->
-            <div class="p_img f_1_5" id="user_img5"><img src="images/popup/ex.jpg" /></div><!--소비자 합성 이미지-->
+            <div class="p_img f_4_5" id="user_img5">예시 이미지</div><!--소비자 합성 이미지-->
             <div class="front_img img"><img src="images/popup/img_frm_4_5.png" /></div>
             <div class="bg img"><img src="images/popup/frm_b_bg.jpg" /></div>
           </div>
@@ -436,11 +434,12 @@ function create_movie()
 		},
 		url: "../main_exec.php",
 		beforeSend: function(response){
-			$("#loading_div").show();
-			$("#input_baby_div").hide();
+			//$("#loading_div").show();
+			//$("#input_baby_div").hide();
 		},
 		success: function(response){
 			console.log(response);
+			/*
 			if (response == "Y")
 			{
 				$(".serial").html("<?=$serial?>");
@@ -454,7 +453,7 @@ function create_movie()
 				alert('접속자가 많아 참여가 지연되고 있습니다. 다시 시도해 주세요.');
 				location.href="index.php";
 			}
-			//console.log(response);
+			*/
 		}
 	});
 }
@@ -473,7 +472,7 @@ function next_page()
 $(function () {
     'use strict';
     // Change this to the location of your server-side upload handler:
-    var url = 'file_upload.php?s_id=<?=$serial?>';
+    var url = 'file_upload1_4.php?s_id=<?=$serial?>';
     $('#fileupload').fileupload({
         url: url,
         dataType: 'json',
@@ -485,8 +484,8 @@ $(function () {
         // send Blob objects via XHR requests:
         disableImageResize: /Android(?!.*Chrome)|Opera/
             .test(window.navigator.userAgent),
-        previewMaxWidth: 500,
-        previewMaxHeight: 500,
+        previewMaxWidth: 800,
+        previewMaxHeight: 800,
         previewCrop: false
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
@@ -521,9 +520,10 @@ $(function () {
             node
                 .prepend('<br>')
                 .prepend(file.preview);
-				$("div#user_img1 > div > p > canvas").css("width","40%");
-				$("div#user_img1 > div > p > canvas").css("padding-top","20%");
-				$("div#user_img1 > div > p > canvas").css("padding-left","29%");
+				$("div#user_img1 > div > p > canvas").css("width","100%");
+				$("div#user_img1 > div > p > canvas").css("height",$("#preview_img_1").height());
+				//$("div#user_img1 > div > p > canvas").css("padding-top","20%");
+				//$("div#user_img1 > div > p > canvas").css("padding-left","29%");
         }
         if (file.error) {
             node
@@ -566,7 +566,7 @@ $(function () {
 $(function () {
     'use strict';
     // Change this to the location of your server-side upload handler:
-    var url = 'file_upload2.php?s_id=<?=$serial?>';
+    var url = 'file_upload2_4.php?s_id=<?=$serial?>';
     $('#fileupload2').fileupload({
         url: url,
         dataType: 'json',
@@ -578,8 +578,8 @@ $(function () {
         // send Blob objects via XHR requests:
         disableImageResize: /Android(?!.*Chrome)|Opera/
             .test(window.navigator.userAgent),
-        previewMaxWidth: 50,
-        previewMaxHeight: 50,
+        previewMaxWidth: 800,
+        previewMaxHeight: 800,
         previewCrop: false
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
@@ -612,9 +612,8 @@ $(function () {
             node
                 .prepend('<br>')
                 .prepend(file.preview);
-				$("div#user_img2 > div > p > canvas").css("width","60%");
-				$("div#user_img2 > div > p > canvas").css("padding-top","12%");
-				$("div#user_img2 > div > p > canvas").css("padding-left","20%");
+				$("div#user_img2 > div > p > canvas").css("width","100%");
+				$("div#user_img2 > div > p > canvas").css("height",$("#preview_img_1").height());
         }
         if (file.error) {
             node
@@ -657,7 +656,7 @@ $(function () {
 $(function () {
     'use strict';
     // Change this to the location of your server-side upload handler:
-    var url = 'file_upload3.php?s_id=<?=$serial?>';
+    var url = 'file_upload3_4.php?s_id=<?=$serial?>';
     $('#fileupload3').fileupload({
         url: url,
         dataType: 'json',
@@ -669,8 +668,8 @@ $(function () {
         // send Blob objects via XHR requests:
         disableImageResize: /Android(?!.*Chrome)|Opera/
             .test(window.navigator.userAgent),
-        previewMaxWidth: 50,
-        previewMaxHeight: 50,
+        previewMaxWidth: 500,
+        previewMaxHeight: 500,
         previewCrop: false
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
@@ -703,9 +702,8 @@ $(function () {
             node
                 .prepend('<br>')
                 .prepend(file.preview);
-				$("div#user_img3 > div > p > canvas").css("width","60%");
-				$("div#user_img3 > div > p > canvas").css("padding-top","12%");
-				$("div#user_img3 > div > p > canvas").css("padding-left","20%");
+				$("div#user_img3 > div > p > canvas").css("width","100%");
+				$("div#user_img3 > div > p > canvas").css("height",$("#preview_img_1").height());
         }
         if (file.error) {
             node
@@ -747,7 +745,7 @@ $(function () {
 $(function () {
     'use strict';
     // Change this to the location of your server-side upload handler:
-    var url = 'file_upload4.php?s_id=<?=$serial?>';
+    var url = 'file_upload4_4.php?s_id=<?=$serial?>';
     $('#fileupload4').fileupload({
         url: url,
         dataType: 'json',
@@ -759,8 +757,8 @@ $(function () {
         // send Blob objects via XHR requests:
         disableImageResize: /Android(?!.*Chrome)|Opera/
             .test(window.navigator.userAgent),
-        previewMaxWidth: 50,
-        previewMaxHeight: 50,
+        previewMaxWidth: 500,
+        previewMaxHeight: 500,
         previewCrop: false
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
@@ -793,9 +791,8 @@ $(function () {
             node
                 .prepend('<br>')
                 .prepend(file.preview);
-				$("div#user_img4 > div > p > canvas").css("width","60%");
-				$("div#user_img4 > div > p > canvas").css("padding-top","12%");
-				$("div#user_img4 > div > p > canvas").css("padding-left","20%");
+				$("div#user_img4 > div > p > canvas").css("width","100%");
+				$("div#user_img4 > div > p > canvas").css("height",$("#preview_img_1").height());
         }
         if (file.error) {
             node
@@ -837,7 +834,7 @@ $(function () {
 $(function () {
     'use strict';
     // Change this to the location of your server-side upload handler:
-    var url = 'file_upload5.php?s_id=<?=$serial?>';
+    var url = 'file_upload5_4.php?s_id=<?=$serial?>';
     $('#fileupload5').fileupload({
         url: url,
         dataType: 'json',
@@ -849,8 +846,8 @@ $(function () {
         // send Blob objects via XHR requests:
         disableImageResize: /Android(?!.*Chrome)|Opera/
             .test(window.navigator.userAgent),
-        previewMaxWidth: 50,
-        previewMaxHeight: 50,
+        previewMaxWidth: 500,
+        previewMaxHeight: 500,
         previewCrop: false
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
@@ -883,9 +880,8 @@ $(function () {
             node
                 .prepend('<br>')
                 .prepend(file.preview);
-				$("div#user_img5 > div > p > canvas").css("width","60%");
-				$("div#user_img5 > div > p > canvas").css("padding-top","12%");
-				$("div#user_img5 > div > p > canvas").css("padding-left","20%");
+				$("div#user_img5 > div > p > canvas").css("width","100%");
+				$("div#user_img5 > div > p > canvas").css("height",$("#preview_img_1").height());
         }
         if (file.error) {
             node
