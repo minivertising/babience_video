@@ -216,7 +216,7 @@ switch ($_REQUEST['exec'])
 		}else{
 			$flag	= "N";
 		}
-		echo $flag;
+		echo stripslashes($output);
 	break;
 }
 ?>
