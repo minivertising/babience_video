@@ -1,10 +1,10 @@
 #!/bin/bash
  ffmpeg \
--loop 1 -t 1 -i ./files/4C12029A69/medium/final_4C12029A69_1.jpg \
--loop 1 -t 1 -i ./files/4C12029A69/medium/final_4C12029A69_2.jpg \
--loop 1 -t 1 -i ./files/4C12029A69/medium/final_4C12029A69_3.jpg \
--loop 1 -t 1 -i ./files/4C12029A69/medium/final_4C12029A69_4.jpg \
--loop 1 -t 1 -i ./files/4C12029A69/medium/final_4C12029A69_4.jpg \
+-loop 1 -t 1 -i ../files/4C12029A69/medium/final_4C12029A69_1.jpg \
+-loop 1 -t 1 -i ../files/4C12029A69/medium/final_4C12029A69_2.jpg \
+-loop 1 -t 1 -i ../files/4C12029A69/medium/final_4C12029A69_3.jpg \
+-loop 1 -t 1 -i ../files/4C12029A69/medium/final_4C12029A69_4.jpg \
+-loop 1 -t 1 -i ../files/4C12029A69/medium/final_4C12029A69_4.jpg \
 -filter_complex \
 "[1:v][0:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b1v]; \
  [2:v][1:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b2v]; \
