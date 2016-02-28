@@ -238,7 +238,7 @@
                         </div>
                     </div>
                     <div class="btn_block img">
-                    	<a href="../files/out.mp4" download><img src="images/popup/btn_down.png" /></a>
+                    	<a href="../files/out.mp4" download id="download_src"><img src="images/popup/btn_down.png" /></a>
                     </div>
                     <div class="btn_block_2 img">
                     	<a href="#" onclick="prev_page();return false;"><img src="images/popup/btn_before.png" /></a>
@@ -491,6 +491,8 @@ function create_movie()
 				$("#video_b_name").html(mb_baby_name);
 				$("#next_image").attr("src","images/popup/btn_m_next_coupon.png");
 				$("#video_player").width("100%");
+				$("#video_player").attr("src","../files/<?=$serial?>/growmovie.mp4");
+				$("#download_src").attr("src","../files/<?=$serial?>/growmovie.mp4");
 				$("#movie_div").show();
 				$("#loading_div").hide();
 				user_gubun	= 1;
@@ -499,6 +501,8 @@ function create_movie()
 				$("#video_b_name").html(mb_baby_name);
 				$("#next_image").attr("src","images/popup/btn_m_next.png");
 				$("#video_player").width("100%");
+				$("#video_player").attr("src","../files/<?=$serial?>/growmovie.mp4");
+				$("#download_src").attr("src","../files/<?=$serial?>/growmovie.mp4");
 				$("#movie_div").show();
 				$("#loading_div").hide();
 				user_gubun	= 0;

@@ -99,8 +99,8 @@ switch ($_REQUEST['exec'])
 			$caption_image2_name_w	= "40;";
 			$caption_image2_name_h	= "393;";
 		}else if ($mb_concept == "4"){
-			$caption_image1_w	= "370;";
-			$caption_image1_h	= "410;";
+			$caption_image1_w	= "110;";
+			$caption_image1_h	= "362;";
 			$caption_image2_w	= "40;";
 			$caption_image2_h	= "440;";
 			$caption_image2_name_w	= "40;";
@@ -114,9 +114,10 @@ switch ($_REQUEST['exec'])
 			$img_name1			= $mb_serial."_1.".strtolower($img_name1arr[$img_name1arr_num]); 
 			$new_image1			= merge_image($img_name1, $mb_serial,"1", $mb_concept);
 			$new_image1_1			= merge_image2($img_name1, $mb_serial,"1", $mb_concept);
-			$cap_image1			= caption_image($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
-			if ($mb_concept == "4")
+			if ($mb_concept == "2" || $mb_concept == "4")
 				$cap_image1			= caption_image_white($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
+			else if ($mb_concept == "3")
+				$cap_image1			= caption_image_yellow($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
 			else
 				$cap_image1			= caption_image($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
 		}
@@ -128,15 +129,21 @@ switch ($_REQUEST['exec'])
 			$img_name2			= $mb_serial."_2.".strtolower($img_name2arr[$img_name2arr_num]); 
 			$new_image2			= merge_image($img_name2, $mb_serial,"2",$mb_concept);
 			$new_image2_1			= merge_image2($img_name2, $mb_serial,"2",$mb_concept);
-			if ($mb_concept == "3")
+			if ($mb_concept == "2" || $mb_concept == "3" || $mb_concept == "4")
+			{
 				$cap_image2			= caption_image_white($mb_caption2, $mb_serial,"2",$caption_image2_w,$caption_image2_h);
-			else
+				$mb_name_age_caption	= $mb_baby_name." (".$mb_baby_age.")";
+				$cap_image2_2			= caption_image2_white($mb_name_age_caption, $mb_serial,"2",$caption_image2_name_w,$caption_image2_name_h);
+			}else{
 				$cap_image2			= caption_image($mb_caption2, $mb_serial,"2",$caption_image2_w,$caption_image2_h);
+			}
+			/*
 			if ($mb_concept == "2" || $mb_concept == "3")
 			{
 				$mb_name_age_caption	= $mb_baby_name." (".$mb_baby_age.")";
 				$cap_image2_2			= caption_image2_white($mb_name_age_caption, $mb_serial,"2",$caption_image2_name_w,$caption_image2_name_h);
 			}
+			*/
 		}
 
 		if ($img_name3)
@@ -146,11 +153,12 @@ switch ($_REQUEST['exec'])
 			$img_name3			= $mb_serial."_3.".strtolower($img_name3arr[$img_name3arr_num]); 
 			$new_image3			= merge_image($img_name3, $mb_serial,"3",$mb_concept);
 			$new_image3_1			= merge_image2($img_name3, $mb_serial,"3",$mb_concept);
-			$cap_image3			= caption_image($mb_caption3, $mb_serial,"3",$caption_image2_w,$caption_image2_h);
-			if ($mb_concept == "2")
-			{
+			if ($mb_concept == "2" || $mb_concept == "3" || $mb_concept == "4"){
+				$cap_image3			= caption_image_white($mb_caption3, $mb_serial,"3",$caption_image2_w,$caption_image2_h);
 				$mb_name_age_caption	= $mb_baby_name." (".$mb_baby_age.")";
-				$cap_image2_2			= caption_image2($mb_name_age_caption, $mb_serial,"3",$caption_image2_name_w,$caption_image2_name_h);
+				$cap_image2_2			= caption_image2_white($mb_name_age_caption, $mb_serial,"3",$caption_image2_name_w,$caption_image2_name_h);
+			}else{
+				$cap_image3			= caption_image($mb_caption3, $mb_serial,"3",$caption_image2_w,$caption_image2_h);
 			}
 		}
 
@@ -161,16 +169,20 @@ switch ($_REQUEST['exec'])
 			$img_name4			= $mb_serial."_4.".strtolower($img_name4arr[$img_name4arr_num]); 
 			$new_image4			= merge_image($img_name4, $mb_serial,"4",$mb_concept);
 			$new_image4_1			= merge_image2($img_name4, $mb_serial,"4",$mb_concept);
-			if ($mb_concept == "3")
+			if ($mb_concept == "2" || $mb_concept == "3" || $mb_concept == "4"){
 				$cap_image4			= caption_image_white($mb_caption4, $mb_serial,"4",$caption_image2_w,$caption_image2_h);
-			else
+				$mb_name_age_caption	= $mb_baby_name." (".$mb_baby_age.")";
+				$cap_image2_2			= caption_image2_white($mb_name_age_caption, $mb_serial,"4",$caption_image2_name_w,$caption_image2_name_h);
+			}else{
 				$cap_image4			= caption_image($mb_caption4, $mb_serial,"4",$caption_image2_w,$caption_image2_h);
-
+			}
+/*
 			if ($mb_concept == "2" || $mb_concept == "3")
 			{
 				$mb_name_age_caption	= $mb_baby_name." (".$mb_baby_age.")";
 				$cap_image2_2			= caption_image2($mb_name_age_caption, $mb_serial,"4",$caption_image2_name_w,$caption_image2_name_h);
 			}
+*/
 		}
 
 		if ($img_name5)

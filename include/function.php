@@ -4885,6 +4885,25 @@ function caption_image_white($caption, $serial, $num, $txt_X, $txt_Y)
 	$cImage = getPrintToImage($txt_X, $txt_Y, $serial, $num, $szFilePath, $objFont, $serial, LEFT | MIDDLE);
 }
 
+function caption_image_yellow($caption, $serial, $num, $txt_X, $txt_Y)
+{
+	# 사용예제
+	$objFont = new Font;
+
+	$objFont->text  = $caption;
+	$objFont->size  = 20;
+	$objFont->color = 0xFFF200;
+	//$objFont->angle = 45;
+	//$objFont->font  = "/home/vdl_gate/nanumBold.ttf";
+	$objFont->font  = "./nanumBold.ttf";
+
+	//$szFilePath     = "/home/vdl_gate/m/images/baby_1.jpg";
+	//$szFilePath     = "./images/baby1.jpg";
+	$szFilePath     = "./files/".$serial."/medium/merge2_".$serial."_".$num.".jpg";
+
+	$cImage = getPrintToImage($txt_X, $txt_Y, $serial, $num, $szFilePath, $objFont, $serial, LEFT | MIDDLE);
+}
+
 function caption_image2($caption, $serial, $num, $txt_X, $txt_Y)
 {
 	# 사용예제
