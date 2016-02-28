@@ -118,7 +118,7 @@
       <div class="pics frame_1">
         <input type="hidden" id="up_images3" value="">
         <div class="inner_pics">
-          <div class="title_frame img"><img src="images/popup/title_frame_1_2.png" /></div>
+          <div class="title_frame img"><img src="images/popup/title_frame_1_3.png" /></div>
           <div class="pc_frame">
             <div class="upload" id="up_img_div3">
               <!-- <a href="#"><img src="images/popup/btn_up.png" /></a> -->
@@ -149,7 +149,7 @@
       <div class="pics frame_1">
         <input type="hidden" id="up_images4" value="">
         <div class="inner_pics">
-          <div class="title_frame img"><img src="images/popup/title_frame_1_2.png" /></div>
+          <div class="title_frame img"><img src="images/popup/title_frame_1_4.png" /></div>
           <div class="pc_frame">
             <div class="upload" id="up_img_div4">
               <!-- <a href="#"><img src="images/popup/btn_up.png" /></a> -->
