@@ -201,6 +201,8 @@ switch ($_REQUEST['exec'])
 			$output	.= " [5:v][4:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b5v]; \\";
 			$output	.= ' [0:v][b1v][1:v][b2v][2:v][b3v][3:v][b4v][4:v][b5v][5:v]concat=n=11:v=1:a=0,format=yuv420p[v]" -pix_fmt yuv420p -map "[v]" ./files/'.$mb_serial.'/output.mp4';
 			system(stripslashes($output));
+			$output2	= "ffmpeg -i ./files/".$mb_serial."/output.mp4 -i ./scene/sound/".$mb_concept."-5_sound.mp4 -c:v copy -c:a copy ../files/".$mb_serial."/growmovie.mp4";
+			system($output2);
 		}
 
 		if ($img_name3 != "" && $img_name4 == "")
@@ -219,9 +221,8 @@ switch ($_REQUEST['exec'])
 			$output	.= " [4:v][3:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b4v]; \\";
 			$output	.= ' [0:v][b1v][1:v][b2v][2:v][b3v][3:v][b4v][4:v]concat=n=9:v=1:a=0,format=yuv420p[v]" -pix_fmt yuv420p -map "[v]" ./files/'.$mb_serial.'/output.mp4';
 			system(stripslashes($output));
-			$output2	= "ffmpeg -i ./files/".$mb_serial."/output.mp4 -i ./MOBILE/scene/sound/".$mb_concept."-5_sound.mp4 \\";
-			$output2	.= "-c:v copy -c:a aac -strict experimental ./files/".$mb_serial."/growmovie.mp4";
-			system(stripslashes($output2));
+			$output2	= "ffmpeg -i ./files/".$mb_serial."/output.mp4 -i ./scene/sound/".$mb_concept."-4_sound.mp4 -c:v copy -c:a copy ../files/".$mb_serial."/growmovie.mp4";
+			system($output2);
 		}
 
 		if ($img_name3 == "" && $img_name4 != "")
@@ -240,9 +241,8 @@ switch ($_REQUEST['exec'])
 			$output	.= " [4:v][3:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b4v]; \\";
 			$output	.= ' [0:v][b1v][1:v][b2v][2:v][b3v][3:v][b4v][4:v]concat=n=9:v=1:a=0,format=yuv420p[v]" -pix_fmt yuv420p -map "[v]" ./files/'.$mb_serial.'/output.mp4';
 			system(stripslashes($output));
-			$output2	= "ffmpeg -i ./files/".$mb_serial."/output.mp4 -i ./MOBILE/scene/sound/".$mb_concept."-4_sound.mp4 \\";
-			$output2	.= "-c:v copy -c:a aac -strict experimental ./files/".$mb_serial."/growmovie.mp4";
-			system(stripslashes($output2));
+			$output2	= "ffmpeg -i ./files/".$mb_serial."/output.mp4 -i ./scene/sound/".$mb_concept."-4_sound.mp4 -c:v copy -c:a copy ../files/".$mb_serial."/growmovie.mp4";
+			system($output2);
 		}
 
 		if ($img_name3 == "" && $img_name4 == "")
@@ -259,9 +259,8 @@ switch ($_REQUEST['exec'])
 			$output	.= " [3:v][2:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b3v]; \\";
 			$output	.= ' [0:v][b1v][1:v][b2v][2:v][b3v][3:v]concat=n=7:v=1:a=0,format=yuv420p[v]" -pix_fmt yuv420p -map "[v]" ./files/'.$mb_serial.'/output.mp4';
 			system(stripslashes($output));
-			$output2	= "ffmpeg -i ./files/".$mb_serial."/output.mp4 -i ./MOBILE/scene/sound/".$mb_concept."-3_sound.mp4 \\";
-			$output2	.= "-c:v copy -c:a aac -strict experimental ./files/".$mb_serial."/growmovie.mp4";
-			system(stripslashes($output2));
+			$output2	= "ffmpeg -i ./files/".$mb_serial."/output.mp4 -i ./scene/sound/".$mb_concept."-3_sound.mp4 -c:v copy -c:a copy ../files/".$mb_serial."/growmovie.mp4";
+			system($output2);
 		}
 
 
