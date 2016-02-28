@@ -211,62 +211,46 @@
 </div>
 <!------------------ 아기 정보 (이름, 나이, 사진) 입력 페이지 ------------------>
 
-<div id="movie_div" class="popup_wrap" style="display:none;">
-  <div class="p_mid p_position">
-    <div class="block_close clearfix">
-      <a href="index.php" class="btn_close"><img src="images/popup/btn_close.png" /></a>
-    </div>        
-    <div class="block_content movie">
-      <div class="inner">
-        <div class="title img">
-          <img src="images/popup/title_movie_1.jpg" />
-        </div>
-        <div class="mv">
-          <div class="title">
-            <div class="img"><img src="images/popup/movie_sub_t_1.png" /></div>
-            <div class="name">
-              김서우<span><img src="images/popup/label_baby.png" width="35" /></span>
+	<div id="movie_div" class="popup_wrap" style="display:none;">
+   	  	<div class="p_mid p_position">
+
+			<div class="block_close clearfix">
+                <a href="index.php" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+            </div>        
+            <div class="block_content movie">
+            	<div class="inner">
+                	<div class="title img">
+                    	<img src="images/popup/top_2.jpg" />
+                    </div>
+                	<div class="mv">
+                    	<div class="title">
+                        	
+                        	<div class="text">
+                            	"폭풍 성장의 비밀"
+                            </div>
+						    <div class="bg img"><img src="images/popup/title_movie_c_1.png" /></div>
+                        </div>
+                        <div class="name">
+                            	<span id="video_b_name">김서우</span><span><img src="images/popup/label_baby.png" width="35" /></span>
+                            </div>
+                        <div class="youtube">
+                        	<video src="../files/out.mp4" controls preload="auto" id="video_player"></video>
+                        </div>
+                    </div>
+                    <div class="btn_block img">
+                    	<a href="../files/out.mp4" download><img src="images/popup/btn_down.png" /></a>
+                    </div>
+                    <div class="btn_block_2 img">
+                    	<a href="#" onclick="prev_page();return false;"><img src="images/popup/btn_before.png" /></a>
+                    	<a href="#" onclick="next_page();return false;"><img src="images/popup/btn_m_next_coupon.png" id="next_image"/></a>
+                        <!--<a href="#"><img src="images/popup/btn_m_next.png" /></a>-->
+                    </div>
+                </div><!--inner-->
             </div>
-          </div>
-          <div class="youtube">
-            <video src="../files/out.mp4" controls autoplay loop muted preload="auto" poster="demo.jpg" id="video_player"></video>
-          </div>
         </div>
-        <div class="btn_block img">
-          <a href="../files/out.mp4" download><img src="images/popup/btn_down.png" /></a>
-          <a href="#" onclick="prev_page();return false;">이전</a>
-          <a href="#" onclick="next_page();return false;">다음</a>
-        </div>
-      </div><!--inner-->
-    </div>
-  </div>
-</div>
+	</div>
 
 <!------------------------------ 체험팩 쿠폰 받을 사람 엔딩 ------------------------------>
-<div id="end_coupon_div" class="popup_wrap" style="display:none;">
-  <div class="p_mid p_position">
-    <div class="block_close clearfix">
-      <a href="index.php" class="btn_close"><img src="images/popup/btn_close.png" /></a>
-    </div>
-    <div class="block_content coupon">
-      <div class="inner">
-        <div class="coupon_img">
-          <div class="serial">serial</div>
-          <div class="img"><img src="images/popup/bg_coupon.jpg" /></div>
-        </div>
-        <div class="img">
-          <img src="images/popup/txt_go_home.png" />
-        </div>
-        <div class="btn_block">
-          <a href="http://www.babience.com/m/index.jsp" class="img" target="_blank"><img src="images/popup/btn_home.png" /></a>
-        </div>
-      </div><!--inner-->
-    </div>
-  </div>
-</div>
-<!------------------------------ 체험팩 쿠폰 받을 사람 엔딩 ------------------------------>
-
-<!------------------------------ 체험팩 쿠폰 이미 받은 사람 엔딩 ------------------------------>
 <div id="end_coupon_div" class="popup_wrap" style="display:none;">
   <div class="p_mid p_position">
     <div class="block_close clearfix">
@@ -306,6 +290,49 @@
     </div>
   </div>
 </div>
+<!------------------------------ 체험팩 쿠폰 받을 사람 엔딩 ------------------------------>
+
+<!------------------------------ 체험팩 쿠폰 이미 받은 사람 엔딩 ------------------------------>
+<div id="end_sns_div" class="popup_wrap" style="display:none">
+  <div class="p_mid p_position">
+    <div class="block_close clearfix">
+      <a href="#" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+    </div>  
+    <div class="block_content movie">
+      <div class="inner">
+        <div class="title img">
+          <img src="images/popup/top_2.jpg" />
+        </div>
+        <div class="mv">
+          <div class="title">
+            <div class="text">
+            "폭풍 성장의 비밀"
+            </div>
+            <div class="bg img"><img src="images/popup/title_movie_c_1.png" /></div>
+          </div>
+          <div class="name">
+          <span id="sns_b_name">김서우</span><span><img src="images/popup/label_baby.png" width="35" /></span>
+          </div>
+        </div>
+      </div><!--inner-->
+    </div>  
+    <div class="block_content ending_sns">
+      <div class="inner">
+        <div class="share">
+          <img src="images/popup/txt_sns.png" class="txt_sns"/>
+          <div>
+            <a href="#"><img src="images/popup/btn_kt.png" /></a>
+            <a href="#"><img src="images/popup/btn_ks.png" /></a>
+            <a href="#"><img src="images/popup/btn_fb.png" /></a>
+          </div>
+        </div>
+        <div class="btn_block">
+          <a href="#" class="img"><img src="images/popup/btn_onemore.png" /></a>
+        </div>
+      </div><!--inner-->
+    </div>
+  </div>
+</div>
 <!------------------------------ 체험팩 쿠폰 이미 받은 사람 엔딩 ------------------------------>
 <?
 	include_once   "./popup_div.php";
@@ -314,6 +341,7 @@
 </html>
 <script type="text/javascript">
 var video_concept	= null;
+var user_gubun				= 0;
 
 $(document).ready(function() {
 	$("#cboxTopLeft").hide();
@@ -353,7 +381,6 @@ function create_movie()
 	var mb_caption3			= $("#mb_caption3").val();
 	var mb_caption4			= $("#mb_caption4").val();
 	//var mb_caption5			= $("#mb_caption5").val();
-
 	if (mb_baby_name == "")
 	{
 		alert('아기 이름을 입력해 주세요.');
@@ -372,7 +399,7 @@ function create_movie()
 
 	if (up_images1 == "" || up_images2 == "" || up_images5 == "")
 	{
-		alert('필수 이미지는 1장 이상 업로드해 주세요.');
+		alert('필수 이미지는 모두 업로드해 주세요.');
 		//chk_ins = 0;
 		return false;
 	}
@@ -383,6 +410,7 @@ function create_movie()
 		{
 			alert('1번 사진의 자막을 입력해 주세요.');
 			//chk_ins = 0;
+			$("#mb_caption1").focus();
 			return false;
 		}
 	}
@@ -393,6 +421,7 @@ function create_movie()
 		{
 			alert('2번 사진의 자막을 입력해 주세요.');
 			//chk_ins = 0;
+			$("#mb_caption2").focus();
 			return false;
 		}
 	}
@@ -403,6 +432,7 @@ function create_movie()
 		{
 			alert('3번 사진의 자막을 입력해 주세요.');
 			//chk_ins = 0;
+			$("#mb_caption3").focus();
 			return false;
 		}
 	}
@@ -413,6 +443,7 @@ function create_movie()
 		{
 			alert('4번 사진의 자막을 입력해 주세요.');
 			//chk_ins = 0;
+			$("#mb_caption4").focus();
 			return false;
 		}
 	}
@@ -456,13 +487,21 @@ function create_movie()
 			console.log(response);
 			if (response == "Y")
 			{
-				$(".serial").html("<?=$serial?>");
-				$("#end_coupon_div").show();
+				//$(".serial").html("<?=$serial?>");
+				$("#video_b_name").html(mb_baby_name);
+				$("#next_image").attr("src","images/popup/btn_m_next_coupon.png");
+				$("#video_player").width("100%");
+				$("#movie_div").show();
 				$("#loading_div").hide();
+				user_gubun	= 1;
 			}else if (response == "D"){
-				$(".c_babyname").html(mb_baby_name);
-				$("#end_sns_div").show();
+				//$(".c_babyname").html(mb_baby_name);
+				$("#video_b_name").html(mb_baby_name);
+				$("#next_image").attr("src","images/popup/btn_m_next.png");
+				$("#video_player").width("100%");
+				$("#movie_div").show();
 				$("#loading_div").hide();
+				user_gubun	= 0;
 			}else{
 				alert('접속자가 많아 참여가 지연되고 있습니다. 다시 시도해 주세요.');
 				location.href="index.php";
@@ -481,6 +520,14 @@ function prev_page()
 function next_page()
 {
 	$("#movie_div").hide();
+	if ( user_gubun == 1 )
+	{
+		$(".serial").html("<?=$serial?>");
+		$("#end_coupon_div").show();
+	}else{
+		$("#sns_b_name").html(mb_baby_name);
+		$("#end_sns_div").show();
+	}
 }
 
 $(function () {
@@ -536,7 +583,7 @@ $(function () {
                 .prepend(file.preview);
 				$("div#user_img1 > div > p > canvas").css("width","40%");
 				$("div#user_img1 > div > p > canvas").css("padding-top","20%");
-				$("div#user_img1 > div > p > canvas").css("padding-left","29%");
+				$("div#user_img1 > div > p > canvas").css("padding-left","29.1%");
         }
         if (file.error) {
             node
@@ -625,9 +672,9 @@ $(function () {
             node
                 .prepend('<br>')
                 .prepend(file.preview);
-				$("div#user_img2 > div > p > canvas").css("width","60%");
-				$("div#user_img2 > div > p > canvas").css("padding-top","12%");
-				$("div#user_img2 > div > p > canvas").css("padding-left","20%");
+				$("div#user_img2 > div > p > canvas").css("width","66%");
+				$("div#user_img2 > div > p > canvas").css("padding-top","9.7%");
+				$("div#user_img2 > div > p > canvas").css("padding-left","17%");
         }
         if (file.error) {
             node
@@ -716,9 +763,9 @@ $(function () {
             node
                 .prepend('<br>')
                 .prepend(file.preview);
-				$("div#user_img3 > div > p > canvas").css("width","60%");
-				$("div#user_img3 > div > p > canvas").css("padding-top","12%");
-				$("div#user_img3 > div > p > canvas").css("padding-left","20%");
+				$("div#user_img3 > div > p > canvas").css("width","66%");
+				$("div#user_img3 > div > p > canvas").css("padding-top","9.7%");
+				$("div#user_img3 > div > p > canvas").css("padding-left","17%");
         }
         if (file.error) {
             node
@@ -806,9 +853,9 @@ $(function () {
             node
                 .prepend('<br>')
                 .prepend(file.preview);
-				$("div#user_img4 > div > p > canvas").css("width","60%");
-				$("div#user_img4 > div > p > canvas").css("padding-top","12%");
-				$("div#user_img4 > div > p > canvas").css("padding-left","20%");
+				$("div#user_img4 > div > p > canvas").css("width","66%");
+				$("div#user_img4 > div > p > canvas").css("padding-top","9.7%");
+				$("div#user_img4 > div > p > canvas").css("padding-left","17%");
         }
         if (file.error) {
             node

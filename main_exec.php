@@ -270,19 +270,28 @@ switch ($_REQUEST['exec'])
 
 		if ($result)
 		{
-			// 배송비 중복 당첨여부 체크
+			// 체험비 무료쿠폰 사이트 중복 당첨여부 체크
 			$dupli_bann_query		= "SELECT * FROM ".$_gl['bann_info_table']." WHERE bann_phone='".$mb_phone."'";
 			$dupli_bann_result		= mysqli_query($my_db, $dupli_bann_query);
 			$dupli_bann_num		= mysqli_num_rows($dupli_bann_result);
-				
+
 			if ($dupli_bann_num == 0)
-				$flag	= "Y";
-			else
+			{
+				// 중복 당첨여부 체크
+				$dupli2_bann_query		= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_phone='".$mb_phone."'";
+				$dupli2_bann_result		= mysqli_query($my_db, $dupli2_bann_query);
+				$dupli2_bann_num		= mysqli_num_rows($dupli2_bann_result);
+				if ($dupli2_bann_num == 0)
+					$flag	= "Y";
+				else
+					$flag	= "D";
+			}else{
 				$flag	= "D";
+			}
 		}else{
 			$flag	= "N";
 		}
-		echo stripslashes($output);
+		echo $flag;
 	break;
 }
 ?>
