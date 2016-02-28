@@ -356,9 +356,9 @@ function create_movie()
 	}
 
 
-	if (up_images1 == "" && up_images2 == "" && up_images3 == "" && up_images4 == "" && up_images5 == "")
+	if (up_images1 == "" || up_images2 == "" || up_images5 == "")
 	{
-		alert('이미지를 1장 이상 업로드해 주세요.');
+		alert('필수 이미지는 1장 이상 업로드해 주세요.');
 		//chk_ins = 0;
 		return false;
 	}

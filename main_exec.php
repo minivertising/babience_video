@@ -58,19 +58,19 @@ switch ($_REQUEST['exec'])
 	case "create_movie" :
 		$mb_baby_name		= $_REQUEST['mb_baby_name'];
 		$mb_baby_age			= $_REQUEST['mb_baby_age'];
-		$img_name1	= $_REQUEST['up_image1'];
-		$img_name2	= $_REQUEST['up_image2'];
-		$img_name3	= $_REQUEST['up_image3'];
-		$img_name4	= $_REQUEST['up_image4'];
-		$img_name5	= $_REQUEST['up_image5'];
-		$mb_caption1	= $_REQUEST['mb_caption1'];
-		$mb_caption2	= $_REQUEST['mb_caption2'];
-		$mb_caption3	= $_REQUEST['mb_caption3'];
-		$mb_caption4	= $_REQUEST['mb_caption4'];
-		//$mb_caption5	= $_REQUEST['mb_caption5'];
-		$mb_phone		= $_REQUEST['mb_phone'];
-		$mb_serial		= $_REQUEST['mb_serial'];
-		$mb_concept	= $_REQUEST['mb_concept'];
+		$img_name1				= $_REQUEST['up_image1'];
+		$img_name2				= $_REQUEST['up_image2'];
+		$img_name3				= $_REQUEST['up_image3'];
+		$img_name4				= $_REQUEST['up_image4'];
+		$img_name5				= $_REQUEST['up_image5'];
+		$mb_caption1			= $_REQUEST['mb_caption1'];
+		$mb_caption2			= $_REQUEST['mb_caption2'];
+		$mb_caption3			= $_REQUEST['mb_caption3'];
+		$mb_caption4			= $_REQUEST['mb_caption4'];
+		//$mb_caption5			= $_REQUEST['mb_caption5'];
+		$mb_phone				= $_REQUEST['mb_phone'];
+		$mb_serial				= $_REQUEST['mb_serial'];
+		$mb_concept			= $_REQUEST['mb_concept'];
 
 		$cap_image1	= "";
 		$cap_image2	= "";
@@ -183,19 +183,73 @@ switch ($_REQUEST['exec'])
 			//$cap_image5			= caption_image($mb_caption5, $mb_serial,"5");
 		}
 
-		$output	= "ffmpeg \\";
-		$output	.= "-loop 1 -t 1 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_1.jpg \\";
-		$output	.= "-loop 1 -t 1 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_1.jpg \\";
-		$output	.= "-loop 1 -t 1 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_1.jpg \\";
-		$output	.= "-loop 1 -t 1 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_1.jpg \\";
-		$output	.= "-loop 1 -t 1 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_1.jpg \\";
-		$output	.= "-filter_complex \\";
-		$output	.= '"[1:v][0:v]blend=all_expr=';
-		$output	.= "'A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b1v]; \\";
-		$output	.= " [2:v][1:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b2v]; \\";
-		$output	.= " [3:v][2:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b3v]; \\";
-		$output	.= " [4:v][3:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b4v]; \\";
-		$output	.= ' [0:v][b1v][1:v][b2v][2:v][b3v][3:v][b4v][4:v]concat=n=9:v=1:a=0,format=yuv420p[v]" -pix_fmt yuv420p -map "[v]" ./files/'.$mb_serial.'/output.mp4';
+		if ($img_name3 != "" && $img_name4 != "")
+		{
+			$output	= "ffmpeg \\";
+			$output	.= "-loop 1 -t 2 -i ./MOBILE/scene/concept_".$mb_concept."_1.jpg \\";
+			$output	.= "-loop 1 -t 1.5 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_1.jpg \\";
+			$output	.= "-loop 1 -t 1.5 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_2.jpg \\";
+			$output	.= "-loop 1 -t 1.5 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_3.jpg \\";
+			$output	.= "-loop 1 -t 1.5 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_4.jpg \\";
+			$output	.= "-loop 1 -t 2 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_5.jpg \\";
+			$output	.= "-filter_complex \\";
+			$output	.= '"[1:v][0:v]blend=all_expr=';
+			$output	.= "'A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b1v]; \\";
+			$output	.= " [2:v][1:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b2v]; \\";
+			$output	.= " [3:v][2:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b3v]; \\";
+			$output	.= " [4:v][3:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b4v]; \\";
+			$output	.= " [5:v][4:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b5v]; \\";
+			$output	.= ' [0:v][b1v][1:v][b2v][2:v][b3v][3:v][b4v][4:v][b5v][5:v]concat=n=11:v=1:a=0,format=yuv420p[v]" -pix_fmt yuv420p -map "[v]" ./files/'.$mb_serial.'/output.mp4';
+		}
+
+		if ($img_name3 != "" && $img_name4 == "")
+		{
+			$output	= "ffmpeg \\";
+			$output	.= "-loop 1 -t 2 -i ./MOBILE/scene/concept_".$mb_concept."_1.jpg \\";
+			$output	.= "-loop 1 -t 1.5 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_1.jpg \\";
+			$output	.= "-loop 1 -t 1.5 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_2.jpg \\";
+			$output	.= "-loop 1 -t 1.5 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_3.jpg \\";
+			$output	.= "-loop 1 -t 2 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_5.jpg \\";
+			$output	.= "-filter_complex \\";
+			$output	.= '"[1:v][0:v]blend=all_expr=';
+			$output	.= "'A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b1v]; \\";
+			$output	.= " [2:v][1:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b2v]; \\";
+			$output	.= " [3:v][2:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b3v]; \\";
+			$output	.= " [4:v][3:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b4v]; \\";
+			$output	.= ' [0:v][b1v][1:v][b2v][2:v][b3v][3:v][b4v][4:v]concat=n=9:v=1:a=0,format=yuv420p[v]" -pix_fmt yuv420p -map "[v]" ./files/'.$mb_serial.'/output.mp4';
+		}
+
+		if ($img_name3 == "" && $img_name4 != "")
+		{
+			$output	= "ffmpeg \\";
+			$output	.= "-loop 1 -t 2 -i ./MOBILE/scene/concept_".$mb_concept."_1.jpg \\";
+			$output	.= "-loop 1 -t 1.5 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_1.jpg \\";
+			$output	.= "-loop 1 -t 1.5 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_2.jpg \\";
+			$output	.= "-loop 1 -t 1.5 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_4.jpg \\";
+			$output	.= "-loop 1 -t 2 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_5.jpg \\";
+			$output	.= "-filter_complex \\";
+			$output	.= '"[1:v][0:v]blend=all_expr=';
+			$output	.= "'A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b1v]; \\";
+			$output	.= " [2:v][1:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b2v]; \\";
+			$output	.= " [3:v][2:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b3v]; \\";
+			$output	.= " [4:v][3:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b4v]; \\";
+			$output	.= ' [0:v][b1v][1:v][b2v][2:v][b3v][3:v][b4v][4:v]concat=n=9:v=1:a=0,format=yuv420p[v]" -pix_fmt yuv420p -map "[v]" ./files/'.$mb_serial.'/output.mp4';
+		}
+
+		if ($img_name3 == "" && $img_name4 == "")
+		{
+			$output	= "ffmpeg \\";
+			$output	.= "-loop 1 -t 2 -i ./MOBILE/scene/concept_".$mb_concept."_1.jpg \\";
+			$output	.= "-loop 1 -t 1.5 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_1.jpg \\";
+			$output	.= "-loop 1 -t 1.5 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_2.jpg \\";
+			$output	.= "-loop 1 -t 2 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_5.jpg \\";
+			$output	.= "-filter_complex \\";
+			$output	.= '"[1:v][0:v]blend=all_expr=';
+			$output	.= "'A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b1v]; \\";
+			$output	.= " [2:v][1:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b2v]; \\";
+			$output	.= " [3:v][2:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b3v]; \\";
+			$output	.= ' [0:v][b1v][1:v][b2v][2:v][b3v][3:v]concat=n=7:v=1:a=0,format=yuv420p[v]" -pix_fmt yuv420p -map "[v]" ./files/'.$mb_serial.'/output.mp4';
+		}
 
 		system(stripslashes($output));
 
