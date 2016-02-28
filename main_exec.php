@@ -184,11 +184,11 @@ switch ($_REQUEST['exec'])
 		}
 
 		$output	= "ffmpeg \\";
-		$output	.= "-loop 1 -t 1 -i ../files/".$mb_serial."/medium/final_".$mb_serial."_1.jpg \\";
-		$output	.= "-loop 1 -t 1 -i ../files/".$mb_serial."/medium/final_".$mb_serial."_1.jpg \\";
-		$output	.= "-loop 1 -t 1 -i ../files/".$mb_serial."/medium/final_".$mb_serial."_1.jpg \\";
-		$output	.= "-loop 1 -t 1 -i ../files/".$mb_serial."/medium/final_".$mb_serial."_1.jpg \\";
-		$output	.= "-loop 1 -t 1 -i ../files/".$mb_serial."/medium/final_".$mb_serial."_1.jpg \\";
+		$output	.= "-loop 1 -t 1 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_1.jpg \\";
+		$output	.= "-loop 1 -t 1 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_1.jpg \\";
+		$output	.= "-loop 1 -t 1 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_1.jpg \\";
+		$output	.= "-loop 1 -t 1 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_1.jpg \\";
+		$output	.= "-loop 1 -t 1 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_1.jpg \\";
 		$output	.= "-filter_complex \\";
 		$output	.= '"[1:v][0:v]blend=all_expr=';
 		$output	.= "'A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b1v]; \\";
