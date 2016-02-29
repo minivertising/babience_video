@@ -313,7 +313,7 @@
 <div id="end_sns_div" class="popup_wrap" style="display:none">
   <div class="p_mid p_position">
     <div class="block_close clearfix">
-      <a href="#" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+      <a href="index.php" class="btn_close"><img src="images/popup/btn_close.png" /></a>
     </div>  
     <div class="block_content movie">
       <div class="inner">
@@ -338,13 +338,13 @@
         <div class="share">
           <img src="images/popup/txt_sns.png" class="txt_sns"/>
           <div>
-            <a href="#"><img src="images/popup/btn_kt.png" /></a>
-            <a href="#"><img src="images/popup/btn_ks.png" /></a>
-            <a href="#"><img src="images/popup/btn_fb.png" /></a>
+            <a href="#" onclick="sns_share('kt','share');return false;"><img src="images/popup/btn_kt.png" /></a>
+            <a href="#" onclick="sns_share('ks','share');return false;"><img src="images/popup/btn_ks.png" /></a>
+            <a href="#" onclick="sns_share('fb','share');return false;"><img src="images/popup/btn_fb.png" /></a>
           </div>
         </div>
         <div class="btn_block">
-          <a href="#" class="img"><img src="images/popup/btn_onemore.png" /></a>
+          <a href="index.php" class="img"><img src="images/popup/btn_onemore.png" /></a>
         </div>
       </div><!--inner-->
     </div>

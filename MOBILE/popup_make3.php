@@ -225,36 +225,44 @@
 </div>
 <!------------------ 아기 정보 (이름, 나이, 사진) 입력 페이지 ------------------>
 
-<div id="movie_div" class="popup_wrap" style="display:none;">
-  <div class="p_mid p_position">
-    <div class="block_close clearfix">
-      <a href="index.php" class="btn_close"><img src="images/popup/btn_close.png" /></a>
-    </div>        
-    <div class="block_content movie">
-      <div class="inner">
-        <div class="title img">
-          <img src="images/popup/title_movie_1.jpg" />
-        </div>
-        <div class="mv">
-          <div class="title">
-            <div class="img"><img src="images/popup/movie_sub_t_1.png" /></div>
-            <div class="name">
-              김서우<span><img src="images/popup/label_baby.png" width="35" /></span>
+	<div id="movie_div" class="popup_wrap" style="display:none;">
+   	  	<div class="p_mid p_position">
+
+			<div class="block_close clearfix">
+                <a href="index.php" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+            </div>        
+            <div class="block_content movie">
+            	<div class="inner">
+                	<div class="title img">
+                    	<img src="images/popup/top_2.jpg" />
+                    </div>
+                	<div class="mv">
+                    	<div class="title">
+                        	
+                        	<div class="text">
+                            	"폭풍 성장의 비밀"
+                            </div>
+						    <div class="bg img"><img src="images/popup/title_movie_c_1.png" /></div>
+                        </div>
+                        <div class="name">
+                            	<span id="video_b_name">김서우</span><span><img src="images/popup/label_baby.png" width="35" /></span>
+                            </div>
+                        <div class="youtube">
+                        	<video src="../files/out.mp4" controls preload="auto" id="video_player"></video>
+                        </div>
+                    </div>
+                    <div class="btn_block img">
+                    	<a href="../files/out.mp4" download id="download_src"><img src="images/popup/btn_down.png" /></a>
+                    </div>
+                    <div class="btn_block_2 img">
+                    	<a href="#" onclick="prev_page();return false;"><img src="images/popup/btn_before.png" /></a>
+                    	<a href="#" onclick="next_page();return false;"><img src="images/popup/btn_m_next_coupon.png" id="next_image"/></a>
+                        <!--<a href="#"><img src="images/popup/btn_m_next.png" /></a>-->
+                    </div>
+                </div><!--inner-->
             </div>
-          </div>
-          <div class="youtube">
-            <video src="../files/out.mp4" controls autoplay loop muted preload="auto" poster="demo.jpg" id="video_player"></video>
-          </div>
         </div>
-        <div class="btn_block img">
-          <a href="../files/out.mp4" download><img src="images/popup/btn_down.png" /></a>
-          <a href="#" onclick="prev_page();return false;">이전</a>
-          <a href="#" onclick="next_page();return false;">다음</a>
-        </div>
-      </div><!--inner-->
-    </div>
-  </div>
-</div>
+	</div>
 
 <!------------------------------ 체험팩 쿠폰 받을 사람 엔딩 ------------------------------>
 <div id="end_coupon_div" class="popup_wrap" style="display:none;">
@@ -302,7 +310,7 @@
 <div id="end_sns_div" class="popup_wrap" style="display:none">
   <div class="p_mid p_position">
     <div class="block_close clearfix">
-      <a href="#" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+      <a href="index.php" class="btn_close"><img src="images/popup/btn_close.png" /></a>
     </div>  
     <div class="block_content movie">
       <div class="inner">
@@ -327,13 +335,13 @@
         <div class="share">
           <img src="images/popup/txt_sns.png" class="txt_sns"/>
           <div>
-            <a href="#"><img src="images/popup/btn_kt.png" /></a>
-            <a href="#"><img src="images/popup/btn_ks.png" /></a>
-            <a href="#"><img src="images/popup/btn_fb.png" /></a>
+            <a href="#" onclick="sns_share('kt','share');return false;"><img src="images/popup/btn_kt.png" /></a>
+            <a href="#" onclick="sns_share('ks','share');return false;"><img src="images/popup/btn_ks.png" /></a>
+            <a href="#" onclick="sns_share('fb','share');return false;"><img src="images/popup/btn_fb.png" /></a>
           </div>
         </div>
         <div class="btn_block">
-          <a href="#" class="img"><img src="images/popup/btn_onemore.png" /></a>
+          <a href="index.php" class="img"><img src="images/popup/btn_onemore.png" /></a>
         </div>
       </div><!--inner-->
     </div>
