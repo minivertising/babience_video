@@ -180,7 +180,6 @@ function insert_input()
 		success: function(response){
 			var flag_res	= response.split("||");
 			flag_res[1]	= serial_num;
-			alert(response);
 			if (flag_res[0] == "Y")
 			{
 				//$("#input_div").hide();
