@@ -128,18 +128,18 @@
 	}
 
 	// LMS 발송 
-	function send_lms($phone)
+	function send_lms($phone, $serial)
 	{
 		global $_gl;
 		global $my_db;
 
-		$s_url		= "http://www.belif-factory.com/MOBILE/coupon_page.belif?mid=".$phone;
+		$s_url		= "http://grow.babience-event.com/MOBILE/coupon_page.php?serial=".$serial;
 		$httpmethod = "POST";
 		$url = "http://api.openapi.io/ppurio/1/message/lms/minivertising";
 		$clientKey = "MTAyMC0xMzg3MzUwNzE3NTQ3LWNlMTU4OTRiLTc4MGItNDQ4MS05NTg5LTRiNzgwYjM0ODEyYw==";
 		$contentType = "Content-Type: application/x-www-form-urlencoded";
 
-		$response = sendRequest($httpmethod, $url, $clientKey, $contentType, $phone, $s_url);
+		$response = sendRequest($httpmethod, $url, $clientKey, $contentType, $phone, $s_url, $serial);
 
 		$json_data = json_decode($response, true);
 
@@ -161,7 +161,7 @@
 	}
 
 	// LMS 발송 
-	function send_lms2($phone)
+	function send_lms2($phone, $serial)
 	{
 		global $_gl;
 		global $my_db;
@@ -172,7 +172,7 @@
 		$clientKey = "MTAyMC0xMzg3MzUwNzE3NTQ3LWNlMTU4OTRiLTc4MGItNDQ4MS05NTg5LTRiNzgwYjM0ODEyYw==";
 		$contentType = "Content-Type: application/x-www-form-urlencoded";
 
-		$response = sendRequest($httpmethod, $url, $clientKey, $contentType, $phone, $s_url);
+		$response = sendRequest2($httpmethod, $url, $clientKey, $contentType, $phone, $s_url, $serial);
 
 		$json_data = json_decode($response, true);
 
@@ -193,7 +193,7 @@
 		return $flag;
 	}
 
-	function sendRequest($httpMethod, $url, $clientKey, $contentType, $phone, $s_url) {
+	function sendRequest($httpMethod, $url, $clientKey, $contentType, $phone, $s_url, $serial) {
 
 		//create basic authentication header
 		$headerValue = $clientKey;
@@ -201,31 +201,32 @@
 
 		$params = array(
 			'send_time' => '', 
-			'send_phone' => '07048881164', 
+			'send_phone' => '07048883580', 
 			'dest_phone' => $phone, 
 			//'dest_phone' => '01099017644',
 			'send_name' => '', 
 			'dest_name' => '', 
-			'subject' => '(광고)빌리프 수분 폭탄 공장에서 알림',
+			'subject' => '(광고)베비언스 폭풍 성장 이벤트',
 			'msg_body' => "
 (광고)
-축하드려요 빌리를 찾으셨군요!
-찾아 주신 보답으로 촉촉 화사함 가득한 수분 폭탄 쿠션 체험 키트 쿠폰을 드립니다.
-선택하신 빌리프 매장에 방문해 아래의 링크를 보여주시면 수분 폭탄 쿠션 체험 키트를 선물로 드려요!
+'베비언스 먹고' 폭풍성장 이벤트에 참여해주셔서 감사합니다.
 
-수분 폭탄 쿠션 체험 키트 쿠폰
+아래 쿠폰번호를 베비언스 홈페이지에 입력하고 배송비까지 완전무료 체험팩을 받으세요!
+ 
+▶ 베비언스 홈페이지
+http://www.babience-event.com/m/index.jsp
+
+▶ 체험팩 완전무료 쿠폰번호
+".$serial."
+
+- 할인쿠폰 > 나의 쿠폰 등록하기 메뉴에서 쿠폰을 등록해주세요
+- 액상분유 체험팩은 한 ID당 1개만 제공됩니다
+
+↓↓
+우리아기 영상 페이지
 ".$s_url."
- 
-▶ 쿠폰 사용 기간
-2016년 1월 11일~1월 31일
- 
-▶ 유의 사항
-타 행사와 중복 적용이 불가하며 매장에 따라 조기 소진될 수 있습니다.
-(1인 1회, 중복 불가)
- 
-▶문의처
-쿠폰 발급 : 02-532-2475 (평일 10~18시)
-매장 정보 : 080-023-7007 (평일 10~18시)
+
+* 이벤트 관련 문의 : 070-4888-3580 / jh.woo@minivertising.kr (평일 10시~18시)
 "
 		);
 
@@ -256,7 +257,7 @@
 		return $response;
 	}
 
-	function sendRequest2($httpMethod, $url, $clientKey, $contentType, $phone, $s_url) {
+	function sendRequest2($httpMethod, $url, $clientKey, $contentType, $phone, $s_url, $serial) {
 
 		//create basic authentication header
 		$headerValue = $clientKey;
@@ -264,35 +265,31 @@
 
 		$params = array(
 			'send_time' => '', 
-			'send_phone' => '07048881164', 
+			'send_phone' => '07048883580', 
 			'dest_phone' => $phone, 
 			//'dest_phone' => '01099017644',
-			//'dest_phone' => '01030033965',
 			'send_name' => '', 
 			'dest_name' => '', 
-			'subject' => '(광고)빌리프 수분 폭탄 공장에서 알림',
+			'subject' => '(광고)베비언스 폭풍 성장 이벤트',
 			'msg_body' => "
-(광고) [빌리프 수분 폭탄 공장 알림]
-수분 폭탄 쿠션 체험키트 교환을 서두르세요!
- 
-아직도 빌리의 선물을 못 받아 가셨나요? :)
-빌리프 수분 폭탄 쿠션을 경험하려는 분들의 발길이 이어지면서 준비된 선물이 빠르게 소진되고 있습니다.
- 
-기회는 이번 주말까지! 서둘러 매장에 방문하셔서 촉촉 화사함 가득한 선물을 받아 가세요.
- 
-수분 폭탄 쿠션 체험키트 쿠폰
+(광고)
+'베비언스 먹고' 폭풍성장 이벤트에 참여해주셔서 감사합니다.
+
+아래 링크를 클릭하여, 만드신 아기 영상을 확인해주세요!
+
+↓↓
+우리아기 영상 페이지
 ".$s_url."
- 
-▶ 수령 기간
-2016년 1월 11일~ 1월 31일
- 
-▶ 유의 사항
-타 행사와 중복 적용이 불가하며 매장에 따라 조기 소진될 수 있습니다.
-(1인 1회, 중복 불가)
- 
-▶문의처
-쿠폰 관련 : 02-532-2475 (평일 10~18시)
-매장 관련 : 080-023-7007 (평일 10~18시)"
+
+참여하신 분들 중 추첨을 통해 베비언스 제품을 선물로 드립니다.
+
+또 참여하시려면?
+이벤트 페이지 바로가기
+↓↓
+http://grow.babience-event.com
+
+* 이벤트 관련 문의 : 070-4888-3580 / jh.woo@minivertising.kr (평일 10시~18시)
+"
 		);
 
 		//curl initialization
