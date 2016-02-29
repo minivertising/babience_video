@@ -486,7 +486,7 @@ flush();
 			case 1 : //gif
 
 			  $im_ori = @imagecreatefromgif($path_mark_file);
-			  imagejpeg($im_ori,'./files/'.$img_folder.'/medium/'.$img_folder.'_'.$p_num.'.jpg'); 
+			  imagejpeg($im_ori,'./files/'.$img_folder.'/medium/merge_'.$img_folder.'_'.$p_num.'.jpg'); 
 			$path_mark_file = './files/'.$img_folder.'/medium/'.$img_folder.'_'.$p_num.'.jpg';	//원본파일
 			$path_save_file = './files/'.$img_folder.'/medium/merge_'.$img_folder.'_'.$p_num.'.jpg'; // 합성된 이미지 파일
 			break;
@@ -499,7 +499,7 @@ flush();
 			case 3 : //png
 
 			  $im_ori = @imagecreatefrompng($path_mark_file);
-			//  imagejpeg($im_ori,'./files/'.$img_folder.'/medium/'.$img_folder.'_'.$p_num.'.jpg'); 
+			//  imagejpeg($im_ori,'./files/'.$img_folder.'/medium/merge_'.$img_folder.'_'.$p_num.'.jpg'); 
 			//$path_mark_file = './files/'.$img_folder.'/medium/'.$img_folder.'_'.$p_num.'.jpg';	//원본파일
 			//$path_save_file = './files/'.$img_folder.'/medium/merge_'.$img_folder.'_'.$p_num.'.jpg'; // 합성된 이미지 파일
 			  break;

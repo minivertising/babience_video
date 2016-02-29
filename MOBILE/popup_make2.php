@@ -71,7 +71,17 @@
               </span>
             </div>
             <div class="text f_2_1" id="imsi_caption1">성장타이틀</div>
-            <div class="p_img f_2_1" id="user_img1"><img src="images/popup/ex.jpg" id="user_ex_img1" /></div><!--소비자 합성 이미지-->
+            <div class="p_img f_2_1">
+              <table width="100%" border="0"  cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td align="center" valign="middle" id="user_img1"><img src="images/popup/ex.jpg" id="user_ex_img1"/></td>
+                  </tr>
+                </tbody>
+              </table>
+
+			  <!-- <img src="images/popup/ex.jpg" id="user_ex_img1" /> -->
+			</div><!--소비자 합성 이미지-->
             <div class="front_img img"><img src="images/popup/img_frm_2_1.png" /></div>
             <div class="bg img"><img src="images/popup/frm_b_bg.jpg" /></div>
           </div>
@@ -331,9 +341,10 @@
 </html>
 <script type="text/javascript">
 var video_concept	= null;
-var user_gubun				= 0;
-var user_ex_img1	= 0;
-var user_ex_img2	= 0;
+var user_gubun			= 0;
+var user_ex_img1		= 0;
+var user_ex_img1_w	= 0;
+var user_ex_img1_h		= 0;
 var user_ex_img3	= 0;
 var user_ex_img4	= 0;
 var user_ex_img5	= 0;
@@ -360,6 +371,8 @@ $(document).ready(function() {
 	$("#ytplayer4").width(yt_width);
 	$("#ytplayer4").height(youtube_height);
 
+	user_ex_img1_h		= $("#user_ex_img1").height();
+	user_ex_img1_w		= $("#user_ex_img1").width();
 });
 
 function create_movie()
@@ -483,7 +496,7 @@ function create_movie()
 			$("#input_baby_div").hide();
 		},
 		success: function(response){
-			//console.log(response);
+			console.log(response);
 			if (response == "Y")
 			{
 				//$(".serial").html("<?=$serial?>");
@@ -549,7 +562,6 @@ $(function () {
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
 		//del_fileview();
-		user_ex_img1	= $("#user_ex_img1").height();
 		$("#user_img1").html("");
         data.context = $('<div/>').appendTo('#user_img1');
 		$("#up_img_div1").attr("class","re_upload");
@@ -580,10 +592,25 @@ $(function () {
             node
                 .prepend('<br>')
                 .prepend(file.preview);
-				$("div#user_img1 > div > p > canvas").css("width","48%");
-				$("div#user_img1 > div > p > canvas").css("height",user_ex_img1+"px");
-				$("div#user_img1 > div > p > canvas").css("padding-top","9.5%");
-				$("div#user_img1 > div > p > canvas").css("padding-left","4.3%");
+				var uimg1_w	= $("td#user_img1 > div > p > canvas").width();
+				var uimg1_h	= $("td#user_img1 > div > p > canvas").height();
+				if (uimg1_w > uimg1_h)
+				{
+					$("td#user_img1 > div > p > canvas").css("width","100%");
+					var re_userimg1_h	= (user_ex_img1_w/ uimg1_w)*uimg1_h;
+					var re_final1_h		= (user_ex_img1_h - re_userimg1_h) /2;
+					$("td#user_img1 > div > p > canvas").css("padding-top",re_final1_h+"px");
+				}else{
+					$("td#user_img1 > div > p > canvas").css("height",user_ex_img1_h+"px");
+					var re_userimg1_w	= (user_ex_img1_h / uimg1_h)*uimg1_w;
+					//alert(re_userimg1_w);
+					//var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;
+					//$("td#user_img1 > div > p > canvas").css("padding-left",re_final1_w+"px");
+				}
+				//$("td#user_img1 > div > p > canvas").css("height","100%");
+				//$("div#user_img1 > div > p > canvas").css("height",user_ex_img1+"px");
+				//$("div#user_img1 > div > p > canvas").css("padding-top","9.5%");
+				//$("div#user_img1 > div > p > canvas").css("padding-left","4.3%");
         }
         if (file.error) {
             node

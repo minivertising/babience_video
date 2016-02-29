@@ -605,7 +605,10 @@ body{
 .popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_2_3 img{
 }
 .popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_2_4 img{
-	width:60%;
+	/*width:60%;*/
+	width:42.5%;
+	padding-top:16.5%;
+	padding-left:5%;
 }
 .popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_2_5 img{
 	width:40%;
