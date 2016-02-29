@@ -74,16 +74,18 @@ body{
 	top:20%;
 }
 .sec_gift{
-	background:url(../images/popup/bg.jpg) repeat ;
-	background-size:contain;
+	background:#48c5e9;
 }
 .sec_banner{
-	background:#f37213;
+	background:#fff;
 }
 .sec_movie .inner_sec_movie{
 	width:98%;
 	margin:0 auto;
 	background:#fff;
+}
+.sec_footer{
+	background:#9fd7e0;
 }
 
 /*popup common*/
@@ -420,7 +422,7 @@ body{
 }
 .popup_wrap .p_mid.p_position .block_content .btn_block{
 	width:100%;
-	padding:10px 0 20px;
+	padding:10px 0 5px;
 }
 .popup_wrap .p_mid.p_position .block_content .btn_block.input{
 	text-align:center;
@@ -567,27 +569,40 @@ body{
 }
 
 
-.popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_1_1 img{
-	width:40%;
-	padding-top:20%;
+.popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_1_1{
+	width:41%;
+	padding-top:22%;
 	padding-left:29%;
 }
-.popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_1_2 img{
+.popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_1_1 table{
+}
+.popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_1_1 img{
+	width:100%;
+}
+.popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_1_2{
 	width:60%;
 	padding-top:12%;
 	padding-left:20%;
 }
+.popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_1_2 img{
+	width:100%;
+}
 .popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_1_3 img{
-	width:60%;
+	width:100%;
 }
 .popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_1_4 img{
-	width:60%;
+	width:100%;
 }
-.popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_1_5 img{
-	width:40%;
+.popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_1_5{
+	width:42%;
 	padding-top:20%;
 	padding-left:29%;
 }
+.popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_1_5 img{
+	width:100%;
+}
+
+
 
 .popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_2_1{
 	width:48%;
@@ -604,11 +619,15 @@ body{
 }
 .popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_2_3 img{
 }
+
+
+.popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_2_4{
+	width:45%;
+	padding-left:3%;
+	padding-top:14%;
+}
 .popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_2_4 img{
-	/*width:60%;*/
-	width:42.5%;
-	padding-top:16.5%;
-	padding-left:5%;
+	width:100%;
 }
 .popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_2_5 img{
 	width:40%;
@@ -622,6 +641,27 @@ body{
 }
 
 
+.popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_3_2{
+	width:50%;
+	right:4%;
+	top:14%;
+	
+}
+.popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_3_2 img{
+	width:100%;
+}
+
+
+
+.popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_3_5{
+	width:56%;
+	right:3%;
+	top:9%;
+	
+}
+.popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_3_5 img{
+	width:100%;
+}
 
 
 .popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .text{
@@ -845,7 +885,7 @@ body{
 }
 .popup_wrap .p_mid.p_position .block_content.coupon .coupon_img .serial{
 	position:absolute;
-	bottom:14.5%;
+	bottom:16%;
 	left:42%;
 	font-weight:bold;
 	color:#000;
@@ -950,6 +990,10 @@ html.gnbOpen .mobile_menu {
 	width:84%;
 }
 */
+
+.end_gift{
+	background:#48c5e9;
+}
 
 .blank{
 	width:0;

@@ -72,7 +72,17 @@
             </div>
             <!-- <div class="re_upload"><a href="#"><img src="images/popup/btn_reup.png" /></a></div> -->
             <div class="text f_1_1" id="imsi_caption1">성장 타이틀</div>
-            <div class="p_img f_1_1" id="user_img1"><img src="images/popup/ex.jpg" id="user_ex_img1" /></div><!--소비자 합성 이미지-->
+            <div class="p_img f_1_1">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                              <tbody>
+                                <tr>
+                                  <td align="center" valign="middle" id="user_img1"><img src="images/popup/ex.jpg" id="user_ex_img1" /></td>
+                                </tr>
+                              </tbody>
+                            </table>
+
+			  <!-- <img src="images/popup/ex.jpg" id="user_ex_img1" /> -->
+			</div><!--소비자 합성 이미지-->
             <div class="front_img img"><img src="images/popup/img_frm_1_1.png" /></div>
             <div class="bg img"><img src="images/popup/frm_b_bg.jpg" /></div>
           </div>
@@ -343,6 +353,8 @@
 var video_concept	= null;
 var user_gubun				= 0;
 var user_ex_img1	= 0;
+var user_ex_img1_w	= 0;
+var user_ex_img1_h		= 0;
 var user_ex_img2	= 0;
 var user_ex_img3	= 0;
 var user_ex_img4	= 0;
@@ -369,6 +381,9 @@ $(document).ready(function() {
 	$("#ytplayer3").height(youtube_height);
 	$("#ytplayer4").width(yt_width);
 	$("#ytplayer4").height(youtube_height);
+
+	user_ex_img1_h		= $("#user_ex_img1").height();
+	user_ex_img1_w		= $("#user_ex_img1").width();
 
 });
 
@@ -591,10 +606,26 @@ $(function () {
             node
                 .prepend('<br>')
                 .prepend(file.preview);
-				$("div#user_img1 > div > p > canvas").css("width","40%");
-				$("div#user_img1 > div > p > canvas").css("height",user_ex_img1+"px");
-				$("div#user_img1 > div > p > canvas").css("padding-top","20%");
-				$("div#user_img1 > div > p > canvas").css("padding-left","29.1%");
+				//$("div#user_img1 > div > p > canvas").css("width","40%");
+				//$("div#user_img1 > div > p > canvas").css("height",user_ex_img1+"px");
+				//$("div#user_img1 > div > p > canvas").css("padding-top","20%");
+				//$("div#user_img1 > div > p > canvas").css("padding-left","29.1%");
+				var uimg1_w	= $("td#user_img1 > div > p > canvas").width();
+				var uimg1_h	= $("td#user_img1 > div > p > canvas").height();
+				if (uimg1_w > uimg1_h)
+				{
+					$("td#user_img1 > div > p > canvas").css("width","100%");
+					var re_userimg1_h	= (user_ex_img1_w/ uimg1_w)*uimg1_h;
+					var re_final1_h		= (user_ex_img1_h - re_userimg1_h) /2;
+					$("td#user_img1 > div > p > canvas").css("padding-top",re_final1_h+"px");
+				}else{
+					$("td#user_img1 > div > p > canvas").css("height",user_ex_img1_h+"px");
+					var re_userimg1_w	= (user_ex_img1_h / uimg1_h)*uimg1_w;
+					//alert(re_userimg1_w);
+					//var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;
+					//$("td#user_img1 > div > p > canvas").css("padding-left",re_final1_w+"px");
+				}
+
         }
         if (file.error) {
             node

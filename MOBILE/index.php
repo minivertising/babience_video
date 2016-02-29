@@ -36,7 +36,7 @@
 <div class="sec_footer">
   <div class="inner_sec_footer">
     <div class="img"><a href="#" onclick="show_notice();return false;"><img src="images/footer.jpg" /></a></div>
-    <div class="img txt" id="notice_div" style="display:none;"><img src="images/footer_txt.jpg" /></div>
+    <div class="img txt" id="notice_div" style="display:none;"><img src="images/footer_noti.jpg" /></div>
   </div>
 </div>
 <?

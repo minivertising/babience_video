@@ -480,7 +480,7 @@ flush();
 			//$GLOBALS['errormsg'] = $path_file . '은 gif 나 jpg, png 파일이 아닙니다.';
 			return Array();
 		  }
-
+/*
 		  switch($size_ori[2]){//image type에 따라 이미지 리소스를 생성한다.
 
 			case 1 : //gif
@@ -504,7 +504,7 @@ flush();
 			//$path_save_file = './files/'.$img_folder.'/medium/merge_'.$img_folder.'_'.$p_num.'.jpg'; // 합성된 이미지 파일
 			  break;
 		  }
-
+*/
 
 $save_w = 720;
 $save_h = 480;

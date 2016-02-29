@@ -604,8 +604,8 @@ $(function () {
 					$("td#user_img1 > div > p > canvas").css("height",user_ex_img1_h+"px");
 					var re_userimg1_w	= (user_ex_img1_h / uimg1_h)*uimg1_w;
 					//alert(re_userimg1_w);
-					//var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;
-					//$("td#user_img1 > div > p > canvas").css("padding-left",re_final1_w+"px");
+					var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;
+					$("td#user_img1 > div > p > canvas").css("padding-left",re_final1_w+"px");
 				}
 				//$("td#user_img1 > div > p > canvas").css("height","100%");
 				//$("div#user_img1 > div > p > canvas").css("height",user_ex_img1+"px");
