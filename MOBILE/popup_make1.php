@@ -48,7 +48,7 @@
           </div>
           <div class="input_one">
             <div class="inner_input_one clearfix">
-              <div class="input"><input type="text" name="mb_baby_age" id="mb_baby_age" placeholder="아기 나이 (숫자만 넣어주세요)"></div>
+              <div class="input"><input type="tel" name="mb_baby_age" id="mb_baby_age" placeholder="아기 나이 (숫자만 넣어주세요)"></div>
             </div>
           </div>
         </div>      
