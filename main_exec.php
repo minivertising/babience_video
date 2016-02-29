@@ -126,7 +126,6 @@ switch ($_REQUEST['exec'])
 			else
 				$cap_image1			= caption_image($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
 		}
-		sleep(1);
 
 		if ($img_name2 != "")
 		{
@@ -156,7 +155,7 @@ switch ($_REQUEST['exec'])
 			}
 			*/
 		}
-		sleep(1);
+print_r("go||");
 		if ($img_name3 != "")
 		{
 			$img_name3arr			= explode(".",stripslashes($img_name3));
@@ -177,7 +176,6 @@ switch ($_REQUEST['exec'])
 				$cap_image3			= caption_image($mb_caption3, $mb_serial,"3",$caption_image2_w,$caption_image2_h);
 			}
 		}
-		sleep(1);
 
 		if ($img_name4 != "")
 		{

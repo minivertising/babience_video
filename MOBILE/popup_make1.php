@@ -551,8 +551,9 @@ function create_movie()
 			$("#input_baby_div").hide();
 		},
 		success: function(response){
+			var flag_res	= response.split("||");
 			console.log(response);
-			if (response == "Y")
+			if (flag_res[0] == "Y")
 			{
 				//$(".serial").html("<?=$serial?>");
 				$("#video_b_name").html(mb_baby_name);
@@ -563,7 +564,7 @@ function create_movie()
 				$("#movie_div").show();
 				$("#loading_div").hide();
 				user_gubun	= 1;
-			}else if (response == "D"){
+			}else if (flag_res[0] == "D"){
 				//$(".c_babyname").html(mb_baby_name);
 				$("#video_b_name").html(mb_baby_name);
 				$("#next_image").attr("src","images/popup/btn_m_next.png");
