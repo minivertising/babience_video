@@ -242,7 +242,7 @@
                 	<div class="mv">
                     	<div class="title">
                         	
-                        	<div class="text">
+                        	<div class="text cap1_txt">
                             	"폭풍 성장의 비밀"
                             </div>
 						    <div class="bg img"><img src="images/popup/title_movie_c_1.png" /></div>
@@ -322,7 +322,7 @@
         </div>
         <div class="mv">
           <div class="title">
-            <div class="text">
+            <div class="text cap1_txt">
             "폭풍 성장의 비밀"
             </div>
             <div class="bg img"><img src="images/popup/title_movie_c_1.png" /></div>
@@ -534,6 +534,7 @@ function create_movie()
 			if (response == "Y")
 			{
 				//$(".serial").html("<?=$serial?>");
+				$(".cap1_txt").html(mb_caption1);
 				$("#video_b_name").html(mb_baby_name);
 				$("#next_image").attr("src","images/popup/btn_m_next_coupon.png");
 				$("#video_player").width("100%");
@@ -544,6 +545,7 @@ function create_movie()
 				user_gubun	= 1;
 			}else if (response == "D"){
 				//$(".c_babyname").html(mb_baby_name);
+				$(".cap1_txt").html(mb_caption1);
 				$("#video_b_name").html(mb_baby_name);
 				$("#next_image").attr("src","images/popup/btn_m_next.png");
 				$("#video_player").width("100%");
