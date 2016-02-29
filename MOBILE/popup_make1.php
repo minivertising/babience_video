@@ -862,7 +862,7 @@ $(function () {
 		// 파일 삭제
 		//del_fileview();
 		//user_ex_img3	= $("#user_ex_img3").height();
-		$("#user_img3").html("");
+		//$("#user_img3").html("");
         data.context = $('<div/>').appendTo('#user_img3');
 		$("#up_img_div3").attr("class","re_upload");
 		$("#up_img3").attr("src","images/popup/btn_reup.png");
@@ -890,7 +890,6 @@ $(function () {
             node
                 .prepend('<br>')
                 .prepend(file.preview);
-				alert('111');
 				//$("div#user_img3 > div > p > canvas").css("width","66%");
 				//$("div#user_img3 > div > p > canvas").css("height",user_ex_img3+"px");
 				//$("div#user_img3 > div > p > canvas").css("padding-top","9.7%");
@@ -917,7 +916,6 @@ $(function () {
 					//$("td#user_img1 > div > p > canvas").css("padding-left",re_final1_w+"px");
 				}
         }
-		alert('222');
 
         if (file.error) {
             node
