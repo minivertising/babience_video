@@ -31,7 +31,7 @@
           <?=$member_info['mb_baby_name']?><span><img src="images/popup/label_baby.png" width="35" /></span>
           </div>
           <div class="youtube" style="background:#a3e2eb">
-            <video src="../files/<?=$serial?>/growmovie.mp4" controls preload="auto" id="video_player"></video>
+            <video src="../files/<?=$serialnumber?>/growmovie.mp4" controls preload="auto" id="video_player"></video>
           </div>
         </div>
       </div><!--inner-->
@@ -99,13 +99,13 @@ function sns_share(media, flag)
 		  //container: '#kakao-link-btn',
 		  label: "우리아기 특별한 성장 영상 공개!",
 		  image: {
-			src: 'http://grow.babience-event.com/<?=$serial?>/medium/final_<?=$serialnumber?>_1.jpg',
+			src: 'http://grow.babience-event.com/<?=$serialnumber?>/medium/final_<?=$serialnumber?>_1.jpg',
 			width: '800',
 			height: '600'
 		  },
 		  webButton: {
 			text: '[베비언스] 베비언스 먹고 폭풍 성장!',
-			url: 'http://grow.babience-event.com/MOBILE/index.php?serial=<?=$serial?>' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
+			url: 'http://grow.babience-event.com/MOBILE/index.php?serial=<?=$serialnumber?>' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
 		  }
 		});
 		$.ajax({
@@ -120,8 +120,8 @@ function sns_share(media, flag)
 		});
 	}else{
 		Kakao.Story.share({
-			url: 'http://grow.babience-event.com/MOBILE/share_page.php?serial=<?=$serial?>',
-			text: '우리아기 특별한 성장 영상 공개!\r\nhttp://grow.babience-event.com/share_page.php?serial=<?=$serialnumber?>'
+			url: 'http://grow.babience-event.com/MOBILE/share_page.php?serial=<?=$serialnumber?>',
+			text: '우리아기 특별한 성장 영상 공개!\r\nhttp://grow.babience-event.com/coupon_page.php?serial=<?=$serialnumber?>'
 		});
 		$.ajax({
 			type   : "POST",
