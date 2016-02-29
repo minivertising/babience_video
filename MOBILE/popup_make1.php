@@ -894,27 +894,8 @@ $(function () {
 				//$("div#user_img3 > div > p > canvas").css("height",user_ex_img3+"px");
 				//$("div#user_img3 > div > p > canvas").css("padding-top","9.7%");
 				//$("div#user_img3 > div > p > canvas").css("padding-left","17%");
-				$("div#user_img3 > div > p > canvas").css("width","100%");
-				var uimg3_w	= $("div#user_img3 > div > p > canvas").width();
-				var uimg3_h	= $("div#user_img3 > div > p > canvas").height();
-				if (uimg3_w > uimg3_h)
-				{
-					if (uimg3_h > user_ex_img3_h)
-					{
-						$("td#user_img3 > div > p > canvas").css("width","80%");
-					}else{
-						$("td#user_img3 > div > p > canvas").css("width","100%");
-					}
-					var re_userimg3_h	= (user_ex_img3_w/ uimg3_w)*uimg3_h;
-					var re_final3_h		= (user_ex_img3_h - re_userimg3_h) /2;
-					$("td#user_img3 > div > p > canvas").css("padding-top",re_final3_h+"px");
-				}else{
 					$("td#user_img3 > div > p > canvas").css("height",user_ex_img3_h+"px");
 					var re_userimg3_w	= (user_ex_img3_h / uimg3_h)*uimg3_w;
-					//alert(re_userimg1_w);
-					//var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;
-					//$("td#user_img1 > div > p > canvas").css("padding-left",re_final1_w+"px");
-				}
         }
 
         if (file.error) {
