@@ -315,7 +315,7 @@ switch ($_REQUEST['exec'])
 			if ($dupli_bann_num == 0)
 			{
 				// 중복 당첨여부 체크
-				$dupli2_bann_query		= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_phone='".$mb_phone."'";
+				$dupli2_bann_query		= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_phone='".$mb_phone."' AND mb_lms='Y'";
 				$dupli2_bann_result		= mysqli_query($my_db, $dupli2_bann_query);
 				$dupli2_bann_num		= mysqli_num_rows($dupli2_bann_result);
 				if ($dupli2_bann_num == 0)
