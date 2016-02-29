@@ -107,6 +107,8 @@ switch ($_REQUEST['exec'])
 			$caption_image2_name_h	= "393;";
 		}
 
+		if ($img_name3 != "" && $img_name4 != "")
+		{
 		if ($img_name1 != "")
 		{
 			$img_name1arr			= explode(".",stripslashes($img_name1));
@@ -196,13 +198,6 @@ switch ($_REQUEST['exec'])
 			}else{
 				$cap_image4			= caption_image($mb_caption4, $mb_serial,"4",$caption_image2_w,$caption_image2_h);
 			}
-/*
-			if ($mb_concept == "2" || $mb_concept == "3")
-			{
-				$mb_name_age_caption	= $mb_baby_name." (".$mb_baby_age.")";
-				$cap_image2_2			= caption_image2($mb_name_age_caption, $mb_serial,"4",$caption_image2_name_w,$caption_image2_name_h);
-			}
-*/
 		}
 
 		if ($img_name5 != "")
@@ -220,8 +215,6 @@ switch ($_REQUEST['exec'])
 			//$cap_image5			= caption_image($mb_caption5, $mb_serial,"5");
 		}
 
-		if ($img_name3 != "" && $img_name4 != "")
-		{
 			$output	= "ffmpeg \\";
 			$output	.= "-loop 1 -t 2 -i ./MOBILE/scene/concept_".$mb_concept."_1.jpg \\";
 			$output	.= "-loop 1 -t 1.5 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_1.jpg \\";
@@ -244,6 +237,91 @@ switch ($_REQUEST['exec'])
 
 		if ($img_name3 != "" && $img_name4 == "")
 		{
+		if ($img_name1 != "")
+		{
+			$img_name1arr			= explode(".",stripslashes($img_name1));
+			$img_name1arr_num	= count($img_name1arr) -1;
+
+			if ($img_name1arr[$img_name1arr_num] == "jpeg")
+				$img_name1arr[$img_name1arr_num]	= "jpg";
+
+			$img_name1			= $mb_serial."_1.".strtolower($img_name1arr[$img_name1arr_num]); 
+			$new_image1			= merge_image($img_name1, $mb_serial,"1", $mb_concept);
+			$f_img_name1			= $mb_serial."_1.jpg";
+			$new_image1_1			= merge_image2($f_img_name1, $mb_serial,"1", $mb_concept);
+			if ($mb_concept == "2" || $mb_concept == "4")
+				$cap_image1			= caption_image_white($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
+			else if ($mb_concept == "3")
+				$cap_image1			= caption_image_yellow($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
+			else
+				$cap_image1			= caption_image($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
+		}
+
+		if ($img_name2 != "")
+		{
+			$img_name2arr			= explode(".",stripslashes($img_name2));
+			$img_name2arr_num	= count($img_name2arr) -1;
+
+			if ($img_name2arr[$img_name2arr_num] == "jpeg")
+				$img_name2arr[$img_name2arr_num]	= "jpg";
+
+			$img_name2			= $mb_serial."_2.".strtolower($img_name2arr[$img_name2arr_num]); 
+			$new_image2			= merge_image($img_name2, $mb_serial,"2",$mb_concept);
+			$f_img_name2			= $mb_serial."_2.jpg";
+			$new_image2_1			= merge_image2($f_img_name2, $mb_serial,"2",$mb_concept);
+			if ($mb_concept == "2" || $mb_concept == "3" || $mb_concept == "4")
+			{
+				$cap_image2			= caption_image_white($mb_caption2, $mb_serial,"2",$caption_image2_w,$caption_image2_h);
+				$mb_name_age_caption	= $mb_baby_name." (".$mb_baby_age.")";
+				$cap_image2_2			= caption_image2_white($mb_name_age_caption, $mb_serial,"2",$caption_image2_name_w,$caption_image2_name_h);
+			}else{
+				$cap_image2			= caption_image($mb_caption2, $mb_serial,"2",$caption_image2_w,$caption_image2_h);
+			}
+			/*
+			if ($mb_concept == "2" || $mb_concept == "3")
+			{
+				$mb_name_age_caption	= $mb_baby_name." (".$mb_baby_age.")";
+				$cap_image2_2			= caption_image2_white($mb_name_age_caption, $mb_serial,"2",$caption_image2_name_w,$caption_image2_name_h);
+			}
+			*/
+		}
+
+		if ($img_name3 != "")
+		{
+			$img_name3arr			= explode(".",stripslashes($img_name3));
+			$img_name3arr_num	= count($img_name3arr) -1;
+
+			if ($img_name3arr[$img_name3arr_num] == "jpeg")
+				$img_name3arr[$img_name3arr_num]	= "jpg";
+
+			$img_name3			= $mb_serial."_3.".strtolower($img_name3arr[$img_name3arr_num]); 
+			$new_image3			= merge_image($img_name3, $mb_serial,"3",$mb_concept);
+			$f_img_name3			= $mb_serial."_3.jpg";
+			$new_image3_1			= merge_image2($f_img_name3, $mb_serial,"3",$mb_concept);
+			if ($mb_concept == "2" || $mb_concept == "3" || $mb_concept == "4"){
+				$cap_image3			= caption_image_white($mb_caption3, $mb_serial,"3",$caption_image2_w,$caption_image2_h);
+				$mb_name_age_caption	= $mb_baby_name." (".$mb_baby_age.")";
+				$cap_image2_2			= caption_image2_white($mb_name_age_caption, $mb_serial,"3",$caption_image2_name_w,$caption_image2_name_h);
+			}else{
+				$cap_image3			= caption_image($mb_caption3, $mb_serial,"3",$caption_image2_w,$caption_image2_h);
+			}
+		}
+
+		if ($img_name5 != "")
+		{
+			$img_name5arr			= explode(".",stripslashes($img_name5));
+			$img_name5arr_num	= count($img_name5arr) -1;
+
+			if ($img_name5arr[$img_name5arr_num] == "jpeg")
+				$img_name5arr[$img_name5arr_num]	= "jpg";
+
+			$img_name5			= $mb_serial."_5.".strtolower($img_name5arr[$img_name5arr_num]); 
+			$new_image5			= merge_image($img_name5, $mb_serial,"5",$mb_concept);
+			$f_img_name5			= $mb_serial."_5.jpg";
+			$new_image5_1			= merge_image2($f_img_name5, $mb_serial,"5",$mb_concept);
+			//$cap_image5			= caption_image($mb_caption5, $mb_serial,"5");
+		}
+
 			$output	= "ffmpeg \\";
 			$output	.= "-loop 1 -t 2 -i ./MOBILE/scene/concept_".$mb_concept."_1.jpg \\";
 			$output	.= "-loop 1 -t 1.5 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_1.jpg \\";
@@ -264,6 +342,92 @@ switch ($_REQUEST['exec'])
 
 		if ($img_name3 == "" && $img_name4 != "")
 		{
+		if ($img_name1 != "")
+		{
+			$img_name1arr			= explode(".",stripslashes($img_name1));
+			$img_name1arr_num	= count($img_name1arr) -1;
+
+			if ($img_name1arr[$img_name1arr_num] == "jpeg")
+				$img_name1arr[$img_name1arr_num]	= "jpg";
+
+			$img_name1			= $mb_serial."_1.".strtolower($img_name1arr[$img_name1arr_num]); 
+			$new_image1			= merge_image($img_name1, $mb_serial,"1", $mb_concept);
+			$f_img_name1			= $mb_serial."_1.jpg";
+			$new_image1_1			= merge_image2($f_img_name1, $mb_serial,"1", $mb_concept);
+			if ($mb_concept == "2" || $mb_concept == "4")
+				$cap_image1			= caption_image_white($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
+			else if ($mb_concept == "3")
+				$cap_image1			= caption_image_yellow($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
+			else
+				$cap_image1			= caption_image($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
+		}
+
+		if ($img_name2 != "")
+		{
+			$img_name2arr			= explode(".",stripslashes($img_name2));
+			$img_name2arr_num	= count($img_name2arr) -1;
+
+			if ($img_name2arr[$img_name2arr_num] == "jpeg")
+				$img_name2arr[$img_name2arr_num]	= "jpg";
+
+			$img_name2			= $mb_serial."_2.".strtolower($img_name2arr[$img_name2arr_num]); 
+			$new_image2			= merge_image($img_name2, $mb_serial,"2",$mb_concept);
+			$f_img_name2			= $mb_serial."_2.jpg";
+			$new_image2_1			= merge_image2($f_img_name2, $mb_serial,"2",$mb_concept);
+			if ($mb_concept == "2" || $mb_concept == "3" || $mb_concept == "4")
+			{
+				$cap_image2			= caption_image_white($mb_caption2, $mb_serial,"2",$caption_image2_w,$caption_image2_h);
+				$mb_name_age_caption	= $mb_baby_name." (".$mb_baby_age.")";
+				$cap_image2_2			= caption_image2_white($mb_name_age_caption, $mb_serial,"2",$caption_image2_name_w,$caption_image2_name_h);
+			}else{
+				$cap_image2			= caption_image($mb_caption2, $mb_serial,"2",$caption_image2_w,$caption_image2_h);
+			}
+			/*
+			if ($mb_concept == "2" || $mb_concept == "3")
+			{
+				$mb_name_age_caption	= $mb_baby_name." (".$mb_baby_age.")";
+				$cap_image2_2			= caption_image2_white($mb_name_age_caption, $mb_serial,"2",$caption_image2_name_w,$caption_image2_name_h);
+			}
+			*/
+		}
+
+		if ($img_name4 != "")
+		{
+			$img_name4arr			= explode(".",stripslashes($img_name4));
+			$img_name4arr_num	= count($img_name4arr) -1;
+
+			if ($img_name4arr[$img_name4arr_num] == "jpeg")
+				$img_name4arr[$img_name4arr_num]	= "jpg";
+
+			$img_name4			= $mb_serial."_4.".strtolower($img_name4arr[$img_name4arr_num]); 
+			$new_image4			= merge_image($img_name4, $mb_serial,"4",$mb_concept);
+			$f_img_name4			= $mb_serial."_4.jpg";
+			$new_image4_1			= merge_image2($f_img_name4, $mb_serial,"4",$mb_concept);
+			if ($mb_concept == "2" || $mb_concept == "3" || $mb_concept == "4"){
+				$cap_image4			= caption_image_white($mb_caption4, $mb_serial,"4",$caption_image2_w,$caption_image2_h);
+				$mb_name_age_caption	= $mb_baby_name." (".$mb_baby_age.")";
+				$cap_image2_2			= caption_image2_white($mb_name_age_caption, $mb_serial,"4",$caption_image2_name_w,$caption_image2_name_h);
+			}else{
+				$cap_image4			= caption_image($mb_caption4, $mb_serial,"4",$caption_image2_w,$caption_image2_h);
+			}
+		}
+
+		if ($img_name5 != "")
+		{
+			$img_name5arr			= explode(".",stripslashes($img_name5));
+			$img_name5arr_num	= count($img_name5arr) -1;
+
+			if ($img_name5arr[$img_name5arr_num] == "jpeg")
+				$img_name5arr[$img_name5arr_num]	= "jpg";
+
+			$img_name5			= $mb_serial."_5.".strtolower($img_name5arr[$img_name5arr_num]); 
+			$new_image5			= merge_image($img_name5, $mb_serial,"5",$mb_concept);
+			$f_img_name5			= $mb_serial."_5.jpg";
+			$new_image5_1			= merge_image2($f_img_name5, $mb_serial,"5",$mb_concept);
+			//$cap_image5			= caption_image($mb_caption5, $mb_serial,"5");
+		}
+
+
 			$output	= "ffmpeg \\";
 			$output	.= "-loop 1 -t 2 -i ./MOBILE/scene/concept_".$mb_concept."_1.jpg \\";
 			$output	.= "-loop 1 -t 1.5 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_1.jpg \\";
@@ -284,6 +448,70 @@ switch ($_REQUEST['exec'])
 
 		if ($img_name3 == "" && $img_name4 == "")
 		{
+		if ($img_name1 != "")
+		{
+			$img_name1arr			= explode(".",stripslashes($img_name1));
+			$img_name1arr_num	= count($img_name1arr) -1;
+
+			if ($img_name1arr[$img_name1arr_num] == "jpeg")
+				$img_name1arr[$img_name1arr_num]	= "jpg";
+
+			$img_name1			= $mb_serial."_1.".strtolower($img_name1arr[$img_name1arr_num]); 
+			$new_image1			= merge_image($img_name1, $mb_serial,"1", $mb_concept);
+			$f_img_name1			= $mb_serial."_1.jpg";
+			$new_image1_1			= merge_image2($f_img_name1, $mb_serial,"1", $mb_concept);
+			if ($mb_concept == "2" || $mb_concept == "4")
+				$cap_image1			= caption_image_white($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
+			else if ($mb_concept == "3")
+				$cap_image1			= caption_image_yellow($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
+			else
+				$cap_image1			= caption_image($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
+		}
+
+		if ($img_name2 != "")
+		{
+			$img_name2arr			= explode(".",stripslashes($img_name2));
+			$img_name2arr_num	= count($img_name2arr) -1;
+
+			if ($img_name2arr[$img_name2arr_num] == "jpeg")
+				$img_name2arr[$img_name2arr_num]	= "jpg";
+
+			$img_name2			= $mb_serial."_2.".strtolower($img_name2arr[$img_name2arr_num]); 
+			$new_image2			= merge_image($img_name2, $mb_serial,"2",$mb_concept);
+			$f_img_name2			= $mb_serial."_2.jpg";
+			$new_image2_1			= merge_image2($f_img_name2, $mb_serial,"2",$mb_concept);
+			if ($mb_concept == "2" || $mb_concept == "3" || $mb_concept == "4")
+			{
+				$cap_image2			= caption_image_white($mb_caption2, $mb_serial,"2",$caption_image2_w,$caption_image2_h);
+				$mb_name_age_caption	= $mb_baby_name." (".$mb_baby_age.")";
+				$cap_image2_2			= caption_image2_white($mb_name_age_caption, $mb_serial,"2",$caption_image2_name_w,$caption_image2_name_h);
+			}else{
+				$cap_image2			= caption_image($mb_caption2, $mb_serial,"2",$caption_image2_w,$caption_image2_h);
+			}
+			/*
+			if ($mb_concept == "2" || $mb_concept == "3")
+			{
+				$mb_name_age_caption	= $mb_baby_name." (".$mb_baby_age.")";
+				$cap_image2_2			= caption_image2_white($mb_name_age_caption, $mb_serial,"2",$caption_image2_name_w,$caption_image2_name_h);
+			}
+			*/
+		}
+
+		if ($img_name5 != "")
+		{
+			$img_name5arr			= explode(".",stripslashes($img_name5));
+			$img_name5arr_num	= count($img_name5arr) -1;
+
+			if ($img_name5arr[$img_name5arr_num] == "jpeg")
+				$img_name5arr[$img_name5arr_num]	= "jpg";
+
+			$img_name5			= $mb_serial."_5.".strtolower($img_name5arr[$img_name5arr_num]); 
+			$new_image5			= merge_image($img_name5, $mb_serial,"5",$mb_concept);
+			$f_img_name5			= $mb_serial."_5.jpg";
+			$new_image5_1			= merge_image2($f_img_name5, $mb_serial,"5",$mb_concept);
+			//$cap_image5			= caption_image($mb_caption5, $mb_serial,"5");
+		}
+
 			$output	= "ffmpeg \\";
 			$output	.= "-loop 1 -t 2 -i ./MOBILE/scene/concept_".$mb_concept."_1.jpg \\";
 			$output	.= "-loop 1 -t 1.5 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_1.jpg \\";
