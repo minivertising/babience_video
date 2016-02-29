@@ -551,7 +551,6 @@ function create_movie()
 			$("#input_baby_div").hide();
 		},
 		success: function(response){
-			alert(response);
 			console.log(response);
 			if (response == "Y")
 			{
