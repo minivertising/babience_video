@@ -861,12 +861,12 @@ $(function () {
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
 		//del_fileview();
-		//user_ex_img3	= $("#user_ex_img3").height();
+		user_ex_img3	= $("#user_ex_img3").height();
+		$("#user_img3").html("");
         data.context = $('<div/>').appendTo('#user_img3');
 		$("#up_img_div3").attr("class","re_upload");
 		$("#up_img3").attr("src","images/popup/btn_reup.png");
         $.each(data.files, function (index, file) {
-		$("#user_img3").html("");
 			//img_name3 = file.name;
             var node = $('<p/>');
                    // .append($('<span/>').text(file.name));
@@ -886,6 +886,7 @@ $(function () {
         var index = data.index,
             file = data.files[index],
             node = $(data.context.children()[index]);
+		alert(file.preview.width);
         if (file.preview) {
             node
                 .prepend('<br>')
@@ -954,6 +955,7 @@ $(function () {
     }).prop('disabled', !$.support.fileInput)
         .parent().addClass($.support.fileInput ? undefined : 'disabled');
 });
+
 $(function () {
     'use strict';
     // Change this to the location of your server-side upload handler:
