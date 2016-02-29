@@ -73,16 +73,15 @@
             <!-- <div class="re_upload"><a href="#"><img src="images/popup/btn_reup.png" /></a></div> -->
             <div class="text f_1_1" id="imsi_caption1">성장 타이틀</div>
             <div class="p_img f_1_1">
-                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                              <tbody>
-                                <tr>
-                                  <td align="center" valign="middle" id="user_img1"><img src="images/popup/ex.jpg" id="user_ex_img1" /></td>
-                                </tr>
-                              </tbody>
-                            </table>
-
-			  <!-- <img src="images/popup/ex.jpg" id="user_ex_img1" /> -->
-			</div><!--소비자 합성 이미지-->
+              <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td align="center" valign="middle" id="user_img1"><img src="images/popup/ex.jpg" id="user_ex_img1" /></td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- <img src="images/popup/ex.jpg" id="user_ex_img1" /> -->
+            </div><!--소비자 합성 이미지-->
             <div class="front_img img"><img src="images/popup/img_frm_1_1.png" /></div>
             <div class="bg img"><img src="images/popup/frm_b_bg.jpg" /></div>
           </div>
@@ -113,7 +112,15 @@
             </div>
             <!--<div class="re_upload"><a href="#"><img src="images/popup/btn_reup.png" /></a></div>-->
             <div class="text f_1_2" id="imsi_caption2">성장 타이틀</div>
-            <div class="p_img f_1_2" id="user_img2"><img src="images/popup/ex.jpg" id="user_ex_img2" /></div><!--소비자 합성 이미지-->
+            <div class="p_img f_1_2">
+              <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td align="center" valign="middle" id="user_img2"><img src="images/popup/ex.jpg" id="user_ex_img2" /></td>
+                  </tr>
+                </tbody>
+              </table>
+			</div><!--소비자 합성 이미지-->
             <div class="front_img img"><img src="images/popup/img_frm_1_2.png" /></div>
             <div class="bg img"><img src="images/popup/frm_b_bg.jpg" /></div>
           </div>
@@ -144,7 +151,15 @@
             </div>
             <!--<div class="re_upload"><a href="#"><img src="images/popup/btn_reup.png" /></a></div>-->
             <div class="text f_1_2" id="imsi_caption3">성장 타이틀</div>
-            <div class="p_img f_1_2" id="user_img3"><img src="images/popup/ex.jpg" id="user_ex_img3" /></div><!--소비자 합성 이미지-->
+            <div class="p_img f_1_2">
+              <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td align="center" valign="middle" id="user_img3"><img src="images/popup/ex.jpg" id="user_ex_img3" /></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!--소비자 합성 이미지-->
             <div class="front_img img"><img src="images/popup/img_frm_1_2.png" /></div>
             <div class="bg img"><img src="images/popup/frm_b_bg.jpg" /></div>
           </div>
@@ -175,7 +190,15 @@
             </div>
             <!--<div class="re_upload"><a href="#"><img src="images/popup/btn_reup.png" /></a></div>-->
             <div class="text f_1_2" id="imsi_caption4">성장 타이틀</div>
-            <div class="p_img f_1_2" id="user_img4"><img src="images/popup/ex.jpg" id="user_ex_img4" /></div><!--소비자 합성 이미지-->
+            <div class="p_img f_1_2">
+              <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td align="center" valign="middle" id="user_img4"><img src="images/popup/ex.jpg" id="user_ex_img4" /></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!--소비자 합성 이미지-->
             <div class="front_img img"><img src="images/popup/img_frm_1_2.png" /></div>
             <div class="bg img"><img src="images/popup/frm_b_bg.jpg" /></div>
           </div>
@@ -205,7 +228,15 @@
               </span>
             </div>
             <!--<div class="re_upload"><a href="#"><img src="images/popup/btn_reup.png" /></a></div>-->
-            <div class="p_img f_1_5" id="user_img5"><img src="images/popup/ex.jpg" id="user_ex_img5" /></div><!--소비자 합성 이미지-->
+            <div class="p_img f_1_5">
+                                <table width="100%" border="0">
+                                  <tbody>
+                                    <tr>
+                                      <td align="center" valign="middle" id="user_img5"><img src="images/popup/ex.jpg" id="user_ex_img5" /></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+			</div><!--소비자 합성 이미지-->
             <div class="front_img img"><img src="images/popup/img_frm_1_5.png" /></div>
             <div class="bg img"><img src="images/popup/frm_b_bg.jpg" /></div>
           </div>
@@ -352,9 +383,17 @@
 <script type="text/javascript">
 var video_concept	= null;
 var user_gubun				= 0;
-var user_ex_img1	= 0;
 var user_ex_img1_w	= 0;
 var user_ex_img1_h		= 0;
+var user_ex_img2_w	= 0;
+var user_ex_img2_h		= 0;
+var user_ex_img3_w	= 0;
+var user_ex_img3_h		= 0;
+var user_ex_img4_w	= 0;
+var user_ex_img4_h		= 0;
+var user_ex_img5_w	= 0;
+var user_ex_img5_h		= 0;
+var user_ex_img1	= 0;
 var user_ex_img2	= 0;
 var user_ex_img3	= 0;
 var user_ex_img4	= 0;
@@ -384,6 +423,14 @@ $(document).ready(function() {
 
 	user_ex_img1_h		= $("#user_ex_img1").height();
 	user_ex_img1_w		= $("#user_ex_img1").width();
+	user_ex_img2_h		= $("#user_ex_img2").height();
+	user_ex_img2_w		= $("#user_ex_img2").width();
+	user_ex_img3_h		= $("#user_ex_img3").height();
+	user_ex_img3_w		= $("#user_ex_img3").width();
+	user_ex_img4_h		= $("#user_ex_img4").height();
+	user_ex_img4_w		= $("#user_ex_img4").width();
+	user_ex_img5_h		= $("#user_ex_img5").height();
+	user_ex_img5_w		= $("#user_ex_img5").width();
 
 });
 
@@ -715,10 +762,26 @@ $(function () {
             node
                 .prepend('<br>')
                 .prepend(file.preview);
-				$("div#user_img2 > div > p > canvas").css("width","66%");
-				$("div#user_img2 > div > p > canvas").css("height",user_ex_img2+"px");
-				$("div#user_img2 > div > p > canvas").css("padding-top","9.7%");
-				$("div#user_img2 > div > p > canvas").css("padding-left","17%");
+				//$("div#user_img2 > div > p > canvas").css("width","66%");
+				//$("div#user_img2 > div > p > canvas").css("height",user_ex_img2+"px");
+				//$("div#user_img2 > div > p > canvas").css("padding-top","9.7%");
+				//$("div#user_img2 > div > p > canvas").css("padding-left","17%");
+				var uimg2_w	= $("td#user_img2 > div > p > canvas").width();
+				var uimg2_h	= $("td#user_img2 > div > p > canvas").height();
+				if (uimg2_w > uimg2_h)
+				{
+					$("td#user_img2 > div > p > canvas").css("width","100%");
+					var re_userimg2_h	= (user_ex_img2_w/ uimg2_w)*uimg2_h;
+					var re_final2_h		= (user_ex_img2_h - re_userimg2_h) /2;
+					$("td#user_img2 > div > p > canvas").css("padding-top",re_final2_h+"px");
+				}else{
+					$("td#user_img2 > div > p > canvas").css("height",user_ex_img2_h+"px");
+					var re_userimg2_w	= (user_ex_img2_h / uimg2_h)*uimg2_w;
+					//alert(re_userimg1_w);
+					//var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;
+					//$("td#user_img1 > div > p > canvas").css("padding-left",re_final1_w+"px");
+				}
+
         }
         if (file.error) {
             node
@@ -808,10 +871,25 @@ $(function () {
             node
                 .prepend('<br>')
                 .prepend(file.preview);
-				$("div#user_img3 > div > p > canvas").css("width","66%");
-				$("div#user_img3 > div > p > canvas").css("height",user_ex_img3+"px");
-				$("div#user_img3 > div > p > canvas").css("padding-top","9.7%");
-				$("div#user_img3 > div > p > canvas").css("padding-left","17%");
+				//$("div#user_img3 > div > p > canvas").css("width","66%");
+				//$("div#user_img3 > div > p > canvas").css("height",user_ex_img3+"px");
+				//$("div#user_img3 > div > p > canvas").css("padding-top","9.7%");
+				//$("div#user_img3 > div > p > canvas").css("padding-left","17%");
+				var uimg3_w	= $("td#user_img3 > div > p > canvas").width();
+				var uimg3_h	= $("td#user_img3 > div > p > canvas").height();
+				if (uimg3_w > uimg3_h)
+				{
+					$("td#user_img3 > div > p > canvas").css("width","100%");
+					var re_userimg3_h	= (user_ex_img3_w/ uimg3_w)*uimg3_h;
+					var re_final3_h		= (user_ex_img3_h - re_userimg3_h) /2;
+					$("td#user_img3 > div > p > canvas").css("padding-top",re_final3_h+"px");
+				}else{
+					$("td#user_img3 > div > p > canvas").css("height",user_ex_img3_h+"px");
+					var re_userimg3_w	= (user_ex_img3_h / uimg3_h)*uimg3_w;
+					//alert(re_userimg1_w);
+					//var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;
+					//$("td#user_img1 > div > p > canvas").css("padding-left",re_final1_w+"px");
+				}
         }
         if (file.error) {
             node
@@ -900,10 +978,26 @@ $(function () {
             node
                 .prepend('<br>')
                 .prepend(file.preview);
-				$("div#user_img4 > div > p > canvas").css("width","66%");
-				$("div#user_img4 > div > p > canvas").css("height",user_ex_img4+"px");
-				$("div#user_img4 > div > p > canvas").css("padding-top","9.7%");
-				$("div#user_img4 > div > p > canvas").css("padding-left","17%");
+				//$("div#user_img4 > div > p > canvas").css("width","66%");
+				//$("div#user_img4 > div > p > canvas").css("height",user_ex_img4+"px");
+				//$("div#user_img4 > div > p > canvas").css("padding-top","9.7%");
+				//$("div#user_img4 > div > p > canvas").css("padding-left","17%");
+				var uimg4_w	= $("td#user_img4 > div > p > canvas").width();
+				var uimg4_h	= $("td#user_img4 > div > p > canvas").height();
+				if (uimg4_w > uimg4_h)
+				{
+					$("td#user_img4 > div > p > canvas").css("width","100%");
+					var re_userimg4_h	= (user_ex_img4_w/ uimg4_w)*uimg4_h;
+					var re_final4_h		= (user_ex_img4_h - re_userimg4_h) /2;
+					$("td#user_img4 > div > p > canvas").css("padding-top",re_final4_h+"px");
+				}else{
+					$("td#user_img4 > div > p > canvas").css("height",user_ex_img4_h+"px");
+					var re_userimg4_w	= (user_ex_img4_h / uimg4_h)*uimg4_w;
+					//alert(re_userimg1_w);
+					//var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;
+					//$("td#user_img1 > div > p > canvas").css("padding-left",re_final1_w+"px");
+				}
+
         }
         if (file.error) {
             node
@@ -992,10 +1086,25 @@ $(function () {
             node
                 .prepend('<br>')
                 .prepend(file.preview);
-				$("div#user_img5 > div > p > canvas").css("width","40%");
-				$("div#user_img5 > div > p > canvas").css("height",user_ex_img5+"px");
-				$("div#user_img5 > div > p > canvas").css("padding-top","19%");
-				$("div#user_img5 > div > p > canvas").css("padding-left","29.2%");
+				//$("div#user_img5 > div > p > canvas").css("width","40%");
+				//$("div#user_img5 > div > p > canvas").css("height",user_ex_img5+"px");
+				//$("div#user_img5 > div > p > canvas").css("padding-top","19%");
+				//$("div#user_img5 > div > p > canvas").css("padding-left","29.2%");
+				var uimg5_w	= $("td#user_img5 > div > p > canvas").width();
+				var uimg5_h	= $("td#user_img5 > div > p > canvas").height();
+				if (uimg5_w > uimg5_h)
+				{
+					$("td#user_img5 > div > p > canvas").css("width","100%");
+					var re_userimg5_h	= (user_ex_img5_w/ uimg5_w)*uimg5_h;
+					var re_final5_h		= (user_ex_img5_h - re_userimg5_h) /2;
+					$("td#user_img5 > div > p > canvas").css("padding-top",re_final5_h+"px");
+				}else{
+					$("td#user_img5 > div > p > canvas").css("height",user_ex_img5_h+"px");
+					var re_userimg5_w	= (user_ex_img5_h / uimg5_h)*uimg5_w;
+					//alert(re_userimg1_w);
+					//var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;
+					//$("td#user_img1 > div > p > canvas").css("padding-left",re_final1_w+"px");
+				}
         }
         if (file.error) {
             node

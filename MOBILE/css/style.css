@@ -588,6 +588,13 @@ body{
 .popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_1_2 img{
 	width:100%;
 }
+.popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_1_3{
+	width:78%;
+	padding-top:12.5%;
+	left:50%;
+	margin-left:-39%;
+}
+
 .popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_1_3 img{
 	width:100%;
 }
