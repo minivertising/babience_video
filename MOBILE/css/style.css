@@ -589,11 +589,13 @@ body{
 	padding-left:29%;
 }
 
-
-.popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_2_1 img{
+.popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_2_1{
 	width:48%;
 	padding-top:10%;
 	padding-left:4%;
+}
+.popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_2_1 img{
+	width:100%;
 }
 .popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_2_2 img{
 	width:100%;
