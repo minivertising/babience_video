@@ -155,7 +155,8 @@ switch ($_REQUEST['exec'])
 			}
 			*/
 		}
-print_r("go||");
+print_r($img_name3);
+print_r($img_name4);
 		if ($img_name3 != "")
 		{
 			$img_name3arr			= explode(".",stripslashes($img_name3));
