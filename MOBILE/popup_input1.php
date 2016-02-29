@@ -26,7 +26,7 @@
             </div>
             <div class="input_one">
               <div class="inner_input_one clearfix">
-                <div class="input"><input type="text" name="mb_phone" id="mb_phone" placeholder="휴대폰번호 ('-' 없이 입력해주세요)" onkeyup="only_num(this);chk_len(this.value);"></div>
+                <div class="input"><input type="tel" name="mb_phone" id="mb_phone" placeholder="휴대폰번호 ('-' 없이 입력해주세요)" onkeyup="only_num(this);chk_len(this.value);"></div>
               </div>
             </div>
           </div>
