@@ -321,13 +321,13 @@ switch ($_REQUEST['exec'])
 				if ($dupli2_bann_num == 0)
 				{
 					$flag	= "Y";
-					send_lms($mb_phone);
+					send_lms($mb_phone, $mb_serial);
 				}else{
 					$flag	= "D";
 				}
 			}else{
 				$flag	= "D";
-				send_lms2($mb_phone);
+				send_lms2($mb_phone, $mb_serial);
 			}
 		}else{
 			$flag	= "N";
