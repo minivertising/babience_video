@@ -155,8 +155,7 @@ switch ($_REQUEST['exec'])
 			}
 			*/
 		}
-print_r($img_name3);
-print_r($img_name4);
+
 		if ($img_name3 != "")
 		{
 			$img_name3arr			= explode(".",stripslashes($img_name3));
@@ -301,7 +300,7 @@ print_r($img_name4);
 			system($output2);
 		}
 
-
+		flush();
 
 		$query 	= "UPDATE ".$_gl['member_info_table']." SET mb_baby_name='".$mb_baby_name."',mb_baby_age='".$mb_baby_age."',mb_concept='".$mb_concept."', mb_photo1='".$img_name1."', mb_photo2='".$img_name2."', mb_photo3='".$img_name3."', mb_photo4='".$img_name4."', mb_photo5='".$img_name5."', mb_caption1='".$mb_caption1."', mb_caption2='".$mb_caption2."', mb_caption3='".$mb_caption3."', mb_caption4='".$mb_caption4."' WHERE mb_serial='".$mb_serial."'";
 		$result 	= mysqli_query($my_db, $query);
