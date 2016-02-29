@@ -886,7 +886,6 @@ $(function () {
         var index = data.index,
             file = data.files[index],
             node = $(data.context.children()[index]);
-		alert(file.preview.width);
         if (file.preview) {
             node
                 .prepend('<br>')
