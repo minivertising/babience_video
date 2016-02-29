@@ -75,7 +75,7 @@
               <table width="100%" border="0"  cellpadding="0" cellspacing="0">
                 <tbody>
                   <tr>
-                    <td align="center" valign="middle" id="user_img1"><img src="images/popup/ex.jpg" id="user_ex_img1"/></td>
+                    <td align="center" valign="middle" id="user_img1"><img src="images/popup/ex2.jpg" id="user_ex_img1"/></td>
                   </tr>
                 </tbody>
               </table>
@@ -179,7 +179,7 @@
                                 <table width="100%" border="0"  cellpadding="0" cellspacing="0">
                                   <tbody>
                                     <tr>
-                                      <td align="center" valign="middle" id="user_img4"><img src="images/popup/ex.jpg" id="user_ex_img4" /></td>
+                                      <td align="center" valign="middle" id="user_img4"><img src="images/popup/ex2.jpg" id="user_ex_img4" /></td>
                                     </tr>
                                   </tbody>
                                 </table>
