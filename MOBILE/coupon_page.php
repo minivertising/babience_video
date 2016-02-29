@@ -30,7 +30,7 @@
           <div class="name">
           <?=$member_info['mb_baby_name']?><span><img src="images/popup/label_baby.png" width="35" /></span>
           </div>
-          <div class="youtube">
+          <div class="youtube" style="background:#a3e2eb">
             <video src="../files/<?=$serial?>/growmovie.mp4" controls preload="auto" id="video_player"></video>
           </div>
         </div>
