@@ -31,7 +31,7 @@
         <img src="images/popup/title_make_sub_1.png" />
       </div>
       <div class="btn_sample img">
-        <a href="#"><img src="images/popup/btn_sample.png" /></a>
+        <a href="#" onclick="open_pop('exam1_popup');return false;"><img src="images/popup/btn_sample.png" /></a>
       </div>
       <div class="img_process img">
         <a href="#"><img src="images/popup/img_process.png" /></a>
@@ -72,7 +72,7 @@
             </div>
             <!-- <div class="re_upload"><a href="#"><img src="images/popup/btn_reup.png" /></a></div> -->
             <div class="text f_1_1" id="imsi_caption1">성장 타이틀</div>
-            <div class="p_img f_1_1" id="user_img1"><img src="images/popup/ex.jpg" /></div><!--소비자 합성 이미지-->
+            <div class="p_img f_1_1" id="user_img1"><img src="images/popup/ex.jpg" id="user_ex_img1" /></div><!--소비자 합성 이미지-->
             <div class="front_img img"><img src="images/popup/img_frm_1_1.png" /></div>
             <div class="bg img"><img src="images/popup/frm_b_bg.jpg" /></div>
           </div>
@@ -103,7 +103,7 @@
             </div>
             <!--<div class="re_upload"><a href="#"><img src="images/popup/btn_reup.png" /></a></div>-->
             <div class="text f_1_2" id="imsi_caption2">성장 타이틀</div>
-            <div class="p_img f_1_2" id="user_img2"><img src="images/popup/ex.jpg" /></div><!--소비자 합성 이미지-->
+            <div class="p_img f_1_2" id="user_img2"><img src="images/popup/ex.jpg" id="user_ex_img2" /></div><!--소비자 합성 이미지-->
             <div class="front_img img"><img src="images/popup/img_frm_1_2.png" /></div>
             <div class="bg img"><img src="images/popup/frm_b_bg.jpg" /></div>
           </div>
@@ -134,7 +134,7 @@
             </div>
             <!--<div class="re_upload"><a href="#"><img src="images/popup/btn_reup.png" /></a></div>-->
             <div class="text f_1_2" id="imsi_caption3">성장 타이틀</div>
-            <div class="p_img f_1_2" id="user_img3"><img src="images/popup/ex.jpg" /></div><!--소비자 합성 이미지-->
+            <div class="p_img f_1_2" id="user_img3"><img src="images/popup/ex.jpg" id="user_ex_img3" /></div><!--소비자 합성 이미지-->
             <div class="front_img img"><img src="images/popup/img_frm_1_2.png" /></div>
             <div class="bg img"><img src="images/popup/frm_b_bg.jpg" /></div>
           </div>
@@ -165,7 +165,7 @@
             </div>
             <!--<div class="re_upload"><a href="#"><img src="images/popup/btn_reup.png" /></a></div>-->
             <div class="text f_1_2" id="imsi_caption4">성장 타이틀</div>
-            <div class="p_img f_1_2" id="user_img4"><img src="images/popup/ex.jpg" /></div><!--소비자 합성 이미지-->
+            <div class="p_img f_1_2" id="user_img4"><img src="images/popup/ex.jpg" id="user_ex_img4" /></div><!--소비자 합성 이미지-->
             <div class="front_img img"><img src="images/popup/img_frm_1_2.png" /></div>
             <div class="bg img"><img src="images/popup/frm_b_bg.jpg" /></div>
           </div>
@@ -195,7 +195,7 @@
               </span>
             </div>
             <!--<div class="re_upload"><a href="#"><img src="images/popup/btn_reup.png" /></a></div>-->
-            <div class="p_img f_1_5" id="user_img5"><img src="images/popup/ex.jpg" /></div><!--소비자 합성 이미지-->
+            <div class="p_img f_1_5" id="user_img5"><img src="images/popup/ex.jpg" id="user_ex_img5" /></div><!--소비자 합성 이미지-->
             <div class="front_img img"><img src="images/popup/img_frm_1_5.png" /></div>
             <div class="bg img"><img src="images/popup/frm_b_bg.jpg" /></div>
           </div>
@@ -296,7 +296,7 @@
 <div id="end_sns_div" class="popup_wrap" style="display:none">
   <div class="p_mid p_position">
     <div class="block_close clearfix">
-      <a href="#" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+      <a href="index.php" class="btn_close"><img src="images/popup/btn_close.png" /></a>
     </div>  
     <div class="block_content movie">
       <div class="inner">
@@ -321,13 +321,13 @@
         <div class="share">
           <img src="images/popup/txt_sns.png" class="txt_sns"/>
           <div>
-            <a href="#"><img src="images/popup/btn_kt.png" /></a>
-            <a href="#"><img src="images/popup/btn_ks.png" /></a>
-            <a href="#"><img src="images/popup/btn_fb.png" /></a>
+            <a href="#" onclick="sns_share('kt','share');return false;"><img src="images/popup/btn_kt.png" /></a>
+            <a href="#" onclick="sns_share('ks','share');return false;"><img src="images/popup/btn_ks.png" /></a>
+            <a href="#" onclick="sns_share('fb','share');return false;"><img src="images/popup/btn_fb.png" /></a>
           </div>
         </div>
         <div class="btn_block">
-          <a href="#" class="img"><img src="images/popup/btn_onemore.png" /></a>
+          <a href="index.php" class="img"><img src="images/popup/btn_onemore.png" /></a>
         </div>
       </div><!--inner-->
     </div>
@@ -342,6 +342,11 @@
 <script type="text/javascript">
 var video_concept	= null;
 var user_gubun				= 0;
+var user_ex_img1	= 0;
+var user_ex_img2	= 0;
+var user_ex_img3	= 0;
+var user_ex_img4	= 0;
+var user_ex_img5	= 0;
 
 $(document).ready(function() {
 	$("#cboxTopLeft").hide();
@@ -555,6 +560,7 @@ $(function () {
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
 		//del_fileview();
+		user_ex_img1	= $("#user_ex_img1").height();
 		$("#user_img1").html("");
         data.context = $('<div/>').appendTo('#user_img1');
 		$("#up_img_div1").attr("class","re_upload");
@@ -586,6 +592,7 @@ $(function () {
                 .prepend('<br>')
                 .prepend(file.preview);
 				$("div#user_img1 > div > p > canvas").css("width","40%");
+				$("div#user_img1 > div > p > canvas").css("height",user_ex_img1+"px");
 				$("div#user_img1 > div > p > canvas").css("padding-top","20%");
 				$("div#user_img1 > div > p > canvas").css("padding-left","29.1%");
         }
@@ -648,6 +655,7 @@ $(function () {
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
 		//del_fileview();
+		user_ex_img2	= $("#user_ex_img2").height();
 		$("#user_img2").html("");
         data.context = $('<div/>').appendTo('#user_img2');
 		$("#up_img_div2").attr("class","re_upload");
@@ -677,6 +685,7 @@ $(function () {
                 .prepend('<br>')
                 .prepend(file.preview);
 				$("div#user_img2 > div > p > canvas").css("width","66%");
+				$("div#user_img2 > div > p > canvas").css("height",user_ex_img2+"px");
 				$("div#user_img2 > div > p > canvas").css("padding-top","9.7%");
 				$("div#user_img2 > div > p > canvas").css("padding-left","17%");
         }
@@ -739,6 +748,7 @@ $(function () {
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
 		//del_fileview();
+		user_ex_img3	= $("#user_ex_img3").height();
 		$("#user_img3").html("");
         data.context = $('<div/>').appendTo('#user_img3');
 		$("#up_img_div3").attr("class","re_upload");
@@ -768,6 +778,7 @@ $(function () {
                 .prepend('<br>')
                 .prepend(file.preview);
 				$("div#user_img3 > div > p > canvas").css("width","66%");
+				$("div#user_img3 > div > p > canvas").css("height",user_ex_img3+"px");
 				$("div#user_img3 > div > p > canvas").css("padding-top","9.7%");
 				$("div#user_img3 > div > p > canvas").css("padding-left","17%");
         }
@@ -829,6 +840,7 @@ $(function () {
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
 		//del_fileview();
+		user_ex_img4	= $("#user_ex_img4").height();
 		$("#user_img4").html("");
         data.context = $('<div/>').appendTo('#user_img4');
 		$("#up_img_div4").attr("class","re_upload");
@@ -858,6 +870,7 @@ $(function () {
                 .prepend('<br>')
                 .prepend(file.preview);
 				$("div#user_img4 > div > p > canvas").css("width","66%");
+				$("div#user_img4 > div > p > canvas").css("height",user_ex_img4+"px");
 				$("div#user_img4 > div > p > canvas").css("padding-top","9.7%");
 				$("div#user_img4 > div > p > canvas").css("padding-left","17%");
         }
@@ -919,6 +932,7 @@ $(function () {
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
 		//del_fileview();
+		user_ex_img5	= $("#user_ex_img5").height();
 		$("#user_img5").html("");
         data.context = $('<div/>').appendTo('#user_img5');
 		$("#up_img_div5").attr("class","re_upload");
@@ -948,6 +962,7 @@ $(function () {
                 .prepend('<br>')
                 .prepend(file.preview);
 				$("div#user_img5 > div > p > canvas").css("width","40%");
+				$("div#user_img5 > div > p > canvas").css("height",user_ex_img5+"px");
 				$("div#user_img5 > div > p > canvas").css("padding-top","19%");
 				$("div#user_img5 > div > p > canvas").css("padding-left","29.2%");
         }

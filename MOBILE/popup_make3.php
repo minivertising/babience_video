@@ -31,7 +31,7 @@
         <img src="images/popup/title_make_sub_3.png" />
       </div>
       <div class="btn_sample img">
-        <a href="#"><img src="images/popup/btn_sample.png" /></a>
+        <a href="#" onclick="open_pop('exam3_popup');return false;"><img src="images/popup/btn_sample.png" /></a>
       </div>
       <div class="img_process img">
         <a href="#"><img src="images/popup/img_process.png" /></a>
@@ -331,6 +331,12 @@
 </html>
 <script type="text/javascript">
 var video_concept	= null;
+var user_gubun				= 0;
+var user_ex_img1	= 0;
+var user_ex_img2	= 0;
+var user_ex_img3	= 0;
+var user_ex_img4	= 0;
+var user_ex_img5	= 0;
 
 $(document).ready(function() {
 	$("#cboxTopLeft").hide();

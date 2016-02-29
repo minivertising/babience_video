@@ -31,7 +31,7 @@
         <img src="images/popup/title_make_sub_2.png" />
       </div>
       <div class="btn_sample img">
-        <a href="#"><img src="images/popup/btn_sample.png" /></a>
+        <a href="#" onclick="open_pop('exam2_popup');return false;"><img src="images/popup/btn_sample.png" /></a>
       </div>
       <div class="img_process img">
         <a href="#"><img src="images/popup/img_process.png" /></a>
@@ -71,7 +71,7 @@
               </span>
             </div>
             <div class="text f_2_1" id="imsi_caption1">성장타이틀</div>
-            <div class="p_img f_2_1" id="user_img1"><img src="images/popup/ex.jpg" /></div><!--소비자 합성 이미지-->
+            <div class="p_img f_2_1" id="user_img1"><img src="images/popup/ex.jpg" id="user_ex_img1" /></div><!--소비자 합성 이미지-->
             <div class="front_img img"><img src="images/popup/img_frm_2_1.png" /></div>
             <div class="bg img"><img src="images/popup/frm_b_bg.jpg" /></div>
           </div>
@@ -331,6 +331,12 @@
 </html>
 <script type="text/javascript">
 var video_concept	= null;
+var user_gubun				= 0;
+var user_ex_img1	= 0;
+var user_ex_img2	= 0;
+var user_ex_img3	= 0;
+var user_ex_img4	= 0;
+var user_ex_img5	= 0;
 
 $(document).ready(function() {
 	$("#cboxTopLeft").hide();
@@ -543,6 +549,7 @@ $(function () {
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
 		//del_fileview();
+		user_ex_img1	= $("#user_ex_img1").height();
 		$("#user_img1").html("");
         data.context = $('<div/>').appendTo('#user_img1');
 		$("#up_img_div1").attr("class","re_upload");
@@ -574,6 +581,7 @@ $(function () {
                 .prepend('<br>')
                 .prepend(file.preview);
 				$("div#user_img1 > div > p > canvas").css("width","48%");
+				$("div#user_img1 > div > p > canvas").css("height",user_ex_img1+"px");
 				$("div#user_img1 > div > p > canvas").css("padding-top","9.5%");
 				$("div#user_img1 > div > p > canvas").css("padding-left","4.3%");
         }
@@ -757,6 +765,7 @@ $(function () {
                 .prepend('<br>')
                 .prepend(file.preview);
 				$("div#user_img3 > div > p > canvas").css("width","100%");
+				$("div#user_img3 > div > p > canvas").css("height","100%");
 				$("div#user_img3 > div > p > canvas").css("height",$("#preview_img_2").height());
         }
         if (file.error) {
@@ -846,7 +855,7 @@ $(function () {
                 .prepend('<br>')
                 .prepend(file.preview);
 				$("div#user_img4 > div > p > canvas").css("width","42.5%");
-				//$("div#user_img4 > div > p > canvas").css("height",$("#preview_img_2").height());
+				$("div#user_img4 > div > p > canvas").css("height",user_ex_img1+"px");
 				$("div#user_img4 > div > p > canvas").css("padding-top","16.5%");
 				$("div#user_img4 > div > p > canvas").css("padding-left","5%");
         }

@@ -160,6 +160,39 @@
 		return $flag;
 	}
 
+	// LMS 발송 
+	function send_lms2($phone)
+	{
+		global $_gl;
+		global $my_db;
+
+		$s_url		= "http://www.belif-factory.com/MOBILE/coupon_page.belif?mid=".$phone;
+		$httpmethod = "POST";
+		$url = "http://api.openapi.io/ppurio/1/message/lms/minivertising";
+		$clientKey = "MTAyMC0xMzg3MzUwNzE3NTQ3LWNlMTU4OTRiLTc4MGItNDQ4MS05NTg5LTRiNzgwYjM0ODEyYw==";
+		$contentType = "Content-Type: application/x-www-form-urlencoded";
+
+		$response = sendRequest($httpmethod, $url, $clientKey, $contentType, $phone, $s_url);
+
+		$json_data = json_decode($response, true);
+
+		/*
+		받아온 결과값을 DB에 저장 및 Variation
+		*/
+		$query3 = "INSERT INTO sms_info(send_phone, send_status, cmid, send_regdate) values('".$phone."','".$json_data['result_code']."','".$json_data['cmid']."','".date("Y-m-d H:i:s")."')";
+		$result3 		= mysqli_query($my_db, $query3);
+
+		$query2 = "UPDATE member_info SET mb_lms='Y' WHERE mb_phone='".$phone."'";
+		$result2 		= mysqli_query($my_db, $query2);
+
+		if ($json_data['result_code'] == "200")
+			$flag = "Y";
+		else
+			$flag = "N";
+
+		return $flag;
+	}
+
 	function sendRequest($httpMethod, $url, $clientKey, $contentType, $phone, $s_url) {
 
 		//create basic authentication header

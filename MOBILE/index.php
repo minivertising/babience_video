@@ -13,7 +13,7 @@
   </div>
 </div>
 <div class="sec_movie">
-  <div class="inner_sec_movie">
+  <div class="inner_sec_movie" style="background:#a3e2eb">
     <iframe allowfullscreen="1" src="<?=$_gl['youtube_url']?>" frameborder="0" id="ytplayer" class="ytplayer"></iframe>
   </div>
 </div>

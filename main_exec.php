@@ -294,11 +294,15 @@ switch ($_REQUEST['exec'])
 				$dupli2_bann_result		= mysqli_query($my_db, $dupli2_bann_query);
 				$dupli2_bann_num		= mysqli_num_rows($dupli2_bann_result);
 				if ($dupli2_bann_num == 0)
+				{
 					$flag	= "Y";
-				else
+					send_lms($mb_phone);
+				}else{
 					$flag	= "D";
+				}
 			}else{
 				$flag	= "D";
+				send_lms2($mb_phone);
 			}
 		}else{
 			$flag	= "N";
