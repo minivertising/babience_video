@@ -672,7 +672,6 @@ $(function () {
 					var re_final1_h		= (user_ex_img1_h - re_userimg1_h) /2;
 					$("td#user_img1 > div > p > canvas").css("padding-top",re_final1_h+"px");
 				}else{
-					alert(user_ex_img1_h);
 					$("td#user_img1 > div > p > canvas").css("height",user_ex_img1_h+"px");
 					var re_userimg1_w	= (user_ex_img1_h / uimg1_h)*uimg1_w;
 					//alert(re_userimg1_w);
@@ -777,7 +776,7 @@ $(function () {
 				var uimg2_h	= $("td#user_img2 > div > p > canvas").height();
 				if (uimg2_w > uimg2_h)
 				{
-					if (uimg2_h > user_ex_img2_h)
+					if (uimg2_h > re_userimg1_h)
 					{
 						$("td#user_img2 > div > p > canvas").css("width","70%");
 					}else{
