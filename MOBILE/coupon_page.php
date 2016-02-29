@@ -23,7 +23,7 @@
         <div class="mv">
           <div class="title">
             <div class="text">
-            "폭풍성장의 비밀"
+            "<?=$member_info['mb_caption1']?>"
             </div>
             <div class="bg img"><img src="images/popup/title_movie_c_1.png" /></div>
           </div>
