@@ -897,6 +897,8 @@ $(function () {
 				$("div#user_img3 > div > p > canvas").css("width","100%");
 				var uimg3_w	= $("div#user_img3 > div > p > canvas").width();
 				var uimg3_h	= $("div#user_img3 > div > p > canvas").height();
+				alert(uimg3_w);
+				alert(uimg3_uimg3_h);
 				if (uimg3_w > uimg3_h)
 				{
 					if (uimg3_h > user_ex_img3_h)

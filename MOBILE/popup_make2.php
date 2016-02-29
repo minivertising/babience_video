@@ -623,16 +623,18 @@ $(function () {
 				var uimg1_h	= $("td#user_img1 > div > p > canvas").height();
 				if (uimg1_w > uimg1_h)
 				{
-					if (uimg1_h > user_ex_img1_h)
+					if (uimg1_h > re_userimg1_h)
 					{
 						$("td#user_img1 > div > p > canvas").css("width","70%");
 					}else{
 						$("td#user_img1 > div > p > canvas").css("width","100%");
 					}
+
 					var re_userimg1_h	= (user_ex_img1_w/ uimg1_w)*uimg1_h;
 					var re_final1_h		= (user_ex_img1_h - re_userimg1_h) /2;
 					$("td#user_img1 > div > p > canvas").css("padding-top",re_final1_h+"px");
 				}else{
+					alert(user_ex_img1_h);
 					$("td#user_img1 > div > p > canvas").css("height",user_ex_img1_h+"px");
 					var re_userimg1_w	= (user_ex_img1_h / uimg1_h)*uimg1_w;
 					//alert(re_userimg1_w);
@@ -732,25 +734,26 @@ $(function () {
             node
                 .prepend('<br>')
                 .prepend(file.preview);
-				var uimg2_w	= $("div#user_img2 > div > p > canvas").width();
-				var uimg2_h	= $("div#user_img2 > div > p > canvas").height();
+				var uimg2_w	= $("td#user_img2 > div > p > canvas").width();
+				var uimg2_h	= $("td#user_img2 > div > p > canvas").height();
 				if (uimg2_w > uimg2_h)
 				{
-					if (uimg2_h > user_ex_img2_h)
+					if (uimg2_h > re_userimg2_h)
 					{
-						$("div#user_img2 > div > p > canvas").css("width","70%");
+						$("div#user_img2 > div > p > canvas").css("width","80%");
 					}else{
 						$("div#user_img2 > div > p > canvas").css("width","100%");
 					}
+
 					var re_userimg2_h	= (user_ex_img2_w/ uimg2_w)*uimg2_h;
 					var re_final2_h		= (user_ex_img2_h - re_userimg2_h) /2;
 					$("div#user_img2 > div > p > canvas").css("padding-top",re_final2_h+"px");
 				}else{
-					$("div#user_img2 > div > p > canvas").css("height",user_ex_img2_h+"px");
+					$("div#user_img1 > div > p > canvas").css("height",user_ex_img2_h+"px");
 					var re_userimg2_w	= (user_ex_img2_h / uimg2_h)*uimg2_w;
 					//alert(re_userimg1_w);
-					var re_final2_w		= (user_ex_img2_w - re_userimg2_w) /2;
-					$("div#user_img2 > div > p > canvas").css("padding-left",re_final2_w+"px");
+					//var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;
+					//$("td#user_img1 > div > p > canvas").css("padding-left",re_final1_w+"px");
 				}
 				//$("div#user_img2 > div > p > canvas").css("width","100%");
 				//$("div#user_img2 > div > p > canvas").css("height",$("#preview_img_2").height());
