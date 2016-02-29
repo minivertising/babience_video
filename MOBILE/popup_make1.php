@@ -776,7 +776,7 @@ $(function () {
 				var uimg2_h	= $("td#user_img2 > div > p > canvas").height();
 				if (uimg2_w > uimg2_h)
 				{
-					if (uimg2_h > re_userimg1_h)
+					if (uimg2_h > re_userimg2_h)
 					{
 						$("td#user_img2 > div > p > canvas").css("width","70%");
 					}else{
