@@ -57,3 +57,9 @@
     
 </body>
 </html>
+<script type="text/javascript">
+
+$(document).ready(function(){
+	$("#video_player").width($(".youtube").width());
+});
+</script>
