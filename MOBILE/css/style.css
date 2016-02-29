@@ -849,7 +849,7 @@ body{
 	position:relative;
 }
 .popup_wrap .p_mid.p_position .block_content.movie .mv .youtube{
-	background:#fff;
+	/*background:#fff;*/
 	margin:10px 0;
 }
 .popup_wrap .p_mid.p_position .block_content.movie .mv .title .text{
