@@ -1,9 +1,9 @@
 <?
 	include_once   "./header.php";
 
-	$serial		= $_REQUEST['serial'];
+	$serialnumber		= $_REQUEST['serial'];
 
-	$query 	= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_serial='".$serial."'";
+	$query 	= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_serial='".$serialnumber."'";
 	$result 	= mysqli_query($my_db, $query);
 	$member_info	= mysqli_fetch_array($result);
 ?>
@@ -68,7 +68,7 @@ function sns_share(media, flag)
 	if (media == "fb")
 	{
 
-		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://grow.babience-event.com/MOBILE/share_page.php?serial=<?=$serial?>'),'sharer','toolbar=0,status=0,width=600,height=325');
+		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://grow.babience-event.com/MOBILE/share_page.php?serial=<?=$serialnumber?>'),'sharer','toolbar=0,status=0,width=600,height=325');
 		$.ajax({
 			type   : "POST",
 			async  : false,
@@ -99,7 +99,7 @@ function sns_share(media, flag)
 		  //container: '#kakao-link-btn',
 		  label: "우리아기 특별한 성장 영상 공개!",
 		  image: {
-			src: 'http://grow.babience-event.com/<?=$serial?>/medium/final_<?=$serial?>_1.jpg',
+			src: 'http://grow.babience-event.com/<?=$serial?>/medium/final_<?=$serialnumber?>_1.jpg',
 			width: '800',
 			height: '600'
 		  },
@@ -121,7 +121,7 @@ function sns_share(media, flag)
 	}else{
 		Kakao.Story.share({
 			url: 'http://grow.babience-event.com/MOBILE/share_page.php?serial=<?=$serial?>',
-			text: '우리아기 특별한 성장 영상 공개!\r\nhttp://grow.babience-event.com/mypage.php?serial=<?=$serial?>'
+			text: '우리아기 특별한 성장 영상 공개!\r\nhttp://grow.babience-event.com/share_page.php?serial=<?=$serialnumber?>'
 		});
 		$.ajax({
 			type   : "POST",
