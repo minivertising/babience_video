@@ -604,8 +604,15 @@ body{
 }
 .popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_2_3 img{
 }
+
+
+.popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_2_4{
+	width:45%;
+	padding-left:3%;
+	padding-top:14%;
+}
 .popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_2_4 img{
-	width:60%;
+	width:100%;
 }
 .popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_2_5 img{
 	width:40%;
