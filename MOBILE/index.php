@@ -35,8 +35,8 @@
 </div>
 <div class="sec_footer">
   <div class="inner_sec_footer">
-    <div class="img"><a href="#"><img src="images/footer.jpg" /></a></div>
-    <div class="img txt" style="display:none;"><img src="images/footer_txt.jpg" /></div>
+    <div class="img"><a href="#" onclick="show_notice();return false;"><img src="images/footer.jpg" /></a></div>
+    <div class="img txt" id="notice_div" style="display:none;"><img src="images/footer_txt.jpg" /></div>
   </div>
 </div>
 <?
@@ -68,6 +68,7 @@ function show_notice()
 	if (notice_flag == 0)
 	{
 		$("#notice_div").show();
+		document.body.scrollTop = document.body.scrollHeight;
 		notice_flag	= 1;
 	}else{
 		$("#notice_div").hide();
