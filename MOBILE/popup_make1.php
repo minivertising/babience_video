@@ -912,7 +912,7 @@ $(function () {
 					var re_final3_h		= (user_ex_img3_h - re_userimg3_h) /2;
 					$("td#user_img3 > div > p > canvas").css("padding-top",re_final3_h+"px");
 				}else{
-					$("td#user_img3 > div > p > canvas").css("height",user_ex_img3_h+"px");
+					$("td#user_img3 > div > p > canvas").css("height",user_ex_img3+"px");
 					var re_userimg3_w	= (user_ex_img3_h / uimg3_h)*uimg3_w;
 					//alert(re_userimg1_w);
 					//var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;
@@ -1027,7 +1027,7 @@ $(function () {
 					var re_final4_h		= (user_ex_img4_h - re_userimg4_h) /2;
 					$("td#user_img4 > div > p > canvas").css("padding-top",re_final4_h+"px");
 				}else{
-					$("td#user_img4 > div > p > canvas").css("height",user_ex_img4_h+"px");
+					$("td#user_img4 > div > p > canvas").css("height",user_ex_img4+"px");
 					var re_userimg4_w	= (user_ex_img4_h / uimg4_h)*uimg4_w;
 					//alert(re_userimg1_w);
 					//var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;
