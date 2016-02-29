@@ -220,7 +220,8 @@ switch ($_REQUEST['exec'])
 			//$cap_image5			= caption_image($mb_caption5, $mb_serial,"5");
 		}
 
-		sleep(1000);
+		flush();
+		sleep(3);
 		if ($img_name3 != "" && $img_name4 != "")
 		{
 			$output	= "ffmpeg \\";
