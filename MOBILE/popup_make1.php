@@ -862,11 +862,11 @@ $(function () {
 		// 파일 삭제
 		//del_fileview();
 		//user_ex_img3	= $("#user_ex_img3").height();
-		//$("#user_img3").html("");
         data.context = $('<div/>').appendTo('#user_img3');
 		$("#up_img_div3").attr("class","re_upload");
 		$("#up_img3").attr("src","images/popup/btn_reup.png");
         $.each(data.files, function (index, file) {
+		$("#user_img3").html("");
 			//img_name3 = file.name;
             var node = $('<p/>');
                    // .append($('<span/>').text(file.name));
