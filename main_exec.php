@@ -107,7 +107,7 @@ switch ($_REQUEST['exec'])
 			$caption_image2_name_h	= "393;";
 		}
 
-		if ($img_name1)
+		if ($img_name1 != "")
 		{
 			$img_name1arr			= explode(".",stripslashes($img_name1));
 			$img_name1arr_num	= count($img_name1arr) -1;
@@ -127,7 +127,7 @@ switch ($_REQUEST['exec'])
 				$cap_image1			= caption_image($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
 		}
 
-		if ($img_name2)
+		if ($img_name2 != "")
 		{
 			$img_name2arr			= explode(".",stripslashes($img_name2));
 			$img_name2arr_num	= count($img_name2arr) -1;
@@ -156,7 +156,7 @@ switch ($_REQUEST['exec'])
 			*/
 		}
 
-		if ($img_name3)
+		if ($img_name3 != "")
 		{
 			$img_name3arr			= explode(".",stripslashes($img_name3));
 			$img_name3arr_num	= count($img_name3arr) -1;
@@ -177,7 +177,7 @@ switch ($_REQUEST['exec'])
 			}
 		}
 
-		if ($img_name4)
+		if ($img_name4 != "")
 		{
 			$img_name4arr			= explode(".",stripslashes($img_name4));
 			$img_name4arr_num	= count($img_name4arr) -1;
@@ -205,7 +205,7 @@ switch ($_REQUEST['exec'])
 */
 		}
 
-		if ($img_name5)
+		if ($img_name5 != "")
 		{
 			$img_name5arr			= explode(".",stripslashes($img_name5));
 			$img_name5arr_num	= count($img_name5arr) -1;
@@ -220,8 +220,6 @@ switch ($_REQUEST['exec'])
 			//$cap_image5			= caption_image($mb_caption5, $mb_serial,"5");
 		}
 
-		flush();
-		sleep(3);
 		if ($img_name3 != "" && $img_name4 != "")
 		{
 			$output	= "ffmpeg \\";
