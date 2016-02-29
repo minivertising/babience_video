@@ -894,9 +894,9 @@ $(function () {
 				//$("div#user_img3 > div > p > canvas").css("height",user_ex_img3+"px");
 				//$("div#user_img3 > div > p > canvas").css("padding-top","9.7%");
 				//$("div#user_img3 > div > p > canvas").css("padding-left","17%");
-				$("td#user_img3 > div > p > canvas").css("width","100%");
-				var uimg3_w	= $("td#user_img3 > div > p > canvas").width();
-				var uimg3_h	= $("td#user_img3 > div > p > canvas").height();
+				$("div#user_img3 > div > p > canvas").css("width","100%");
+				var uimg3_w	= $("div#user_img3 > div > p > canvas").width();
+				var uimg3_h	= $("div#user_img3 > div > p > canvas").height();
 				if (uimg3_w > uimg3_h)
 				{
 					if (uimg3_h > user_ex_img3_h)
