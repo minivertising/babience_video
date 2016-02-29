@@ -661,17 +661,18 @@ $(function () {
 				var uimg1_h	= $("td#user_img1 > div > p > canvas").height();
 				if (uimg1_w > uimg1_h)
 				{
-
-					var re_userimg1_h	= (user_ex_img1_w/ uimg1_w)*uimg1_h;
-					var re_final1_h		= (user_ex_img1_h - re_userimg1_h) /2;
 					if (uimg1_h > re_userimg1_h)
 					{
 						$("td#user_img1 > div > p > canvas").css("width","70%");
 					}else{
 						$("td#user_img1 > div > p > canvas").css("width","100%");
 					}
+
+					var re_userimg1_h	= (user_ex_img1_w/ uimg1_w)*uimg1_h;
+					var re_final1_h		= (user_ex_img1_h - re_userimg1_h) /2;
 					$("td#user_img1 > div > p > canvas").css("padding-top",re_final1_h+"px");
 				}else{
+					alert(user_ex_img1_h);
 					$("td#user_img1 > div > p > canvas").css("height",user_ex_img1_h+"px");
 					var re_userimg1_w	= (user_ex_img1_h / uimg1_h)*uimg1_w;
 					//alert(re_userimg1_w);
