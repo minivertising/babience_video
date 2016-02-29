@@ -505,12 +505,15 @@ function create_movie()
 			$("#input_baby_div").hide();
 		},
 		success: function(response){
+			console.log(response);
 			if (response == "Y")
 			{
 				//$(".serial").html("<?=$serial?>");
 				$("#video_b_name").html(mb_baby_name);
 				$("#next_image").attr("src","images/popup/btn_m_next_coupon.png");
 				$("#video_player").width("100%");
+				$("#video_player").attr("src","../files/<?=$serial?>/growmovie.mp4");
+				$("#download_src").attr("src","../files/<?=$serial?>/growmovie.mp4");
 				$("#movie_div").show();
 				$("#loading_div").hide();
 				user_gubun	= 1;
@@ -519,6 +522,8 @@ function create_movie()
 				$("#video_b_name").html(mb_baby_name);
 				$("#next_image").attr("src","images/popup/btn_m_next.png");
 				$("#video_player").width("100%");
+				$("#video_player").attr("src","../files/<?=$serial?>/growmovie.mp4");
+				$("#download_src").attr("src","../files/<?=$serial?>/growmovie.mp4");
 				$("#movie_div").show();
 				$("#loading_div").hide();
 				user_gubun	= 0;
@@ -605,13 +610,15 @@ $(function () {
 				//$("div#user_img1 > div > p > canvas").css("height",$("#preview_img_1").height());
 				//$("div#user_img1 > div > p > canvas").css("padding-top","20%");
 				//$("div#user_img1 > div > p > canvas").css("padding-left","29%");
+				$("div#user_img1 > div > p > canvas").css("width","100%");
 				var uimg1_w	= $("div#user_img1 > div > p > canvas").width();
 				var uimg1_h	= $("div#user_img1 > div > p > canvas").height();
 				if (uimg1_w > uimg1_h)
 				{
 					if (uimg1_h > user_ex_img1_h)
 					{
-						$("div#user_img1 > div > p > canvas").css("width","70%");
+						$("div#user_img1 > div > p > canvas").css("width","80%");
+						$("div#user_img1 > div > p > canvas").css("padding-left","10%");
 					}else{
 						$("div#user_img1 > div > p > canvas").css("width","100%");
 					}
@@ -622,8 +629,8 @@ $(function () {
 					$("div#user_img1 > div > p > canvas").css("height",user_ex_img1_h+"px");
 					var re_userimg1_w	= (user_ex_img1_h / uimg1_h)*uimg1_w;
 					//alert(re_userimg1_w);
-					var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;
-					$("div#user_img1 > div > p > canvas").css("padding-left",re_final1_w+"px");
+					//var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;
+					//$("td#user_img1 > div > p > canvas").css("padding-left",re_final1_w+"px");
 				}
         }
         if (file.error) {
@@ -716,13 +723,15 @@ $(function () {
                 .prepend(file.preview);
 				//$("div#user_img2 > div > p > canvas").css("width","100%");
 				//$("div#user_img2 > div > p > canvas").css("height",$("#preview_img_1").height());
+				$("div#user_img2 > div > p > canvas").css("width","100%");
 				var uimg2_w	= $("div#user_img2 > div > p > canvas").width();
 				var uimg2_h	= $("div#user_img2 > div > p > canvas").height();
 				if (uimg2_w > uimg2_h)
 				{
 					if (uimg2_h > user_ex_img2_h)
 					{
-						$("div#user_img2 > div > p > canvas").css("width","70%");
+						$("div#user_img2 > div > p > canvas").css("width","80%");
+						$("div#user_img2 > div > p > canvas").css("padding-left","10%");
 					}else{
 						$("div#user_img2 > div > p > canvas").css("width","100%");
 					}
@@ -733,8 +742,8 @@ $(function () {
 					$("div#user_img2 > div > p > canvas").css("height",user_ex_img2_h+"px");
 					var re_userimg2_w	= (user_ex_img2_h / uimg2_h)*uimg2_w;
 					//alert(re_userimg1_w);
-					var re_final2_w		= (user_ex_img2_w - re_userimg2_w) /2;
-					$("div#user_img2 > div > p > canvas").css("padding-left",re_final2_w+"px");
+					//var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;
+					//$("td#user_img1 > div > p > canvas").css("padding-left",re_final1_w+"px");
 				}
         }
         if (file.error) {
@@ -825,13 +834,15 @@ $(function () {
             node
                 .prepend('<br>')
                 .prepend(file.preview);
+				$("div#user_img3 > div > p > canvas").css("width","100%");
 				var uimg3_w	= $("div#user_img3 > div > p > canvas").width();
 				var uimg3_h	= $("div#user_img3 > div > p > canvas").height();
 				if (uimg3_w > uimg3_h)
 				{
 					if (uimg3_h > user_ex_img3_h)
 					{
-						$("div#user_img3 > div > p > canvas").css("width","70%");
+						$("div#user_img3 > div > p > canvas").css("width","80%");
+						$("div#user_img3 > div > p > canvas").css("padding-left","10%");
 					}else{
 						$("div#user_img3 > div > p > canvas").css("width","100%");
 					}
@@ -842,8 +853,8 @@ $(function () {
 					$("div#user_img3 > div > p > canvas").css("height",user_ex_img3_h+"px");
 					var re_userimg3_w	= (user_ex_img3_h / uimg3_h)*uimg3_w;
 					//alert(re_userimg1_w);
-					var re_final3_w		= (user_ex_img3_w - re_userimg3_w) /2;
-					$("div#user_img3 > div > p > canvas").css("padding-left",re_final3_w+"px");
+					//var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;
+					//$("td#user_img1 > div > p > canvas").css("padding-left",re_final1_w+"px");
 				}
         }
         if (file.error) {
@@ -935,13 +946,15 @@ $(function () {
                 .prepend(file.preview);
 				//$("div#user_img4 > div > p > canvas").css("width","100%");
 				//$("div#user_img4 > div > p > canvas").css("height",$("#preview_img_1").height());
+				$("div#user_img4 > div > p > canvas").css("width","100%");
 				var uimg4_w	= $("div#user_img4 > div > p > canvas").width();
 				var uimg4_h	= $("div#user_img4 > div > p > canvas").height();
 				if (uimg4_w > uimg4_h)
 				{
 					if (uimg4_h > user_ex_img4_h)
 					{
-						$("div#user_img4 > div > p > canvas").css("width","70%");
+						$("div#user_img4 > div > p > canvas").css("width","80%");
+						$("div#user_img4 > div > p > canvas").css("padding-left","10%");
 					}else{
 						$("div#user_img4 > div > p > canvas").css("width","100%");
 					}
@@ -952,8 +965,8 @@ $(function () {
 					$("div#user_img4 > div > p > canvas").css("height",user_ex_img4_h+"px");
 					var re_userimg4_w	= (user_ex_img4_h / uimg4_h)*uimg4_w;
 					//alert(re_userimg1_w);
-					var re_final4_w		= (user_ex_img4_w - re_userimg4_w) /2;
-					$("div#user_img4 > div > p > canvas").css("padding-left",re_final4_w+"px");
+					//var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;
+					//$("td#user_img1 > div > p > canvas").css("padding-left",re_final1_w+"px");
 				}
         }
         if (file.error) {
@@ -1045,13 +1058,15 @@ $(function () {
                 .prepend(file.preview);
 				//$("div#user_img5 > div > p > canvas").css("width","100%");
 				//$("div#user_img5 > div > p > canvas").css("height",$("#preview_img_1").height());
+				$("div#user_img5 > div > p > canvas").css("width","100%");
 				var uimg5_w	= $("div#user_img5 > div > p > canvas").width();
 				var uimg5_h	= $("div#user_img5 > div > p > canvas").height();
 				if (uimg5_w > uimg5_h)
 				{
 					if (uimg5_h > user_ex_img5_h)
 					{
-						$("div#user_img5 > div > p > canvas").css("width","70%");
+						$("div#user_img5 > div > p > canvas").css("width","80%");
+						$("div#user_img5 > div > p > canvas").css("padding-left","10%");
 					}else{
 						$("div#user_img5 > div > p > canvas").css("width","100%");
 					}
@@ -1062,8 +1077,8 @@ $(function () {
 					$("div#user_img5 > div > p > canvas").css("height",user_ex_img5_h+"px");
 					var re_userimg5_w	= (user_ex_img5_h / uimg5_h)*uimg5_w;
 					//alert(re_userimg1_w);
-					var re_final5_w		= (user_ex_img5_w - re_userimg5_w) /2;
-					$("div#user_img5 > div > p > canvas").css("padding-left",re_final5_w+"px");
+					//var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;
+					//$("td#user_img1 > div > p > canvas").css("padding-left",re_final1_w+"px");
 				}
         }
         if (file.error) {
