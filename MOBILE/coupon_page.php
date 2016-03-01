@@ -68,7 +68,7 @@ function sns_share(media, flag)
 	if (media == "fb")
 	{
 
-		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://grow.babience-event.com/MOBILE/share_page.php?serial=<?=$serialnumber?>'),'sharer','toolbar=0,status=0,width=600,height=325');
+		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://grow.babience-event.com/MOBILE/coupon_page.php?serial=<?=$serialnumber?>'),'sharer','toolbar=0,status=0,width=600,height=325');
 		$.ajax({
 			type   : "POST",
 			async  : false,
@@ -120,7 +120,7 @@ function sns_share(media, flag)
 		});
 	}else{
 		Kakao.Story.share({
-			url: 'http://grow.babience-event.com/MOBILE/share_page.php?serial=<?=$serialnumber?>',
+			url: 'http://grow.babience-event.com/MOBILE/coupon_page.php?serial=<?=$serialnumber?>',
 			text: '혼자보기 아까운 우리아기 성장 영상 공개!!\r\nhttp://grow.babience-event.com/coupon_page.php?serial=<?=$serialnumber?>'
 		});
 		$.ajax({
