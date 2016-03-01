@@ -166,7 +166,7 @@
 		global $_gl;
 		global $my_db;
 
-		$s_url		= "http://www.belif-factory.com/MOBILE/coupon_page.belif?mid=".$phone;
+		$s_url		= "http://grow.babience-event.com/MOBILE/coupon_page.php?serial=".$serial;
 		$httpmethod = "POST";
 		$url = "http://api.openapi.io/ppurio/1/message/lms/minivertising";
 		$clientKey = "MTAyMC0xMzg3MzUwNzE3NTQ3LWNlMTU4OTRiLTc4MGItNDQ4MS05NTg5LTRiNzgwYjM0ODEyYw==";
