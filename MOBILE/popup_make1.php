@@ -211,7 +211,7 @@
 
       <!--프레임5--><!--5번째 컷에는 자막 없음-->
       <div class="pics frame_5">
-        <input type="hidden" id="up_images5" value="">
+        <input type="text" id="up_images5" value="">
         <div class="inner_pics">
           <div class="title_frame img"><img src="images/popup/title_frame_1_5.png" /></div>
           <div class="pc_frame">
