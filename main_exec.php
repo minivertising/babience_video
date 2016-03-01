@@ -107,6 +107,7 @@ switch ($_REQUEST['exec'])
 			$caption_image2_name_h	= "393;";
 		}
 
+		sleep(5);
 		if ($img_name3 != "" && $img_name4 != "")
 		{
 		if ($img_name1 != "")
