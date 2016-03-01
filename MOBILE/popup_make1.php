@@ -279,7 +279,7 @@
                         </div>
                     </div>
                     <div class="btn_block img">
-                    	<a href="../files/out.mp4" download id="download_src"><img src="images/popup/btn_down.png" /></a>
+                    	<a href="../files/out.mp4" download="download_video" id="download_src"><img src="images/popup/btn_down.png" /></a>
                     </div>
                     <div class="btn_block_2 img">
                     	<a href="#" onclick="prev_page();return false;"><img src="images/popup/btn_before.png" /></a>
