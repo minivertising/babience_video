@@ -436,6 +436,7 @@ $(document).ready(function() {
 
 function create_movie()
 {
+
 	var mb_baby_name		= $("#mb_baby_name").val();
 	var mb_baby_age			= $("#mb_baby_age").val();
 	var up_images1				= $("#up_images1").val();
@@ -525,7 +526,9 @@ function create_movie()
 		}
 	}
 */
-    setTimeout( function {
+
+
+setTimeout(function() {
 	$.ajax({
 		type:"POST",
 		data:{
@@ -584,7 +587,7 @@ function create_movie()
 			//console.log(response);
 		}
 	});
-    }, 5000); 
+	}, 5000); // 3000ms(3초)가 경과하면 이 함수가 실행됩니다.
 }
 
 function prev_page()
