@@ -538,7 +538,7 @@ setTimeout(function() {
 			//"mb_caption5"			: mb_caption5,
 			"mb_phone"				: "<?=$mb_phone?>",
 			"mb_serial"				: "<?=$serial?>",
-			"mb_concept"			: "1"
+			"mb_concept"			: "2"
 		},
 		url: "../main_exec.php",
 		beforeSend: function(response){
