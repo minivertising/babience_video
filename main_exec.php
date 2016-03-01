@@ -548,6 +548,7 @@ switch ($_REQUEST['exec'])
 					send_lms($mb_phone, $mb_serial);
 				}else{
 					$flag	= "D";
+					send_lms2($mb_phone, $mb_serial);
 				}
 			}else{
 				$flag	= "D";
