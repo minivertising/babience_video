@@ -278,9 +278,16 @@
                         	<video src="../files/out.mp4" controls preload="auto" id="video_player"></video>
                         </div>
                     </div>
+<?
+	if ($iPhoneYN == "N")
+	{
+?>
                     <div class="btn_block img">
                     	<a href="../files/out.mp4" download="download_video" id="download_src"><img src="images/popup/btn_down.png" /></a>
                     </div>
+<?
+	}
+?>
                     <div class="btn_block_2 img">
                     	<a href="#" onclick="prev_page();return false;"><img src="images/popup/btn_before.png" /></a>
                     	<a href="#" onclick="next_page();return false;"><img src="images/popup/btn_m_next_coupon.png" id="next_image"/></a>

@@ -44,12 +44,12 @@
 	else
 		$IE8	= "N";
 	*/
-/*
 	if(stripos( $_SERVER['HTTP_USER_AGENT'], "iPhone" ) || stripos( $_SERVER['HTTP_USER_AGENT'], "iPod" ) || stripos( $_SERVER['HTTP_USER_AGENT'], "iPad" ))
 		$iPhoneYN = "Y";
 	else
 		$iPhoneYN = "N";
 
+/*
 	if ($iPhoneYN == "Y")
 	{
 		if(stripos( $_SERVER['HTTP_USER_AGENT'], "KAKAO" ))
