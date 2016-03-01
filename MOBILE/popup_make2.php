@@ -647,7 +647,7 @@ $(function () {
 					var re_final1_h		= (user_ex_img1_h - re_userimg1_h) /2;
 					$("td#user_img1 > div > p > canvas").css("padding-top",re_final1_h+"px");
 				}else{
-					$("td#user_img1 > div > p > canvas").css("height",user_ex_img1_h+"px");
+					$("td#user_img1 > div > p > canvas").css("height",user_ex_img1+"px");
 					var re_userimg1_w	= (user_ex_img1_h / uimg1_h)*uimg1_w;
 					//alert(re_userimg1_w);
 					//var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;
@@ -762,7 +762,7 @@ $(function () {
 					var re_final2_h		= (user_ex_img2_h - re_userimg2_h) /2;
 					$("div#user_img2 > div > p > canvas").css("padding-top",re_final2_h+"px");
 				}else{
-					$("div#user_img2 > div > p > canvas").css("height",user_ex_img2_h+"px");
+					$("div#user_img2 > div > p > canvas").css("height",user_ex_img2+"px");
 					var re_userimg2_w	= (user_ex_img2_h / uimg2_h)*uimg2_w;
 					//alert(re_userimg1_w);
 					//var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;
@@ -833,7 +833,7 @@ $(function () {
 		// 파일 삭제
 		//del_fileview();
 		$("#user_img3").html("");
-		user_ex_img2	= $("#user_ex_img2").height();
+		user_ex_img3	= $("#user_ex_img3").height();
         data.context = $('<div/>').appendTo('#user_img3');
 		$("#up_img_div3").attr("class","re_upload");
 		$("#up_img3").attr("src","images/popup/btn_reup.png");
@@ -880,7 +880,7 @@ $(function () {
 					var re_final3_h		= (user_ex_img3_h - re_userimg3_h) /2;
 					$("div#user_img3 > div > p > canvas").css("padding-top",re_final3_h+"px");
 				}else{
-					$("div#user_img3 > div > p > canvas").css("height",user_ex_img3_h+"px");
+					$("div#user_img3 > div > p > canvas").css("height",user_ex_img3+"px");
 					var re_userimg3_w	= (user_ex_img3_h / uimg3_h)*uimg3_w;
 					//alert(re_userimg1_w);
 					//var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;
@@ -993,7 +993,7 @@ $(function () {
 					var re_final4_h		= (user_ex_img4_h - re_userimg4_h) /2;
 					$("td#user_img4 > div > p > canvas").css("padding-top",re_final4_h+"px");
 				}else{
-					$("td#user_img4 > div > p > canvas").css("height",user_ex_img4_h+"px");
+					$("td#user_img4 > div > p > canvas").css("height",user_ex_img4+"px");
 					var re_userimg4_w	= (user_ex_img4_h / uimg4_h)*uimg4_w;
 					//alert(re_userimg1_w);
 					//var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;
@@ -1105,7 +1105,7 @@ $(function () {
 					var re_final5_h		= (user_ex_img5_h - re_userimg5_h) /2;
 					$("div#user_img5 > div > p > canvas").css("padding-top",re_final5_h+"px");
 				}else{
-					$("div#user_img5 > div > p > canvas").css("height",user_ex_img5_h+"px");
+					$("div#user_img5 > div > p > canvas").css("height",user_ex_img5+"px");
 					var re_userimg5_w	= (user_ex_img5_h / uimg5_h)*uimg5_w;
 					//alert(re_userimg1_w);
 					//var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;
