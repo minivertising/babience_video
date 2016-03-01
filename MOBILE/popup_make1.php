@@ -525,6 +525,7 @@ function create_movie()
 		}
 	}
 */
+    setTimeout( function {
 	$.ajax({
 		type:"POST",
 		data:{
@@ -583,6 +584,7 @@ function create_movie()
 			//console.log(response);
 		}
 	});
+    }, 5000); 
 }
 
 function prev_page()
