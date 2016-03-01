@@ -551,35 +551,59 @@ function create_movie()
 			$("#input_baby_div").hide();
 		},
 		success: function(response){
-			var flag_res	= response.split("||");
-			console.log(response);
-			if (flag_res[0] == "Y")
-			{
-				//$(".serial").html("<?=$serial?>");
-				$("#video_b_name").html(mb_baby_name);
-				$(".cap1_txt").html(mb_caption1);
-				$("#next_image").attr("src","images/popup/btn_m_next_coupon.png");
-				$("#video_player").width("100%");
-				$("#video_player").attr("src","../files/<?=$serial?>/growmovie.mp4");
-				$("#download_src").attr("src","../files/<?=$serial?>/growmovie.mp4");
-				$("#movie_div").show();
-				$("#loading_div").hide();
-				user_gubun	= 1;
-			}else if (flag_res[0] == "D"){
-				//$(".c_babyname").html(mb_baby_name);
-				$(".cap1_txt").html(mb_caption1);
-				$("#video_b_name").html(mb_baby_name);
-				$("#next_image").attr("src","images/popup/btn_m_next.png");
-				$("#video_player").width("100%");
-				$("#video_player").attr("src","../files/<?=$serial?>/growmovie.mp4");
-				$("#download_src").attr("src","../files/<?=$serial?>/growmovie.mp4");
-				$("#movie_div").show();
-				$("#loading_div").hide();
-				user_gubun	= 0;
-			}else{
-				alert('접속자가 많아 참여가 지연되고 있습니다. 다시 시도해 주세요.');
-				location.href="index.php";
-			}
+			$.ajax({
+				type:"POST",
+				data:{
+					"exec"					: "create_movie2",
+					"mb_baby_name"		: mb_baby_name,
+					"mb_baby_age"			: mb_baby_age,
+					"up_image1"			: up_images1,
+					"up_image2"			: up_images2,
+					"up_image3"			: up_images3,
+					"up_image4"			: up_images4,
+					"up_image5"			: up_images5,
+					"mb_caption1"			: mb_caption1,
+					"mb_caption2"			: mb_caption2,
+					"mb_caption3"			: mb_caption3,
+					"mb_caption4"			: mb_caption4,
+					//"mb_caption5"			: mb_caption5,
+					"mb_phone"				: "<?=$mb_phone?>",
+					"mb_serial"				: "<?=$serial?>",
+					"mb_concept"			: "1"
+				},
+				url: "../main_exec.php",
+				success: function(response){
+					console.log(response);
+					if (response == "Y")
+					{
+						//$(".serial").html("<?=$serial?>");
+						$("#video_b_name").html(mb_baby_name);
+						$(".cap1_txt").html(mb_caption1);
+						$("#next_image").attr("src","images/popup/btn_m_next_coupon.png");
+						$("#video_player").width("100%");
+						$("#video_player").attr("src","../files/<?=$serial?>/growmovie.mp4");
+						$("#download_src").attr("src","../files/<?=$serial?>/growmovie.mp4");
+						$("#movie_div").show();
+						$("#loading_div").hide();
+						user_gubun	= 1;
+					}else if (response == "D"){
+						//$(".c_babyname").html(mb_baby_name);
+						$(".cap1_txt").html(mb_caption1);
+						$("#video_b_name").html(mb_baby_name);
+						$("#next_image").attr("src","images/popup/btn_m_next.png");
+						$("#video_player").width("100%");
+						$("#video_player").attr("src","../files/<?=$serial?>/growmovie.mp4");
+						$("#download_src").attr("src","../files/<?=$serial?>/growmovie.mp4");
+						$("#movie_div").show();
+						$("#loading_div").hide();
+						user_gubun	= 0;
+					}else{
+						alert('접속자가 많아 참여가 지연되고 있습니다. 다시 시도해 주세요.');
+						location.href="index.php";
+					}
+					//console.log(response);
+				}
+			});
 			//console.log(response);
 		}
 	});
