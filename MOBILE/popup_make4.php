@@ -1191,7 +1191,7 @@ function sns_share(media, flag)
 		//Kakao.Link.createTalkLinkButton({
 		Kakao.Link.sendTalkLink({
 		  //container: '#kakao-link-btn',
-		  label: "우리아기 특별한 성장 영상 공개!",
+		  label: "혼자보기 아까운 우리아기 성장 영상 공개!",
 		  image: {
 			src: 'http://grow.babience-event.com/<?=$serial?>/medium/final_<?=$serial?>_1.jpg',
 			width: '800',
@@ -1215,7 +1215,7 @@ function sns_share(media, flag)
 	}else{
 		Kakao.Story.share({
 			url: 'http://grow.babience-event.com/MOBILE/share_page.php?serial=<?=$serial?>',
-			text: '우리아기 특별한 성장 영상 공개!\r\nhttp://grow.babience-event.com/coupon_page.php?serial=<?=$serial?>'
+			text: '혼자보기 아까운 우리아기 성장 영상 공개!\r\nhttp://grow.babience-event.com/coupon_page.php?serial=<?=$serial?>'
 		});
 		$.ajax({
 			type   : "POST",
