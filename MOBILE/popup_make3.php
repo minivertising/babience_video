@@ -554,7 +554,7 @@ setTimeout(function() {
 				$("#next_image").attr("src","images/popup/btn_m_next_coupon.png");
 				$("#video_player").width("100%");
 				$("#video_player").attr("src","../files/<?=$serial?>/growmovie.mp4");
-				$("#download_src").attr("src","../files/<?=$serial?>/growmovie.mp4");
+				$("#download_src").attr("href","../files/<?=$serial?>/growmovie.mp4");
 				$("#movie_div").show();
 				$("#loading_div").hide();
 				user_gubun	= 1;
@@ -565,7 +565,7 @@ setTimeout(function() {
 				$("#next_image").attr("src","images/popup/btn_m_next.png");
 				$("#video_player").width("100%");
 				$("#video_player").attr("src","../files/<?=$serial?>/growmovie.mp4");
-				$("#download_src").attr("src","../files/<?=$serial?>/growmovie.mp4");
+				$("#download_src").attr("href","../files/<?=$serial?>/growmovie.mp4");
 				$("#movie_div").show();
 				$("#loading_div").hide();
 				user_gubun	= 0;
