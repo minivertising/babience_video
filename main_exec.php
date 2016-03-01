@@ -201,8 +201,6 @@ switch ($_REQUEST['exec'])
 			}
 		}
 
-		if ($img_name5 != "")
-		{
 			$img_name5arr			= explode(".",stripslashes($img_name5));
 			$img_name5arr_num	= count($img_name5arr) -1;
 
@@ -235,7 +233,6 @@ switch ($_REQUEST['exec'])
 			$output2	= "ffmpeg -i ./files/".$mb_serial."/output.mp4 -i ./MOBILE/scene/sound/".$mb_concept."-5_sound.mp4 -c:v copy -c:a copy ./files/".$mb_serial."/growmovie.mp4";
 			system($output2);
 
-		}
 
 		}
 
@@ -311,8 +308,6 @@ switch ($_REQUEST['exec'])
 			}
 		}
 
-		if ($img_name5 != "")
-		{
 			$img_name5arr			= explode(".",stripslashes($img_name5));
 			$img_name5arr_num	= count($img_name5arr) -1;
 
@@ -342,7 +337,6 @@ switch ($_REQUEST['exec'])
 			system(stripslashes($output));
 			$output2	= "ffmpeg -i ./files/".$mb_serial."/output.mp4 -i ./MOBILE/scene/sound/".$mb_concept."-4_sound.mp4 -c:v copy -c:a copy ./files/".$mb_serial."/growmovie.mp4";
 			system($output2);
-		}
 
 		}
 
@@ -418,8 +412,6 @@ switch ($_REQUEST['exec'])
 			}
 		}
 
-		if ($img_name5 != "")
-		{
 			$img_name5arr			= explode(".",stripslashes($img_name5));
 			$img_name5arr_num	= count($img_name5arr) -1;
 
@@ -448,7 +440,6 @@ switch ($_REQUEST['exec'])
 			system(stripslashes($output));
 			$output2	= "ffmpeg -i ./files/".$mb_serial."/output.mp4 -i ./MOBILE/scene/sound/".$mb_concept."-4_sound.mp4 -c:v copy -c:a copy ./files/".$mb_serial."/growmovie.mp4";
 			system($output2);
-		}
 
 
 		}
@@ -504,8 +495,6 @@ switch ($_REQUEST['exec'])
 			*/
 		}
 
-		if ($img_name5 != "")
-		{
 			$img_name5arr			= explode(".",stripslashes($img_name5));
 			$img_name5arr_num	= count($img_name5arr) -1;
 
@@ -532,7 +521,6 @@ switch ($_REQUEST['exec'])
 			system(stripslashes($output));
 			$output2	= "ffmpeg -i ./files/".$mb_serial."/output.mp4 -i ./MOBILE/scene/sound/".$mb_concept."-3_sound.mp4 -c:v copy -c:a copy ./files/".$mb_serial."/growmovie.mp4";
 			system($output2);
-		}
 
 
 		}
