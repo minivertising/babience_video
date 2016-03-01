@@ -215,6 +215,7 @@ switch ($_REQUEST['exec'])
 			//$cap_image5			= caption_image($mb_caption5, $mb_serial,"5");
 		}
 
+			sleep(3);
 			$output	= "ffmpeg \\";
 			$output	.= "-loop 1 -t 2 -i ./MOBILE/scene/concept_".$mb_concept."_1.jpg \\";
 			$output	.= "-loop 1 -t 1.5 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_1.jpg \\";
