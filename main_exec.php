@@ -213,7 +213,6 @@ switch ($_REQUEST['exec'])
 			$f_img_name5			= $mb_serial."_5.jpg";
 			$new_image5_1			= merge_image2($f_img_name5, $mb_serial,"5",$mb_concept);
 			//$cap_image5			= caption_image($mb_caption5, $mb_serial,"5");
-		}
 
 			sleep(3);
 			$output	= "ffmpeg \\";
@@ -234,6 +233,9 @@ switch ($_REQUEST['exec'])
 			system(stripslashes($output));
 			$output2	= "ffmpeg -i ./files/".$mb_serial."/output.mp4 -i ./MOBILE/scene/sound/".$mb_concept."-5_sound.mp4 -c:v copy -c:a copy ./files/".$mb_serial."/growmovie.mp4";
 			system($output2);
+
+		}
+
 		}
 
 		if ($img_name3 != "" && $img_name4 == "")
@@ -321,8 +323,8 @@ switch ($_REQUEST['exec'])
 			$f_img_name5			= $mb_serial."_5.jpg";
 			$new_image5_1			= merge_image2($f_img_name5, $mb_serial,"5",$mb_concept);
 			//$cap_image5			= caption_image($mb_caption5, $mb_serial,"5");
-		}
 
+			sleep(3);
 			$output	= "ffmpeg \\";
 			$output	.= "-loop 1 -t 2 -i ./MOBILE/scene/concept_".$mb_concept."_1.jpg \\";
 			$output	.= "-loop 1 -t 1.5 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_1.jpg \\";
@@ -339,6 +341,8 @@ switch ($_REQUEST['exec'])
 			system(stripslashes($output));
 			$output2	= "ffmpeg -i ./files/".$mb_serial."/output.mp4 -i ./MOBILE/scene/sound/".$mb_concept."-4_sound.mp4 -c:v copy -c:a copy ./files/".$mb_serial."/growmovie.mp4";
 			system($output2);
+		}
+
 		}
 
 		if ($img_name3 == "" && $img_name4 != "")
@@ -426,9 +430,7 @@ switch ($_REQUEST['exec'])
 			$f_img_name5			= $mb_serial."_5.jpg";
 			$new_image5_1			= merge_image2($f_img_name5, $mb_serial,"5",$mb_concept);
 			//$cap_image5			= caption_image($mb_caption5, $mb_serial,"5");
-		}
-
-
+			sleep(3);
 			$output	= "ffmpeg \\";
 			$output	.= "-loop 1 -t 2 -i ./MOBILE/scene/concept_".$mb_concept."_1.jpg \\";
 			$output	.= "-loop 1 -t 1.5 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_1.jpg \\";
@@ -445,6 +447,9 @@ switch ($_REQUEST['exec'])
 			system(stripslashes($output));
 			$output2	= "ffmpeg -i ./files/".$mb_serial."/output.mp4 -i ./MOBILE/scene/sound/".$mb_concept."-4_sound.mp4 -c:v copy -c:a copy ./files/".$mb_serial."/growmovie.mp4";
 			system($output2);
+		}
+
+
 		}
 
 		if ($img_name3 == "" && $img_name4 == "")
@@ -511,8 +516,7 @@ switch ($_REQUEST['exec'])
 			$f_img_name5			= $mb_serial."_5.jpg";
 			$new_image5_1			= merge_image2($f_img_name5, $mb_serial,"5",$mb_concept);
 			//$cap_image5			= caption_image($mb_caption5, $mb_serial,"5");
-		}
-
+			sleep(3);
 			$output	= "ffmpeg \\";
 			$output	.= "-loop 1 -t 2 -i ./MOBILE/scene/concept_".$mb_concept."_1.jpg \\";
 			$output	.= "-loop 1 -t 1.5 -i ./files/".$mb_serial."/medium/final_".$mb_serial."_1.jpg \\";
@@ -527,6 +531,9 @@ switch ($_REQUEST['exec'])
 			system(stripslashes($output));
 			$output2	= "ffmpeg -i ./files/".$mb_serial."/output.mp4 -i ./MOBILE/scene/sound/".$mb_concept."-3_sound.mp4 -c:v copy -c:a copy ./files/".$mb_serial."/growmovie.mp4";
 			system($output2);
+		}
+
+
 		}
 
 		flush();

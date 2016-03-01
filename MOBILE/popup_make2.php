@@ -1208,7 +1208,7 @@ function sns_share(media, flag)
 	}else{
 		Kakao.Story.share({
 			url: 'http://grow.babience-event.com/MOBILE/share_page.php?serial=<?=$serial?>',
-			text: '우리아기 특별한 성장 영상 공개!\r\nhttp://grow.babience-event.com/mypage.php?serial=<?=$serial?>'
+			text: '우리아기 특별한 성장 영상 공개!\r\nhttp://grow.babience-event.com/coupon_page.php?serial=<?=$serial?>'
 		});
 		$.ajax({
 			type   : "POST",
