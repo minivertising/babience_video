@@ -86,7 +86,7 @@
             <div class="bg img"><img src="images/popup/frm_b_bg.jpg" /></div>
           </div>
           <div class="pic_input">
-            <div class="input"><input type="text" name="mb_caption1" id="mb_caption1" placeholder="타이틀을 넣어주세요(20자 이내)" onkeyup="ins_caption('1');return false;"></div>
+            <div class="input"><input type="text" name="mb_caption1" id="mb_caption1" placeholder="일기처럼 써 주세요(20자 이내)" onkeyup="ins_caption('1');return false;"></div>
           </div>
         </div>
       </div>
@@ -125,7 +125,7 @@
             <div class="bg img"><img src="images/popup/frm_b_bg.jpg" /></div>
           </div>
           <div class="pic_input">
-            <div class="input"><input type="text" name="mb_caption2" id="mb_caption2" placeholder="자막을 넣어주세요(20자 이내)" onkeyup="ins_caption('2');return false;"></div>
+            <div class="input"><input type="text" name="mb_caption2" id="mb_caption2" placeholder="일기처럼 써 주세요(20자 이내)" onkeyup="ins_caption('2');return false;"></div>
           </div>
         </div>
       </div>
@@ -164,7 +164,7 @@
             <div class="bg img"><img src="images/popup/frm_b_bg.jpg" /></div>
           </div>
           <div class="pic_input">
-            <div class="input"><input type="text" name="mb_caption3" id="mb_caption3" placeholder="자막을 넣어주세요(20자 이내)" onkeyup="ins_caption('3');return false;"></div>
+            <div class="input"><input type="text" name="mb_caption3" id="mb_caption3" placeholder="일기처럼 써 주세요(20자 이내)" onkeyup="ins_caption('3');return false;"></div>
           </div>
         </div>
       </div>
@@ -203,7 +203,7 @@
             <div class="bg img"><img src="images/popup/frm_b_bg.jpg" /></div>
           </div>
           <div class="pic_input">
-            <div class="input"><input type="text" name="mb_caption4" id="mb_caption4" placeholder="자막을 넣어주세요(20자 이내)" onkeyup="ins_caption('4');return false;"></div>
+            <div class="input"><input type="text" name="mb_caption4" id="mb_caption4" placeholder="일기처럼 써 주세요(20자 이내)" onkeyup="ins_caption('4');return false;"></div>
           </div>
         </div>
       </div>
