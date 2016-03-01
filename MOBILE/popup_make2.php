@@ -247,8 +247,8 @@
                             </div>
 						    <div class="bg img"><img src="images/popup/title_movie_c_1.png" /></div>
                         </div>
-                        <div class="name">
-                            	<span id="video_b_name">김서우</span><span><img src="images/popup/label_baby.png" width="35" /></span>
+                        <div class="name" id="video_b_name">
+                            	김서우<span><img src="images/popup/label_baby.png" width="35" /></span>
                             </div>
                         <div class="youtube">
                         	<video src="../files/out.mp4" controls preload="auto" id="video_player"></video>
@@ -551,7 +551,7 @@ setTimeout(function() {
 			if (flag_res[0] == "Y")
 			{
 				//$(".serial").html("<?=$serial?>");
-				$("#video_b_name").html(mb_baby_name);
+				$("#video_b_name").html(mb_baby_name+'<span><img src="images/popup/label_baby.png" width="35" /></span>');
 				$(".cap1_txt").html(mb_caption1);
 				$("#next_image").attr("src","images/popup/btn_m_next_coupon.png");
 				$("#video_player").width("100%");
@@ -563,7 +563,7 @@ setTimeout(function() {
 			}else if (flag_res[0] == "D"){
 				//$(".c_babyname").html(mb_baby_name);
 				$(".cap1_txt").html(mb_caption1);
-				$("#video_b_name").html(mb_baby_name);
+				$("#video_b_name").html(mb_baby_name+'<span><img src="images/popup/label_baby.png" width="35" /></span>');
 				$("#next_image").attr("src","images/popup/btn_m_next.png");
 				$("#video_player").width("100%");
 				$("#video_player").attr("src","../files/<?=$serial?>/growmovie.mp4");
