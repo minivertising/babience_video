@@ -345,6 +345,9 @@
         </div>
       </div><!--inner-->
     </div>
+    <div class="img end_gift">
+      <img src="images/popup/end_gift.jpg" />
+    </div>
   </div>
 </div>
 <!------------------------------ 체험팩 쿠폰 이미 받은 사람 엔딩 ------------------------------>
