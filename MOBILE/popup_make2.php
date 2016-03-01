@@ -110,7 +110,7 @@
                 <input id="fileupload2" type="file" name="files[]" >
               </span>
             </div>
-            <div class="name f_2_3 imsi_caption_baby">이서준(2)</div>
+            <div class="name f_2_3 imsi_caption_baby"></div>
             <div class="text f_2_2" id="imsi_caption2">성장 타이틀</div>
             <div class="p_img f_2_2" id="user_img2">이미지</div><!--소비자 합성 이미지-->
             <!-- <div class="front_img img"><img src="images/popup/img_frm_2_2.png" id="preview_img_2" /></div> -->
@@ -142,7 +142,7 @@
                 <input id="fileupload3" type="file" name="files[]" >
               </span>
             </div>
-            <div class="name f_2_3 imsi_caption_baby">이서준(2)</div>
+            <div class="name f_2_3 imsi_caption_baby"></div>
             <div class="text f_2_3" id="imsi_caption3">성장 타이틀</div>
             <div class="p_img f_2_3" id="user_img3">이미지</div><!--소비자 합성 이미지-->
             <div class="front_img img"><img src="images/popup/img_frm_2_3.png" id="user_ex_img3" /></div>
@@ -173,7 +173,7 @@
                 <input id="fileupload4" type="file" name="files[]" >
               </span>
             </div>
-            <div class="name f_2_4 imsi_caption_baby">이서준(2)</div>
+            <div class="name f_2_4 imsi_caption_baby"></div>
             <div class="text f_2_4" id="imsi_caption4">성장 타이틀</div>
             <div class="p_img f_2_4">
                                 <table width="100%" border="0"  cellpadding="0" cellspacing="0">
