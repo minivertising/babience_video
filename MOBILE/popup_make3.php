@@ -409,6 +409,9 @@ $(document).ready(function() {
 
 function create_movie()
 {
+	$("#loading_div").show();
+	$("#input_baby_div").hide();
+
 	var mb_baby_name		= $("#mb_baby_name").val();
 	var mb_baby_age			= $("#mb_baby_age").val();
 	var up_images1				= $("#up_images1").val();
@@ -420,12 +423,13 @@ function create_movie()
 	var mb_caption2			= $("#mb_caption2").val();
 	var mb_caption3			= $("#mb_caption3").val();
 	var mb_caption4			= $("#mb_caption4").val();
-	var mb_caption5			= $("#mb_caption5").val();
-
+	//var mb_caption5			= $("#mb_caption5").val();
 	if (mb_baby_name == "")
 	{
 		alert('아기 이름을 입력해 주세요.');
 		//chk_ins = 0;
+		$("#loading_div").hide();
+		$("#input_baby_div").show();
 		$("#mb_baby_name").focus();
 		return false;
 	}
@@ -434,15 +438,18 @@ function create_movie()
 	{
 		alert('아기 나이를 입력해 주세요.');
 		//chk_ins = 0;
+		$("#loading_div").hide();
+		$("#input_baby_div").show();
 		$("#mb_baby_age").focus();
 		return false;
 	}
-
 
 	if (up_images1 == "" || up_images2 == "" || up_images5 == "")
 	{
 		alert('필수 이미지는 모두 업로드해 주세요.');
 		//chk_ins = 0;
+		$("#loading_div").hide();
+		$("#input_baby_div").show();
 		return false;
 	}
 
@@ -452,6 +459,9 @@ function create_movie()
 		{
 			alert('1번 사진의 자막을 입력해 주세요.');
 			//chk_ins = 0;
+			$("#loading_div").hide();
+			$("#input_baby_div").show();
+			$("#mb_caption1").focus();
 			return false;
 		}
 	}
@@ -462,6 +472,9 @@ function create_movie()
 		{
 			alert('2번 사진의 자막을 입력해 주세요.');
 			//chk_ins = 0;
+			$("#loading_div").hide();
+			$("#input_baby_div").show();
+			$("#mb_caption2").focus();
 			return false;
 		}
 	}
@@ -472,6 +485,9 @@ function create_movie()
 		{
 			alert('3번 사진의 자막을 입력해 주세요.');
 			//chk_ins = 0;
+			$("#loading_div").hide();
+			$("#input_baby_div").show();
+			$("#mb_caption3").focus();
 			return false;
 		}
 	}
@@ -482,10 +498,13 @@ function create_movie()
 		{
 			alert('4번 사진의 자막을 입력해 주세요.');
 			//chk_ins = 0;
+			$("#loading_div").hide();
+			$("#input_baby_div").show();
+			$("#mb_caption4").focus();
 			return false;
 		}
 	}
-
+/*
 	if (mb_caption5 == "")
 	{
 		if (up_images5 != "")
@@ -495,7 +514,10 @@ function create_movie()
 			return false;
 		}
 	}
+*/
 
+
+setTimeout(function() {
 	$.ajax({
 		type:"POST",
 		data:{
@@ -511,10 +533,10 @@ function create_movie()
 			"mb_caption2"			: mb_caption2,
 			"mb_caption3"			: mb_caption3,
 			"mb_caption4"			: mb_caption4,
-			"mb_caption5"			: mb_caption5,
+			//"mb_caption5"			: mb_caption5,
 			"mb_phone"				: "<?=$mb_phone?>",
 			"mb_serial"				: "<?=$serial?>",
-			"mb_concept"			: "3"
+			"mb_concept"			: "1"
 		},
 		url: "../main_exec.php",
 		beforeSend: function(response){
@@ -522,12 +544,13 @@ function create_movie()
 			$("#input_baby_div").hide();
 		},
 		success: function(response){
+			var flag_res	= response.split("||");
 			console.log(response);
-			if (response == "Y")
+			if (flag_res[0] == "Y")
 			{
 				//$(".serial").html("<?=$serial?>");
-				$(".cap1_txt").html(mb_caption1);
 				$("#video_b_name").html(mb_baby_name);
+				$(".cap1_txt").html(mb_caption1);
 				$("#next_image").attr("src","images/popup/btn_m_next_coupon.png");
 				$("#video_player").width("100%");
 				$("#video_player").attr("src","../files/<?=$serial?>/growmovie.mp4");
@@ -535,7 +558,7 @@ function create_movie()
 				$("#movie_div").show();
 				$("#loading_div").hide();
 				user_gubun	= 1;
-			}else if (response == "D"){
+			}else if (flag_res[0] == "D"){
 				//$(".c_babyname").html(mb_baby_name);
 				$(".cap1_txt").html(mb_caption1);
 				$("#video_b_name").html(mb_baby_name);
@@ -550,8 +573,10 @@ function create_movie()
 				alert('접속자가 많아 참여가 지연되고 있습니다. 다시 시도해 주세요.');
 				location.href="index.php";
 			}
+			//console.log(response);
 		}
 	});
+	}, 5000); // 3000ms(3초)가 경과하면 이 함수가 실행됩니다.
 }
 
 function prev_page()

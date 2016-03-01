@@ -436,6 +436,8 @@ $(document).ready(function() {
 
 function create_movie()
 {
+	$("#loading_div").show();
+	$("#input_baby_div").hide();
 
 	var mb_baby_name		= $("#mb_baby_name").val();
 	var mb_baby_age			= $("#mb_baby_age").val();
@@ -453,6 +455,8 @@ function create_movie()
 	{
 		alert('아기 이름을 입력해 주세요.');
 		//chk_ins = 0;
+		$("#loading_div").hide();
+		$("#input_baby_div").show();
 		$("#mb_baby_name").focus();
 		return false;
 	}
@@ -461,6 +465,8 @@ function create_movie()
 	{
 		alert('아기 나이를 입력해 주세요.');
 		//chk_ins = 0;
+		$("#loading_div").hide();
+		$("#input_baby_div").show();
 		$("#mb_baby_age").focus();
 		return false;
 	}
@@ -469,6 +475,8 @@ function create_movie()
 	{
 		alert('필수 이미지는 모두 업로드해 주세요.');
 		//chk_ins = 0;
+		$("#loading_div").hide();
+		$("#input_baby_div").show();
 		return false;
 	}
 
@@ -478,6 +486,8 @@ function create_movie()
 		{
 			alert('1번 사진의 자막을 입력해 주세요.');
 			//chk_ins = 0;
+			$("#loading_div").hide();
+			$("#input_baby_div").show();
 			$("#mb_caption1").focus();
 			return false;
 		}
@@ -489,6 +499,8 @@ function create_movie()
 		{
 			alert('2번 사진의 자막을 입력해 주세요.');
 			//chk_ins = 0;
+			$("#loading_div").hide();
+			$("#input_baby_div").show();
 			$("#mb_caption2").focus();
 			return false;
 		}
@@ -500,6 +512,8 @@ function create_movie()
 		{
 			alert('3번 사진의 자막을 입력해 주세요.');
 			//chk_ins = 0;
+			$("#loading_div").hide();
+			$("#input_baby_div").show();
 			$("#mb_caption3").focus();
 			return false;
 		}
@@ -511,6 +525,8 @@ function create_movie()
 		{
 			alert('4번 사진의 자막을 입력해 주세요.');
 			//chk_ins = 0;
+			$("#loading_div").hide();
+			$("#input_baby_div").show();
 			$("#mb_caption4").focus();
 			return false;
 		}
