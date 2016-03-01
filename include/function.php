@@ -319,7 +319,7 @@ http://grow.babience-event.com
 		return $response;
 	}
 
-	//$GLOBALS['errormsg']	= "";
+	$GLOBALS['errormsg']	= "";
 	function merge_image($img_name, $img_folder, $p_num, $concept)
 	{
 		$path_mark_file = './files/'.$img_folder.'/medium/'.$img_name;	//원본파일
@@ -2109,7 +2109,7 @@ function proc_watermark1_5_2($src, $src_w, $src_h, $path_mark_file, $pos, $sharp
 
         if ($result_watermark === false) {
           @imagedestroy($mark);
-          //$GLOBALS['errormsg'] = "워터마크 처리에 실패하였습니다.";
+          $GLOBALS['errormsg'] = "워터마크 처리에 실패하였습니다.";
           return false;
         }
       }
@@ -2176,7 +2176,7 @@ function proc_watermark1_5_2($src, $src_w, $src_h, $path_mark_file, $pos, $sharp
     @imagedestroy($mark);
 
     if ($result_watermark === false) {
-      //$GLOBALS['errormsg'] = "워터마크 처리에 실패하였습니다.";
+      $GLOBALS['errormsg'] = "워터마크 처리에 실패하였습니다.";
       return false;
     }
   }
