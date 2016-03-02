@@ -396,15 +396,15 @@ $(document).ready(function() {
 	$("#cboxBottomCenter").hide();
 	Kakao.init('d58dc6bc022da9c054b20aff9c23e0f9');
 
-	var yt_width = $(document).width()-20;
+	var yt_width = $(document).width() - 20;
 	var youtube_height = (yt_width / 16) * 9;
-	$("#ytplayer1").width(yt_width);
-	$("#ytplayer1").height(youtube_height);
-	$("#ytplayer2").width(yt_width);
+	//$("#ytplayer1").width(yt_width);
+	//$("#ytplayer1").height(youtube_height);
+	$("#ytplayer2").width(yt_width - 19);
 	$("#ytplayer2").height(youtube_height);
-	$("#ytplayer3").width(yt_width);
+	$("#ytplayer3").width(yt_width - 19);
 	$("#ytplayer3").height(youtube_height);
-	$("#ytplayer4").width(yt_width);
+	$("#ytplayer4").width(yt_width - 19);
 	$("#ytplayer4").height(youtube_height);
 
 	user_ex_img1_h		= $("#user_ex_img1").height();
