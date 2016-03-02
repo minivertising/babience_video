@@ -1112,7 +1112,7 @@ $(function () {
 					var re_final5_h		= (user_ex_img5_h - re_userimg5_h) /2;
 					$("div#user_img5 > div > p > canvas").css("padding-top",re_final5_h+"px");
 				}else{
-					$("div#user_img5 > div > p > canvas").css("height",user_ex_img5_h+"px");
+					$("div#user_img5 > div > p > canvas").css("height",user_ex_img5+"px");
 					var re_userimg5_w	= (user_ex_img5_h / uimg5_h)*uimg5_w;
 					//alert(re_userimg1_w);
 					//var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;

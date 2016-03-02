@@ -746,8 +746,8 @@ $(function () {
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
 		//del_fileview();
-		$("#user_img2").html("");
 		user_ex_img2	= $("#user_ex_img2").height();
+		$("#user_img2").html("");
         data.context = $('<div/>').appendTo('#user_img2');
 		$("#up_img_div2").attr("class","re_upload");
 		$("#up_img2").attr("src","images/popup/btn_reup.png");
@@ -861,8 +861,8 @@ $(function () {
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
 		//del_fileview();
-		$("#user_img3").html("");
 		user_ex_img3	= $("#user_ex_img3").height();
+		$("#user_img3").html("");
         data.context = $('<div/>').appendTo('#user_img3');
 		$("#up_img_div3").attr("class","re_upload");
 		$("#up_img3").attr("src","images/popup/btn_reup.png");
@@ -1087,8 +1087,8 @@ $(function () {
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
 		//del_fileview();
-		$("#user_img5").html("");
 		user_ex_img5	= $("#user_ex_img5").height();
+		$("#user_img5").html("");
         data.context = $('<div/>').appendTo('#user_img5');
 		$("#up_img_div5").attr("class","re_upload");
 		$("#up_img5").attr("src","images/popup/btn_reup.png");
