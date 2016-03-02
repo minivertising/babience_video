@@ -5122,9 +5122,9 @@ function getPrintToImage($txt_X, $txt_Y, $serial, $num, $szFilePath, &$objFont, 
 
 function txt_position($txt, $concept)
 {
+	$caption1_len	= strlen(iconv('UTF-8','CP949',$txt));
 	if ($concept == "1")
 	{
-		$caption1_len	= strlen(iconv('UTF-8','CP949',$txt));
 		if ($caption1_len == 1)
 			$rs_txt = "357";
 		else if ($caption1_len == 2)
@@ -5207,85 +5207,85 @@ function txt_position($txt, $concept)
 			$rs_txt = "106";
 	}else if ($concept == "3"){
 		if ($caption1_len == 1)
-			$rs_txt = "357";
+			$rs_txt = "490";
 		else if ($caption1_len == 2)
-			$rs_txt = "347";
+			$rs_txt = "490";
 		else if ($caption1_len == 3)
-			$rs_txt = "342";
+			$rs_txt = "480";
 		else if ($caption1_len == 4)
-			$rs_txt = "337";
+			$rs_txt = "475";
 		else if ($caption1_len == 5)
-			$rs_txt = "332";
+			$rs_txt = "470";
 		else if ($caption1_len == 6)
-			$rs_txt = "327";
+			$rs_txt = "465";
 		else if ($caption1_len == 7)
-			$rs_txt = "320";
+			$rs_txt = "460";
 		else if ($caption1_len == 8)
-			$rs_txt = "312";
+			$rs_txt = "455";
 		else if ($caption1_len == 9)
-			$rs_txt = "304";
+			$rs_txt = "450";
 		else if ($caption1_len == 10)
-			$rs_txt = "295";
+			$rs_txt = "445";
 		else if ($caption1_len == 11)
-			$rs_txt = "287";
+			$rs_txt = "440";
 		else if ($caption1_len == 12)
-			$rs_txt = "278";
+			$rs_txt = "435";
 		else if ($caption1_len == 13)
-			$rs_txt = "271";
+			$rs_txt = "430";
 		else if ($caption1_len == 14)
-			$rs_txt = "264";
+			$rs_txt = "425";
 		else if ($caption1_len == 15)
-			$rs_txt = "257";
+			$rs_txt = "420";
 		else if ($caption1_len == 16)
-			$rs_txt = "250";
+			$rs_txt = "415";
 		else if ($caption1_len == 17)
-			$rs_txt = "242";
+			$rs_txt = "410";
 		else if ($caption1_len == 18)
-			$rs_txt = "235";
+			$rs_txt = "405";
 		else if ($caption1_len == 19)
-			$rs_txt = "231";
+			$rs_txt = "400";
 		else if ($caption1_len == 20)
-			$rs_txt = "228";
+			$rs_txt = "395";
 		else if ($caption1_len == 21)
-			$rs_txt = "224";
+			$rs_txt = "390";
 		else if ($caption1_len == 22)
-			$rs_txt = "220";
+			$rs_txt = "385";
 		else if ($caption1_len == 23)
-			$rs_txt = "213";
+			$rs_txt = "380";
 		else if ($caption1_len == 24)
-			$rs_txt = "207";
+			$rs_txt = "375";
 		else if ($caption1_len == 25)
-			$rs_txt = "201";
+			$rs_txt = "370";
 		else if ($caption1_len == 26)
-			$rs_txt = "195";
+			$rs_txt = "365";
 		else if ($caption1_len == 27)
-			$rs_txt = "189";
+			$rs_txt = "360";
 		else if ($caption1_len == 28)
-			$rs_txt = "182";
+			$rs_txt = "355";
 		else if ($caption1_len == 29)
-			$rs_txt = "176";
+			$rs_txt = "350";
 		else if ($caption1_len == 30)
-			$rs_txt = "170";
+			$rs_txt = "345";
 		else if ($caption1_len == 31)
-			$rs_txt = "164";
+			$rs_txt = "340";
 		else if ($caption1_len == 32)
-			$rs_txt = "158";
+			$rs_txt = "335";
 		else if ($caption1_len == 33)
-			$rs_txt = "151";
+			$rs_txt = "330";
 		else if ($caption1_len == 34)
-			$rs_txt = "145";
+			$rs_txt = "325";
 		else if ($caption1_len == 35)
-			$rs_txt = "138";
+			$rs_txt = "320";
 		else if ($caption1_len == 36)
-			$rs_txt = "132";
+			$rs_txt = "315";
 		else if ($caption1_len == 37)
-			$rs_txt = "125";
+			$rs_txt = "310";
 		else if ($caption1_len == 38)
-			$rs_txt = "119";
+			$rs_txt = "305";
 		else if ($caption1_len == 39)
-			$rs_txt = "112";
+			$rs_txt = "300";
 		else if ($caption1_len == 40)
-			$rs_txt = "106";
+			$rs_txt = "295";
 	}
 	return $rs_txt;
 }

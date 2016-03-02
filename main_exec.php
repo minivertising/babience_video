@@ -124,7 +124,8 @@ switch ($_REQUEST['exec'])
 			if ($mb_concept == "2" || $mb_concept == "4"){
 				$cap_image1			= caption_image_white($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
 			}else if ($mb_concept == "3"){
-				$cap_image1			= caption_image_yellow($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
+				$rs_caption_w3	= txt_position($mb_caption1, $mb_concept);
+				$cap_image1			= caption_image_yellow($mb_caption1, $mb_serial,"1",$rs_caption_w3,$caption_image1_h);
 			}else{
 				$rs_caption_w1	= txt_position($mb_caption1, $mb_concept);
 				$cap_image1			= caption_image($mb_caption1, $mb_serial,"1",$rs_caption_w1,$caption_image1_h);
@@ -257,7 +258,8 @@ switch ($_REQUEST['exec'])
 			if ($mb_concept == "2" || $mb_concept == "4"){
 				$cap_image1			= caption_image_white($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
 			}else if ($mb_concept == "3"){
-				$cap_image1			= caption_image_yellow($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
+				$rs_caption_w3	= txt_position($mb_caption1, $mb_concept);
+				$cap_image1			= caption_image_yellow($mb_caption1, $mb_serial,"1",$rs_caption_w3,$caption_image1_h);
 			}else{
 				$rs_caption_w1	= txt_position($mb_caption1, $mb_concept);
 				$cap_image1			= caption_image($mb_caption1, $mb_serial,"1",$rs_caption_w1,$caption_image1_h);
@@ -365,7 +367,8 @@ switch ($_REQUEST['exec'])
 			if ($mb_concept == "2" || $mb_concept == "4"){
 				$cap_image1			= caption_image_white($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
 			}else if ($mb_concept == "3"){
-				$cap_image1			= caption_image_yellow($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
+				$rs_caption_w3	= txt_position($mb_caption1, $mb_concept);
+				$cap_image1			= caption_image_yellow($mb_caption1, $mb_serial,"1",$rs_caption_w3,$caption_image1_h);
 			}else{
 				$rs_caption_w1	= txt_position($mb_caption1, $mb_concept);
 				$cap_image1			= caption_image($mb_caption1, $mb_serial,"1",$rs_caption_w1,$caption_image1_h);
@@ -473,7 +476,8 @@ switch ($_REQUEST['exec'])
 			if ($mb_concept == "2" || $mb_concept == "4"){
 				$cap_image1			= caption_image_white($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
 			}else if ($mb_concept == "3"){
-				$cap_image1			= caption_image_yellow($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
+				$rs_caption_w3	= txt_position($mb_caption1, $mb_concept);
+				$cap_image1			= caption_image_yellow($mb_caption1, $mb_serial,"1",$rs_caption_w3,$caption_image1_h);
 			}else{
 				$rs_caption_w1	= txt_position($mb_caption1, $mb_concept);
 				//print_r($caption1_len);
