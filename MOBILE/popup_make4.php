@@ -283,13 +283,13 @@
         <div class="share">
           <img src="images/popup/txt_sns.png" class="txt_sns"/>
           <div>
-            <a href="#" onclick="sns_share('kt','share');return false;"><img src="images/popup/btn_kt.png" /></a>
+            <!-- <a href="#" onclick="sns_share('kt','share');return false;"><img src="images/popup/btn_kt.png" /></a> -->
             <a href="#" onclick="sns_share('ks','share');return false;"><img src="images/popup/btn_ks.png" /></a>
             <a href="#" onclick="sns_share('fb','share');return false;"><img src="images/popup/btn_fb.png" /></a>
           </div>
         </div>
         <div class="btn_block">
-          <a href="index.php" class="img"><img src="images/popup/btn_onemore.png" /></a>
+          <a href="index.php" class="img"><img src="images/popup/btn_main.png" /></a>
         </div>
       </div><!--inner-->
     </div>
@@ -326,13 +326,13 @@
         <div class="share">
           <img src="images/popup/txt_sns.png" class="txt_sns"/>
           <div>
-            <a href="#" onclick="sns_share('kt','share');return false;"><img src="images/popup/btn_kt.png" /></a>
+            <!-- <a href="#" onclick="sns_share('kt','share');return false;"><img src="images/popup/btn_kt.png" /></a> -->
             <a href="#" onclick="sns_share('ks','share');return false;"><img src="images/popup/btn_ks.png" /></a>
             <a href="#" onclick="sns_share('fb','share');return false;"><img src="images/popup/btn_fb.png" /></a>
           </div>
         </div>
         <div class="btn_block">
-          <a href="index.php" class="img"><img src="images/popup/btn_onemore.png" /></a>
+          <a href="index.php" class="img"><img src="images/popup/btn_main.png" /></a>
         </div>
       </div><!--inner-->
     </div>
