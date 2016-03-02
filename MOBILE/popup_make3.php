@@ -67,7 +67,7 @@
                     <a href="#"><img src="images/popup/btn_up.png" id="up_img1" /></a>
                   </div>
                 </span>
-                <input id="fileupload" type="file" name="files[]" >
+                <input id="fileupload" type="file" name="files[]" accept="image/*" >
               </span>
             </div>
             <div class="text f_3_1" id="imsi_caption1">성장타이틀</div>
@@ -97,7 +97,7 @@
                     <a href="#"><img src="images/popup/btn_up.png" id="up_img2" /></a>
                   </div>
                 </span>
-                <input id="fileupload2" type="file" name="files[]" >
+                <input id="fileupload2" type="file" name="files[]" accept="image/*" >
               </span>
             </div>
             <div class="name f_3_2 imsi_caption_baby"></div>
@@ -128,7 +128,7 @@
                     <a href="#"><img src="images/popup/btn_up.png" id="up_img3" /></a>
                   </div>
                 </span>
-                <input id="fileupload3" type="file" name="files[]" >
+                <input id="fileupload3" type="file" name="files[]" accept="image/*" >
               </span>
             </div>
             <div class="name f_3_2 imsi_caption_baby"></div>
@@ -167,7 +167,7 @@
                     <a href="#"><img src="images/popup/btn_up.png" id="up_img4" /></a>
                   </div>
                 </span>
-                <input id="fileupload4" type="file" name="files[]" >
+                <input id="fileupload4" type="file" name="files[]" accept="image/*" >
               </span>
             </div>
             <div class="name f_3_4 imsi_caption_baby"></div>
@@ -198,7 +198,7 @@
                     <a href="#"><img src="images/popup/btn_up.png" id="up_img5" /></a>
                   </div>
                 </span>
-                <input id="fileupload5" type="file" name="files[]" >
+                <input id="fileupload5" type="file" name="files[]" accept="image/*" >
               </span>
             </div>
             <div class="p_img f_3_5">

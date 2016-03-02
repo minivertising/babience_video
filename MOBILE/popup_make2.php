@@ -67,7 +67,7 @@
                     <a href="#"><img src="images/popup/btn_up.png" id="up_img1" /></a>
                   </div>
                 </span>
-                <input id="fileupload" type="file" name="files[]" >
+                <input id="fileupload" type="file" name="files[]" accept="image/*" >
               </span>
             </div>
             <div class="text f_2_1" id="imsi_caption1">성장타이틀</div>
@@ -107,7 +107,7 @@
                     <a href="#"><img src="images/popup/btn_up.png" id="up_img2" /></a>
                   </div>
                 </span>
-                <input id="fileupload2" type="file" name="files[]" >
+                <input id="fileupload2" type="file" name="files[]" accept="image/*" >
               </span>
             </div>
             <div class="name f_2_3 imsi_caption_baby"></div>
@@ -139,7 +139,7 @@
                     <a href="#"><img src="images/popup/btn_up.png" id="up_img3" /></a>
                   </div>
                 </span>
-                <input id="fileupload3" type="file" name="files[]" >
+                <input id="fileupload3" type="file" name="files[]" accept="image/*" >
               </span>
             </div>
             <div class="name f_2_3 imsi_caption_baby"></div>
@@ -170,7 +170,7 @@
                     <a href="#"><img src="images/popup/btn_up.png" id="up_img4" /></a>
                   </div>
                 </span>
-                <input id="fileupload4" type="file" name="files[]" >
+                <input id="fileupload4" type="file" name="files[]" accept="image/*" >
               </span>
             </div>
             <div class="name f_2_4 imsi_caption_baby"></div>
@@ -209,7 +209,7 @@
                     <a href="#"><img src="images/popup/btn_up.png" id="up_img5" /></a>
                   </div>
                 </span>
-                <input id="fileupload5" type="file" name="files[]" >
+                <input id="fileupload5" type="file" name="files[]" accept="image/*" >
               </span>
             </div>
             <div class="p_img f_2_5" id="user_img5">예시 이미지</div><!--소비자 합성 이미지-->

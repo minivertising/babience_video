@@ -67,7 +67,7 @@
                     <a href="#"><img src="images/popup/btn_up.png" id="up_img1" /></a>
                   </div>
                 </span>
-                <input id="fileupload" type="file" name="files[]" >
+                <input id="fileupload" type="file" name="files[]" accept="image/*" >
               </span>
             </div>
             <!-- <div class="re_upload"><a href="#"><img src="images/popup/btn_reup.png" /></a></div> -->
@@ -107,7 +107,7 @@
                     <a href="#"><img src="images/popup/btn_up.png" id="up_img2" /></a>
                   </div>
                 </span>
-                <input id="fileupload2" type="file" name="files[]" >
+                <input id="fileupload2" type="file" name="files[]" accept="image/*" >
               </span>
             </div>
             <!--<div class="re_upload"><a href="#"><img src="images/popup/btn_reup.png" /></a></div>-->
@@ -185,7 +185,7 @@
                     <a href="#"><img src="images/popup/btn_up.png" id="up_img4" /></a>
                   </div>
                 </span>
-                <input id="fileupload4" type="file" name="files[]" >
+                <input id="fileupload4" type="file" name="files[]" accept="image/*" >
               </span>
             </div>
             <!--<div class="re_upload"><a href="#"><img src="images/popup/btn_reup.png" /></a></div>-->
@@ -224,7 +224,7 @@
                     <a href="#"><img src="images/popup/btn_up.png" id="up_img5" /></a>
                   </div>
                 </span>
-                <input id="fileupload5" type="file" name="files[]" >
+                <input id="fileupload5" type="file" name="files[]" accept="image/*" >
               </span>
             </div>
             <!--<div class="re_upload"><a href="#"><img src="images/popup/btn_reup.png" /></a></div>-->
