@@ -226,7 +226,7 @@
                         	<div class="text cap1_txt">
                             	"폭풍 성장의 비밀"
                             </div>
-						    <div class="bg img"><img src="images/popup/title_movie_c_1.png" /></div>
+						    <div class="bg img"><img src="images/popup/title_movie_c_4.png" /></div>
                         </div>
                         <div class="name" id="video_b_name">
                             	김서우<span><img src="images/popup/label_baby.png" width="35" /></span>
