@@ -1202,7 +1202,7 @@ function sns_share(media, flag)
 		  //container: '#kakao-link-btn',
 		  label: "혼자보기 아까운 우리아기 성장 영상 공개!",
 		  image: {
-			src: 'http://grow.babience-event.com/<?=$serial?>/medium/final_<?=$serial?>_1.jpg',
+			src: 'http://grow.babience-event.com/MOBILE/images/sns.jpg',
 			width: '800',
 			height: '600'
 		  },

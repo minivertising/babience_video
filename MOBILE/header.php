@@ -15,7 +15,7 @@
       <meta property="og:url" content="http://grow.babience-event.com/MOBILE/index.php?serial=<?=$serial2?>" />
       <meta property="og:image" content="http://grow.babience-event.com/files/<?=$serial2?>/medium/final_<?=$serial2?>_1.jpg" />
       <meta property="og:description" content="우리 아기의 성장 과정을 특별하게 담는 방법! 지금 베비언스에서 만들어 드립니다.">
-      <link rel="shortcut icon" type="image/x-icon" href="./images/fabicon.ico" />
+      <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico" />
       <title>베비언스 먹고 폭풍 성장!</title>
       <link href="css/style.css" rel="stylesheet" type="text/css">
       <!-- Generic page styles -->
