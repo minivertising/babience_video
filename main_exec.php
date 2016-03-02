@@ -576,5 +576,20 @@ switch ($_REQUEST['exec'])
 		}
 		echo $flag;
 	break;
+
+	case "insert_click_count" :
+		$c_position	= $_REQUEST['c_position'];
+		$media		= $_SESSION['ss_media'];
+
+		// 클릭 정보 입력
+		$click_query		= "INSERT INTO ".$_gl['click_info_table']."(click_media, click_position, click_date) values ('".$_SESSION['ss_media']."','".$c_position."','".date('Y-m-d H:i:s')."')";
+		$result		= mysqli_query($my_db, $click_query);
+
+		if ($result)
+			$flag	= "Y";
+		else
+			$flag	= "N";
+		echo $flag;
+	break;
 }
 ?>

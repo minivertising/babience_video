@@ -30,7 +30,7 @@
 </div>
 <div class="sec_banner">
   <div class="inner_sec_banner">
-    <div class="img"><a href="http://www.babience.com/m/bbchange/event.jsp" target="_blank"><img src="images/banner_change.jpg" /></a></div>
+    <div class="img"><a href="http://www.babience.com/m/bbchange/event.jsp" onclick="count_media('bbchange');return false;" target="_blank"><img src="images/banner_change.jpg" /></a></div>
   </div>
 </div>
 <div class="sec_footer">
@@ -74,6 +74,19 @@ function show_notice()
 		$("#notice_div").hide();
 		notice_flag	= 0;
 	}
+}
+
+function count_media(param)
+{
+	$.ajax({
+		type:"POST",
+		data:{
+			"exec"				: "insert_click_count",
+			"c_position"		: param
+		},
+		url: "../main_exec.php"
+	});
+
 }
 
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

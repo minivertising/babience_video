@@ -5205,7 +5205,87 @@ function txt_position($txt, $concept)
 			$rs_txt = "112";
 		else if ($caption1_len == 40)
 			$rs_txt = "106";
-
+	}else if ($concept == "3"){
+		if ($caption1_len == 1)
+			$rs_txt = "357";
+		else if ($caption1_len == 2)
+			$rs_txt = "347";
+		else if ($caption1_len == 3)
+			$rs_txt = "342";
+		else if ($caption1_len == 4)
+			$rs_txt = "337";
+		else if ($caption1_len == 5)
+			$rs_txt = "332";
+		else if ($caption1_len == 6)
+			$rs_txt = "327";
+		else if ($caption1_len == 7)
+			$rs_txt = "320";
+		else if ($caption1_len == 8)
+			$rs_txt = "312";
+		else if ($caption1_len == 9)
+			$rs_txt = "304";
+		else if ($caption1_len == 10)
+			$rs_txt = "295";
+		else if ($caption1_len == 11)
+			$rs_txt = "287";
+		else if ($caption1_len == 12)
+			$rs_txt = "278";
+		else if ($caption1_len == 13)
+			$rs_txt = "271";
+		else if ($caption1_len == 14)
+			$rs_txt = "264";
+		else if ($caption1_len == 15)
+			$rs_txt = "257";
+		else if ($caption1_len == 16)
+			$rs_txt = "250";
+		else if ($caption1_len == 17)
+			$rs_txt = "242";
+		else if ($caption1_len == 18)
+			$rs_txt = "235";
+		else if ($caption1_len == 19)
+			$rs_txt = "231";
+		else if ($caption1_len == 20)
+			$rs_txt = "228";
+		else if ($caption1_len == 21)
+			$rs_txt = "224";
+		else if ($caption1_len == 22)
+			$rs_txt = "220";
+		else if ($caption1_len == 23)
+			$rs_txt = "213";
+		else if ($caption1_len == 24)
+			$rs_txt = "207";
+		else if ($caption1_len == 25)
+			$rs_txt = "201";
+		else if ($caption1_len == 26)
+			$rs_txt = "195";
+		else if ($caption1_len == 27)
+			$rs_txt = "189";
+		else if ($caption1_len == 28)
+			$rs_txt = "182";
+		else if ($caption1_len == 29)
+			$rs_txt = "176";
+		else if ($caption1_len == 30)
+			$rs_txt = "170";
+		else if ($caption1_len == 31)
+			$rs_txt = "164";
+		else if ($caption1_len == 32)
+			$rs_txt = "158";
+		else if ($caption1_len == 33)
+			$rs_txt = "151";
+		else if ($caption1_len == 34)
+			$rs_txt = "145";
+		else if ($caption1_len == 35)
+			$rs_txt = "138";
+		else if ($caption1_len == 36)
+			$rs_txt = "132";
+		else if ($caption1_len == 37)
+			$rs_txt = "125";
+		else if ($caption1_len == 38)
+			$rs_txt = "119";
+		else if ($caption1_len == 39)
+			$rs_txt = "112";
+		else if ($caption1_len == 40)
+			$rs_txt = "106";
 	}
 	return $rs_txt;
 }
