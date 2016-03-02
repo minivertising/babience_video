@@ -319,6 +319,11 @@
           <span id="sns_b_name">김서우</span><span><img src="images/popup/label_baby.png" width="35" /></span>
           </div>
         </div>
+        <!-- 태그 추가 0302 -->
+        <div class="img">
+          <a href="http://grow.babience-event.com/MOBILE/coupon_page.php?serial=<?=$serial?>" target="_blank"><img src="images/popup/btn_go_mybaby.png" /></a>
+        </div>
+        <!-- end 태그 추가 0302 -->
       </div><!--inner-->
     </div>  
     <div class="block_content ending_sns">
