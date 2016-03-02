@@ -146,7 +146,7 @@
                     <a href="#"><img src="images/popup/btn_up.png" id="up_img3" /></a>
                   </div>
                 </span>
-                <input id="fileupload3" type="file" name="files[]" accept="image/*;capture=camera" >
+                <input id="fileupload3" type="file" name="files[]" accept="image/*">
               </span>
             </div>
             <!--<div class="re_upload"><a href="#"><img src="images/popup/btn_reup.png" /></a></div>-->
