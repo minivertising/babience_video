@@ -974,8 +974,8 @@ $(function () {
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
 		//del_fileview();
-		$("#user_img4").html("");
 		user_ex_img4	= $("#user_ex_img4").height();
+		$("#user_img4").html("");
         data.context = $('<div/>').appendTo('#user_img4');
 		$("#up_img_div4").attr("class","re_upload");
 		$("#up_img4").attr("src","images/popup/btn_reup.png");
