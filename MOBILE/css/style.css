@@ -997,6 +997,27 @@ html.gnbOpen .mobile_menu {
 .end_gift{
 	background:#48c5e9;
 }
+.share_url{
+	text-align:center;
+	margin:0 auto;
+	width:96%;
+}
+.share_url .url{
+	border:1px solid #8abdc4;
+	background:#c7eef3;
+	font-size:13px;
+	padding:10px;
+	color:#666;
+}
+.share_url .url a{
+	color:#666;
+	text-decoration:none;
+}
+.share_url .txt{
+	padding:10px 0 15px;
+	font-size:13px;
+	color:#333;
+}
 
 .blank{
 	width:0;
