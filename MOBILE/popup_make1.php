@@ -630,7 +630,7 @@ function next_page()
 		$(".serial").html("<?=$serial?>");
 		$("#end_coupon_div").show();
 	}else{
-		$("#sns_b_name").html(mb_baby_name);
+		$("#sns_b_name").html($("#mb_baby_name").val());
 		$("#end_sns_div").show();
 	}
 }
