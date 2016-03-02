@@ -85,8 +85,8 @@ switch ($_REQUEST['exec'])
 			$caption_image2_w	= "120;";
 			$caption_image2_h	= "440;";
 		}else if ($mb_concept == "2"){
-			$caption_image1_w	= "40;";
-			$caption_image1_h	= "345;";
+			$caption_image1_w	= "38;";
+			$caption_image1_h	= "325;";
 			$caption_image2_w	= "40;";
 			$caption_image2_h	= "440;";
 			$caption_image2_name_w	= "40;";
