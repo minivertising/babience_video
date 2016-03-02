@@ -650,9 +650,9 @@ body{
 
 
 .popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_3_2{
-	width:51%;
-	right:4%;
-	top:20%;
+	width:100%;
+	/*right:4%;
+	top:20%;*/
 	
 }
 .popup_wrap .p_mid.p_position .block_content.make .pics .inner_pics .p_img.f_3_2 img{
