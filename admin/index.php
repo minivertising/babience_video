@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>더페이스샵 - 모델지원</title>
+    <title>베비언스 - 성장영상</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -34,7 +34,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-6">
-            <h1 class="page-header">더페이스샵 - 모델지원</h1>
+            <h1 class="page-header">베비언스 - 성장영상</h1>
             <ol class="breadcrumb">
               <form name="login_frm" method="post" action="admin_exec.php">
                 <input type="hidden" name="exec" value="login">

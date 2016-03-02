@@ -1237,7 +1237,7 @@ function sns_share(media, flag)
 		$.ajax({
 			type   : "POST",
 			async  : false,
-			url    : "../main_exec.belif",
+			url    : "../main_exec.php",
 			data:{
 				"exec" : "insert_share_info",
 				"sns_media" : media,
@@ -1264,7 +1264,7 @@ function sns_share(media, flag)
 		$.ajax({
 			type   : "POST",
 			async  : false,
-			url    : "../main_exec.belif",
+			url    : "../main_exec.php",
 			data:{
 				"exec" : "insert_share_info",
 				"sns_media" : media,
@@ -1279,7 +1279,7 @@ function sns_share(media, flag)
 		$.ajax({
 			type   : "POST",
 			async  : false,
-			url    : "../main_exec.belif",
+			url    : "../main_exec.php",
 			data:{
 				"exec" : "insert_share_info",
 				"sns_media" : media,

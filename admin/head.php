@@ -14,7 +14,7 @@ if (isset($_SESSION['ss_mb_name']) == false)
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>더페이스샵 - 모델지원</title>
+    <title>베비언스 - 성장영상</title>
 	<!-- jQuery Version 1.11.0 -->
 	<script src="js/jquery-1.11.0.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
@@ -76,9 +76,9 @@ if (isset($_SESSION['ss_mb_name']) == false)
                   <li>
                     <a href="daily_share_count.php">일자별 SNS 공유 수</a>
                   </li>
-                    <li>
+                    <!-- <li>
                     <a href="daily_coupon_count.php">일자별 쿠폰 사용자 수</a>
-                  </li>
+                  </li> -->
                     <!-- <li>
                     <a href="daily_event_count2.php">일자별 투표 이벤트 참여자 수</a>
                   </li>
@@ -102,9 +102,9 @@ if (isset($_SESSION['ss_mb_name']) == false)
               <li>
                 <a href="media_count.php"><i class="fa fa-fw fa-edit"></i> 매체별 참여자 수</a>
               </li>
-              <!-- <li>
+              <li>
                 <a href="share_media_count.php"><i class="fa fa-fw fa-bar-chart-o"></i> 공유 정보</a>
-              </li> -->
+              </li>
             </ul>
           </div>
         <!-- /.navbar-collapse -->
