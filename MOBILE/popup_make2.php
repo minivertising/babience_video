@@ -782,6 +782,7 @@ $(function () {
 				{
 					if (uimg2_h > user_ex_img2_h)
 					{
+						$("div#user_img2 > div > p > canvas").css("height",user_ex_img2+"px");
 						$("div#user_img2 > div > p > canvas").css("width","80%");
 						$("div#user_img2 > div > p > canvas").css("padding-left","10%");
 					}else{
@@ -900,6 +901,7 @@ $(function () {
 				{
 					if (uimg3_h > user_ex_img3_h)
 					{
+						$("div#user_img3 > div > p > canvas").css("height",user_ex_img3+"px");
 						$("div#user_img3 > div > p > canvas").css("width","80%");
 						$("div#user_img3 > div > p > canvas").css("padding-left","10%");
 					}else{
@@ -1125,6 +1127,7 @@ $(function () {
 				{
 					if (uimg5_h > user_ex_img5_h)
 					{
+						$("div#user_img5 > div > p > canvas").css("height",user_ex_img5+"px");
 						$("div#user_img5 > div > p > canvas").css("width","80%");
 						$("div#user_img5 > div > p > canvas").css("padding-left","10%");
 					}else{
