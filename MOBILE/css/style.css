@@ -950,7 +950,9 @@ body{
 	width:13%;
 }
 .popup_wrap .p_mid.p_position .block_content.ending_sns .btn_block{
-	padding-top:0;
+	padding-top:15px;
+	margin-top:10px;
+	border-top:1px solid #8ec3cb;
 }
 
 /*팝업별 사이즈 조정*/
