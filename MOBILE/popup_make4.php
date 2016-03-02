@@ -320,8 +320,14 @@
           </div>
         </div>
         <!-- 태그 추가 0302 -->
-        <div class="img">
+        <!-- <div class="img">
           <a href="http://grow.babience-event.com/MOBILE/coupon_page.php?serial=<?=$serial?>" target="_blank"><img src="images/popup/btn_go_mybaby.png" /></a>
+        </div> -->
+        <!-- end 태그 추가 0302 -->
+        <!-- 태그 추가 0302 -->
+        <div class="share_url">
+          <div class="url"><a href="http://grow.babience-event.com/MOBILE/coupon_page.php?serial=<?=$serial?>" onclick="return false;">http://grow.babience-event.com/MOBILE/coupon_page.php?serial=<?=$serial?></a></div>
+          <div class="txt">URL을 길게 누르시면 복사하실 수 있습니다.</div>
         </div>
         <!-- end 태그 추가 0302 -->
       </div><!--inner-->
