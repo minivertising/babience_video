@@ -30,7 +30,7 @@
 </div>
 <div class="sec_banner">
   <div class="inner_sec_banner">
-    <div class="img"><a href="#"><img src="images/banner_change.jpg" /></a></div>
+    <div class="img"><a href="http://www.babience.com/m/bbchange/event.jsp" target="_blank"><img src="images/banner_change.jpg" /></a></div>
   </div>
 </div>
 <div class="sec_footer">
