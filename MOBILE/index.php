@@ -4,7 +4,7 @@
 <body>
 <div class="sec_top">
   <div class="inner_sec_top">
-    <a href="#"><img src="images/logo.png" width="80" /></a>
+    <a href="http://www.babience.com/m/index.jsp" target="_blank"><img src="images/logo.png" width="80" /></a>
   </div>
 </div>
 <div class="sec_top_visual">
