@@ -108,6 +108,7 @@
 <script type="text/javascript">
 
 $(document).ready(function(){
+	Kakao.init('d58dc6bc022da9c054b20aff9c23e0f9');
 	$("#video_player").width($(".youtube").width());
 });
 
