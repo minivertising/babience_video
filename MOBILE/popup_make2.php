@@ -251,7 +251,7 @@
                             	김서우<span><img src="images/popup/label_baby.png" width="35" /></span>
                             </div>
                         <div class="youtube">
-                        	<video src="../files/out.mp4" controls preload="auto" id="video_player"></video>
+                        	<video src="../files/out.mp4" controls preload="auto" id="video_player" poster="scene/concept_2_1.jpg"></video>
                         </div>
                     </div>
 <?
