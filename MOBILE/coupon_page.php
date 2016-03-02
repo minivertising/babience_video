@@ -133,12 +133,12 @@ function sns_share(media, flag)
 		//Kakao.Link.createTalkLinkButton({
 		Kakao.Link.sendTalkLink({
 		  //container: '#kakao-link-btn',
-		  label: "혼자보기 아까운 우리아기 성장 영상 공개!",
-		  image: {
-			src: 'http://grow.babience-event.com/MOBILE/images/sns.jpg',
-			width: '1200',
-			height: '630'
-		  },
+		  label: "혼자보기 아까운 우리아기 성장 영상 공개!\r\nhttp://grow.babience-event.com/MOBILE/coupon_page.php?serial=<?=$serial?>",
+		  //image: {
+			//src: 'http://grow.babience-event.com/MOBILE/images/sns.jpg',
+			//width: '1200',
+			//height: '630'
+		  //},
 		  webButton: {
 			text: '[베비언스] 베비언스 먹고 폭풍 성장!',
 			url: 'http://grow.babience-event.com/MOBILE/index.php?serial=<?=$serialnumber?>' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
