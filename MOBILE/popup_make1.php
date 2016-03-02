@@ -624,7 +624,7 @@ setTimeout(function() {
 			//console.log(response);
 		}
 	});
-	}, 5000); // 3000ms(3초)가 경과하면 이 함수가 실행됩니다.
+	}, 8000); // 3000ms(3초)가 경과하면 이 함수가 실행됩니다.
 }
 
 function prev_page()
