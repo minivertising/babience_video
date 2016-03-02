@@ -121,12 +121,14 @@ switch ($_REQUEST['exec'])
 			$new_image1			= merge_image($img_name1, $mb_serial,"1", $mb_concept);
 			$f_img_name1			= $mb_serial."_1.jpg";
 			$new_image1_1			= merge_image2($f_img_name1, $mb_serial,"1", $mb_concept);
-			if ($mb_concept == "2" || $mb_concept == "4")
+			if ($mb_concept == "2" || $mb_concept == "4"){
 				$cap_image1			= caption_image_white($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
-			else if ($mb_concept == "3")
+			}else if ($mb_concept == "3"){
 				$cap_image1			= caption_image_yellow($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
-			else
-				$cap_image1			= caption_image($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
+			}else{
+				$rs_caption_w1	= txt_position($mb_caption1, $mb_concept);
+				$cap_image1			= caption_image($mb_caption1, $mb_serial,"1",$rs_caption_w1,$caption_image1_h);
+			}
 		}
 
 		if ($img_name2 != "")
@@ -147,7 +149,8 @@ switch ($_REQUEST['exec'])
 				$mb_name_age_caption	= $mb_baby_name." (".$mb_baby_age.")";
 				$cap_image2_2			= caption_image2_white($mb_name_age_caption, $mb_serial,"2",$caption_image2_name_w,$caption_image2_name_h);
 			}else{
-				$cap_image2			= caption_image($mb_caption2, $mb_serial,"2",$caption_image2_w,$caption_image2_h);
+				$rs_caption_w1	= txt_position($mb_caption2, $mb_concept);
+				$cap_image2			= caption_image($mb_caption2, $mb_serial,"2",$rs_caption_w1,$caption_image2_h);
 			}
 			/*
 			if ($mb_concept == "2" || $mb_concept == "3")
@@ -175,7 +178,8 @@ switch ($_REQUEST['exec'])
 				$mb_name_age_caption	= $mb_baby_name." (".$mb_baby_age.")";
 				$cap_image2_2			= caption_image2_white($mb_name_age_caption, $mb_serial,"3",$caption_image2_name_w,$caption_image2_name_h);
 			}else{
-				$cap_image3			= caption_image($mb_caption3, $mb_serial,"3",$caption_image2_w,$caption_image2_h);
+				$rs_caption_w1	= txt_position($mb_caption3, $mb_concept);
+				$cap_image3			= caption_image($mb_caption3, $mb_serial,"3",$rs_caption_w1,$caption_image2_h);
 			}
 		}
 
@@ -196,7 +200,8 @@ switch ($_REQUEST['exec'])
 				$mb_name_age_caption	= $mb_baby_name." (".$mb_baby_age.")";
 				$cap_image2_2			= caption_image2_white($mb_name_age_caption, $mb_serial,"4",$caption_image2_name_w,$caption_image2_name_h);
 			}else{
-				$cap_image4			= caption_image($mb_caption4, $mb_serial,"4",$caption_image2_w,$caption_image2_h);
+				$rs_caption_w1	= txt_position($mb_caption4, $mb_concept);
+				$cap_image4			= caption_image($mb_caption4, $mb_serial,"4",$rs_caption_w1,$caption_image2_h);
 			}
 		}
 
@@ -249,12 +254,14 @@ switch ($_REQUEST['exec'])
 			$new_image1			= merge_image($img_name1, $mb_serial,"1", $mb_concept);
 			$f_img_name1			= $mb_serial."_1.jpg";
 			$new_image1_1			= merge_image2($f_img_name1, $mb_serial,"1", $mb_concept);
-			if ($mb_concept == "2" || $mb_concept == "4")
+			if ($mb_concept == "2" || $mb_concept == "4"){
 				$cap_image1			= caption_image_white($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
-			else if ($mb_concept == "3")
+			}else if ($mb_concept == "3"){
 				$cap_image1			= caption_image_yellow($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
-			else
-				$cap_image1			= caption_image($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
+			}else{
+				$rs_caption_w1	= txt_position($mb_caption1, $mb_concept);
+				$cap_image1			= caption_image($mb_caption1, $mb_serial,"1",$rs_caption_w1,$caption_image1_h);
+			}
 		}
 
 		if ($img_name2 != "")
@@ -275,7 +282,8 @@ switch ($_REQUEST['exec'])
 				$mb_name_age_caption	= $mb_baby_name." (".$mb_baby_age.")";
 				$cap_image2_2			= caption_image2_white($mb_name_age_caption, $mb_serial,"2",$caption_image2_name_w,$caption_image2_name_h);
 			}else{
-				$cap_image2			= caption_image($mb_caption2, $mb_serial,"2",$caption_image2_w,$caption_image2_h);
+				$rs_caption_w1	= txt_position($mb_caption2, $mb_concept);
+				$cap_image2			= caption_image($mb_caption2, $mb_serial,"2",$rs_caption_w1,$caption_image2_h);
 			}
 			/*
 			if ($mb_concept == "2" || $mb_concept == "3")
@@ -303,7 +311,8 @@ switch ($_REQUEST['exec'])
 				$mb_name_age_caption	= $mb_baby_name." (".$mb_baby_age.")";
 				$cap_image2_2			= caption_image2_white($mb_name_age_caption, $mb_serial,"3",$caption_image2_name_w,$caption_image2_name_h);
 			}else{
-				$cap_image3			= caption_image($mb_caption3, $mb_serial,"3",$caption_image2_w,$caption_image2_h);
+				$rs_caption_w1	= txt_position($mb_caption3, $mb_concept);
+				$cap_image3			= caption_image($mb_caption3, $mb_serial,"3",$rs_caption_w1,$caption_image2_h);
 			}
 		}
 
@@ -353,12 +362,14 @@ switch ($_REQUEST['exec'])
 			$new_image1			= merge_image($img_name1, $mb_serial,"1", $mb_concept);
 			$f_img_name1			= $mb_serial."_1.jpg";
 			$new_image1_1			= merge_image2($f_img_name1, $mb_serial,"1", $mb_concept);
-			if ($mb_concept == "2" || $mb_concept == "4")
+			if ($mb_concept == "2" || $mb_concept == "4"){
 				$cap_image1			= caption_image_white($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
-			else if ($mb_concept == "3")
+			}else if ($mb_concept == "3"){
 				$cap_image1			= caption_image_yellow($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
-			else
-				$cap_image1			= caption_image($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
+			}else{
+				$rs_caption_w1	= txt_position($mb_caption1, $mb_concept);
+				$cap_image1			= caption_image($mb_caption1, $mb_serial,"1",$rs_caption_w1,$caption_image1_h);
+			}
 		}
 
 		if ($img_name2 != "")
@@ -379,7 +390,8 @@ switch ($_REQUEST['exec'])
 				$mb_name_age_caption	= $mb_baby_name." (".$mb_baby_age.")";
 				$cap_image2_2			= caption_image2_white($mb_name_age_caption, $mb_serial,"2",$caption_image2_name_w,$caption_image2_name_h);
 			}else{
-				$cap_image2			= caption_image($mb_caption2, $mb_serial,"2",$caption_image2_w,$caption_image2_h);
+				$rs_caption_w1	= txt_position($mb_caption2, $mb_concept);
+				$cap_image2			= caption_image($mb_caption2, $mb_serial,"2",$rs_caption_w1,$caption_image2_h);
 			}
 			/*
 			if ($mb_concept == "2" || $mb_concept == "3")
@@ -407,7 +419,8 @@ switch ($_REQUEST['exec'])
 				$mb_name_age_caption	= $mb_baby_name." (".$mb_baby_age.")";
 				$cap_image2_2			= caption_image2_white($mb_name_age_caption, $mb_serial,"4",$caption_image2_name_w,$caption_image2_name_h);
 			}else{
-				$cap_image4			= caption_image($mb_caption4, $mb_serial,"4",$caption_image2_w,$caption_image2_h);
+				$rs_caption_w1	= txt_position($mb_caption4, $mb_concept);
+				$cap_image4			= caption_image($mb_caption4, $mb_serial,"4",$rs_caption_w1,$caption_image2_h);
 			}
 		}
 
@@ -457,12 +470,15 @@ switch ($_REQUEST['exec'])
 			$new_image1			= merge_image($img_name1, $mb_serial,"1", $mb_concept);
 			$f_img_name1			= $mb_serial."_1.jpg";
 			$new_image1_1			= merge_image2($f_img_name1, $mb_serial,"1", $mb_concept);
-			if ($mb_concept == "2" || $mb_concept == "4")
+			if ($mb_concept == "2" || $mb_concept == "4"){
 				$cap_image1			= caption_image_white($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
-			else if ($mb_concept == "3")
+			}else if ($mb_concept == "3"){
 				$cap_image1			= caption_image_yellow($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
-			else
-				$cap_image1			= caption_image($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
+			}else{
+				$rs_caption_w1	= txt_position($mb_caption1, $mb_concept);
+				//print_r($caption1_len);
+				$cap_image1			= caption_image($mb_caption1, $mb_serial,"1",$rs_caption_w1,$caption_image1_h);
+			}
 		}
 
 		if ($img_name2 != "")
@@ -483,7 +499,8 @@ switch ($_REQUEST['exec'])
 				$mb_name_age_caption	= $mb_baby_name." (".$mb_baby_age.")";
 				$cap_image2_2			= caption_image2_white($mb_name_age_caption, $mb_serial,"2",$caption_image2_name_w,$caption_image2_name_h);
 			}else{
-				$cap_image2			= caption_image($mb_caption2, $mb_serial,"2",$caption_image2_w,$caption_image2_h);
+				$rs_caption_w2	= txt_position($mb_caption2, $mb_concept);
+				$cap_image2			= caption_image($mb_caption2, $mb_serial,"2",$rs_caption_w2,$caption_image2_h);
 			}
 			/*
 			if ($mb_concept == "2" || $mb_concept == "3")
