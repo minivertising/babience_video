@@ -45,7 +45,7 @@
 		$total_pc_cnt = 0;    
 		while ($media_daily_data = mysqli_fetch_array($media_res))
 		{
-			$media_name[]	= $media_daily_data['mb_media'];
+			$media_name[]	= $media_daily_data['click_media'];
 			$media_cnt[]	= $media_daily_data['media_cnt'];
 			$mobile_query	= "SELECT * FROM ".$_gl['click_info_table']." WHERE 1 AND click_media='".$media_daily_data['mb_media']."'";
 			$mobile_count	= mysqli_num_rows(mysqli_query($my_db, $mobile_query));
