@@ -76,9 +76,9 @@ if (isset($_SESSION['ss_mb_name']) == false)
                   <li>
                     <a href="daily_share_count.php">일자별 SNS 공유 수</a>
                   </li>
-                    <!-- <li>
-                    <a href="daily_coupon_count.php">일자별 쿠폰 사용자 수</a>
-                  </li> -->
+                   <li>
+                    <a href="daily_click_count.php">일자별 분유체인지 배너 클릭</a>
+                  </li>
                     <!-- <li>
                     <a href="daily_event_count2.php">일자별 투표 이벤트 참여자 수</a>
                   </li>
