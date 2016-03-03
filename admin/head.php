@@ -93,9 +93,9 @@ if (isset($_SESSION['ss_mb_name']) == false)
               <li>
                 <a href="entry_list.php"><i class="fa fa-fw fa-table"></i> 이벤트 참여자 목록</a>
               </li>
-              <!-- <li>
-                <a href="comment_list.php"><i class="fa fa-fw fa-table"></i> 코멘트 목록</a>
-              </li> -->
+              <li>
+                <a href="click_count.php"><i class="fa fa-fw fa-table"></i>분유체인지 배너클릭</a>
+              </li>
                <!-- <li>
                 <a href="winner_count.php"><i class="fa fa-fw fa-table"></i> 경품별 당첨자 수</a>
               </li> -->
