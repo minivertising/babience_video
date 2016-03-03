@@ -288,7 +288,7 @@
             <img src="images/popup/txt_go_home.png" />
           </div>
           <div class="btn_block">
-            <a href="http://www.babience.com/m/index.jsp" class="img"><img src="images/popup/btn_home.png" /></a>
+            <a href="http://www.babience.com/m/bbgrowth_coupon/event.jsp" class="img" target="_blank"><img src="images/popup/btn_home.png" /></a>
           </div>
         </div>
       </div><!--inner-->

@@ -214,7 +214,7 @@
 아래 쿠폰번호를 베비언스 홈페이지에 입력하고 배송비까지 완전무료 체험팩을 받으세요!
  
 ▶ 베비언스 홈페이지
-http://www.babience.com/m/mypage/coupon.jsp
+http://www.babience.com/m/bbgrowth_coupon/event.jsp
 
 ▶ 체험팩 완전무료 쿠폰번호
 ".$serial."
