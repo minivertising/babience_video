@@ -219,9 +219,6 @@ http://www.babience.com/m/bbgrowth_coupon/event.jsp
 ▶ 체험팩 완전무료 쿠폰번호
 ".$serial."
 
-- 할인쿠폰 > 나의 쿠폰 등록하기 메뉴에서 쿠폰을 등록해주세요
-- 액상분유 체험팩은 한 ID당 1개만 제공됩니다
-
 ↓↓
 우리아기 영상 페이지
 ".$s_url."
