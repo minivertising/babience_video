@@ -1,5 +1,6 @@
 <?
 	include_once   "./header.php";
+	BR_InsertTrackingInfo($media, $gubun);
 ?>
 <body>
 <div class="sec_top">

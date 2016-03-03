@@ -9,7 +9,7 @@
 	$_SESSION['ss_media'] = $media;
 	$_SESSION['ss_testurl'] = $testurl;
 
-	BR_InsertTrackingInfo($media, $gubun);
+	//BR_InsertTrackingInfo($media, $gubun);
 
 	if($gubun == "MOBILE")
 	{
