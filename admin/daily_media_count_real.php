@@ -61,7 +61,7 @@
 		}
 		$rowspan_cnt =  count($media_name);
 		$i = 0;
-		@foreach($media_name as $key => $val)
+		foreach($media_name as $key => $val)
 		{
 ?>
                   <tr>
