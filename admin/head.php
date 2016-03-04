@@ -88,6 +88,9 @@ if (isset($_SESSION['ss_mb_name']) == false)
                   <li>
                     <a href="daily_media_count.php">일자별 매체당 참여자 수</a>
                   </li>
+                  <li>
+                    <a href="daily_media_count_real.php">일자별 매체당 참여자 수(영상완료)</a>
+                  </li>
                 </ul>
               </li>
               <li>
