@@ -1001,6 +1001,17 @@ html.gnbOpen .mobile_menu {
 }
 */
 
+
+.btn_sample{
+	text-align:center;
+	width:100%;
+}
+.btn_sample a{
+}
+.btn_sample img{
+	width:49%;
+}
+
 .end_gift{
 	background:#48c5e9;
 }
