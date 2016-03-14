@@ -69,9 +69,9 @@ body{
 	background:#263264;
 	position:relative;
 }
-.sec_btn .btn_make{
+.sec_top_visual .btn_make{
 	position:absolute;
-	top:20%;
+	top:55%;
 }
 .sec_gift{
 	background:#48c5e9;
