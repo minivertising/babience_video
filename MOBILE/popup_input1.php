@@ -2,6 +2,8 @@
 	include_once   "./header.php";
 
 	$serial	= BC_getSerial();
+
+	BR_InsertEventInfo($media, $gubun);
 ?>
 <body>
 <div class="popup_wrap">

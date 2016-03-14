@@ -9,6 +9,15 @@
 		$result		= mysqli_query($my_db, $query);
 	}
 
+	function BR_InsertEventInfo($media, $gubun)
+	{
+		global $_gl;
+		global $my_db;
+
+		$query		= "INSERT INTO ".$_gl['event_info_table']."(tracking_media, tracking_refferer, tracking_ipaddr, tracking_date, tracking_gubun) values('".$_SESSION['ss_media']."','".$_SERVER['HTTP_REFERER']."','".$_SERVER['REMOTE_ADDR']."',now(),'".$gubun."')";
+		$result		= mysqli_query($my_db, $query);
+	}
+
 	function BA_winner_draw($mb_phone)
 	{
 		global $_gl;
