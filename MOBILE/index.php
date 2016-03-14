@@ -8,9 +8,15 @@
     <a href="http://www.babience.com/m/index.jsp" target="_blank"><img src="images/logo.png" width="80" /></a>
   </div>
 </div>
-<div class="sec_top_visual">
+<!-- <div class="sec_top_visual">
   <div class="inner_sec_top img">
     <img src="images/img_sec_top_visual.jpg" />
+  </div>
+</div> -->
+<div class="sec_top_visual">
+  <div class="inner_sec_top img">
+    <div class="img btn_make"><a href="popup_input1.php"><img src="images/btn_make.png" /></a></div>
+    <div class="img"><img src="images/img_sec_top_visual.jpg" /></div>
   </div>
 </div>
 <div class="sec_movie">
@@ -18,12 +24,12 @@
     <iframe allowfullscreen="1" src="<?=$_gl['youtube_url']?>" frameborder="0" id="ytplayer" class="ytplayer"></iframe>
   </div>
 </div>
-<div class="sec_btn">
+<!-- <div class="sec_btn">
   <div class="inner_sec_btn">
     <div class="img btn_make"><a href="popup_input1.php"><img src="images/btn_make.png" /></a></div>
     <div class="img"><img src="images/bg_btn.jpg" /></div>
   </div>
-</div>
+</div> -->
 <div class="sec_gift">
   <div class="inner_sec_gift">
     <div class="img"><img src="images/img_gift.jpg" /></div>
