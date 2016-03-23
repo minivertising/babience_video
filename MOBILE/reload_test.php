@@ -15,7 +15,7 @@
 </html>
 <script type="text/javascript">
 $(document).ready(function() {
-	setInterval("reload_page()", 5000);
+	//setInterval("reload_page()", 5000);
 });
 function reload_page()
 {
