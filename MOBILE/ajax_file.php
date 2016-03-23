@@ -1,7 +1,7 @@
 <?
 //$file = $_REQUEST['file_dir'];
 //send_attachment('test111.jpg', $_REQUEST['file_dir']);
-$rs	= send_attachment('test111.jpg', "http://grow.babience-event.com/MOBILE.sns.jpg");
+$rs	= send_attachment('test111.jpg', "babience_video/MOBILE/images/sns.jpg");
 print_r($rs);
 //print_r($_REQUEST['file_dir']);
 /**
