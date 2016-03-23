@@ -21,9 +21,7 @@
                             </div>
                         </div>
                         <div class="youtube">
-                        	<video src="../files/BEB54EC761/out.mp4" controls autoplay loop muted preload="auto" poster="demo.jpg" id="video_player">
-
-</video>
+                        	<video src="../files/BEB54EC761/out.mp4" controls autoplay loop muted preload="auto" poster="demo.jpg" id="video_player"></video>
                         </div>
                     </div>
                     <div class="btn_block img">
