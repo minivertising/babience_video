@@ -1,7 +1,3 @@
-<?
-	include_once   "./header.php";
-?>
-
 <!doctype html>
 <html lang="en">
  <head>
@@ -10,24 +6,19 @@
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
+      <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
   <title>Document</title>
  </head>
  <body>
-  <a href="./images/sns.jpg" onclick="image_down_test();return false;">다운로드</a>
+  1111
  </body>
 </html>
 <script type="text/javascript">
-function image_down_test()
+$(document).ready(function() {
+	setInterval("reload_page()", 5000);
+});
+function reload_page()
 {
-	$.ajax({
-		type:"POST",
-		data:{
-			"file_dir"		: "./images/sns.jpg"
-		},
-		url: "./ajax_file.php",
-		success: function(response){
-			alert(response);
-		}
-	});
+	location.reload();
 }
 </script>
