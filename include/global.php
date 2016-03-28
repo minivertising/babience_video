@@ -1,5 +1,6 @@
 <?
 	$_gl['member_info_table']		= "member_info";			//이벤트 참여자 정보 테이블
+	$_gl['member_info2_table']		= "member_info2";			//이벤트 참여자 정보 테이블
 	$_gl['tracking_info_table']		= "tracking_info";			//유입경로 테이블
 	$_gl['event_info_table']		= "event_info";			//이벤트 참여버튼 테이블
 	$_gl['share_info_table']			= "share_info";				//공유정보 테이블
