@@ -638,11 +638,12 @@ $(function () {
 					var re_final1_h		= (user_ex_img1_h - re_userimg1_h) /2;
 					if (uimg1_h > re_userimg1_h)
 					{
-						$("td#user_img1 > div > p > canvas").css("width","70%");
+						$("td#user_img1 > div > p > canvas").css("width","100%");
 					}else{
 						$("td#user_img1 > div > p > canvas").css("width","100%");
 					}
 
+					$("td#user_img1 > div > p > canvas").css("height",re_userimg1_h+"px");
 					$("td#user_img1 > div > p > canvas").css("padding-top",re_final1_h+"px");
 				}else{
 					

@@ -380,19 +380,9 @@ if ($concept == "1")
 {
 	$result = thumnail_test1_2_1($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
 }else if ($concept == "2"){
-	if ($p_num == "1")
-		$result = thumnail_test2_1_1($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
-	else if ($p_num == "2" || $p_num == "3" || $p_num == "5")
-		$result = thumnail_test2_2_1($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
-	else if ($p_num == "4")
-		$result = thumnail_test2_4_1($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
+	$result = thumnail_test2_2_1($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
 }else if ($concept == "3"){
-	if ($p_num == "3")
-		$result = thumnail_test3_3_1($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
-	else if ($p_num == "1" || $p_num == "2" || $p_num == "4")
-		$result = thumnail_test3_1_1($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
-	else if ($p_num == "5")
-		$result = thumnail_test3_5_1($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
+	$result = thumnail_test3_1_1($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
 }else if ($concept == "4"){
 	$result = thumnail_test4_1_1($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
 }
@@ -405,41 +395,14 @@ flush();
 	{
 		if ($concept == "1")
 		{
-				$path_mark_file = './files/frame_images/img_frm_1_2.png';
-				$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
+			$path_mark_file = './files/frame_images/img_frm_1_2.png';
+			$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
 		}else if ($concept == "2"){
-			if ($p_num == "1")
-			{
-				$path_mark_file = './files/frame_images/img_frm_2_1.png';
-				$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
-			}else if ($p_num == "2"){
-				$path_mark_file = './files/frame_images/img_frm_2_2.png';
-				$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
-			}else if ($p_num == "3"){
-				$path_mark_file = './files/frame_images/img_frm_2_3.png';
-				$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
-			}else if ($p_num == "4"){
-				$path_mark_file = './files/frame_images/img_frm_2_4.png';
-				$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
-			}else{
-				$path_mark_file = './files/frame_images/img_frm_2_5.png';
-				$path_save_file = './files/'.$img_folder.'/medium/final_'.$img_name; // 합성된 이미지 파일
-			}
+			$path_mark_file = './files/frame_images/img_frm_2_2.png';
+			$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
 		}else if ($concept == "3"){
-			if ($p_num == "1")
-			{
-				$path_mark_file = './files/frame_images/img_frm_3_1.png';
-				$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
-			}else if ($p_num == "2" || $p_num == "4"){
-				$path_mark_file = './files/frame_images/img_frm_3_2.png';
-				$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
-			}else if ($p_num == "3"){
-				$path_mark_file = './files/frame_images/img_frm_3_3.png';
-				$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
-			}else{
-				$path_mark_file = './files/frame_images/img_frm_3_5.png';
-				$path_save_file = './files/'.$img_folder.'/medium/final_'.$img_name; // 합성된 이미지 파일
-			}
+			$path_mark_file = './files/frame_images/img_frm_3_1.png';
+			$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
 		}else{
 			if ($p_num == "1")
 			{
@@ -524,12 +487,7 @@ if ($concept == "1")
 	else if ($p_num == "4")
 		$result = thumnail_test2_4_2($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
 }else if ($concept == "3"){
-	if ($p_num == "3")
-		$result = thumnail_test3_3_2($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
-	else if ($p_num == "1" || $p_num == "2" || $p_num == "4")
 		$result = thumnail_test3_1_2($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
-	else if ($p_num == "5")
-		$result = thumnail_test3_5_2($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
 }else if ($concept == "4"){
 	$result = thumnail_test4_1_2($path_src_file, $path_save_file, $path_mark_file, $save_w, $save_h, $options);
 }

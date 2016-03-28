@@ -57,13 +57,14 @@
           </div>
         </div>      
       </div>
-      <!--프레임1-->
+      <!--프레임2-->
       <div class="pics frame_1">
         <input type="hidden" id="up_images1" value="">
         <div class="inner_pics">
-          <div class="title_frame img"><img src="images/popup/title_frame_1_1.png" /></div>
+          <div class="title_frame img"><img src="images/popup/title_frame_1_2.png" /></div>
           <div class="pc_frame">
             <div class="upload" id="up_img_div1">
+              <!-- <a href="#"><img src="images/popup/btn_up.png" /></a> -->
               <span class="btn btn-success fileinput-button">
                 <i class="glyphicon glyphicon-plus"></i>
                 <span>
@@ -74,156 +75,19 @@
                 <input id="fileupload" type="file" name="files[]" accept="image/*" >
               </span>
             </div>
-            <div class="text f_2_1" id="imsi_caption1">성장타이틀</div>
-            <div class="p_img f_2_1">
-              <table width="100%" border="0"  cellpadding="0" cellspacing="0">
-                <tbody>
-                  <tr>
-                    <td align="center" valign="middle" id="user_img1"><img src="images/popup/ex2.jpg" id="user_ex_img1"/></td>
-                  </tr>
-                </tbody>
-              </table>
-
-			  <!-- <img src="images/popup/ex.jpg" id="user_ex_img1" /> -->
-			</div><!--소비자 합성 이미지-->
-            <div class="front_img img"><img src="images/popup/img_frm_2_1.png" /></div>
-            <div class="bg img"><img src="images/popup/frm_b_bg.jpg" /></div>
-          </div>
-          <div class="pic_input">
-            <div class="input"><input type="text" name="mb_caption1" id="mb_caption1" placeholder="타이틀을 넣어주세요(20자 이내)" onkeyup="ins_caption('1');return false;"></div>
-          </div>
-        </div>
-      </div>
-      <!--END:프레임1-->
-
-      <!--프레임2-->
-      <div class="pics frame_1">
-        <input type="hidden" id="up_images2" value="">
-        <div class="inner_pics">
-          <div class="title_frame img"><img src="images/popup/title_frame_1_2.png" /></div>
-          <div class="pc_frame">
-            <div class="upload" id="up_img_div2">
-              <!-- <a href="#"><img src="images/popup/btn_up.png" /></a> -->
-              <span class="btn btn-success fileinput-button">
-                <i class="glyphicon glyphicon-plus"></i>
-                <span>
-                  <div id="files2">
-                    <a href="#"><img src="images/popup/btn_up.png" id="up_img2" /></a>
-                  </div>
-                </span>
-                <input id="fileupload2" type="file" name="files[]" accept="image/*" >
-              </span>
-            </div>
             <div class="name f_2_3 imsi_caption_baby"></div>
-            <div class="text f_2_2" id="imsi_caption2">자막</div>
-            <div class="p_img f_2_2" id="user_img2">이미지</div><!--소비자 합성 이미지-->
+            <div class="text f_2_2" id="imsi_caption1">자막</div>
+            <div class="p_img f_2_2" id="user_img1">이미지</div><!--소비자 합성 이미지-->
             <!-- <div class="front_img img"><img src="images/popup/img_frm_2_2.png" id="preview_img_2" /></div> -->
-            <div class="front_img img"><img src="images/popup/img_frm_2_2.png" id="user_ex_img2" /></div>
+            <div class="front_img img"><img src="images/popup/img_frm_2_2.png" id="user_ex_img1" /></div>
             <div class="bg img"><img src="images/popup/frm_b_bg.jpg" /></div>
           </div>
           <div class="pic_input">
-            <div class="input"><input type="text" name="mb_caption2" id="mb_caption2" placeholder="자막을 넣어주세요(20자 이내)" onkeyup="ins_caption('2');return false;"></div>
+            <div class="input"><input type="text" name="mb_caption1" id="mb_caption1" placeholder="자막을 넣어주세요(20자 이내)" onkeyup="ins_caption('1');return false;"></div>
           </div>
         </div>
       </div>
       <!--END:프레임2-->
-
-      <!--프레임3-->
-      <div class="pics frame_1">
-        <input type="hidden" id="up_images3" value="">
-        <div class="inner_pics">
-          <div class="title_frame img"><img src="images/popup/title_frame_1_3.png" /></div>
-          <div class="pc_frame">
-            <div class="upload" id="up_img_div3">
-              <!-- <a href="#"><img src="images/popup/btn_up.png" /></a> -->
-              <span class="btn btn-success fileinput-button">
-                <i class="glyphicon glyphicon-plus"></i>
-                <span>
-                  <div id="files3">
-                    <a href="#"><img src="images/popup/btn_up.png" id="up_img3" /></a>
-                  </div>
-                </span>
-                <input id="fileupload3" type="file" name="files[]" accept="image/*" >
-              </span>
-            </div>
-            <div class="name f_2_3 imsi_caption_baby"></div>
-            <div class="text f_2_3" id="imsi_caption3">자막</div>
-            <div class="p_img f_2_3" id="user_img3">이미지</div><!--소비자 합성 이미지-->
-            <div class="front_img img"><img src="images/popup/img_frm_2_3.png" id="user_ex_img3" /></div>
-            <div class="bg img"><img src="images/popup/frm_b_bg.jpg" /></div>
-          </div>
-          <div class="pic_input">
-            <div class="input"><input type="text" name="mb_caption3" id="mb_caption3" placeholder="자막을 넣어주세요(20자 이내)" onkeyup="ins_caption('3');return false;"></div>
-          </div>
-        </div>
-      </div>
-      <!--END:프레임3-->
-
-      <!--프레임4-->
-      <div class="pics frame_1">
-        <input type="hidden" id="up_images4" value="">
-        <div class="inner_pics">
-          <div class="title_frame img"><img src="images/popup/title_frame_1_4.png" /></div>
-          <div class="pc_frame">
-            <div class="upload" id="up_img_div4">
-              <!-- <a href="#"><img src="images/popup/btn_up.png" /></a> -->
-              <span class="btn btn-success fileinput-button">
-                <i class="glyphicon glyphicon-plus"></i>
-                <span>
-                  <div id="files4">
-                    <a href="#"><img src="images/popup/btn_up.png" id="up_img4" /></a>
-                  </div>
-                </span>
-                <input id="fileupload4" type="file" name="files[]" accept="image/*" >
-              </span>
-            </div>
-            <div class="name f_2_4 imsi_caption_baby"></div>
-            <div class="text f_2_4" id="imsi_caption4">자막</div>
-            <div class="p_img f_2_4">
-                                <table width="100%" border="0"  cellpadding="0" cellspacing="0">
-                                  <tbody>
-                                    <tr>
-                                      <td align="center" valign="middle" id="user_img4"><img src="images/popup/ex2.jpg" id="user_ex_img4" /></td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-			</div><!--소비자 합성 이미지-->
-            <div class="front_img img"><img src="images/popup/img_frm_2_4.png" /></div>
-            <div class="bg img"><img src="images/popup/frm_b_bg.jpg" /></div>
-          </div>
-          <div class="pic_input">
-            <div class="input"><input type="text" name="mb_caption4" id="mb_caption4" placeholder="자막을 넣어주세요(20자 이내)" onkeyup="ins_caption('4');return false;"></div>
-          </div>
-        </div>
-      </div>
-      <!--END:프레임4-->
-
-      <!--프레임5--><!--5번째 컷에는 자막 없음-->
-      <div class="pics frame_5">
-        <input type="hidden" id="up_images5" value="">
-        <div class="inner_pics">
-          <div class="title_frame img"><img src="images/popup/title_frame_1_5.png" /></div>
-          <div class="pc_frame">
-            <div class="upload" id="up_img_div5">
-              <!-- <a href="#"><img src="images/popup/btn_up.png" /></a> -->
-              <span class="btn btn-success fileinput-button">
-                <i class="glyphicon glyphicon-plus"></i>
-                <span>
-                  <div id="files5">
-                    <a href="#"><img src="images/popup/btn_up.png" id="up_img5" /></a>
-                  </div>
-                </span>
-                <input id="fileupload5" type="file" name="files[]" accept="image/*" >
-              </span>
-            </div>
-            <div class="p_img f_2_5" id="user_img5">예시 이미지</div><!--소비자 합성 이미지-->
-            <div class="front_img img"><img src="images/popup/img_frm_2_5.png" id="user_ex_img5" /></div>
-            <div class="bg img"><img src="images/popup/frm_b_bg.jpg" /></div>
-          </div>
-        </div>
-      </div>
-      <!--END:프레임5-->
-
       <div class="btn_make img">
         <a href="#" onclick="create_movie();return false;"><img src="images/popup/btn_make.png" /></a>
       </div>
@@ -232,51 +96,100 @@
 </div>
 <!------------------ 아기 정보 (이름, 나이, 사진) 입력 페이지 ------------------>
 
-	<div id="movie_div" class="popup_wrap" style="display:none;">
-   	  	<div class="p_mid p_position">
+<!------------------ 개인정보 입력 페이지 ------------------>
+<div id="input_div" class="popup_wrap" style="display:none">
+  <div class="p_mid p_position">
+    <div class="block_close clearfix">
+      <a href="index.php" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+    </div>
+    <div class="block_content input">
+      <div class="title_pop_main">
+        <img src="images/popup/title_pop_main.png" />
+      </div>
+      <div class="inner">
+        <div class="input_block">
+          <div class="title img">
+            <img src="images/popup/title_input_1.png" />
+          </div>
+          <div class="inner_input_block">
+            <div class="input_one">
+              <div class="inner_input_one clearfix">
+                <div class="input"><input type="text" name="mb_name" id="mb_name" placeholder="이름"></div>
+              </div>
+            </div>
+            <div class="input_one">
+              <div class="inner_input_one clearfix">
+                <div class="input"><input type="tel" name="mb_phone" id="mb_phone" placeholder="휴대폰번호 ('-' 없이 입력해주세요)" onkeyup="only_num(this);chk_len(this.value);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="check_block">
+            <div class="inner_check_block clearfix">
+              <div class="check"><a href="#" onclick="privacy_check();return false;"><img src="images/popup/check_off.jpg" width="20" name="privacy_agree" id="privacy_agree" /></a></div>
+              <div class="txt">개인정보 수집 및 위탁에 관한 동의</div>
+              <div class="btn_detail"><a href="#" onclick="open_pop('privacy_agree_popup');return false;"><img src="images/popup/btn_detail.jpg" width="55" /></a></div>
+            </div>
+            <div class="inner_check_block clearfix">
+              <div class="check"><a href="#" onclick="adver_check();return false;"><img src="images/popup/check_off.jpg" width="20" name="adver_agree" id="adver_agree" /></a></div>
+              <div class="txt">광고성 정보 전송 동의 약관 동의</div>
+              <div class="btn_detail"><a href="#" onclick="open_pop('adver_agree_popup');return false;"><img src="images/popup/btn_detail.jpg" width="55" /></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="btn_block input">
+          <div class="img"><a href="#" onclick="insert_input();return false;"><img src="images/popup/btn_input_1.png" /></a></div>
+        </div>
+      </div><!--inner-->
+    </div>
+  </div>
+</div>
+<!------------------ 개인정보 입력 페이지 ------------------>
 
-			<div class="block_close clearfix">
-                <a href="index.php" class="btn_close"><img src="images/popup/btn_close.png" /></a>
-            </div>        
-            <div class="block_content movie">
-            	<div class="inner">
-                	<div class="title img">
-                    	<img src="images/popup/top_2.jpg" />
-                    </div>
-                	<div class="mv">
-                    	<div class="title">
-                        	
-                        	<div class="text cap1_txt">
-                            	"폭풍 성장의 비밀"
-                            </div>
-						    <div class="bg img"><img src="images/popup/title_movie_c_2.png" /></div>
-                        </div>
-                        <div class="name" id="video_b_name">
-                            	김서우<span><img src="images/popup/label_baby.png" width="35" /></span>
-                            </div>
-                        <div class="youtube">
-                        	<video src="../files/out.mp4" controls preload="auto" id="video_player" poster="scene/concept_2_1.jpg"></video>
-                        </div>
-                    </div>
+
+<div id="movie_div" class="popup_wrap" style="display:none;">
+  <div class="p_mid p_position">
+    <div class="block_close clearfix">
+      <a href="index.php" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+    </div>        
+    <div class="block_content movie">
+      <div class="inner">
+        <div class="title img">
+          <img src="images/popup/top_2.jpg" />
+        </div>
+        <div class="mv">
+          <div class="title">
+            <div class="text cap1_txt">
+            "폭풍 성장의 비밀"
+            </div>
+            <div class="bg img"><img src="images/popup/title_movie_c_1.png" /></div>
+          </div>
+          <div class="name" id="video_b_name">
+          김서우<span><img src="images/popup/label_baby.png" width="35" /></span>
+          </div>
+          <div class="youtube">
+            <!-- <video src="../files/out.mp4" controls preload="auto" id="video_player" poster="scene/concept_1_1.jpg"></video> -->
+            <a href="#" onclick="return false;"><img src="" id="image_view"></a>
+          </div>
+        </div>
 <?
 	if ($iPhoneYN == "N")
 	{
 ?>
-                    <div class="btn_block img">
-                    	<a href="../files/out.mp4" download id="download_src"><img src="images/popup/btn_down.png" /></a>
-                    </div>
+        <div class="btn_block img">
+          <a href="../files/out.mp4" download="download_video" id="download_src"><img src="images/popup/btn_down.png" /></a>
+        </div>
 <?
 	}
 ?>
-                    <div class="btn_block_2 img">
-                    	<a href="#" onclick="prev_page();return false;"><img src="images/popup/btn_before.png" /></a>
-                    	<a href="#" onclick="next_page();return false;"><img src="images/popup/btn_m_next_coupon.png" id="next_image"/></a>
-                        <!--<a href="#"><img src="images/popup/btn_m_next.png" /></a>-->
-                    </div>
-                </div><!--inner-->
-            </div>
+        <div class="btn_block_2 img">
+          <a href="#" onclick="prev_page();return false;"><img src="images/popup/btn_before.png" /></a>
+          <a href="#" onclick="next_page();return false;"><img src="images/popup/btn_m_next_coupon.png" id="next_image"/></a>
+          <!--<a href="#"><img src="images/popup/btn_m_next.png" /></a>-->
         </div>
-	</div>
+      </div><!--inner-->
+    </div>
+  </div>
+</div>
 
 <!------------------------------ 체험팩 쿠폰 받을 사람 엔딩 ------------------------------>
 <div id="end_coupon_div" class="popup_wrap" style="display:none;">
@@ -383,22 +296,12 @@
 </html>
 <script type="text/javascript">
 var video_concept	= null;
-var user_gubun			= 0;
+var user_gubun				= 0;
 var user_ex_img1_w	= 0;
 var user_ex_img1_h		= 0;
-var user_ex_img2_w	= 0;
-var user_ex_img2_h		= 0;
-var user_ex_img3_w	= 0;
-var user_ex_img3_h		= 0;
-var user_ex_img4_w	= 0;
-var user_ex_img4_h		= 0;
-var user_ex_img5_w	= 0;
-var user_ex_img5_h		= 0;
-var user_ex_img1		= 0;
-var user_ex_img2		= 0;
-var user_ex_img3		= 0;
-var user_ex_img4		= 0;
-var user_ex_img5		= 0;
+var user_ex_img1	= 0;
+var chk_privacy_flag	= 0;
+var chk_adver_flag		= 0;
 
 $(document).ready(function() {
 	$("#cboxTopLeft").hide();
@@ -411,27 +314,20 @@ $(document).ready(function() {
 	$("#cboxBottomCenter").hide();
 	Kakao.init('d58dc6bc022da9c054b20aff9c23e0f9');
 
-	var yt_width = $(document).width() - 20;
+	var yt_width = $(document).width()-20;
 	var youtube_height = (yt_width / 16) * 9;
-	//$("#ytplayer1").width(yt_width);
-	//$("#ytplayer1").height(youtube_height);
-	$("#ytplayer2").width(yt_width - 19);
+	$("#ytplayer1").width(yt_width);
+	$("#ytplayer1").height(youtube_height);
+	$("#ytplayer2").width(yt_width);
 	$("#ytplayer2").height(youtube_height);
-	$("#ytplayer3").width(yt_width - 19);
+	$("#ytplayer3").width(yt_width);
 	$("#ytplayer3").height(youtube_height);
-	$("#ytplayer4").width(yt_width - 19);
+	$("#ytplayer4").width(yt_width);
 	$("#ytplayer4").height(youtube_height);
 
 	user_ex_img1_h		= $("#user_ex_img1").height();
 	user_ex_img1_w		= $("#user_ex_img1").width();
-	user_ex_img2_h		= $("#user_ex_img2").height();
-	user_ex_img2_w		= $("#user_ex_img2").width();
-	user_ex_img3_h		= $("#user_ex_img3").height();
-	user_ex_img3_w		= $("#user_ex_img3").width();
-	user_ex_img4_h		= $("#user_ex_img4").height();
-	user_ex_img4_w		= $("#user_ex_img4").width();
-	user_ex_img5_h		= $("#user_ex_img5").height();
-	user_ex_img5_w		= $("#user_ex_img5").width();
+
 });
 
 function create_movie()
@@ -442,15 +338,7 @@ function create_movie()
 	var mb_baby_name		= $("#mb_baby_name").val();
 	var mb_baby_age			= $("#mb_baby_age").val();
 	var up_images1				= $("#up_images1").val();
-	var up_images2				= $("#up_images2").val();
-	var up_images3				= $("#up_images3").val();
-	var up_images4				= $("#up_images4").val();
-	var up_images5				= $("#up_images5").val();
 	var mb_caption1			= $("#mb_caption1").val();
-	var mb_caption2			= $("#mb_caption2").val();
-	var mb_caption3			= $("#mb_caption3").val();
-	var mb_caption4			= $("#mb_caption4").val();
-	//var mb_caption5			= $("#mb_caption5").val();
 	if (mb_baby_name == "")
 	{
 		alert('아기 이름을 입력해 주세요.');
@@ -471,9 +359,9 @@ function create_movie()
 		return false;
 	}
 
-	if (up_images1 == "" || up_images2 == "" || up_images5 == "")
+	if (up_images1 == "")
 	{
-		alert('필수 이미지는 모두 업로드해 주세요.');
+		alert('이미지를 업로드해 주세요.');
 		//chk_ins = 0;
 		$("#loading_div").hide();
 		$("#input_baby_div").show();
@@ -493,118 +381,168 @@ function create_movie()
 		}
 	}
 
-	if (mb_caption2 == "")
-	{
-		if (up_images2 != "")
-		{
-			alert('2번 사진의 자막을 입력해 주세요.');
-			//chk_ins = 0;
-			$("#loading_div").hide();
-			$("#input_baby_div").show();
-			$("#mb_caption2").focus();
-			return false;
-		}
-	}
-
-	if (mb_caption3 == "")
-	{
-		if (up_images3 != "")
-		{
-			alert('3번 사진의 자막을 입력해 주세요.');
-			//chk_ins = 0;
-			$("#loading_div").hide();
-			$("#input_baby_div").show();
-			$("#mb_caption3").focus();
-			return false;
-		}
-	}
-
-	if (mb_caption4 == "")
-	{
-		if (up_images4 != "")
-		{
-			alert('4번 사진의 자막을 입력해 주세요.');
-			//chk_ins = 0;
-			$("#loading_div").hide();
-			$("#input_baby_div").show();
-			$("#mb_caption4").focus();
-			return false;
-		}
-	}
-/*
-	if (mb_caption5 == "")
-	{
-		if (up_images5 != "")
-		{
-			alert('5번 사진의 자막을 입력해 주세요.');
-			//chk_ins = 0;
-			return false;
-		}
-	}
-*/
-
-
 setTimeout(function() {
 	$.ajax({
 		type:"POST",
 		data:{
 			"exec"					: "create_movie",
-			"mb_baby_name"		: mb_baby_name,
-			"mb_baby_age"			: mb_baby_age,
+			"mb_baby_name"	: mb_baby_name,
+			"mb_baby_age"		: mb_baby_age,
 			"up_image1"			: up_images1,
-			"up_image2"			: up_images2,
-			"up_image3"			: up_images3,
-			"up_image4"			: up_images4,
-			"up_image5"			: up_images5,
-			"mb_caption1"			: mb_caption1,
-			"mb_caption2"			: mb_caption2,
-			"mb_caption3"			: mb_caption3,
-			"mb_caption4"			: mb_caption4,
-			//"mb_caption5"			: mb_caption5,
-			"mb_phone"				: "<?=$mb_phone?>",
-			"mb_serial"				: "<?=$serial?>",
-			"mb_concept"			: "2"
+			"mb_caption1"		: mb_caption1,
+			"mb_serial"			: "<?=$serial?>",
+			"mb_concept"		: "2"
 		},
-		url: "../main_exec.php",
+		url: "../main_exec2.php",
 		beforeSend: function(response){
 			$("#loading_div").show();
 			$("#input_baby_div").hide();
 		},
 		success: function(response){
-			var flag_res	= response.split("||");
-			console.log(response);
-			if (flag_res[0] == "Y")
+			alert(response);
+			if (response == "Y")
 			{
-				//$(".serial").html("<?=$serial?>");
-				$("#video_b_name").html(mb_baby_name+'<span><img src="images/popup/label_baby.png" width="35" /></span>');
-				$(".cap1_txt").html(mb_caption1);
-				$("#next_image").attr("src","images/popup/btn_m_next_coupon.png");
-				$("#video_player").width("100%");
-				$("#video_player").attr("src","../files/<?=$serial?>/growmovie.mp4");
-				$("#download_src").attr("href","../files/<?=$serial?>/growmovie.mp4");
-				$("#movie_div").show();
+				$("#input_div").show();
 				$("#loading_div").hide();
-				user_gubun	= 1;
-			}else if (flag_res[0] == "D"){
-				//$(".c_babyname").html(mb_baby_name);
-				$(".cap1_txt").html(mb_caption1);
-				$("#video_b_name").html(mb_baby_name+'<span><img src="images/popup/label_baby.png" width="35" /></span>');
-				$("#next_image").attr("src","images/popup/btn_m_next.png");
-				$("#video_player").width("100%");
-				$("#video_player").attr("src","../files/<?=$serial?>/growmovie.mp4");
-				$("#download_src").attr("href","../files/<?=$serial?>/growmovie.mp4");
-				$("#movie_div").show();
-				$("#loading_div").hide();
-				user_gubun	= 0;
 			}else{
 				alert('접속자가 많아 참여가 지연되고 있습니다. 다시 시도해 주세요.');
 				location.href="index.php";
 			}
-			//console.log(response);
 		}
 	});
-	}, 8000); // 3000ms(3초)가 경과하면 이 함수가 실행됩니다.
+	}, 5000); // 5000ms(5초)가 경과하면 이 함수가 실행됩니다.
 }
+
+function privacy_check()
+{
+	if (chk_privacy_flag == 0)
+	{
+		$("#privacy_agree").attr("src","images/popup/check_on.jpg");
+		chk_privacy_flag = 1;
+	}else{
+		$("#privacy_agree").attr("src","images/popup/check_off.jpg");
+		chk_privacy_flag = 0;
+	}
+}
+
+function adver_check()
+{
+	if (chk_adver_flag == 0)
+	{
+		$("#adver_agree").attr("src","images/popup/check_on.jpg");
+		chk_adver_flag = 1;
+	}else{
+		$("#adver_agree").attr("src","images/popup/check_off.jpg");
+		chk_adver_flag = 0;
+	}
+}
+
+
+function chk_len(val)
+{
+	if (val.length == 11)
+	{
+		$("#mb_phone").blur();
+	}
+}
+
+function only_num(obj)
+{
+	var inText = obj.value;
+	var outText = "";
+	var flag = true;
+	var ret;
+	for(var i = 0; i < inText.length; i++)
+	{
+		ret = inText.charCodeAt(i);
+		if((ret < 48) || (ret > 57))
+		{
+			flag = false;
+		}
+		else
+		{
+			outText += inText.charAt(i);
+		}
+	}
+ 
+	if(flag == false)
+	{
+		alert("전화번호는 숫자입력만 가능합니다.");
+		obj.value = outText;
+		obj.focus();
+		return false;
+	} 
+	return true;
+}
+
+function insert_input()
+{
+	var mb_name				= $("#mb_name").val();
+	mb_phone				= $("#mb_phone").val();
+
+	if (mb_name == "")
+	{
+		alert('이름을 입력해 주세요.');
+		$("#mb_name").focus();
+		//chk_ins = 0;
+		return false;
+	}
+
+	if (mb_phone == "")
+	{
+		alert('휴대폰 번호를 입력해주세요.');
+		$("#mb_phone").focus();
+		//chk_ins = 0;
+		return false;
+	}
+
+	if (chk_privacy_flag == 0)
+	{
+		alert("개인정보 수집 및 위탁에 관한 동의를 안 하셨습니다");
+		//chk_ins = 0;
+		return false;
+	}
+
+	/*
+	if (chk_adver_flag == 0)
+	{
+		alert("광고성 정보전송 동의를 안 하셨습니다");
+		//chk_ins = 0;
+		return false;
+	}
+	*/
+
+	$.ajax({
+		type:"POST",
+		data:{
+			"exec"					: "update_info",
+			"mb_name"				: mb_name,
+			"mb_phone"				: mb_phone,
+			"chk_adver"				: chk_adver_flag,
+			"mb_serial"				: "<?=$serial?>"
+		},
+		url: "../main_exec2.php",
+		success: function(response){
+			alert(response);
+			if (response == "Y")
+			{
+				$("#video_b_name").html($("#mb_baby_name").val() + '<span><img src="images/popup/label_baby.png" width="35" /></span>');
+				//$(".cap1_txt").html(mb_caption1);
+				$("#next_image").attr("src","images/popup/btn_m_next_coupon.png");
+				$("#image_view").width("100%");
+				$("#image_view").attr("src","../files/<?=$serial?>/medium/final_<?=$serial?>_1.jpg");
+				//$("#download_src").attr("href","../files/<?=$serial?>/growmovie.mp4");
+				$("#input_div").hide();
+				$("#movie_div").show();
+				//location.href="./popup_gate.php?mb_phone=" + mb_phone + "&serial=<?=$serial?>";
+			}else{
+				alert("참여자가 많아 지연되고 있습니다. 다시 응모해 주세요.");
+				location.href="index.php";
+			}
+		}
+	});
+}
+
 
 function prev_page()
 {
@@ -628,123 +566,8 @@ function next_page()
 $(function () {
     'use strict';
     // Change this to the location of your server-side upload handler:
-    var url = 'file_upload1_2.php?s_id=<?=$serial?>';
-    $('#fileupload').fileupload({
-        url: url,
-        dataType: 'json',
-        autoUpload: false,
-        acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i,
-        maxFileSize: 99900000,
-        // Enable image resizing, except for Android and Opera,
-        // which actually support image resizing, but fail to
-        // send Blob objects via XHR requests:
-        disableImageResize: /Android(?!.*Chrome)|Opera/
-            .test(window.navigator.userAgent),
-        previewMaxWidth: 500,
-        previewMaxHeight: 500,
-        previewCrop: false
-    }).on('fileuploadadd', function (e, data) {
-		// 파일 삭제
-		//del_fileview();
-		user_ex_img1	= $("#user_ex_img1").height();
-		$("#user_img1").html("");
-        data.context = $('<div/>').appendTo('#user_img1');
-		$("#up_img_div1").attr("class","re_upload");
-		$("#up_img1").attr("src","images/popup/btn_reup.png");
-        $.each(data.files, function (index, file) {
-			//img_name1 = file.name;
-            var node = $('<p/>');
-                   // .append($('<span/>').text(file.name));
-			  //$("#image_up_name1").val(file.name);
-			  $("#up_images1").val(file.name);
-            if (!index) {
-                //node
-                  //  .append('<br>')
-                    //.append(uploadButton.clone(true).data(data));
-				//uploadButton.clone(true).data(data);
-				data.submit();
-            }
-            node.appendTo(data.context);
-			//$("div#user_img1 > div > p > canvas").attr("style","width:40%;padding-top:20%;padding-left:29%");
-			//$('#files').append(data.context);
-        });
-    }).on('fileuploadprocessalways', function (e, data) {
-        var index = data.index,
-            file = data.files[index],
-            node = $(data.context.children()[index]);
-        if (file.preview) {
-            node
-                .prepend('<br>')
-                .prepend(file.preview);
-				$("td#user_img1 > div > p > canvas").css("width","100%");
-				var uimg1_w	= $("td#user_img1 > div > p > canvas").width();
-				var uimg1_h	= $("td#user_img1 > div > p > canvas").height();
-				if (uimg1_w > uimg1_h)
-				{
-					if (uimg1_h > user_ex_img1_h)
-					{
-						$("td#user_img1 > div > p > canvas").css("width","80%");
-					}else{
-						$("td#user_img1 > div > p > canvas").css("width","100%");
-					}
-					var re_userimg1_h	= (user_ex_img1_w/ uimg1_w)*uimg1_h;
-					var re_final1_h		= (user_ex_img1_h - re_userimg1_h) /2;
-					$("td#user_img1 > div > p > canvas").css("padding-top",re_final1_h+"px");
-				}else{
-					$("td#user_img1 > div > p > canvas").css("height",user_ex_img1+"px");
-					var re_userimg1_w	= (user_ex_img1_h / uimg1_h)*uimg1_w;
-					//alert(re_userimg1_w);
-					//var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;
-					//$("td#user_img1 > div > p > canvas").css("padding-left",re_final1_w+"px");
-				}
-				//$("td#user_img1 > div > p > canvas").css("height","100%");
-				//$("div#user_img1 > div > p > canvas").css("height",user_ex_img1+"px");
-				//$("div#user_img1 > div > p > canvas").css("padding-top","9.5%");
-				//$("div#user_img1 > div > p > canvas").css("padding-left","4.3%");
-        }
-        if (file.error) {
-            node
-                .append('<br>')
-                .append($('<span class="text-danger"/>').text(file.error));
-        }
-        if (index + 1 === data.files.length) {
-            data.context.find('button')
-                .text('Upload')
-                .prop('disabled', !!data.files.error);
-        }
-    }).on('fileuploadprogressall', function (e, data) {
-        var progress = parseInt(data.loaded / data.total * 100, 10);
-        $('#progress .progress-bar').css(
-            'width',
-            progress + '%'
-        );
-		//$(".loading").show();
-		//$("html body").css("overflow","hidden");
-		//Timer();
-    }).on('fileuploaddone', function (e, data) {
-        $.each(data.result.files, function (index, file) {
-            if (file.url) {
-                var link = $('<a>')
-                    .attr('target', '_blank')
-                    .prop('href', file.url);
-                $(data.context.children()[index])
-                    .wrap(link);
-            } else if (file.error) {
-                var error = $('<span class="text-danger"/>').text(file.error);
-                $(data.context.children()[index])
-                    .append('<br>')
-                    .append(error);
-            }
-        });
-    }).prop('disabled', !$.support.fileInput)
-        .parent().addClass($.support.fileInput ? undefined : 'disabled');
-});
-
-$(function () {
-    'use strict';
-    // Change this to the location of your server-side upload handler:
     var url = 'file_upload2_2.php?s_id=<?=$serial?>';
-    $('#fileupload2').fileupload({
+    $('#fileupload').fileupload({
         url: url,
         dataType: 'json',
         autoUpload: false,
@@ -761,17 +584,17 @@ $(function () {
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
 		//del_fileview();
-		user_ex_img2	= $("#user_ex_img2").height();
-		$("#user_img2").html("");
-        data.context = $('<div/>').appendTo('#user_img2');
-		$("#up_img_div2").attr("class","re_upload");
-		$("#up_img2").attr("src","images/popup/btn_reup.png");
+		user_ex_img1	= $("#user_ex_img1").height();
+		$("#user_img1").html("");
+        data.context = $('<div/>').appendTo('#user_img1');
+		$("#up_img_div1").attr("class","re_upload");
+		$("#up_img1").attr("src","images/popup/btn_reup.png");
         $.each(data.files, function (index, file) {
 			//img_name2 = file.name;
             var node = $('<p/>');
                    // .append($('<span/>').text(file.name));
 			 // $("#image_up_name2").val(file.name);
-			  $("#up_images2").val(file.name);
+			  $("#up_images1").val(file.name);
             if (!index) {
                 //node
                   //  .append('<br>')
@@ -790,25 +613,25 @@ $(function () {
             node
                 .prepend('<br>')
                 .prepend(file.preview);
-				$("div#user_img2 > div > p > canvas").css("width","100%");
-				var uimg2_w	= $("div#user_img2 > div > p > canvas").width();
-				var uimg2_h	= $("div#user_img2 > div > p > canvas").height();
-				if (uimg2_w > uimg2_h)
+				$("div#user_img1 > div > p > canvas").css("width","100%");
+				var uimg1_w	= $("div#user_img1 > div > p > canvas").width();
+				var uimg1_h	= $("div#user_img1 > div > p > canvas").height();
+				if (uimg1_w > uimg1_h)
 				{
-					if (uimg2_h > user_ex_img2_h)
+					if (uimg1_h > user_ex_img1_h)
 					{
-						$("div#user_img2 > div > p > canvas").css("height",user_ex_img2+"px");
-						$("div#user_img2 > div > p > canvas").css("width","80%");
-						$("div#user_img2 > div > p > canvas").css("padding-left","10%");
+						$("div#user_img1 > div > p > canvas").css("height",user_ex_img1+"px");
+						$("div#user_img1 > div > p > canvas").css("width","80%");
+						$("div#user_img1 > div > p > canvas").css("padding-left","10%");
 					}else{
-						$("div#user_img2 > div > p > canvas").css("width","100%");
+						$("div#user_img1 > div > p > canvas").css("width","100%");
 					}
-					var re_userimg2_h	= (user_ex_img2_w/ uimg2_w)*uimg2_h;
-					var re_final2_h		= (user_ex_img2_h - re_userimg2_h) /2;
-					$("div#user_img2 > div > p > canvas").css("padding-top",re_final2_h+"px");
+					var re_userimg1_h	= (user_ex_img1_w/ uimg1_w)*uimg1_h;
+					var re_final1_h		= (user_ex_img1_h - re_userimg1_h) /2;
+					$("div#user_img1 > div > p > canvas").css("padding-top",re_final1_h+"px");
 				}else{
-					$("div#user_img2 > div > p > canvas").css("height",user_ex_img2+"px");
-					var re_userimg2_w	= (user_ex_img2_h / uimg2_h)*uimg2_w;
+					$("div#user_img1 > div > p > canvas").css("height",user_ex_img1+"px");
+					var re_userimg1_w	= (user_ex_img1_h / uimg1_h)*uimg1_w;
 					//alert(re_userimg1_w);
 					//var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;
 					//$("td#user_img1 > div > p > canvas").css("padding-left",re_final1_w+"px");
@@ -856,346 +679,6 @@ $(function () {
         .parent().addClass($.support.fileInput ? undefined : 'disabled');
 });
 
-$(function () {
-    'use strict';
-    // Change this to the location of your server-side upload handler:
-    var url = 'file_upload3_2.php?s_id=<?=$serial?>';
-    $('#fileupload3').fileupload({
-        url: url,
-        dataType: 'json',
-        autoUpload: false,
-        acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i,
-        maxFileSize: 99900000,
-        // Enable image resizing, except for Android and Opera,
-        // which actually support image resizing, but fail to
-        // send Blob objects via XHR requests:
-        disableImageResize: /Android(?!.*Chrome)|Opera/
-            .test(window.navigator.userAgent),
-        previewMaxWidth: 800,
-        previewMaxHeight: 800,
-        previewCrop: false
-    }).on('fileuploadadd', function (e, data) {
-		// 파일 삭제
-		//del_fileview();
-		user_ex_img3	= $("#user_ex_img3").height();
-		$("#user_img3").html("");
-        data.context = $('<div/>').appendTo('#user_img3');
-		$("#up_img_div3").attr("class","re_upload");
-		$("#up_img3").attr("src","images/popup/btn_reup.png");
-        $.each(data.files, function (index, file) {
-			//img_name3 = file.name;
-            var node = $('<p/>');
-                   // .append($('<span/>').text(file.name));
-			  //$("#image_up_name3").val(file.name);
-			  $("#up_images3").val(file.name);
-            if (!index) {
-                //node
-                  //  .append('<br>')
-                    //.append(uploadButton.clone(true).data(data));
-				//uploadButton.clone(true).data(data);
-				data.submit();
-            }
-
-            node.appendTo(data.context);
-        });
-    }).on('fileuploadprocessalways', function (e, data) {
-        var index = data.index,
-            file = data.files[index],
-            node = $(data.context.children()[index]);
-        if (file.preview) {
-            node
-                .prepend('<br>')
-                .prepend(file.preview);
-				//$("div#user_img3 > div > p > canvas").css("width","100%");
-				//$("div#user_img3 > div > p > canvas").css("height","100%");
-				//$("div#user_img3 > div > p > canvas").css("height",$("#preview_img_2").height());
-				$("div#user_img3 > div > p > canvas").css("width","100%");
-				var uimg3_w	= $("div#user_img3 > div > p > canvas").width();
-				var uimg3_h	= $("div#user_img3 > div > p > canvas").height();
-				if (uimg3_w > uimg3_h)
-				{
-					if (uimg3_h > user_ex_img3_h)
-					{
-						$("div#user_img3 > div > p > canvas").css("height",user_ex_img3+"px");
-						$("div#user_img3 > div > p > canvas").css("width","80%");
-						$("div#user_img3 > div > p > canvas").css("padding-left","10%");
-					}else{
-						$("div#user_img3 > div > p > canvas").css("width","100%");
-					}
-					var re_userimg3_h	= (user_ex_img3_w/ uimg3_w)*uimg3_h;
-					var re_final3_h		= (user_ex_img3_h - re_userimg3_h) /2;
-					$("div#user_img3 > div > p > canvas").css("padding-top",re_final3_h+"px");
-				}else{
-					$("div#user_img3 > div > p > canvas").css("height",user_ex_img3+"px");
-					var re_userimg3_w	= (user_ex_img3_h / uimg3_h)*uimg3_w;
-					//alert(re_userimg1_w);
-					//var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;
-					//$("td#user_img1 > div > p > canvas").css("padding-left",re_final1_w+"px");
-				}
-        }
-        if (file.error) {
-            node
-                .append('<br>')
-                .append($('<span class="text-danger"/>').text(file.error));
-        }
-        if (index + 1 === data.files.length) {
-            data.context.find('button')
-                .text('Upload')
-                .prop('disabled', !!data.files.error);
-        }
-    }).on('fileuploadprogressall', function (e, data) {
-        var progress = parseInt(data.loaded / data.total * 100, 10);
-        $('#progress .progress-bar').css(
-            'width',
-            progress + '%'
-        );
-		//$(".loading").show();
-		//$("html body").css("overflow","hidden");
-		//Timer();
-    }).on('fileuploaddone', function (e, data) {
-        $.each(data.result.files, function (index, file) {
-            if (file.url) {
-                var link = $('<a>')
-                    .attr('target', '_blank')
-                    .prop('href', file.url);
-                $(data.context.children()[index])
-                    .wrap(link);
-            } else if (file.error) {
-                var error = $('<span class="text-danger"/>').text(file.error);
-                $(data.context.children()[index])
-                    .append('<br>')
-                    .append(error);
-            }
-        });
-    }).prop('disabled', !$.support.fileInput)
-        .parent().addClass($.support.fileInput ? undefined : 'disabled');
-});
-$(function () {
-    'use strict';
-    // Change this to the location of your server-side upload handler:
-    var url = 'file_upload4_2.php?s_id=<?=$serial?>';
-    $('#fileupload4').fileupload({
-        url: url,
-        dataType: 'json',
-        autoUpload: false,
-        acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i,
-        maxFileSize: 99900000,
-        // Enable image resizing, except for Android and Opera,
-        // which actually support image resizing, but fail to
-        // send Blob objects via XHR requests:
-        disableImageResize: /Android(?!.*Chrome)|Opera/
-            .test(window.navigator.userAgent),
-        previewMaxWidth: 800,
-        previewMaxHeight: 800,
-        previewCrop: false
-    }).on('fileuploadadd', function (e, data) {
-		// 파일 삭제
-		//del_fileview();
-		user_ex_img4	= $("#user_ex_img4").height();
-		$("#user_img4").html("");
-        data.context = $('<div/>').appendTo('#user_img4');
-		$("#up_img_div4").attr("class","re_upload");
-		$("#up_img4").attr("src","images/popup/btn_reup.png");
-        $.each(data.files, function (index, file) {
-			//img_name4 = file.name;
-            var node = $('<p/>');
-                   // .append($('<span/>').text(file.name));
-			  //$("#image_up_name4").val(file.name);
-			  $("#up_images4").val(file.name);
-            if (!index) {
-                //node
-                  //  .append('<br>')
-                    //.append(uploadButton.clone(true).data(data));
-				//uploadButton.clone(true).data(data);
-				data.submit();
-            }
-
-            node.appendTo(data.context);
-        });
-    }).on('fileuploadprocessalways', function (e, data) {
-        var index = data.index,
-            file = data.files[index],
-            node = $(data.context.children()[index]);
-        if (file.preview) {
-            node
-                .prepend('<br>')
-                .prepend(file.preview);
-				//$("div#user_img4 > div > p > canvas").css("width","42.5%");
-				//$("div#user_img4 > div > p > canvas").css("height",user_ex_img1+"px");
-				//$("div#user_img4 > div > p > canvas").css("padding-top","16.5%");
-				//$("div#user_img4 > div > p > canvas").css("padding-left","5%");
-				$("td#user_img4 > div > p > canvas").css("width","100%");
-				var uimg4_w	= $("td#user_img4 > div > p > canvas").width();
-				var uimg4_h	= $("td#user_img4 > div > p > canvas").height();
-				if (uimg4_w > uimg4_h)
-				{
-					if (uimg4_h > user_ex_img4_h)
-					{
-						$("td#user_img4 > div > p > canvas").css("width","80%");
-					}else{
-						$("td#user_img4 > div > p > canvas").css("width","100%");
-					}
-					var re_userimg4_h	= (user_ex_img4_w/ uimg4_w)*uimg4_h;
-					var re_final4_h		= (user_ex_img4_h - re_userimg4_h) /2;
-					$("td#user_img4 > div > p > canvas").css("padding-top",re_final4_h+"px");
-				}else{
-					$("td#user_img4 > div > p > canvas").css("height",user_ex_img4+"px");
-					var re_userimg4_w	= (user_ex_img4_h / uimg4_h)*uimg4_w;
-					//alert(re_userimg1_w);
-					//var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;
-					//$("td#user_img1 > div > p > canvas").css("padding-left",re_final1_w+"px");
-				}
-        }
-        if (file.error) {
-            node
-                .append('<br>')
-                .append($('<span class="text-danger"/>').text(file.error));
-        }
-        if (index + 1 === data.files.length) {
-            data.context.find('button')
-                .text('Upload')
-                .prop('disabled', !!data.files.error);
-        }
-    }).on('fileuploadprogressall', function (e, data) {
-        var progress = parseInt(data.loaded / data.total * 100, 10);
-        $('#progress .progress-bar').css(
-            'width',
-            progress + '%'
-        );
-		//$(".loading").show();
-		//$("html body").css("overflow","hidden");
-		//Timer();
-    }).on('fileuploaddone', function (e, data) {
-        $.each(data.result.files, function (index, file) {
-            if (file.url) {
-                var link = $('<a>')
-                    .attr('target', '_blank')
-                    .prop('href', file.url);
-                $(data.context.children()[index])
-                    .wrap(link);
-            } else if (file.error) {
-                var error = $('<span class="text-danger"/>').text(file.error);
-                $(data.context.children()[index])
-                    .append('<br>')
-                    .append(error);
-            }
-        });
-    }).prop('disabled', !$.support.fileInput)
-        .parent().addClass($.support.fileInput ? undefined : 'disabled');
-});
-$(function () {
-    'use strict';
-    // Change this to the location of your server-side upload handler:
-    var url = 'file_upload5_2.php?s_id=<?=$serial?>';
-    $('#fileupload5').fileupload({
-        url: url,
-        dataType: 'json',
-        autoUpload: false,
-        acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i,
-        maxFileSize: 99900000,
-        // Enable image resizing, except for Android and Opera,
-        // which actually support image resizing, but fail to
-        // send Blob objects via XHR requests:
-        disableImageResize: /Android(?!.*Chrome)|Opera/
-            .test(window.navigator.userAgent),
-        previewMaxWidth: 800,
-        previewMaxHeight: 800,
-        previewCrop: false
-    }).on('fileuploadadd', function (e, data) {
-		// 파일 삭제
-		//del_fileview();
-		user_ex_img5	= $("#user_ex_img5").height();
-		$("#user_img5").html("");
-        data.context = $('<div/>').appendTo('#user_img5');
-		$("#up_img_div5").attr("class","re_upload");
-		$("#up_img5").attr("src","images/popup/btn_reup.png");
-        $.each(data.files, function (index, file) {
-			//img_name5 = file.name;
-            var node = $('<p/>');
-                   // .append($('<span/>').text(file.name));
-			  //$("#image_up_name5").val(file.name);
-			  $("#up_images5").val(file.name);
-            if (!index) {
-                //node
-                  //  .append('<br>')
-                    //.append(uploadButton.clone(true).data(data));
-				//uploadButton.clone(true).data(data);
-				data.submit();
-            }
-
-            node.appendTo(data.context);
-        });
-    }).on('fileuploadprocessalways', function (e, data) {
-        var index = data.index,
-            file = data.files[index],
-            node = $(data.context.children()[index]);
-        if (file.preview) {
-            node
-                .prepend('<br>')
-                .prepend(file.preview);
-				//$("div#user_img5 > div > p > canvas").css("width","100%");
-				//$("div#user_img5 > div > p > canvas").css("height",$("#preview_img_2").height());
-				$("div#user_img5 > div > p > canvas").css("width","100%");
-				var uimg5_w	= $("div#user_img5 > div > p > canvas").width();
-				var uimg5_h	= $("div#user_img5 > div > p > canvas").height();
-				if (uimg5_w > uimg5_h)
-				{
-					if (uimg5_h > user_ex_img5_h)
-					{
-						$("div#user_img5 > div > p > canvas").css("height",user_ex_img5+"px");
-						$("div#user_img5 > div > p > canvas").css("width","80%");
-						$("div#user_img5 > div > p > canvas").css("padding-left","10%");
-					}else{
-						$("div#user_img5 > div > p > canvas").css("width","100%");
-					}
-					var re_userimg5_h	= (user_ex_img5_w/ uimg5_w)*uimg5_h;
-					var re_final5_h		= (user_ex_img5_h - re_userimg5_h) /2;
-					$("div#user_img5 > div > p > canvas").css("padding-top",re_final5_h+"px");
-				}else{
-					$("div#user_img5 > div > p > canvas").css("height",user_ex_img5+"px");
-					var re_userimg5_w	= (user_ex_img5_h / uimg5_h)*uimg5_w;
-					//alert(re_userimg1_w);
-					//var re_final1_w		= (user_ex_img1_w - re_userimg1_w) /2;
-					//$("td#user_img1 > div > p > canvas").css("padding-left",re_final1_w+"px");
-				}
-        }
-        if (file.error) {
-            node
-                .append('<br>')
-                .append($('<span class="text-danger"/>').text(file.error));
-        }
-        if (index + 1 === data.files.length) {
-            data.context.find('button')
-                .text('Upload')
-                .prop('disabled', !!data.files.error);
-        }
-    }).on('fileuploadprogressall', function (e, data) {
-        var progress = parseInt(data.loaded / data.total * 100, 10);
-        $('#progress .progress-bar').css(
-            'width',
-            progress + '%'
-        );
-		//$(".loading").show();
-		//$("html body").css("overflow","hidden");
-		//Timer();
-    }).on('fileuploaddone', function (e, data) {
-        $.each(data.result.files, function (index, file) {
-            if (file.url) {
-                var link = $('<a>')
-                    .attr('target', '_blank')
-                    .prop('href', file.url);
-                $(data.context.children()[index])
-                    .wrap(link);
-            } else if (file.error) {
-                var error = $('<span class="text-danger"/>').text(file.error);
-                $(data.context.children()[index])
-                    .append('<br>')
-                    .append(error);
-            }
-        });
-    }).prop('disabled', !$.support.fileInput)
-        .parent().addClass($.support.fileInput ? undefined : 'disabled');
-});
 
 function sns_share(media, flag)
 {
@@ -1227,7 +710,7 @@ function sns_share(media, flag)
 		  //},
 		  webButton: {
 			text: '[베비언스] 베비언스 먹고 폭풍 성장!',
-			url: 'http://grow.babience-event.com/MOBILE/index.php?serial=<?=$serial?>' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
+			url: 'http://grow.babience-event.com/MOBILE/coupon_page.php?serial=<?=$serial?>' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
 		  }
 		});
 		$.ajax({

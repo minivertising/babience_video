@@ -533,7 +533,7 @@ class UploadHandler
 		$arr_num	= count($namearr) -1;
 		if ($namearr[$arr_num] == "jpeg" || $namearr[$arr_num] == "JPEG")
 			$namearr[$arr_num]	= "jpg";
-		$name	= $_REQUEST['s_id']."_2.".strtolower($namearr[$arr_num]);
+		$name	= $_REQUEST['s_id']."_1.".strtolower($namearr[$arr_num]);
 		//$name	= date("YmdHis").".".$namearr[1];
 		//$ssl_name = stripslashes($name);
 		//$namearr	= substr($ssl_name,-3);

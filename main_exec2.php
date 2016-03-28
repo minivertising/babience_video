@@ -88,12 +88,10 @@ switch ($_REQUEST['exec'])
 			$caption_image1_w	= "120;";
 			$caption_image1_h	= "440;";
 		}else if ($mb_concept == "2"){
-			$caption_image1_w	= "38;";
-			$caption_image1_h	= "325;";
-			$caption_image2_w	= "40;";
-			$caption_image2_h	= "440;";
-			$caption_image2_name_w	= "40;";
-			$caption_image2_name_h	= "383;";
+			$caption_image1_w	= "40;";
+			$caption_image1_h	= "440;";
+			$caption_image1_name_w	= "40;";
+			$caption_image1_name_h	= "383;";
 		}else if ($mb_concept == "3"){
 			$caption_image1_w	= "370;";
 			$caption_image1_h	= "410;";
@@ -120,11 +118,15 @@ switch ($_REQUEST['exec'])
 		$new_image1			= merge_image($img_name1, $mb_serial,"1", $mb_concept);
 		$f_img_name1			= $mb_serial."_1.jpg";
 		$new_image1_1			= merge_image2($f_img_name1, $mb_serial,"1", $mb_concept);
-		if ($mb_concept == "2" || $mb_concept == "4"){
+		if ($mb_concept == "2"){
 			$cap_image1			= caption_image_white($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
+			$mb_name_age_caption	= $mb_baby_name." (".$mb_baby_age.")";
+			$cap_image1_2			= caption_image2_white($mb_name_age_caption, $mb_serial,"1",$caption_image1_name_w,$caption_image1_name_h);
 		}else if ($mb_concept == "3"){
 			$rs_caption_w3	= txt_position($mb_caption1, $mb_concept);
 			$cap_image1			= caption_image_yellow($mb_caption1, $mb_serial,"1",$rs_caption_w3,$caption_image1_h);
+		}else if ($mb_concept == "4"){
+			$cap_image1			= caption_image_white($mb_caption1, $mb_serial,"1",$caption_image1_w,$caption_image1_h);
 		}else{
 			//$mb_caption1	= "어느덧 쑥쑥 자라서 너무 고마워";
 			$rs_caption_w1	= txt_position($mb_caption1, $mb_concept);
