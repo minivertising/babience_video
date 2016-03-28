@@ -103,19 +103,12 @@
                 <th>순번</th>
                 <th>이름</th>
                 <th>전화번호</th>
-                <th>사진1</th>
-                <th>사진2</th>
-                <th>사진3</th>
-                <th>사진4</th>
-                <th>사진5</th>
-                <th>SNS주소</th>
-                <th>선택한 상품</th>
+                <th>영상컨셉</th>
+                <th>아기이름</th>
+                <th>아기나이</th>
                 <th>유입매체</th>
                 <th>유입구분</th>
                 <th>참여일자</th>
-                <th>대학내일 모델 선택여부</th>
-                <th>대학교</th>
-                <th>전공</th>
               </tr>
             </thead>
             <tbody>
@@ -155,19 +148,12 @@
                 <td><?php echo $PAGE_UNCOUNT--?></td>	<!-- No. 하나씩 감소 -->
                 <td><?php echo $buyer_info[$key]['mb_name']?></td>
                 <td><?php echo $buyer_info[$key]['mb_phone']?></td>
-                <td><a href="../files/<?=$buyer_info[$key]['mb_serial']?>/<?php echo $buyer_info[$key]['mb_photo1']?>" target="_blank"><img src="../files/<?=$buyer_info[$key]['mb_serial']?>/thumbnail/<?php echo $buyer_info[$key]['mb_photo1']?>"></a></td>
-                <td><a href="../files/<?=$buyer_info[$key]['mb_serial']?>/<?php echo $buyer_info[$key]['mb_photo2']?>" target="_blank"><img src="../files/<?=$buyer_info[$key]['mb_serial']?>/thumbnail/<?php echo $buyer_info[$key]['mb_photo2']?>"></a></td>
-                <td><a href="../files/<?=$buyer_info[$key]['mb_serial']?>/<?php echo $buyer_info[$key]['mb_photo3']?>" target="_blank"><img src="../files/<?=$buyer_info[$key]['mb_serial']?>/thumbnail/<?php echo $buyer_info[$key]['mb_photo3']?>"></a></td>
-                <td><a href="../files/<?=$buyer_info[$key]['mb_serial']?>/<?php echo $buyer_info[$key]['mb_photo4']?>" target="_blank"><img src="../files/<?=$buyer_info[$key]['mb_serial']?>/thumbnail/<?php echo $buyer_info[$key]['mb_photo4']?>"></a></td>
-                <td><a href="../files/<?=$buyer_info[$key]['mb_serial']?>/<?php echo $buyer_info[$key]['mb_photo5']?>" target="_blank"><img src="../files/<?=$buyer_info[$key]['mb_serial']?>/thumbnail/<?php echo $buyer_info[$key]['mb_photo5']?>"></a></td>
-                <td><?php echo $buyer_info[$key]['mb_sns']?></td>
-                <td><?php echo $buyer_info[$key]['mb_nominees']?></td>
+                <td><?php echo $buyer_info[$key]['mb_concept']?></td>
+                <td><?php echo $buyer_info[$key]['mb_baby_name']?></td>
+                <td><?php echo $buyer_info[$key]['mb_baby_age']?></td>
                 <td><?php echo $buyer_info[$key]['mb_media']?></td>
                 <td><?php echo $buyer_info[$key]['mb_gubun']?></td>
                 <td><?php echo $buyer_info[$key]['mb_regdate']?></td>
-                <td><?php echo $buyer_info[$key]['mb_magazineYN']?></td>
-                <td><?php echo $buyer_info[$key]['mb_university']?></td>
-                <td><?php echo $buyer_info[$key]['mb_major']?></td>
               </tr>
 <?php 
 	}

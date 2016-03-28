@@ -14,7 +14,7 @@ if (isset($_SESSION['ss_mb_name']) == false)
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>더페이스샵 - 모델지원</title>
+    <title>베비언스 - 성장영상</title>
 	<!-- jQuery Version 1.11.0 -->
 	<script src="js/jquery-1.11.0.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
@@ -76,8 +76,8 @@ if (isset($_SESSION['ss_mb_name']) == false)
                   <li>
                     <a href="daily_share_count.php">일자별 SNS 공유 수</a>
                   </li>
-                    <li>
-                    <a href="daily_coupon_count.php">일자별 쿠폰 사용자 수</a>
+                   <li>
+                    <a href="daily_click_count.php">일자별 분유체인지 배너 클릭</a>
                   </li>
                     <!-- <li>
                     <a href="daily_event_count2.php">일자별 투표 이벤트 참여자 수</a>
@@ -88,23 +88,26 @@ if (isset($_SESSION['ss_mb_name']) == false)
                   <li>
                     <a href="daily_media_count.php">일자별 매체당 참여자 수</a>
                   </li>
+                  <li>
+                    <a href="daily_media_count_real.php">일자별 매체당 참여자 수(영상완료)</a>
+                  </li>
                 </ul>
               </li>
               <li>
                 <a href="entry_list.php"><i class="fa fa-fw fa-table"></i> 이벤트 참여자 목록</a>
               </li>
-              <!-- <li>
-                <a href="comment_list.php"><i class="fa fa-fw fa-table"></i> 코멘트 목록</a>
-              </li> -->
+              <li>
+                <a href="click_count.php"><i class="fa fa-fw fa-table"></i>분유체인지 배너클릭</a>
+              </li>
                <!-- <li>
                 <a href="winner_count.php"><i class="fa fa-fw fa-table"></i> 경품별 당첨자 수</a>
               </li> -->
               <li>
                 <a href="media_count.php"><i class="fa fa-fw fa-edit"></i> 매체별 참여자 수</a>
               </li>
-              <!-- <li>
+              <li>
                 <a href="share_media_count.php"><i class="fa fa-fw fa-bar-chart-o"></i> 공유 정보</a>
-              </li> -->
+              </li>
             </ul>
           </div>
         <!-- /.navbar-collapse -->
