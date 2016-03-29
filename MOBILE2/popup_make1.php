@@ -270,7 +270,7 @@ $(function () {
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
 		//del_fileview();
-		//user_ex_img1	= $("#user_ex_img1").height();
+		user_ex_img1	= $("#user_ex_img1").height();
 		$("#user_img1").html("");
         data.context = $('<div/>').appendTo('#user_img1');
 		$("#up_img_div1").attr("class","re_upload");
@@ -305,7 +305,7 @@ $(function () {
 						$("td#user_img1 > div > p > canvas").css("width","100%");
 					}
 					//$("td#user_img1 > div > p > canvas").css("height",re_userimg1_h+"px");
-					$("td#user_img1 > div > p > canvas").css("height",user_ex_img1_h+"px");
+					$("td#user_img1 > div > p > canvas").css("height",user_ex_img1+"px");
 					$("td#user_img1 > div > p > canvas").css("padding-top",re_final1_h+"px");
 				}else{
 					
