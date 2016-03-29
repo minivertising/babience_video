@@ -422,7 +422,7 @@ function sns_share(media, flag)
 	if (media == "fb")
 	{
 
-		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://grow.babience-event.com/MOBILE2/coupon_page.php?serial=<?=$serialnumber?>'),'sharer','toolbar=0,status=0,width=600,height=325');
+		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://grow.babience-event.com/MOBILE2/coupon_page.php?serial=<?=$serial?>'),'sharer','toolbar=0,status=0,width=600,height=325');
 		$.ajax({
 			type   : "POST",
 			async  : false,
@@ -447,7 +447,7 @@ function sns_share(media, flag)
 		  //},
 		  webButton: {
 			text: '[베비언스] 베비언스 먹고 폭풍 성장 2탄!',
-			url: 'http://grow.babience-event.com/MOBILE2/index.php?serial=<?=$serialnumber?>' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
+			url: 'http://grow.babience-event.com/MOBILE2/index.php?serial=<?=$serial?>' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
 		  }
 		});
 		$.ajax({
@@ -462,8 +462,8 @@ function sns_share(media, flag)
 		});
 	}else{
 		Kakao.Story.share({
-			url: 'http://grow.babience-event.com/MOBILE2/coupon_page.php?serial=<?=$serialnumber?>',
-			text: '우리아기 특별한 패러디 컷 공개!\r\nhttp://grow.babience-event.com/MOBILE2/coupon_page.php?serial=<?=$serialnumber?>'
+			url: 'http://grow.babience-event.com/MOBILE2/coupon_page.php?serial=<?=$serial?>',
+			text: '우리아기 특별한 패러디 컷 공개!\r\nhttp://grow.babience-event.com/MOBILE2/coupon_page.php?serial=<?=$serial?>'
 		});
 		$.ajax({
 			type   : "POST",
