@@ -308,7 +308,7 @@ $(function () {
 						$("td#user_img1 > div > p > canvas").css("width","100%");
 					}
 					//$("td#user_img1 > div > p > canvas").css("height",re_userimg1_h+"px");
-					$("td#user_img1 > div > p > canvas").css("height",user_ex_img1+"px");
+					$("td#user_img1 > div > p > canvas").css("height",user_ex_img1_h+"px");
 					$("td#user_img1 > div > p > canvas").css("padding-top",re_final1_h+"px");
 				}else{
 					
