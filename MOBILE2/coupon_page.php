@@ -15,7 +15,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta property="og:title" content="[베비언스] 베비언스 먹고 폭풍 성장">
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="http://grow.babience-event.com/MOBILE/coupon_page.php?serial=<?=$serialnumber?>" />
+      <meta property="og:url" content="http://grow.babience-event.com/MOBILE2/coupon_page.php?serial=<?=$serialnumber?>" />
       <meta property="og:image" content="http://grow.babience-event.com/files2/<?=$serialnumber?>/medium/final_<?=$serialnumber?>_1.jpg" />
       <meta property="og:description" content="우리 아기의 성장 과정을 특별하게 담는 방법! 지금 베비언스에서 만들어 드립니다.">
       <link rel="shortcut icon" type="image/x-icon" href="./images/fabicon.ico" />
