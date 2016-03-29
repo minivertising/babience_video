@@ -149,7 +149,8 @@ class UploadHandler
                 
                 'medium' => array(
                     'max_width' => 555,
-                    'max_height' => 317
+                    'max_height' => 317,
+					'auto_orient' => true
                 ),
                 
                 'thumbnail' => array(
