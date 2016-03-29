@@ -32,7 +32,7 @@
       </div>
       <div class="btn_sample">
         <a href="popup_gate.php"><img src="images/popup/btn_reselect.png" /></a>
-        <a href="#" onclick="open_pop('exam1_popup');return false;"><img src="images/popup/btn_sample2.png" /></a>
+        <a href="#" onclick="open_pop('exam3_popup');return false;"><img src="images/popup/btn_sample2.png" /></a>
       </div>
       <div class="img_process img">
         <a href="#"><img src="images/popup/img_process.png" /></a>
