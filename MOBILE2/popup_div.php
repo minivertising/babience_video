@@ -4,9 +4,9 @@
   <div class="p_mid p_agree p_position">
     <div class="block_close clearfix">
       <a href="#" onclick="$.colorbox.close();" class="btn_close"><img src="images/popup/btn_close_2.png" /></a>
-    </div>
+    </div>        
     <div class="block_content">
-      <div class="inner" style="padding-top:35px">
+      <div class="inner">
         <span class="bold">[개인정보 수집 · 이용에 대한 동의]</span> <br><br>
         (주)LG생활건강(이하 "LG생활건강")는 이벤트 진행을 위한 개인정보 
         수집 이용을 위하여 다음과 같이 귀하의 동의를 받고자 합니다.
@@ -65,10 +65,10 @@
     <div class="block_content">
       <div class="inner">
         <div class="title img">
-          <img src="images/popup/title_view_1.png" />
+          <img src="images/popup/title_view_1.png" id="exam_title_img1"/>
         </div>
         <div class="youtube">
-          <iframe allowfullscreen="1" src="<?=$_gl['youtube_url1']?>" frameborder="0" id="ytplayer1" class="ytplayer1"></iframe>
+          <img src="images/popup/cut_1.jpg" id="gate_exam1">
         </div>
       </div><!--inner-->
     </div>
@@ -88,7 +88,7 @@
           <img src="images/popup/title_view_2.png" />
         </div>
         <div class="youtube">
-          <iframe allowfullscreen="1" src="<?=$_gl['youtube_url2']?>" frameborder="0" id="ytplayer2" class="ytplayer2"></iframe>
+          <img src="images/popup/cut_2.jpg" id="gate_exam2">
         </div>
       </div><!--inner-->
     </div>
@@ -108,7 +108,7 @@
           <img src="images/popup/title_view_3.png" />
         </div>
         <div class="youtube">
-          <iframe allowfullscreen="1" src="<?=$_gl['youtube_url3']?>" frameborder="0" id="ytplayer3" class="ytplayer3"></iframe>
+          <img src="images/popup/cut_3.jpg" id="gate_exam3">
         </div>
       </div><!--inner-->
     </div>
@@ -128,7 +128,7 @@
           <img src="images/popup/title_view_4.png" />
         </div>
         <div class="youtube">
-          <iframe allowfullscreen="1" src="<?=$_gl['youtube_url4']?>" frameborder="0" id="ytplayer4" class="ytplayer4"></iframe>
+          <img src="images/popup/cut_4.jpg" id="gate_exam4">
         </div>
       </div><!--inner-->
     </div>

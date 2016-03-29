@@ -40,30 +40,34 @@
           <div class="title img">
             <img src="images/popup/title_gate.png" />
           </div>  
-          <div class="concept">
-            <div class="c_btn clearfix">
-              <div class="btn"><a href="#" onclick="sel_concept2('1','<?=$serial?>');return false;"><img src="images/popup/btn_c_1.png" /></a></div>
-              <div class="thumb"><a href="#" onclick="open_pop('exam1_popup');return false;"><img src="images/popup/btn_c_thumb_1.png" /></a></div>
-            </div>
-          </div>  
-          <div class="concept">
-            <div class="c_btn clearfix">
-              <div class="btn"><a href="#" onclick="sel_concept2('2','<?=$serial?>');return false;"><img src="images/popup/btn_c_2.png" /></a></div>
-              <div class="thumb"><a href="#" onclick="open_pop('exam2_popup');return false;"><img src="images/popup/btn_c_thumb_2.png" /></a></div>
-            </div>
-          </div>  
-          <div class="concept">
-            <div class="c_btn clearfix">
-              <div class="btn"><a href="#" onclick="sel_concept2('3','<?=$serial?>');return false;"><img src="images/popup/btn_c_3.png" /></a></div>
-              <div class="thumb"><a href="#" onclick="open_pop('exam3_popup');return false;"><img src="images/popup/btn_c_thumb_3.png" /></a></div>
-            </div>
-          </div>  
-          <div class="concept last">
-            <div class="c_btn clearfix">
-              <div class="btn"><a href="#" onclick="sel_concept2('4','<?=$serial?>');return false;"><img src="images/popup/btn_c_4.png" /></a></div>
-              <div class="thumb"><a href="#" onclick="open_pop('exam4_popup');return false;"><img src="images/popup/btn_c_thumb_4.png" /></a></div>
-            </div>
-          </div>
+          <div class="clearfix">
+            <div class="concepts">
+              <div class="c_btn">
+                <div class="thumb"><a href="#" onclick="open_pop('exam1_popup');return false;"><img src="images/popup/btn_c_thumb_1.png" /></a></div>
+                <div class="btn"><a href="#" onclick="sel_concept2('1','<?=$serial?>');return false;"><img src="images/popup/btn_c_n1.png" /></a></div>
+              </div>
+            </div>  
+            <div class="concepts">
+              <div class="c_btn clearfix">
+                <div class="thumb"><a href="#" onclick="open_pop('exam2_popup');return false;"><img src="images/popup/btn_c_thumb_2.png" /></a></div>
+                <div class="btn"><a href="#" onclick="sel_concept2('2','<?=$serial?>');return false;"><img src="images/popup/btn_c_2.png" /></a></div>
+              </div>
+            </div> 
+          </div>   
+          <div class="clearfix">
+            <div class="concepts last">
+              <div class="c_btn">
+                <div class="thumb"><a href="#" onclick="open_pop('exam3_popup');return false;"><img src="images/popup/btn_c_thumb_3.png" /></a></div>
+                <div class="btn"><a href="#" onclick="sel_concept2('3','<?=$serial?>');return false;"><img src="images/popup/btn_c_n3.png" /></a></div>
+              </div>
+            </div>  
+            <div class="concepts last">
+              <div class="c_btn clearfix">
+                <div class="thumb"><a href="#" onclick="open_pop('exam4_popup');return false;"><img src="images/popup/btn_c_thumb_4.png" /></a></div>
+                <div class="btn"><a href="#" onclick="sel_concept2('4','<?=$serial?>');return false;"><img src="images/popup/btn_c_4.png" /></a></div>
+              </div>
+            </div> 
+          </div> 
         </div>
       </div><!--inner-->
     </div>
@@ -90,17 +94,14 @@ $(document).ready(function() {
 	$("#cboxBottomCenter").hide();
 	Kakao.init('d58dc6bc022da9c054b20aff9c23e0f9');
 
-	var yt_width = $(document).width()-20;
-	var youtube_height = (yt_width / 16) * 9;
-	$("#ytplayer1").width(yt_width);
-	$("#ytplayer1").height(youtube_height);
-	$("#ytplayer2").width(yt_width);
-	$("#ytplayer2").height(youtube_height);
-	$("#ytplayer3").width(yt_width);
-	$("#ytplayer3").height(youtube_height);
-	$("#ytplayer4").width(yt_width);
-	$("#ytplayer4").height(youtube_height);
-
+	var yt_width = $(document).width()*0.95;
+	var youtube_height = ((yt_width / 16) * 9)*1.15;
+	$("#gate_exam1").width(yt_width);
+	$("#gate_exam2").width(yt_width);
+	$("#gate_exam3").width(yt_width);
+	$("#gate_exam4").width(yt_width);
+	$(".youtube").height(youtube_height);
+	
 });
 
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

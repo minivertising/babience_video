@@ -136,7 +136,7 @@
 		return $data['serial_code'];
 	}
 
-	// LMS 발송 
+	// LMS 발송 ( 쿠폰 발급받을 사람 )
 	function send_lms($phone, $serial)
 	{
 		global $_gl;
@@ -158,7 +158,7 @@
 		$query3 = "INSERT INTO sms_info(send_phone, send_status, cmid, send_regdate) values('".$phone."','".$json_data['result_code']."','".$json_data['cmid']."','".date("Y-m-d H:i:s")."')";
 		$result3 		= mysqli_query($my_db, $query3);
 
-		$query2 = "UPDATE member_info SET mb_lms='Y' WHERE mb_phone='".$phone."'";
+		$query2 = "UPDATE member_info2 SET mb_lms='Y' WHERE mb_phone='".$phone."'";
 		$result2 		= mysqli_query($my_db, $query2);
 
 		if ($json_data['result_code'] == "200")
@@ -169,7 +169,7 @@
 		return $flag;
 	}
 
-	// LMS 발송 
+	// LMS 발송 ( 쿠폰 이미 발급받은 사람 )
 	function send_lms2($phone, $serial)
 	{
 		global $_gl;
@@ -191,7 +191,7 @@
 		$query3 = "INSERT INTO sms_info(send_phone, send_status, cmid, send_regdate) values('".$phone."','".$json_data['result_code']."','".$json_data['cmid']."','".date("Y-m-d H:i:s")."')";
 		$result3 		= mysqli_query($my_db, $query3);
 
-		$query2 = "UPDATE member_info SET mb_lms='Y' WHERE mb_phone='".$phone."'";
+		$query2 = "UPDATE member_info2 SET mb_lms='Y' WHERE mb_phone='".$phone."'";
 		$result2 		= mysqli_query($my_db, $query2);
 
 		if ($json_data['result_code'] == "200")
@@ -215,24 +215,25 @@
 			//'dest_phone' => '01099017644',
 			'send_name' => '', 
 			'dest_name' => '', 
-			'subject' => '(광고)베비언스 폭풍 성장 이벤트',
+			'subject' => '(광고)베비언스 폭풍 성장 2탄!',
 			'msg_body' => "
 (광고)
-'베비언스 먹고 폭풍성장!' 이벤트에 참여해주셔서 감사합니다.
+“베비언스 먹고 폭풍성장 2탄!” 
+이벤트에 참여해주셔서 감사합니다.
 
 아래 쿠폰번호를 베비언스 홈페이지에 입력하고 배송비까지 완전무료 체험팩을 받으세요!
- 
-▶ 베비언스 홈페이지
-http://www.babience.com/m/bbgrowth_coupon/event.jsp
 
-▶ 체험팩 완전무료 쿠폰번호
+베비언스 홈페이지
+http://www.babience.com/m/index.jsp
+
+체험팩 완전무료 쿠폰번호
 ".$serial."
 
 ↓↓
-우리아기 영상 페이지
+우리아기 패러디 컷 페이지
 ".$s_url."
 
-* 이벤트 관련 문의 : 070-4888-3580 / jh.woo@minivertising.kr (평일 10시~18시)
+*이벤트 관련 문의 : 070-4888-3580 /jh.woo@minivertising.kr (평일 10시~18시)
 "
 		);
 
@@ -276,25 +277,25 @@ http://www.babience.com/m/bbgrowth_coupon/event.jsp
 			//'dest_phone' => '01099017644',
 			'send_name' => '', 
 			'dest_name' => '', 
-			'subject' => '(광고)베비언스 폭풍 성장 이벤트',
+			'subject' => '(광고)베비언스 폭풍 성장 2탄!',
 			'msg_body' => "
 (광고)
-'베비언스 먹고 폭풍성장' 이벤트에 참여해주셔서 감사합니다.
 
-아래 링크를 클릭하여, 만드신 아기 영상을 확인해주세요!
+“베비언스 먹고 폭풍성장 2탄!” 
+이벤트에 참여해주셔서 감사합니다.
+
+아래 링크를 클릭하여, 만드신 아기 패러디 컷을 확인해주세요!
 
 ↓↓
-우리아기 영상 페이지
+우리아기 패러디 컷 페이지
 ".$s_url."
 
-참여하신 분들 중 추첨을 통해 베비언스 제품을 선물로 드립니다.
+참여하신 분들 중 추첨을 통해 스타벅스 아메리카노를 드려요!
 
 또 참여하시려면?
 이벤트 페이지 바로가기
 ↓↓
 http://grow.babience-event.com
-
-* 이벤트 관련 문의 : 070-4888-3580 / jh.woo@minivertising.kr (평일 10시~18시)
 "
 		);
 
@@ -328,9 +329,9 @@ http://grow.babience-event.com
 	$GLOBALS['errormsg']	= "";
 	function merge_image($img_name, $img_folder, $p_num, $concept)
 	{
-		$path_mark_file = './files/'.$img_folder.'/medium/'.$img_name;	//원본파일
-		$path_src_file ='./files/frame_images/frm_b_bg.jpg';	// 720 x 480 베이스 이미지
-		$path_save_file = './files/'.$img_folder.'/medium/merge_'.$img_name; // 합성된 이미지 파일
+		$path_mark_file = './files2/'.$img_folder.'/medium/'.$img_name;	//원본파일
+		$path_src_file ='./files2/frame_images/frm_b_bg.jpg';	// 720 x 480 베이스 이미지
+		$path_save_file = './files2/'.$img_folder.'/medium/merge_'.$img_name; // 합성된 이미지 파일
 
 		  $size_ori = @getimagesize($path_mark_file);
 		  if (empty($size_ori[2])) {//이미지 타입이 없다면
@@ -348,9 +349,9 @@ http://grow.babience-event.com
 			case 1 : //gif
 
 			  $im_ori = @imagecreatefromgif($path_mark_file);
-			  imagejpeg($im_ori,'./files/'.$img_folder.'/medium/'.$img_folder.'_'.$p_num.'.jpg'); 
-			$path_mark_file = './files/'.$img_folder.'/medium/'.$img_folder.'_'.$p_num.'.jpg';	//원본파일
-			$path_save_file = './files/'.$img_folder.'/medium/merge_'.$img_folder.'_'.$p_num.'.jpg'; // 합성된 이미지 파일
+			  imagejpeg($im_ori,'./files2/'.$img_folder.'/medium/'.$img_folder.'_'.$p_num.'.jpg'); 
+			$path_mark_file = './files2/'.$img_folder.'/medium/'.$img_folder.'_'.$p_num.'.jpg';	//원본파일
+			$path_save_file = './files2/'.$img_folder.'/medium/merge_'.$img_folder.'_'.$p_num.'.jpg'; // 합성된 이미지 파일
 			break;
 
 			case 2 : //jpg
@@ -361,9 +362,9 @@ http://grow.babience-event.com
 			case 3 : //png
 
 			  $im_ori = @imagecreatefrompng($path_mark_file);
-			  imagejpeg($im_ori,'./files/'.$img_folder.'/medium/'.$img_folder.'_'.$p_num.'.jpg'); 
-			$path_mark_file = './files/'.$img_folder.'/medium/'.$img_folder.'_'.$p_num.'.jpg';	//원본파일
-			$path_save_file = './files/'.$img_folder.'/medium/merge_'.$img_folder.'_'.$p_num.'.jpg'; // 합성된 이미지 파일
+			  imagejpeg($im_ori,'./files2/'.$img_folder.'/medium/'.$img_folder.'_'.$p_num.'.jpg'); 
+			$path_mark_file = './files2/'.$img_folder.'/medium/'.$img_folder.'_'.$p_num.'.jpg';	//원본파일
+			$path_save_file = './files2/'.$img_folder.'/medium/merge_'.$img_folder.'_'.$p_num.'.jpg'; // 합성된 이미지 파일
 			  break;
 		  }
 
@@ -395,35 +396,35 @@ flush();
 	{
 		if ($concept == "1")
 		{
-			$path_mark_file = './files/frame_images/img_frm_1_2.png';
-			$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
+			$path_mark_file = './files2/frame_images/img_frm_1_2.png';
+			$path_save_file = './files2/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
 		}else if ($concept == "2"){
-			$path_mark_file = './files/frame_images/img_frm_2_2.png';
-			$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
+			$path_mark_file = './files2/frame_images/img_frm_2_2.png';
+			$path_save_file = './files2/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
 		}else if ($concept == "3"){
-			$path_mark_file = './files/frame_images/img_frm_3_1.png';
-			$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
+			$path_mark_file = './files2/frame_images/img_frm_3_1.png';
+			$path_save_file = './files2/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
 		}else{
 			if ($p_num == "1")
 			{
-				$path_mark_file = './files/frame_images/img_frm_4_1.png';
-				$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
+				$path_mark_file = './files2/frame_images/img_frm_4_1.png';
+				$path_save_file = './files2/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
 			}else if ($p_num == "2"){
-				$path_mark_file = './files/frame_images/img_frm_4_2.png';
-				$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
+				$path_mark_file = './files2/frame_images/img_frm_4_2.png';
+				$path_save_file = './files2/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
 			}else if ($p_num == "3"){
-				$path_mark_file = './files/frame_images/img_frm_4_3.png';
-				$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
+				$path_mark_file = './files2/frame_images/img_frm_4_3.png';
+				$path_save_file = './files2/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
 			}else if ($p_num == "4"){
-				$path_mark_file = './files/frame_images/img_frm_4_4.png';
-				$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
+				$path_mark_file = './files2/frame_images/img_frm_4_4.png';
+				$path_save_file = './files2/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
 			}else{
-				$path_mark_file = './files/frame_images/img_frm_4_5.png';
-				$path_save_file = './files/'.$img_folder.'/medium/final_'.$img_name; // 합성된 이미지 파일
+				$path_mark_file = './files2/frame_images/img_frm_4_5.png';
+				$path_save_file = './files2/'.$img_folder.'/medium/final_'.$img_name; // 합성된 이미지 파일
 			}
 		}
-		$path_src_file = './files/'.$img_folder.'/medium/merge_'.$img_name;	//원본파일
-		//$path_save_file = './files/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
+		$path_src_file = './files2/'.$img_folder.'/medium/merge_'.$img_name;	//원본파일
+		//$path_save_file = './files2/'.$img_folder.'/medium/merge2_'.$img_name; // 합성된 이미지 파일
 
 		  $size_ori = @getimagesize($path_mark_file);
 		  if (empty($size_ori[2])) {//이미지 타입이 없다면
@@ -441,9 +442,9 @@ flush();
 			case 1 : //gif
 
 			  $im_ori = @imagecreatefromgif($path_mark_file);
-			  imagejpeg($im_ori,'./files/'.$img_folder.'/medium/merge_'.$img_folder.'_'.$p_num.'.jpg'); 
-			$path_mark_file = './files/'.$img_folder.'/medium/'.$img_folder.'_'.$p_num.'.jpg';	//원본파일
-			$path_save_file = './files/'.$img_folder.'/medium/merge_'.$img_folder.'_'.$p_num.'.jpg'; // 합성된 이미지 파일
+			  imagejpeg($im_ori,'./files2/'.$img_folder.'/medium/merge_'.$img_folder.'_'.$p_num.'.jpg'); 
+			$path_mark_file = './files2/'.$img_folder.'/medium/'.$img_folder.'_'.$p_num.'.jpg';	//원본파일
+			$path_save_file = './files2/'.$img_folder.'/medium/merge_'.$img_folder.'_'.$p_num.'.jpg'; // 합성된 이미지 파일
 			break;
 
 			case 2 : //jpg
@@ -454,9 +455,9 @@ flush();
 			case 3 : //png
 
 			  $im_ori = @imagecreatefrompng($path_mark_file);
-			//  imagejpeg($im_ori,'./files/'.$img_folder.'/medium/merge_'.$img_folder.'_'.$p_num.'.jpg'); 
-			//$path_mark_file = './files/'.$img_folder.'/medium/'.$img_folder.'_'.$p_num.'.jpg';	//원본파일
-			//$path_save_file = './files/'.$img_folder.'/medium/merge_'.$img_folder.'_'.$p_num.'.jpg'; // 합성된 이미지 파일
+			//  imagejpeg($im_ori,'./files2/'.$img_folder.'/medium/merge_'.$img_folder.'_'.$p_num.'.jpg'); 
+			//$path_mark_file = './files2/'.$img_folder.'/medium/'.$img_folder.'_'.$p_num.'.jpg';	//원본파일
+			//$path_save_file = './files2/'.$img_folder.'/medium/merge_'.$img_folder.'_'.$p_num.'.jpg'; // 합성된 이미지 파일
 			  break;
 		  }
 */
@@ -4841,7 +4842,7 @@ function caption_image($caption, $serial, $num, $txt_X, $txt_Y)
 
 	//$szFilePath     = "/home/vdl_gate/m/images/baby_1.jpg";
 	//$szFilePath     = "./images/baby1.jpg";
-	$szFilePath     = "./files/".$serial."/medium/merge2_".$serial."_".$num.".jpg";
+	$szFilePath     = "./files2/".$serial."/medium/merge2_".$serial."_".$num.".jpg";
 
 	$cImage = getPrintToImage($txt_X, $txt_Y, $serial, $num, $szFilePath, $objFont, $serial, LEFT | MIDDLE);
 }
@@ -4860,7 +4861,7 @@ function caption_image_white($caption, $serial, $num, $txt_X, $txt_Y)
 
 	//$szFilePath     = "/home/vdl_gate/m/images/baby_1.jpg";
 	//$szFilePath     = "./images/baby1.jpg";
-	$szFilePath     = "./files/".$serial."/medium/merge2_".$serial."_".$num.".jpg";
+	$szFilePath     = "./files2/".$serial."/medium/merge2_".$serial."_".$num.".jpg";
 
 	$cImage = getPrintToImage($txt_X, $txt_Y, $serial, $num, $szFilePath, $objFont, $serial, LEFT | MIDDLE);
 }
@@ -4879,7 +4880,7 @@ function caption_image_yellow($caption, $serial, $num, $txt_X, $txt_Y)
 
 	//$szFilePath     = "/home/vdl_gate/m/images/baby_1.jpg";
 	//$szFilePath     = "./images/baby1.jpg";
-	$szFilePath     = "./files/".$serial."/medium/merge2_".$serial."_".$num.".jpg";
+	$szFilePath     = "./files2/".$serial."/medium/merge2_".$serial."_".$num.".jpg";
 
 	$cImage = getPrintToImage($txt_X, $txt_Y, $serial, $num, $szFilePath, $objFont, $serial, LEFT | MIDDLE);
 }
@@ -4898,7 +4899,7 @@ function caption_image2($caption, $serial, $num, $txt_X, $txt_Y)
 
 	//$szFilePath     = "/home/vdl_gate/m/images/baby_1.jpg";
 	//$szFilePath     = "./images/baby1.jpg";
-	$szFilePath     = "./files/".$serial."/medium/final_".$serial."_".$num.".jpg";
+	$szFilePath     = "./files2/".$serial."/medium/final_".$serial."_".$num.".jpg";
 
 	$cImage = getPrintToImage($txt_X, $txt_Y, $serial, $num, $szFilePath, $objFont, $serial, LEFT | MIDDLE);
 }
@@ -4917,7 +4918,7 @@ function caption_image2_white($caption, $serial, $num, $txt_X, $txt_Y)
 
 	//$szFilePath     = "/home/vdl_gate/m/images/baby_1.jpg";
 	//$szFilePath     = "./images/baby1.jpg";
-	$szFilePath     = "./files/".$serial."/medium/final_".$serial."_".$num.".jpg";
+	$szFilePath     = "./files2/".$serial."/medium/final_".$serial."_".$num.".jpg";
 
 	$cImage = getPrintToImage($txt_X, $txt_Y, $serial, $num, $szFilePath, $objFont, $serial, LEFT | MIDDLE);
 }
@@ -5057,7 +5058,7 @@ function getPrintToImage($txt_X, $txt_Y, $serial, $num, $szFilePath, &$objFont, 
 			break;
 		case 2:
 			# JPG
-			ImageJPEG($nImage,'./files/'.$serial.'/medium/final_'.$serial.'_'.$num.'.jpg',100);
+			ImageJPEG($nImage,'./files2/'.$serial.'/medium/final_'.$serial.'_'.$num.'.jpg',100);
 			break;
 		case 3:
 			# PNG

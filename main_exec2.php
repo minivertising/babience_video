@@ -39,18 +39,42 @@ switch ($_REQUEST['exec'])
 
 	case "update_info" :
 		$mb_name		= $_REQUEST['mb_name'];
-		$mb_phone		= $_REQUEST['mb_phone'];
+		$mb_phone		= trim($_REQUEST['mb_phone']);
 		$chk_adver		= $_REQUEST['chk_adver'];
 		$serial				= $_REQUEST['mb_serial'];
 
 		$query 	= "UPDATE ".$_gl['member_info2_table']." SET mb_name='".$mb_name."', mb_phone='".$mb_phone."' ,chk_adver='".$chk_adver."' WHERE mb_serial='".$serial."'";
 		$result 	= mysqli_query($my_db, $query);
-		if ($result)
-			$flag	= "Y";
-		else
-			$flag	= "N";
 
-		// $flag=D ( 중복 ), Y ( 참여완료 ), N ( 오류 )
+		if ($result)
+		{
+			// 체험비 무료쿠폰 사이트 중복 당첨여부 체크
+			$dupli_bann_query		= "SELECT * FROM ".$_gl['bann_info_table']." WHERE bann_phone='".$mb_phone."'";
+			$dupli_bann_result		= mysqli_query($my_db, $dupli_bann_query);
+			$dupli_bann_num		= mysqli_num_rows($dupli_bann_result);
+
+			if ($dupli_bann_num == 0)
+			{
+				// 중복 당첨여부 체크
+				$dupli2_bann_query		= "SELECT * FROM ".$_gl['member_info2_table']." WHERE mb_phone='".$mb_phone."' AND mb_lms='Y'";
+				$dupli2_bann_result		= mysqli_query($my_db, $dupli2_bann_query);
+				$dupli2_bann_num		= mysqli_num_rows($dupli2_bann_result);
+				if ($dupli2_bann_num == 0)
+				{
+					$flag	= "Y";
+					send_lms($mb_phone, $serial);
+				}else{
+					$flag	= "D";
+					send_lms2($mb_phone, $serial);
+				}
+			}else{
+				$flag	= "D";
+				send_lms2($mb_phone, $serial);
+			}
+		}else{
+			$flag	= "N";
+		}
+
 		echo $flag;
 	break;
 
@@ -135,7 +159,7 @@ switch ($_REQUEST['exec'])
 
 		//$query 	= "UPDATE ".$_gl['member_info_table']." SET mb_baby_name='".$mb_baby_name."',mb_baby_age='".$mb_baby_age."',mb_concept='".$mb_concept."', mb_photo1='".$img_name1."' WHERE mb_serial='".$mb_serial."'";
 		//$result 	= mysqli_query($my_db, $query);
-		$query 	= "INSERT INTO ".$_gl['member_info2_table']."(mb_baby_name,mb_baby_age,mb_concept,mb_photo1,mb_ipaddr,mb_regdate,mb_serial,mb_gubun,mb_media) values('".$mb_baby_name."','".$mb_baby_age."','".$mb_concept."','".$img_name1."','".$_SERVER['REMOTE_ADDR']."','".date("Y-m-d H:i:s")."','".$mb_serial."','".$gubun."','".$media."')";
+		$query 	= "INSERT INTO ".$_gl['member_info2_table']."(mb_baby_name,mb_baby_age,mb_concept,mb_photo1,mb_caption1,mb_ipaddr,mb_regdate,mb_serial,mb_gubun,mb_media) values('".$mb_baby_name."','".$mb_baby_age."','".$mb_concept."','".$img_name1."','".$mb_caption1."','".$_SERVER['REMOTE_ADDR']."','".date("Y-m-d H:i:s")."','".$mb_serial."','".$gubun."','".$media."')";
 		$result 	= mysqli_query($my_db, $query);
 
 		if ($result)

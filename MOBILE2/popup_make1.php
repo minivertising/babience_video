@@ -30,53 +30,17 @@
       <div class="title_make img">
         <img src="images/popup/title_make_sub_1.png" />
       </div>
-      <!-- <div class="btn_sample img">
-        <a href="#" onclick="open_pop('exam1_popup');return false;"><img src="images/popup/btn_sample.png" /></a>
-      </div> -->
       <div class="btn_sample">
-        <a href="popup_gate.php?mb_phone=<?=$mb_phone?>&serial=<?=$serial?>"><img src="images/popup/btn_reselect.png" /></a>
+        <a href="popup_gate.php"><img src="images/popup/btn_reselect.png" /></a>
         <a href="#" onclick="open_pop('exam1_popup');return false;"><img src="images/popup/btn_sample2.png" /></a>
       </div>
       <div class="img_process img">
         <a href="#"><img src="images/popup/img_process.png" /></a>
       </div>
-      <div class="input_block">
-        <div class="title img">
-          <img src="images/popup/title_input_2.png" />
-        </div>                    
-        <div class="inner_input_block">
-          <div class="input_one">
-            <div class="inner_input_one clearfix">
-              <div class="input"><input type="text" name="mb_baby_name" id="mb_baby_name" placeholder="아기 이름"></div>
-            </div>
-          </div>
-          <div class="input_one">
-            <div class="inner_input_one clearfix">
-              <!-- <div class="input"><input type="tel" name="mb_baby_age" id="mb_baby_age" placeholder="아기 나이 (숫자만 넣어주세요)"></div> -->
-              <div class="input">
-                <select name="mb_baby_age" id="mb_baby_age">
-                  <option value="">나이를 선택해주세요.</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </div>      
-      </div>
-      <!--프레임1-->
+      <!--프레임2-->
       <div class="pics frame_1">
         <input type="hidden" id="up_images1" value="">
         <div class="inner_pics">
-          <div class="title_frame img"><img src="images/popup/title_frame_1_1.png" /></div>
           <div class="pc_frame">
             <div class="upload" id="up_img_div1">
               <!-- <a href="#"><img src="images/popup/btn_up.png" /></a> -->
@@ -90,28 +54,25 @@
                 <input id="fileupload" type="file" name="files[]" accept="image/*" >
               </span>
             </div>
-            <!--<div class="re_upload"><a href="#"><img src="images/popup/btn_reup.png" /></a></div>-->
-            <div class="text f_1_2" id="imsi_caption1">어느덧 쑥쑥 자라서 너무 고마워</div>
+            <div class="text f_1_2" id="imsi_caption1">자막</div>
             <div class="p_img f_1_2">
-              <table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <table width="100%" border="0">
                 <tbody>
                   <tr>
-                    <td align="center" valign="middle" id="user_img1"><img src="images/popup/ex2.jpg" id="user_ex_img1" /></td>
+                    <td align="center" valign="middle" id="user_img1"><img src="images/popup/ex.jpg" id="user_ex_img1" /></td>
                   </tr>
                 </tbody>
               </table>
-			</div><!--소비자 합성 이미지-->
+            </div><!--소비자 합성 이미지-->
             <div class="front_img img"><img src="images/popup/img_frm_1_2.png" /></div>
             <div class="bg img"><img src="images/popup/frm_b_bg.jpg" /></div>
           </div>
           <div class="pic_input">
-            <div class="input"><input type="text" name="mb_caption1" id="mb_caption1" placeholder="일기처럼 써 주세요(20자 이내)"></div>
+            <div class="input"><input type="text" name="mb_caption1" id="mb_caption1" placeholder="자막을 넣어주세요(20자 이내)" onkeyup="ins_caption('1');return false;"></div>
           </div>
         </div>
       </div>
-      <!--END:프레임1-->
-
-
+      <!--END:프레임2-->
       <div class="btn_make img">
         <a href="#" onclick="create_movie();return false;"><img src="images/popup/btn_make.png" /></a>
       </div>
@@ -120,200 +81,8 @@
 </div>
 <!------------------ 아기 정보 (이름, 나이, 사진) 입력 페이지 ------------------>
 
-<!------------------ 개인정보 입력 페이지 ------------------>
-<div id="input_div" class="popup_wrap" style="display:none">
-  <div class="p_mid p_position">
-    <div class="block_close clearfix">
-      <a href="index.php" class="btn_close"><img src="images/popup/btn_close.png" /></a>
-    </div>
-    <div class="block_content input">
-      <div class="title_pop_main">
-        <img src="images/popup/title_pop_main.png" />
-      </div>
-      <div class="inner">
-        <div class="input_block">
-          <div class="title img">
-            <img src="images/popup/title_input_1.png" />
-          </div>
-          <div class="inner_input_block">
-            <div class="input_one">
-              <div class="inner_input_one clearfix">
-                <div class="input"><input type="text" name="mb_name" id="mb_name" placeholder="이름"></div>
-              </div>
-            </div>
-            <div class="input_one">
-              <div class="inner_input_one clearfix">
-                <div class="input"><input type="tel" name="mb_phone" id="mb_phone" placeholder="휴대폰번호 ('-' 없이 입력해주세요)" onkeyup="only_num(this);chk_len(this.value);"></div>
-              </div>
-            </div>
-          </div>
-          <div class="check_block">
-            <div class="inner_check_block clearfix">
-              <div class="check"><a href="#" onclick="privacy_check();return false;"><img src="images/popup/check_off.jpg" width="20" name="privacy_agree" id="privacy_agree" /></a></div>
-              <div class="txt">개인정보 수집 및 위탁에 관한 동의</div>
-              <div class="btn_detail"><a href="#" onclick="open_pop('privacy_agree_popup');return false;"><img src="images/popup/btn_detail.jpg" width="55" /></a></div>
-            </div>
-            <div class="inner_check_block clearfix">
-              <div class="check"><a href="#" onclick="adver_check();return false;"><img src="images/popup/check_off.jpg" width="20" name="adver_agree" id="adver_agree" /></a></div>
-              <div class="txt">광고성 정보 전송 동의 약관 동의</div>
-              <div class="btn_detail"><a href="#" onclick="open_pop('adver_agree_popup');return false;"><img src="images/popup/btn_detail.jpg" width="55" /></a></div>
-            </div>
-          </div>
-        </div>
-        <div class="btn_block input">
-          <div class="img"><a href="#" onclick="insert_input();return false;"><img src="images/popup/btn_input_1.png" /></a></div>
-        </div>
-      </div><!--inner-->
-    </div>
-  </div>
-</div>
-<!------------------ 개인정보 입력 페이지 ------------------>
-
-
-<div id="movie_div" class="popup_wrap" style="display:none;">
-  <div class="p_mid p_position">
-    <div class="block_close clearfix">
-      <a href="index.php" class="btn_close"><img src="images/popup/btn_close.png" /></a>
-    </div>        
-    <div class="block_content movie">
-      <div class="inner">
-        <div class="title img">
-          <img src="images/popup/top_2.jpg" />
-        </div>
-        <div class="mv">
-          <div class="title">
-            <div class="text cap1_txt">
-            "폭풍 성장의 비밀"
-            </div>
-            <div class="bg img"><img src="images/popup/title_movie_c_1.png" /></div>
-          </div>
-          <div class="name" id="video_b_name">
-          김서우<span><img src="images/popup/label_baby.png" width="35" /></span>
-          </div>
-          <div class="youtube">
-            <!-- <video src="../files/out.mp4" controls preload="auto" id="video_player" poster="scene/concept_1_1.jpg"></video> -->
-            <a href="#" onclick="return false;"><img src="" id="image_view"></a>
-          </div>
-        </div>
 <?
-	if ($iPhoneYN == "N")
-	{
-?>
-        <div class="btn_block img">
-          <a href="../files/out.mp4" download="download_video" id="download_src"><img src="images/popup/btn_down.png" /></a>
-        </div>
-<?
-	}
-?>
-        <div class="btn_block_2 img">
-          <a href="#" onclick="prev_page();return false;"><img src="images/popup/btn_before.png" /></a>
-          <a href="#" onclick="next_page();return false;"><img src="images/popup/btn_m_next_coupon.png" id="next_image"/></a>
-          <!--<a href="#"><img src="images/popup/btn_m_next.png" /></a>-->
-        </div>
-      </div><!--inner-->
-    </div>
-  </div>
-</div>
-
-<!------------------------------ 체험팩 쿠폰 받을 사람 엔딩 ------------------------------>
-<div id="end_coupon_div" class="popup_wrap" style="display:none;">
-  <div class="p_mid p_position">
-    <div class="block_close clearfix">
-      <a href="index.php" class="btn_close"><img src="images/popup/btn_close.png" /></a>
-    </div>        
-    <div class="block_content coupon">
-      <div class="inner">
-        <div class="coupon_img">
-          <div class="serial">serial</div>
-          <div class="img"><img src="images/popup/bg_coupon.jpg" /></div>
-        </div>
-        <div class="btn_home_block">
-          <div class="img">
-            <img src="images/popup/txt_go_home.png" />
-          </div>
-          <div class="btn_block">
-            <a href="http://www.babience.com/m/bbgrowth_coupon/event.jsp" class="img" target="_blank"><img src="images/popup/btn_home.png" /></a>
-          </div>
-        </div>
-      </div><!--inner-->
-    </div>
-        
-    <div class="block_content ending_sns">
-      <div class="inner">
-        <div class="share">
-          <img src="images/popup/txt_sns.png" class="txt_sns"/>
-          <div>
-            <a href="#" onclick="sns_share('kt','share');return false;"><img src="images/popup/btn_kt.png" /></a>
-            <a href="#" onclick="sns_share('ks','share');return false;"><img src="images/popup/btn_ks.png" /></a>
-            <a href="#" onclick="sns_share('fb','share');return false;"><img src="images/popup/btn_fb.png" /></a>
-          </div>
-        </div>
-        <div class="btn_block">
-          <a href="index.php" class="img"><img src="images/popup/btn_main.png" /></a>
-        </div>
-      </div><!--inner-->
-    </div>
-  </div>
-</div>
-<!------------------------------ 체험팩 쿠폰 받을 사람 엔딩 ------------------------------>
-
-<!------------------------------ 체험팩 쿠폰 이미 받은 사람 엔딩 ------------------------------>
-<div id="end_sns_div" class="popup_wrap" style="display:none">
-  <div class="p_mid p_position">
-    <div class="block_close clearfix">
-      <a href="index.php" class="btn_close"><img src="images/popup/btn_close.png" /></a>
-    </div>  
-    <div class="block_content movie">
-      <div class="inner">
-        <div class="title img">
-          <img src="images/popup/top_2.jpg" />
-        </div>
-        <div class="mv">
-          <div class="title">
-            <div class="text cap1_txt">
-            "폭풍 성장의 비밀"
-            </div>
-            <div class="bg img"><img src="images/popup/title_movie_c_1.png" /></div>
-          </div>
-          <div class="name">
-          <span id="sns_b_name">김서우</span><span><img src="images/popup/label_baby.png" width="35" /></span>
-          </div>
-        </div>
-        <!-- 태그 추가 0302 -->
-        <!-- <div class="img">
-          <a href="http://grow.babience-event.com/MOBILE/coupon_page.php?serial=<?=$serial?>" target="_blank"><img src="images/popup/btn_go_mybaby.png" /></a>
-        </div> -->
-        <!-- end 태그 추가 0302 -->
-        <!-- 태그 추가 0302 -->
-        <div class="share_url">
-          <div class="url"><a href="http://grow.babience-event.com/MOBILE/coupon_page.php?serial=<?=$serial?>" onclick="return false;">http://grow.babience-event.com/MOBILE/coupon_page.php?serial=<?=$serial?></a></div>
-          <div class="txt">URL을 길게 누르시면 복사하실 수 있습니다.</div>
-        </div>
-        <!-- end 태그 추가 0302 -->
-      </div><!--inner-->
-    </div>  
-    <div class="block_content ending_sns">
-      <div class="inner">
-        <div class="share">
-          <img src="images/popup/txt_sns.png" class="txt_sns"/>
-          <div>
-            <a href="#" onclick="sns_share('kt','share');return false;"><img src="images/popup/btn_kt.png" /></a>
-            <a href="#" onclick="sns_share('ks','share');return false;"><img src="images/popup/btn_ks.png" /></a>
-            <a href="#" onclick="sns_share('fb','share');return false;"><img src="images/popup/btn_fb.png" /></a>
-          </div>
-        </div>
-        <div class="btn_block">
-          <a href="index.php" class="img"><img src="images/popup/btn_main.png" /></a>
-        </div>
-      </div><!--inner-->
-    </div>
-    <div class="img end_gift">
-      <img src="images/popup/end_gift.jpg" />
-    </div>
-  </div>
-</div>
-<!------------------------------ 체험팩 쿠폰 이미 받은 사람 엔딩 ------------------------------>
-<?
+	include_once   "./page_div.php";
 	include_once   "./popup_div.php";
 ?>
 </body>
@@ -338,16 +107,13 @@ $(document).ready(function() {
 	$("#cboxBottomCenter").hide();
 	Kakao.init('d58dc6bc022da9c054b20aff9c23e0f9');
 
-	var yt_width = $(document).width()-20;
-	var youtube_height = (yt_width / 16) * 9;
-	$("#ytplayer1").width(yt_width);
-	$("#ytplayer1").height(youtube_height);
-	$("#ytplayer2").width(yt_width);
-	$("#ytplayer2").height(youtube_height);
-	$("#ytplayer3").width(yt_width);
-	$("#ytplayer3").height(youtube_height);
-	$("#ytplayer4").width(yt_width);
-	$("#ytplayer4").height(youtube_height);
+	var yt_width = $(document).width()*0.95;
+	var youtube_height = ((yt_width / 16) * 9)*1.15;
+	$("#gate_exam1").width(yt_width);
+	$("#gate_exam2").width(yt_width);
+	$("#gate_exam3").width(yt_width);
+	$("#gate_exam4").width(yt_width);
+	$(".youtube").height(youtube_height);
 
 	user_ex_img1_h		= $("#user_ex_img1").height();
 	user_ex_img1_w		= $("#user_ex_img1").width();
@@ -359,29 +125,8 @@ function create_movie()
 	$("#loading_div").show();
 	$("#input_baby_div").hide();
 
-	var mb_baby_name		= $("#mb_baby_name").val();
-	var mb_baby_age			= $("#mb_baby_age").val();
 	var up_images1				= $("#up_images1").val();
 	var mb_caption1			= $("#mb_caption1").val();
-	if (mb_baby_name == "")
-	{
-		alert('아기 이름을 입력해 주세요.');
-		//chk_ins = 0;
-		$("#loading_div").hide();
-		$("#input_baby_div").show();
-		$("#mb_baby_name").focus();
-		return false;
-	}
-
-	if (mb_baby_age == "")
-	{
-		alert('아기 나이를 입력해 주세요.');
-		//chk_ins = 0;
-		$("#loading_div").hide();
-		$("#input_baby_div").show();
-		$("#mb_baby_age").focus();
-		return false;
-	}
 
 	if (up_images1 == "")
 	{
@@ -410,8 +155,6 @@ setTimeout(function() {
 		type:"POST",
 		data:{
 			"exec"					: "create_movie",
-			"mb_baby_name"	: mb_baby_name,
-			"mb_baby_age"		: mb_baby_age,
 			"up_image1"			: up_images1,
 			"mb_caption1"		: mb_caption1,
 			"mb_serial"			: "<?=$serial?>",
@@ -435,68 +178,6 @@ setTimeout(function() {
 		}
 	});
 	}, 5000); // 5000ms(5초)가 경과하면 이 함수가 실행됩니다.
-}
-
-function privacy_check()
-{
-	if (chk_privacy_flag == 0)
-	{
-		$("#privacy_agree").attr("src","images/popup/check_on.jpg");
-		chk_privacy_flag = 1;
-	}else{
-		$("#privacy_agree").attr("src","images/popup/check_off.jpg");
-		chk_privacy_flag = 0;
-	}
-}
-
-function adver_check()
-{
-	if (chk_adver_flag == 0)
-	{
-		$("#adver_agree").attr("src","images/popup/check_on.jpg");
-		chk_adver_flag = 1;
-	}else{
-		$("#adver_agree").attr("src","images/popup/check_off.jpg");
-		chk_adver_flag = 0;
-	}
-}
-
-
-function chk_len(val)
-{
-	if (val.length == 11)
-	{
-		$("#mb_phone").blur();
-	}
-}
-
-function only_num(obj)
-{
-	var inText = obj.value;
-	var outText = "";
-	var flag = true;
-	var ret;
-	for(var i = 0; i < inText.length; i++)
-	{
-		ret = inText.charCodeAt(i);
-		if((ret < 48) || (ret > 57))
-		{
-			flag = false;
-		}
-		else
-		{
-			outText += inText.charAt(i);
-		}
-	}
- 
-	if(flag == false)
-	{
-		alert("전화번호는 숫자입력만 가능합니다.");
-		obj.value = outText;
-		obj.focus();
-		return false;
-	} 
-	return true;
 }
 
 function insert_input()
@@ -550,41 +231,22 @@ function insert_input()
 			alert(response);
 			if (response == "Y")
 			{
-				$("#video_b_name").html($("#mb_baby_name").val() + '<span><img src="images/popup/label_baby.png" width="35" /></span>');
-				//$(".cap1_txt").html(mb_caption1);
-				$("#next_image").attr("src","images/popup/btn_m_next_coupon.png");
-				$("#image_view").width("100%");
-				$("#image_view").attr("src","../files/<?=$serial?>/medium/final_<?=$serial?>_1.jpg");
-				//$("#download_src").attr("href","../files/<?=$serial?>/growmovie.mp4");
+				$(".image_view").width("100%");
+				$(".image_view").attr("src","../files2/<?=$serial?>/medium/final_<?=$serial?>_1.jpg");
+				$("#use_serial").html("<?=$serial?>");
 				$("#input_div").hide();
-				$("#movie_div").show();
-				//location.href="./popup_gate.php?mb_phone=" + mb_phone + "&serial=<?=$serial?>";
+				$("#end_coupon_div").show();
+			}else if (response == "D"){
+				$(".image_view").width("100%");
+				$(".image_view").attr("src","../files2/<?=$serial?>/medium/final_<?=$serial?>_1.jpg");
+				$("#input_div").hide();
+				$("#end_sns_div").show();
 			}else{
 				alert("참여자가 많아 지연되고 있습니다. 다시 응모해 주세요.");
 				location.href="index.php";
 			}
 		}
 	});
-}
-
-
-function prev_page()
-{
-	$("#input_baby_div").show();
-	$("#movie_div").hide();
-}
-
-function next_page()
-{
-	$("#movie_div").hide();
-	if ( user_gubun == 1 )
-	{
-		$(".serial").html("<?=$serial?>");
-		$("#end_coupon_div").show();
-	}else{
-		$("#sns_b_name").html($("#mb_baby_name").val());
-		$("#end_sns_div").show();
-	}
 }
 
 $(function () {
@@ -608,7 +270,7 @@ $(function () {
     }).on('fileuploadadd', function (e, data) {
 		// 파일 삭제
 		//del_fileview();
-		user_ex_img1	= $("#user_ex_img1").height();
+		//user_ex_img1	= $("#user_ex_img1").height();
 		$("#user_img1").html("");
         data.context = $('<div/>').appendTo('#user_img1');
 		$("#up_img_div1").attr("class","re_upload");
@@ -642,12 +304,12 @@ $(function () {
 					}else{
 						$("td#user_img1 > div > p > canvas").css("width","100%");
 					}
-
-					$("td#user_img1 > div > p > canvas").css("height",re_userimg1_h+"px");
+					//$("td#user_img1 > div > p > canvas").css("height",re_userimg1_h+"px");
+					$("td#user_img1 > div > p > canvas").css("height",user_ex_img1_h+"px");
 					$("td#user_img1 > div > p > canvas").css("padding-top",re_final1_h+"px");
 				}else{
 					
-					$("td#user_img1 > div > p > canvas").css("height",user_ex_img1+"px");
+					$("td#user_img1 > div > p > canvas").css("height",user_ex_img1_h+"px");
 					var re_userimg1_w	= (user_ex_img1_h / uimg1_h)*uimg1_w;
 				}
 

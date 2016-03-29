@@ -1,9 +1,9 @@
 <?
-	include_once   "./header.php";
+	include_once   "../config.php";
 
 	$serialnumber		= $_REQUEST['serial'];
 
-	$query 	= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_serial='".$serialnumber."'";
+	$query 	= "SELECT * FROM ".$_gl['member_info2_table']." WHERE mb_serial='".$serialnumber."'";
 	$result 	= mysqli_query($my_db, $query);
 	$member_info	= mysqli_fetch_array($result);
 ?>
@@ -16,7 +16,7 @@
       <meta property="og:title" content="[베비언스] 베비언스 먹고 폭풍 성장">
       <meta property="og:type" content="website" />
       <meta property="og:url" content="http://grow.babience-event.com/MOBILE/coupon_page.php?serial=<?=$serialnumber?>" />
-      <meta property="og:image" content="http://grow.babience-event.com/files/<?=$serialnumber?>/medium/final_<?=$serialnumber?>_1.jpg" />
+      <meta property="og:image" content="http://grow.babience-event.com/files2/<?=$serialnumber?>/medium/final_<?=$serialnumber?>_1.jpg" />
       <meta property="og:description" content="우리 아기의 성장 과정을 특별하게 담는 방법! 지금 베비언스에서 만들어 드립니다.">
       <link rel="shortcut icon" type="image/x-icon" href="./images/fabicon.ico" />
       <title>베비언스 먹고 폭풍 성장!</title>
@@ -58,7 +58,7 @@
     </head><body>
 <div class="sec_top">
   <div class="inner_sec_top">
-    <a href="#"><img src="images/logo.png" width="80" /></a>
+    <a href="index.php"><img src="images/logo.png" width="80" /></a>
   </div>
 </div>
 <div class="popup_wrap">
@@ -70,46 +70,43 @@
         </div>
         <div class="mv">
           <div class="title">
-            <div class="text">
-            "<?=$member_info['mb_caption1']?>"
-            </div>
-            <div class="bg img"><img src="images/popup/title_movie_c_1.png" /></div>
+            <div class="bg img"><img src="images/popup/title_movie_c_<?=$member_info['mb_concept']?>.png" /></div>
           </div>
-          <div class="name">
-          <?=$member_info['mb_baby_name']?><span><img src="images/popup/label_baby.png" width="35" /></span>
-          </div>
-          <div class="youtube" style="background:#a3e2eb">
-            <video src="../files/<?=$serialnumber?>/growmovie.mp4" controls preload="auto" id="video_player" poster="scene/concept_<?=$member_info['mb_concept']?>_1.jpg"></video>
+          <div class="youtube">
+            <img src="../files2/<?=$member_info['mb_serial']?>/medium/final_<?=$member_info['mb_serial']?>_1.jpg" class="image_view">
           </div>
         </div>
+
       </div><!--inner-->
     </div>  
     <div class="block_content ending_sns">
       <div class="inner">
         <div class="share">
           <img src="images/popup/txt_sns.png" class="txt_sns"/>
-        <div>
-        <a href="#" onclick="sns_share('kt','share');return false;"><img src="images/popup/btn_kt.png" /></a>
-        <a href="#" onclick="sns_share('ks','share');return false;"><img src="images/popup/btn_ks.png" /></a>
-        <a href="#" onclick="sns_share('fb','share');return false;"><img src="images/popup/btn_fb.png" /></a>
-      </div>
-    </div>
-    <div class="btn_block">
-      <a href="http://grow.babience-event.com" target="_blank" class="img"><img src="images/popup/btn_onemore.png" /></a>
-    </div>
-  </div><!--inner-->
-</div>
+          <div>
+            <a href="#" onclick="sns_share('kt','share');return false;"><img src="images/popup/btn_kt.png" /></a>
+            <a href="#" onclick="sns_share('ks','share');return false;"><img src="images/popup/btn_ks.png" /></a>
+            <a href="#" onclick="sns_share('fb','share');return false;"><img src="images/popup/btn_fb.png" /></a>
+          </div>
         </div>
-	</div> 
- 
-    
+        <div class="btn_block">
+          <a href="index.php" class="img"><img src="images/popup/btn_onemore.png" /></a>
+        </div>
+      </div><!--inner-->
+    </div>
+  </div>
+</div> 
 </body>
 </html>
 <script type="text/javascript">
 
 $(document).ready(function(){
 	Kakao.init('d58dc6bc022da9c054b20aff9c23e0f9');
-	$("#video_player").width($(".youtube").width());
+	var yt_width = $(window).width()-20;
+	var youtube_height = (yt_width / 16) * 9;
+	$(".image_view").width(yt_width);
+	$(".youtube").width(yt_width);
+	$(".youtube").height($(".image_view").height());
 });
 
 function sns_share(media, flag)
