@@ -157,7 +157,6 @@ setTimeout(function() {
 			$("#input_baby_div").hide();
 		},
 		success: function(response){
-			alert(response);
 			if (response == "Y")
 			{
 				$("#input_div").show();
@@ -210,7 +209,6 @@ function insert_input()
 		},
 		url: "../main_exec2.php",
 		success: function(response){
-			alert(response);
 			if (response == "Y")
 			{
 				$(".image_view").width("100%");

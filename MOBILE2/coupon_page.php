@@ -100,7 +100,7 @@
 </html>
 <script type="text/javascript">
 
-$(document).ready(function(){
+$(window).load(function(){
 	Kakao.init('d58dc6bc022da9c054b20aff9c23e0f9');
 	var yt_width = $(window).width()-20;
 	var youtube_height = (yt_width / 16) * 9;

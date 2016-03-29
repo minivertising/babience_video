@@ -166,7 +166,6 @@ setTimeout(function() {
 			$("#input_baby_div").hide();
 		},
 		success: function(response){
-			alert(response);
 			if (response == "Y")
 			{
 				$("#input_div").show();
@@ -228,7 +227,6 @@ function insert_input()
 		},
 		url: "../main_exec2.php",
 		success: function(response){
-			alert(response);
 			if (response == "Y")
 			{
 				$(".image_view").width("100%");
@@ -307,12 +305,10 @@ $(function () {
 					}else{
 						$("td#user_img1 > div > p > canvas").css("width","100%");
 					}
-					alert(user_ex_img1_h);
 					//$("td#user_img1 > div > p > canvas").css("height",re_userimg1_h+"px");
 					$("td#user_img1 > div > p > canvas").css("height",user_ex_img1_h+"px");
 					$("td#user_img1 > div > p > canvas").css("padding-top",re_final1_h+"px");
 				}else{
-					alert(user_ex_img1_h+"test");
 					$("td#user_img1 > div > p > canvas").css("height",user_ex_img1_h+"px");
 					var re_userimg1_w	= (user_ex_img1_h / uimg1_h)*uimg1_w;
 				}
