@@ -150,7 +150,7 @@ class UploadHandler
                 'medium' => array(
                     'max_width' => 555,
                     'max_height' => 317,
-					'auto_orient' => false
+					'auto_orient' => true
                 ),
                 
                 'thumbnail' => array(

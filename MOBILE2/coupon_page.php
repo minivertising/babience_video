@@ -79,7 +79,7 @@
 
       </div><!--inner-->
     </div>  
-    <div class="block_content ending_sns">
+    <div class="block_content ending_sns" style="display:none;">
       <div class="inner">
         <div class="share">
           <img src="images/popup/txt_sns.png" class="txt_sns"/>
@@ -107,6 +107,7 @@ $(document).ready(function(){
 	$(".image_view").width(yt_width);
 	$(".youtube").width(yt_width);
 	$(".youtube").height($(".image_view").height());
+	$(".ending_sns").show();
 });
 
 function sns_share(media, flag)
