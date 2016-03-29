@@ -354,7 +354,7 @@ $(function () {
 				{
 					if (uimg1_h > user_ex_img1_h)
 					{
-						$("div#user_img1 > div > p > canvas").css("height",user_ex_img1+"px");
+						$("div#user_img1 > div > p > canvas").css("height",user_ex_img1_h+"px");
 						$("div#user_img1 > div > p > canvas").css("width","80%");
 						$("div#user_img1 > div > p > canvas").css("padding-left","10%");
 					}else{
