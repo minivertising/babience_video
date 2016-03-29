@@ -13,7 +13,7 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, user-scalable=yes,initial-scale=1.0, maximum-scale=1.0"/>
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta property="og:title" content="[베비언스] 베비언스 먹고 폭풍 성장">
+      <meta property="og:title" content="[베비언스] 베비언스 먹고 폭풍 성장 2탄!">
       <meta property="og:type" content="website" />
       <meta property="og:url" content="http://grow.babience-event.com/MOBILE2/coupon_page.php?serial=<?=$serialnumber?>" />
       <meta property="og:image" content="http://grow.babience-event.com/files2/<?=$serialnumber?>/medium/final_<?=$serialnumber?>_1.jpg" />
@@ -114,7 +114,7 @@ function sns_share(media, flag)
 	if (media == "fb")
 	{
 
-		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://grow.babience-event.com/MOBILE/coupon_page.php?serial=<?=$serialnumber?>'),'sharer','toolbar=0,status=0,width=600,height=325');
+		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://grow.babience-event.com/MOBILE2/coupon_page.php?serial=<?=$serialnumber?>'),'sharer','toolbar=0,status=0,width=600,height=325');
 		$.ajax({
 			type   : "POST",
 			async  : false,
@@ -131,15 +131,15 @@ function sns_share(media, flag)
 		//Kakao.Link.createTalkLinkButton({
 		Kakao.Link.sendTalkLink({
 		  //container: '#kakao-link-btn',
-		  label: "혼자보기 아까운 우리아기 성장 영상 공개!\r\nhttp://grow.babience-event.com/MOBILE/coupon_page.php?serial=<?=$serialnumber?>",
+		  label: "우리아기 특별한 패러디 컷 공개!",
 		  //image: {
 			//src: 'http://grow.babience-event.com/MOBILE/images/sns.jpg',
 			//width: '1200',
 			//height: '630'
 		  //},
 		  webButton: {
-			text: '[베비언스] 베비언스 먹고 폭풍 성장!',
-			url: 'http://grow.babience-event.com/MOBILE/index.php?serial=<?=$serialnumber?>' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
+			text: '[베비언스] 베비언스 먹고 폭풍 성장 2탄!',
+			url: 'http://grow.babience-event.com/MOBILE2/index.php?serial=<?=$serialnumber?>' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
 		  }
 		});
 		$.ajax({
@@ -154,8 +154,8 @@ function sns_share(media, flag)
 		});
 	}else{
 		Kakao.Story.share({
-			url: 'http://grow.babience-event.com/MOBILE/coupon_page.php?serial=<?=$serialnumber?>',
-			text: '혼자보기 아까운 우리아기 성장 영상 공개!!\r\nhttp://grow.babience-event.com/MOBILE/coupon_page.php?serial=<?=$serialnumber?>'
+			url: 'http://grow.babience-event.com/MOBILE2/coupon_page.php?serial=<?=$serialnumber?>',
+			text: '우리아기 특별한 패러디 컷 공개!\r\nhttp://grow.babience-event.com/MOBILE2/coupon_page.php?serial=<?=$serialnumber?>'
 		});
 		$.ajax({
 			type   : "POST",

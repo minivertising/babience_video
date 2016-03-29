@@ -10,7 +10,7 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, user-scalable=yes,initial-scale=1.0, maximum-scale=1.0"/>
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta property="og:title" content="[베비언스] 베비언스 먹고 폭풍 성장">
+      <meta property="og:title" content="[베비언스] 베비언스 먹고 폭풍 성장 2탄!">
       <meta property="og:type" content="website" />
       <meta property="og:url" content="http://grow.babience-event.com/MOBILE2/index.php?serial=<?=$serial2?>" />
       <meta property="og:image" content="http://grow.babience-event.com/files2/<?=$serial2?>/medium/final_<?=$serial2?>_1.jpg" />
