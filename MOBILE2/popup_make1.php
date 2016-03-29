@@ -96,7 +96,7 @@ var user_ex_img1	= 0;
 var chk_privacy_flag	= 0;
 var chk_adver_flag		= 0;
 
-$(document).ready(function() {
+$(window).load(function() {
 	$("#cboxTopLeft").hide();
 	$("#cboxTopRight").hide();
 	$("#cboxBottomLeft").hide();
